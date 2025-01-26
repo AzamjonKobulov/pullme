@@ -53,49 +53,48 @@
 }
 
 .text-trsprt-catalog-1 {
-  background: url("/public/assets/images/catalog-1.jpg") -20px -20px no-repeat;
+  background: url("../assets/images/catalog-1.jpg") -20px -20px no-repeat;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
 .text-trsprt-catalog-2 {
-  background: url("/public/assets/images/catalog-2.jpg") -20px -20px no-repeat;
+  background: url("../assets/images/catalog-2.jpg") -20px -20px no-repeat;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
 .text-trsprt-catalog-3 {
-  background: url("/public/assets/images/catalog-3.jpg") -20px -20px no-repeat;
+  background: url("../assets/images/catalog-3.jpg") -20px -20px no-repeat;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
 .text-trsprt-catalog-4 {
-  background: url("/public/assets/images/catalog-4.jpg") -20px -20px no-repeat;
+  background: url("../assets/images/catalog-4.jpg") -20px -20px no-repeat;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
 .text-trsprt-catalog-5 {
-  background: url("/public/assets/images/catalog-5.jpg") -20px -20px no-repeat;
+  background: url("../assets/images/catalog-5.jpg") -20px -20px no-repeat;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
 .text-trsprt-catalog-6 {
-  background: url("/public/assets/images/catalog-6.jpg") -20px -20px no-repeat;
+  background: url("../assets/images/catalog-6.jpg") -20px -20px no-repeat;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
 .text-trsprt-catalog-7 {
-  background: url("/public/assets/images/catalog-7.jpg") -20px -20px no-repeat;
+  background: url("../assets/images/catalog-7.jpg") -20px -20px no-repeat;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
 .text-trsprt-catalog-8 {
-  background: url("/public/assets/images/catalog-8.jpg") -20px -20px no-repeat;
+  background: url("../assets/images/catalog-8.jpg") -20px -20px no-repeat;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
 
 .text-trsprt-section-title {
-  background: url("/public/assets/bg-images/hero-left.png") -20px -20px
-    no-repeat;
+  background: url("../assets/bg-images/hero-left.png") -20px -20px no-repeat;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
