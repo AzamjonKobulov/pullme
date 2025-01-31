@@ -125,3 +125,8 @@
 .icon-transform.rotate-180 {
   transform: rotate(180deg);
 }
+
+/* Checkbox */
+input[type="checkbox"]:checked + div .custom-check {
+  @apply block;
+}

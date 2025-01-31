@@ -14,6 +14,7 @@ module.exports = {
       },
       maxWidth: {
         base: "96.25rem",
+        secondary: "62.9375rem",
       },
       fontFamily: {
         oswald: ["Oswald", "sans-serif"],
@@ -56,6 +57,10 @@ module.exports = {
       },
       backgroundImage: {
         button: "url('../assets/images/button.png')",
+        "cards-hero":
+          "linear-gradient(90deg, rgba(170, 151, 234, 0.95) 8.77%, rgba(170, 151, 234, 0.095) 73.06%);",
+        "cards-hero-mobile":
+          "linear-gradient(0deg, rgba(170, 151, 234, 0.95) 8.77%, rgba(170, 151, 234, 0.095) 73.06%);",
       },
     },
   },

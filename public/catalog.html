@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <nav
+        class="max-w-base mx-auto flex items-start justify-between pb-3.5 pt-3 sm:py-5 px-2.5 md:px-12 xl:px-2.5"
+      >
+        <!-- Logo -->
+        <div
+          class="relative z-50 bg-white rounded-br-[20px] sm:rounded-br-[32px] lg:rounded-br-[45px] mt-1 sm:mt-0 pb-1 sm:pb-3 sm:pt-2 pr-5"
+        >
+          <a
+            href="./index.html"
+            class="inline-block w-12 h-8 xs:w-14 xs:h-8 sm:w-24 sm:h-12 lg:w-40 lg:h-[77px] overflow-hidden shrink-0"
+          >
+            <img src="./assets/svgs/logo.svg" alt="LOGO" class="size-full" />
+          </a>
+        </div>
+
+        <!-- Links & Cart & Lang -->
+        <div
+          class="h-fit hidden lg:flex items-center gap-6 font-extrabold uppercase text-black/40 text-xs"
+        >
+          <!-- Links -->
+          <ul class="flex items-center gap-6">
+            <li>
+              <a href="#" class="hover:text-black transition-all duration-200"
+                >все игры</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-black transition-all duration-200"
+                >Бонусы</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-black transition-all duration-200"
+                >Гайды</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-black transition-all duration-200"
+                >О нас</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-black transition-all duration-200"
+                >Контакты</a
+              >
+            </li>
+          </ul>
+
+          <!-- Cart & Lang -->
+          <div class="flex items-center gap-6">
+            <!-- Cart -->
+            <div>
+              <button class="flex items-center gap-1">
+                <img src="./assets/svgs/cart.svg" alt="Cart Icon" />
+                <span>2</span>
+              </button>
+            </div>
+
+            <!-- Lang -->
+            <div>
+              <button class="flex items-center gap-1">
+                <img src="./assets/svgs/globe.svg" alt="Cart Icon" />
+                <span>RU</span>
+                <svg
+                  width="9"
+                  height="6"
+                  viewBox="0 0 9 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.30314 5.14892L8.59033 1.86173C8.86963 1.58243 8.86963 1.13124 8.59033 0.851941C8.31102 0.572637 7.85984 0.572637 7.58054 0.851941L4.79466 3.63065L2.01595 0.85194C1.73664 0.572637 1.28546 0.572637 1.00616 0.85194C0.726854 1.13124 0.726854 1.58243 1.00616 1.86173L4.29335 5.14892C4.56549 5.42822 5.02383 5.42822 5.30314 5.14892Z"
+                    fill="black"
+                    fill-opacity="0.4"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Btn -->
+        <div
+          class="lg:hidden relative z-50 bg-white rounded-bl-20 sm:rounded-bl-[32px] lg:rounded-bl-[45px] mt-2 sm:mt-0 pb-2 pl-5 sm:pt-3 sm:pb-5"
+        >
+          <button>
+            <img
+              src="./assets/svgs/hamburger.svg"
+              alt="hamburger icon"
+              class="w-6"
+            />
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Socials -->
+    <ul class="fixed right-2 top-52 z-[70] space-y-2.5">
+      <li>
+        <a href="#">
+          <img src="./assets/svgs/message.svg" alt="Icon" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./assets/svgs/message-2.svg" alt="Icon" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./assets/svgs/vk.svg" alt="Icon" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./assets/svgs/telegram.svg" alt="Icon" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./assets/svgs/tel.svg" alt="Icon" />
+        </a>
+      </li>
+    </ul>
+
+    <!-- MAIN -->
+    <main class="relative">
+      <!-- Hero -->
+      <section
+        id="hero"
+        class="-mt-[52px] sm:-mt-[86px] lg:-mt-20 xl:-mt-[86px]"
+      >
+        <div
+          class="max-w-base mx-auto flex flex-col xl:grid xl:grid-cols-3 gap-5 px-2.5 md:px-12 xl:px-2.5"
+        >
+          <!-- Left Content -->
+          <div class="col-span-2 relative">
+            <!-- BG Desktop -->
+            <img
+              src="./assets/bg-images/hero-left.png"
+              alt="Bg img"
+              class="hidden sm:block absolute inset-0 size-full -scale-x-[1] w-[15s0%] rounded-45"
+            />
+
+            <!-- BG Mobile -->
+            <img
+              src="./assets/bg-images/hero-left-mobile.png"
+              alt="Bg img"
+              class="sm:hidden absolute inset-0 size-full rounded-20"
+            />
+
+            <!-- Swiper -->
+            <div class="swiper home-swiper">
+              <div class="swiper-wrapper">
+                <div
+                  class="swiper-slide swiper-slide-reviews transition-all duration-200"
+                >
+                  <div class="flex flex-col-reverse lg:pt-24">
+                    <!-- Texts & Images -->
+                    <div class="size-full relative flex flex-col-reverse">
+                      <!-- Texts -->
+                      <div
+                        class="max-w-2xl space-y-3 xs:space-y-5 relative z-20 text-white pl-5 pb-12 xs:pb-20"
+                      >
+                        <h1
+                          class="text-2xl xxs:taxt-5xl xs:text-6xl sm:text-[80px] leading-[90%]"
+                        >
+                          Покупай донаты выгоднее, <br />
+                          чем в игре!
+                        </h1>
+
+                        <p
+                          class="max-w-[242px] xs:max-w-none font-extrabold uppercase xs:text-xl sm:text-[28px] text-white leading-normal pb-3"
+                        >
+                          Мгновенное пополнение игровых аккаунтов по низким
+                          ценам
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Image Desktop -->
+                    <img
+                      src="./assets/images/hero-desktop.png"
+                      alt="Hero Image"
+                      class="hidden lg:block md:absolute -top-8 -right-16 z-10"
+                    />
+
+                    <!-- Image Mobile -->
+                    <img
+                      src="./assets/images/hero-mobile.png"
+                      alt="Hero Image"
+                      class="lg:hidden relative z-20 -mb-10"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="flex flex-col-reverse lg:pt-24">
+                    <!-- Texts & Images -->
+                    <div class="size-full relative flex flex-col-reverse">
+                      <!-- Texts -->
+                      <div
+                        class="max-w-2xl space-y-3 xs:space-y-5 relative z-20 text-white pl-5 pb-12 xs:pb-20"
+                      >
+                        <h1
+                          class="text-2xl xxs:taxt-5xl xs:text-6xl sm:text-[80px] leading-[90%]"
+                        >
+                          Покупай донаты выгоднее, <br />
+                          чем в игре!
+                        </h1>
+
+                        <p
+                          class="max-w-[242px] xs:max-w-none font-extrabold uppercase xs:text-xl sm:text-[28px] text-white leading-normal pb-3"
+                        >
+                          Мгновенное пополнение игровых аккаунтов по низким
+                          ценам
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Image Desktop -->
+                    <img
+                      src="./assets/images/hero-desktop.png"
+                      alt="Hero Image"
+                      class="hidden lg:block md:absolute -top-8 -right-16 z-10"
+                    />
+
+                    <!-- Image Mobile -->
+                    <img
+                      src="./assets/images/hero-mobile.png"
+                      alt="Hero Image"
+                      class="lg:hidden relative z-20 -mb-10"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="flex flex-col-reverse lg:pt-24">
+                    <!-- Texts & Images -->
+                    <div class="size-full relative flex flex-col-reverse">
+                      <!-- Texts -->
+                      <div
+                        class="max-w-2xl space-y-3 xs:space-y-5 relative z-20 text-white pl-5 pb-12 xs:pb-20"
+                      >
+                        <h1
+                          class="text-2xl xxs:taxt-5xl xs:text-6xl sm:text-[80px] leading-[90%]"
+                        >
+                          Покупай донаты выгоднее, <br />
+                          чем в игре!
+                        </h1>
+
+                        <p
+                          class="max-w-[242px] sm:max-w-none font-extrabold uppercase xs:text-xl sm:text-[28px] text-white leading-normal pb-3"
+                        >
+                          Мгновенное пополнение игровых аккаунтов по низким
+                          ценам
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Image Desktop -->
+                    <img
+                      src="./assets/images/hero-desktop.png"
+                      alt="Hero Image"
+                      class="hidden lg:block md:absolute -top-8 -right-16 z-10"
+                    />
+
+                    <!-- Image Mobile -->
+                    <img
+                      src="./assets/images/hero-mobile.png"
+                      alt="Hero Image"
+                      class="lg:hidden relative z-20 -mb-10"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- Fill Balance Btn -->
+            <div
+              class="w-fit absolute bottom-0 right-0 z-50 bg-white rounded-tl-2xl xs:rounded-tl-[32px] lg:rounded-tl-[45px] pl-2.5 pt-2.5 sm:pl-5 sm:pt-5"
+            >
+              <button
+                class="flex items-center gap-3 lg:gap-8 group font-extrabold uppercase text-start text-sm sm:text-[28px] leading-5 sm:leading-8"
+              >
+                <span class="clip-text"
+                  >Пополнить <br />
+                  сейчас</span
+                >
+                <img
+                  src="./assets/svgs/rounded-arrow.svg"
+                  alt="Arrow Icon"
+                  class="size-6 sm:size-auto shrink-0 group-hover:-rotate-45 transition-all duration-300"
+                />
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Content -->
+          <div
+            class="min-h-64 xs:min-h-80 sm:min-h-[420px] col-span-2 xl:col-span-1 relative flex items-end rounded-20 sm:rounded-45 overflow-hidden"
+          >
+            <img
+              src="./assets/bg-images/hero-right.png"
+              alt="Bg image"
+              class="absolute inset-0 size-full rotate-180"
+            />
+
+            <img
+              src="./assets/images/bonus.png"
+              alt="Bg image"
+              class="absolute -top-5 -left-10 xs:top-0 xs:left-auto sm:-top-10 sm:-right-7"
+            />
+
+            <!-- Texts -->
+            <div
+              class="h-full relative flex flex-col xl:items-end justify-end lg:justify-center xl:justify-end gap-3 sm:gap-5 mt-auto p-5 sm:py-10 px-5"
+            >
+              <h2
+                class="text-white text-2xl xxs:taxt-5xl xs:text-6xl sm:text-[80px] leading-[85%]"
+              >
+                Накопи бонусы
+              </h2>
+              <p
+                class="max-w-[242px] xs:max-w-none font-extrabold uppercase xs:text-xl sm:text-[28px] text-white leading-normal"
+              >
+                и получи реальные или внутриигровые товары!
+              </p>
+            </div>
+
+            <!-- Fill Balance Btn -->
+            <div
+              class="w-fit absolute bottom-0 right-0 z-50 bg-white rounded-tl-2xl xs:rounded-tl-[32px] lg:rounded-tl-[45px] pl-2.5 pt-2.5 sm:pl-5 sm:pt-5"
+            >
+              <button
+                class="group font-extrabold uppercase text-start text-sm sm:text-[28px] leading-5 sm:leading-8"
+              >
+                <img
+                  src="./assets/svgs/rounded-arrow.svg"
+                  alt="Arrow Icon"
+                  class="size-6 sm:size-auto shrink-0 group-hover:-rotate-45 transition-all duration-300"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Catalog -->
+      <section id="catalog">
+        <div
+          class="max-w-base grid xs:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-5 font-bold text-sm lg:text-lg text-black/40 text-center mt-5 xs:mx-auto px-2.5 md:px-12 xl:px-2.5"
+        >
+          <!-- Catalog Item 1 -->
+          <a href="#" class="group space-y-2.5">
+            <div class="relative">
+              <div class="h-[150px] xs:h-auto xs:max-h-none xs:aspect-video">
+                <!-- Discount -->
+                <div
+                  class="size-12 md:size-14 lg:size-24 absolute top-0 left-0 z-10 shrink-0 grid place-content-center bg-white rounded-br-30 lg:rounded-br-45"
+                >
+                  <span
+                    class="text-trsprt-catalog-1 block font-bold text-lg lg:text-[40px] leading-normal font-oswald -rotate-45 bg-transparent text-white"
+                    >-10%</span
+                  >
+                </div>
+
+                <!-- Image -->
+                <div
+                  class="relative size-full border-3 border-brand-purple/40 rounded-20 xs:rounded-br-none rounded-tr-20 rounded-bl-20 lg:rounded-tr-45 lg:rounded-bl-45 overflow-hidden after:absolute after:inset-0 after:size-full after:bg-brand-purple/30"
+                >
+                  <img
+                    src="./assets/images/catalog-1.jpg"
+                    alt="Game Image"
+                    class="size-full object-cover"
+                  />
+                </div>
+
+                <!-- Arrow Icon -->
+                <div
+                  class="absolute bottom-0 right-0 z-10 shrink-0 flex items-end justify-end bg-white rounded-tl-3xl lg:rounded-tl-45 pt-2.5 pl-2.5 lg:pt-4 lg:pl-4"
+                >
+                  <img
+                    src="./assets/svgs/arrow-catalog-1.svg"
+                    alt="Arrow"
+                    class="size-6 sm:size-8 lg:size-14 group-hover:-rotate-45 transition-all duration-200"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Game Name -->
+            <p
+              class="group-hover:text-brand-purple transition-all duration-200"
+            >
+              Zenless Zone Zero
+            </p>
+          </a>
+          <!-- Catalog Item 2 -->
+          <a href="#" class="group space-y-2.5">
+            <div class="relative">
+              <div class="h-[150px] xs:h-auto xs:max-h-none xs:aspect-video">
+                <!-- Discount -->
+                <div
+                  class="size-12 md:size-14 lg:size-24 absolute top-0 left-0 z-10 shrink-0 grid place-content-center bg-white rounded-br-30 lg:rounded-br-45"
+                >
+                  <span
+                    class="text-trsprt-catalog-2 block font-bold text-lg lg:text-[40px] leading-normal font-oswald -rotate-45 bg-transparent text-white"
+                    >-25%</span
+                  >
+                </div>
+
+                <!-- Image -->
+                <div
+                  class="relative size-full border-3 border-brand-purple/40 rounded-20 xs:rounded-br-none rounded-tr-20 rounded-bl-20 lg:rounded-tr-45 lg:rounded-bl-45 overflow-hidden after:absolute after:inset-0 after:size-full after:bg-brand-purple/30"
+                >
+                  <img
+                    src="./assets/images/catalog-2.jpg"
+                    alt="Game Image"
+                    class="size-full object-cover"
+                  />
+                </div>
+
+                <!-- Arrow Icon -->
+                <div
+                  class="absolute bottom-0 right-0 z-10 shrink-0 flex items-end justify-end bg-white rounded-tl-3xl lg:rounded-tl-45 pt-2.5 pl-2.5 lg:pt-4 lg:pl-4"
+                >
+                  <img
+                    src="./assets/svgs/arrow-catalog-2.svg"
+                    alt="Arrow"
+                    class="size-6 sm:size-8 lg:size-14 group-hover:-rotate-45 transition-all duration-200"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- Game Name -->
+            <p
+              class="group-hover:text-brand-purple transition-all duration-200"
+            >
+              Honkai: Star Rail
+            </p>
+          </a>
+          <!-- Catalog Item 3 -->
+          <a href="#" class="group space-y-2.5">
+            <div class="relative">
+              <div class="h-[150px] xs:h-auto xs:max-h-none xs:aspect-video">
+                <!-- Discount -->
+                <div
+                  class="size-12 md:size-14 lg:size-24 absolute top-0 left-0 z-10 shrink-0 grid place-content-center bg-white rounded-br-30 lg:rounded-br-45"
+                >
+                  <span
+                    class="text-trsprt-catalog-3 block font-bold text-lg lg:text-[40px] leading-normal font-oswald -rotate-45 bg-transparent text-white"
+                    >-30%</span
+                  >
+                </div>
+
+                <!-- Image -->
+                <div
+                  class="relative size-full border-3 border-brand-purple/40 rounded-20 xs:rounded-br-none rounded-tr-20 rounded-bl-20 lg:rounded-tr-45 lg:rounded-bl-45 overflow-hidden after:absolute after:inset-0 after:size-full after:bg-brand-purple/30"
+                >
+                  <img
+                    src="./assets/images/catalog-3.jpg"
+                    alt="Game Image"
+                    class="size-full object-cover"
+                  />
+                </div>
+
+                <!-- Arrow Icon -->
+                <div
+                  class="absolute bottom-0 right-0 z-10 shrink-0 flex items-end justify-end bg-white rounded-tl-3xl lg:rounded-tl-45 pt-2.5 pl-2.5 lg:pt-4 lg:pl-4"
+                >
+                  <img
+                    src="./assets/svgs/arrow-catalog-4.svg"
+                    alt="Arrow"
+                    class="size-6 sm:size-8 lg:size-14 group-hover:-rotate-45 transition-all duration-200"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Game Name -->
+            <p
+              class="group-hover:text-brand-purple transition-all duration-200"
+            >
+              Genshin Impact
+            </p>
+          </a>
+          <!-- Catalog Item 4 -->
+          <a href="#" class="group space-y-2.5">
+            <div class="relative">
+              <div class="h-[150px] xs:h-auto xs:max-h-none xs:aspect-video">
+                <!-- Discount -->
+                <div
+                  class="size-12 md:size-14 lg:size-24 absolute top-0 left-0 z-10 shrink-0 grid place-content-center bg-white rounded-br-30 lg:rounded-br-45"
+                >
+                  <span
+                    class="text-trsprt-catalog-4 block font-bold text-lg lg:text-[40px] leading-normal font-oswald -rotate-45 bg-transparent text-white"
+                    >-20%</span
+                  >
+                </div>
+
+                <!-- Image -->
+                <div
+                  class="relative size-full border-3 border-brand-purple/40 rounded-20 xs:rounded-br-none rounded-tr-20 rounded-bl-20 lg:rounded-tr-45 lg:rounded-bl-45 overflow-hidden after:absolute after:inset-0 after:size-full after:bg-brand-purple/30"
+                >
+                  <img
+                    src="./assets/images/catalog-4.jpg"
+                    alt="Game Image"
+                    class="size-full object-cover"
+                  />
+                </div>
+
+                <!-- Arrow Icon -->
+                <div
+                  class="absolute bottom-0 right-0 z-10 shrink-0 flex items-end justify-end bg-white rounded-tl-3xl lg:rounded-tl-45 pt-2.5 pl-2.5 lg:pt-4 lg:pl-4"
+                >
+                  <img
+                    src="./assets/svgs/arrow-catalog-4.svg"
+                    alt="Arrow"
+                    class="size-6 sm:size-8 lg:size-14 group-hover:-rotate-45 transition-all duration-200"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- Game Name -->
+            <p
+              class="group-hover:text-brand-purple transition-all duration-200 mt-2.5"
+            >
+              Arena Breakout
+            </p>
+          </a>
+          <!-- Catalog Item 5 -->
+          <a href="#" class="group space-y-2.5">
+            <div class="relative">
+              <div class="h-[150px] xs:h-auto xs:max-h-none xs:aspect-video">
+                <!-- Discount -->
+                <div
+                  class="size-12 md:size-14 lg:size-24 absolute top-0 left-0 z-10 shrink-0 grid place-content-center bg-white rounded-br-30 lg:rounded-br-45"
+                >
+                  <span
+                    class="text-trsprt-catalog-5 block font-bold text-lg lg:text-[40px] leading-normal font-oswald -rotate-45 bg-transparent text-white"
+                    >-3%</span
+                  >
+                </div>
+                <!-- Image -->
+                <div
+                  class="relative size-full border-3 border-brand-purple/40 rounded-20 xs:rounded-br-none rounded-tr-20 rounded-bl-20 lg:rounded-tr-45 lg:rounded-bl-45 overflow-hidden after:absolute after:inset-0 after:size-full after:bg-brand-purple/30"
+                >
+                  <img
+                    src="./assets/images/catalog-5.jpg"
+                    alt="Game Image"
+                    class="size-full object-cover"
+                  />
+                </div>
+
+                <!-- Arrow Icon -->
+                <div
+                  class="absolute bottom-0 right-0 z-10 shrink-0 flex items-end justify-end bg-white rounded-tl-3xl lg:rounded-tl-45 pt-2.5 pl-2.5 lg:pt-4 lg:pl-4"
+                >
+                  <img
+                    src="./assets/svgs/arrow-catalog-5.svg"
+                    alt="Arrow"
+                    class="size-6 sm:size-8 lg:size-14 group-hover:-rotate-45 transition-all duration-200"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- Game Name -->
+            <p
+              class="group-hover:text-brand-purple transition-all duration-200 mt-2.5"
+            >
+              PUBG MOBILE
+            </p>
+          </a>
+          <!-- Catalog Item 6 -->
+          <a href="#" class="group space-y-2.5">
+            <div class="relative">
+              <div class="h-[150px] xs:h-auto xs:max-h-none xs:aspect-video">
+                <!-- Discount -->
+                <div
+                  class="size-12 md:size-14 lg:size-24 absolute top-0 left-0 z-10 shrink-0 grid place-content-center bg-white rounded-br-30 lg:rounded-br-45"
+                >
+                  <span
+                    class="text-trsprt-catalog-2 block font-bold text-lg lg:text-[40px] leading-normal font-oswald -rotate-45 bg-transparent text-white"
+                    >-19%</span
+                  >
+                </div>
+
+                <!-- Image -->
+                <div
+                  class="relative size-full border-3 border-brand-purple/40 rounded-20 xs:rounded-br-none rounded-tr-20 rounded-bl-20 lg:rounded-tr-45 lg:rounded-bl-45 overflow-hidden after:absolute after:inset-0 after:size-full after:bg-brand-purple/30"
+                >
+                  <img
+                    src="./assets/images/catalog-6.jpg"
+                    alt="Game Image"
+                    class="size-full object-cover"
+                  />
+                </div>
+
+                <!-- Arrow Icon -->
+                <div
+                  class="absolute bottom-0 right-0 z-10 shrink-0 flex items-end justify-end bg-white rounded-tl-3xl lg:rounded-tl-45 pt-2.5 pl-2.5 lg:pt-4 lg:pl-4"
+                >
+                  <img
+                    src="./assets/svgs/arrow-catalog-6.svg"
+                    alt="Arrow"
+                    class="size-6 sm:size-8 lg:size-14 group-hover:-rotate-45 transition-all duration-200"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- Game Name -->
+            <p
+              class="group-hover:text-brand-purple transition-all duration-200 mt-2.5"
+            >
+              Tower of Fantasy
+            </p>
+          </a>
+          <!-- Catalog Item 7 -->
+          <a href="#" class="group space-y-2.5">
+            <div class="relative">
+              <div class="h-[150px] xs:h-auto xs:max-h-none xs:aspect-video">
+                <!-- Discount -->
+                <!-- <div
+                class="size-12 md:size-14 lg:size-24 absolute top-0 left-0 z-10 shrink-0 grid place-content-center bg-white rounded-br-30 lg:rounded-br-45"
+              >
+                <span
+                  class="text-trsprt-catalog-3 block font-bold text-lg lg:text-[40px] leading-normal font-oswald -rotate-45 bg-transparent text-white"
+                  >-30%</span
+                >
+              </div> -->
+
+                <!-- Image -->
+                <div
+                  class="relative size-full border-3 border-brand-purple/40 rounded-20 xs:rounded-br-none rounded-tr-20 rounded-tl-20 rounded-bl-20 lg:rounded-tr-45 lg:rounded-tl-45 lg:rounded-bl-45 overflow-hidden after:absolute after:inset-0 after:size-full after:bg-brand-purple/30"
+                >
+                  <img
+                    src="./assets/images/catalog-7.jpg"
+                    alt="Game Image"
+                    class="size-full object-cover"
+                  />
+                </div>
+
+                <!-- Arrow Icon -->
+                <div
+                  class="absolute bottom-0 right-0 z-10 shrink-0 flex items-end justify-end bg-white rounded-tl-3xl lg:rounded-tl-45 pt-2.5 pl-2.5 lg:pt-4 lg:pl-4"
+                >
+                  <img
+                    src="./assets/svgs/arrow-catalog-7.svg"
+                    alt="Arrow"
+                    class="size-6 sm:size-8 lg:size-14 group-hover:-rotate-45 transition-all duration-200"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- Game Name -->
+            <p
+              class="group-hover:text-brand-purple transition-all duration-200 mt-2.5"
+            >
+              Goddess of Victory: Nikke
+            </p>
+          </a>
+          <!-- Catalog Item 8 -->
+          <a href="#" class="group space-y-2.5">
+            <div class="relative">
+              <div class="h-[150px] xs:h-auto xs:max-h-none xs:aspect-video">
+                <!-- Discount -->
+                <!-- <div
+                class="size-12 md:size-14 lg:size-24 absolute top-0 left-0 z-10 shrink-0 grid place-content-center bg-white rounded-br-30 lg:rounded-br-45"
+              >
+                <span
+                  class="text-trsprt-catalog-4 block font-bold text-lg lg:text-[40px] leading-normal font-oswald -rotate-45 bg-transparent text-white"
+                  >-20%</span
+                >
+              </div> -->
+
+                <!-- Image -->
+                <div
+                  class="relative size-full border-3 border-brand-purple/40 rounded-20 xs:rounded-br-none rounded-tr-20 rounded-tl-20 rounded-bl-20 lg:rounded-tr-45 lg:rounded-tl-45 lg:rounded-bl-45 overflow-hidden after:absolute after:inset-0 after:size-full after:bg-brand-purple/30"
+                >
+                  <img
+                    src="./assets/images/catalog-3.jpg"
+                    alt="Game Image"
+                    class="size-full object-cover"
+                  />
+                </div>
+
+                <!-- Arrow Icon -->
+                <div
+                  class="absolute bottom-0 right-0 z-10 shrink-0 flex items-end justify-end bg-white rounded-tl-3xl lg:rounded-tl-45 pt-2.5 pl-2.5 lg:pt-4 lg:pl-4"
+                >
+                  <img
+                    src="./assets/svgs/arrow-catalog-8.svg"
+                    alt="Arrow"
+                    class="size-6 sm:size-8 lg:size-14 group-hover:-rotate-45 transition-all duration-200"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- Game Name -->
+            <p
+              class="group-hover:text-brand-purple transition-all duration-200 mt-2.5"
+            >
+              Arena Breakout
+            </p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div
+        class="max-w-base mx-auto relative flex flex-col md:flex-row justify-between gap-6 pt-20 lg:pt-40 pb-10 px-2.5 md:px-12 lg:px-2.5"
+      >
+        <!-- Logo -->
+        <a
+          href="./index.html"
+          class="inline-block w-[85px] h-10 xs:w-14 xs:h-8 sm:w-[118px] sm:h-14 overflow-hidden shrink-0"
+        >
+          <img
+            src="./assets/svgs/logo-footer.svg"
+            alt="LOGO"
+            class="size-full"
+          />
+        </a>
+
+        <!-- Links -->
+        <div
+          class="flex lg:mx-auto gap-12 xs:gap-20 sm:gap-32 lg:gap-[180px] text-[10px] lg:text-xs font-extrabold uppercase text-black/40 tracking-[0.6px]"
+        >
+          <ul class="space-y-3.5 lg:space-y-5">
+            <li>
+              <a
+                href="#"
+                class="hover:text-brand-purple transition-all duration-300"
+                >Продукты</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-brand-purple transition-all duration-300"
+                >Бонусы</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-brand-purple transition-all duration-300"
+                >Гайды</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-brand-purple transition-all duration-300"
+                >О нас</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-brand-purple transition-all duration-300"
+                >Контакты</a
+              >
+            </li>
+          </ul>
+          <ul class="space-y-3.5 lg:space-y-5">
+            <li>
+              <a
+                href="#"
+                class="hover:text-brand-purple transition-all duration-300"
+                >Поддержка</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-brand-purple transition-all duration-300"
+                >Политика конфиденциальности</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-brand-purple transition-all duration-300"
+                >Политика конфиденциальности</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-brand-purple transition-all duration-300"
+                >Правила поведения</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <img
+          src="./assets/images/footer.png"
+          alt="Image"
+          class="absolute bottom-0 right-0 hidden lg:block"
+        />
+
+        <!-- Mobile Image -->
+        <img
+          src="./assets/images/footer-mobile.png"
+          alt="Image"
+          class="absolute bottom-0 right-0 lg:hidden"
+        />
+      </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
