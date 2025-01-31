@@ -177,3 +177,46 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// User ID Poppup
+const userIdPoppup = document.getElementById("user-id-poppup");
+const userIdOpenBtn = document.getElementById("user-id-open-btn");
+const userIdCloseBtn = document.getElementById("user-id-close-btn");
+
+userIdOpenBtn.addEventListener("click", function () {
+  userIdPoppup.classList.remove("hidden");
+  document.body.classList.add("overflow-hidden");
+});
+
+userIdCloseBtn.addEventListener("click", function () {
+  userIdPoppup.classList.add("hidden");
+  document.body.classList.remove("overflow-hidden");
+});
+
+// Product Poppup
+const productPoppup = document.getElementById("product-poppup");
+const productOpenBtns = document.querySelectorAll(".product-open-btn");
+const productCloseBtns = document.querySelectorAll(".product-close-btn");
+
+productOpenBtns.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    productPoppup.classList.remove("hidden");
+    document.body.classList.add("overflow-hidden");
+  });
+});
+
+productCloseBtns.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    productPoppup.classList.add("hidden");
+    document.body.classList.remove("overflow-hidden");
+  });
+});
+
+// Mobile Menu
+const mobMenu = document.getElementById("mobile-menu");
+const mobMenuBtn = document.getElementById("mobile-menu-btn");
+
+mobMenuBtn.addEventListener("click", function () {
+  mobMenu.classList.remove("-translate-x-full");
+  document.body.classList.add("overflow-hidden");
+});

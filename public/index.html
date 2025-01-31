@@ -15,7 +15,7 @@
     <!-- HEADER -->
     <header>
       <nav
-        class="max-w-base mx-auto flex items-start justify-b etween pb-3.5 pt-3 sm:py-5 px-2.5 md:px-12 xl:px-2.5"
+        class="max-w-base mx-auto flex items-start justify-between pb-3.5 pt-3 sm:py-5 px-2.5 md:px-12 xl:px-2.5"
       >
         <!-- Logo -->
         <div
@@ -65,24 +65,25 @@
           <!-- Cart & Lang -->
           <div class="flex items-center gap-6">
             <!-- Cart -->
-            <div>
-              <button class="flex items-center gap-1">
-                <img src="./assets/svgs/cart.svg" alt="Cart Icon" />
-                <span>2</span>
-              </button>
-            </div>
 
-            <!-- Lang -->
-            <div>
-              <button class="flex items-center gap-1">
+            <button class="flex items-center gap-1">
+              <img src="./assets/svgs/cart.svg" alt="Cart Icon" />
+              <span>2</span>
+            </button>
+
+            <!-- Lang Select Container -->
+            <div class="w-20 relative select space-y-2.5">
+              <!-- Select Button -->
+              <button class="select-button flex items-center gap-1">
                 <img src="./assets/svgs/globe.svg" alt="Cart Icon" />
-                <span>RU</span>
+                <span class="select-label uppercase">RU</span>
                 <svg
                   width="9"
                   height="6"
                   viewBox="0 0 9 6"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  class="select-icon"
                 >
                   <path
                     d="M5.30314 5.14892L8.59033 1.86173C8.86963 1.58243 8.86963 1.13124 8.59033 0.851941C8.31102 0.572637 7.85984 0.572637 7.58054 0.851941L4.79466 3.63065L2.01595 0.85194C1.73664 0.572637 1.28546 0.572637 1.00616 0.85194C0.726854 1.13124 0.726854 1.58243 1.00616 1.86173L4.29335 5.14892C4.56549 5.42822 5.02383 5.42822 5.30314 5.14892Z"
@@ -91,6 +92,30 @@
                   />
                 </svg>
               </button>
+
+              <!-- Select List -->
+              <ul
+                class="select-list fade-in w-full absolute bg-white rounded-10 font-mulish hidden z-10 shadow-lg"
+              >
+                <li
+                  class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
+                  data-value="ru"
+                >
+                  ru
+                </li>
+                <li
+                  class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
+                  data-value="eng"
+                >
+                  eng
+                </li>
+                <li
+                  class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
+                  data-value="chn"
+                >
+                  chn
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -99,7 +124,7 @@
         <div
           class="lg:hidden relative z-50 bg-white rounded-bl-20 sm:rounded-bl-[32px] lg:rounded-bl-[45px] mt-2 sm:mt-0 pb-2 pl-5 sm:pt-3 sm:pb-5"
         >
-          <button>
+          <button id="mobile-menu-btn">
             <img
               src="./assets/svgs/hamburger.svg"
               alt="hamburger icon"
@@ -108,6 +133,371 @@
           </button>
         </div>
       </nav>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="fixed inset-0 z-[80] size-full -translate-x-full transition-all duration-200 lg:hidden bg-white pt-5 pb-8 px-2.5"
+      >
+        <!-- Header -->
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <a href="/">
+            <img src="./assets/svgs/logo-mob-menu.svg" alt="Logo" />
+          </a>
+
+          <!-- Cart & Close Btn -->
+          <div class="flex items-center gap-7">
+            <!-- Cart -->
+            <button class="flex items-center gap-1">
+              <img src="./assets/svgs/cart.svg" alt="Cart Icon" />
+              <span class="text-xs font-extrabold text-black/40">1</span>
+            </button>
+
+            <!-- Close Btn -->
+            <button>
+              <img src="./assets/svgs/mob-menu-close.svg" alt="X icon" />
+            </button>
+          </div>
+        </div>
+
+        <!-- Body -->
+        <div class="space-y-14 mt-10">
+          <!-- Links & Catalog -->
+          <div class="flex justify-between">
+            <!-- Links -->
+            <ul
+              class="space-y-5 uppercase font-extrabold text-black/40 text-sm"
+            >
+              <li>
+                <a href="#">все игры</a>
+              </li>
+              <li>
+                <a href="#">О нас</a>
+              </li>
+              <li>
+                <a href="#">FAQ</a>
+              </li>
+              <li>
+                <a href="#">ПОДДЕРЖКА</a>
+              </li>
+              <li>
+                <!-- Lang Select Container -->
+                <div class="w-20 relative select space-y-2.5">
+                  <!-- Select Button -->
+                  <button class="select-button flex items-center gap-1">
+                    <span class="select-label uppercase">RU</span>
+                    <svg
+                      width="9"
+                      height="6"
+                      viewBox="0 0 9 6"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="select-icon"
+                    >
+                      <path
+                        d="M5.30314 5.14892L8.59033 1.86173C8.86963 1.58243 8.86963 1.13124 8.59033 0.851941C8.31102 0.572637 7.85984 0.572637 7.58054 0.851941L4.79466 3.63065L2.01595 0.85194C1.73664 0.572637 1.28546 0.572637 1.00616 0.85194C0.726854 1.13124 0.726854 1.58243 1.00616 1.86173L4.29335 5.14892C4.56549 5.42822 5.02383 5.42822 5.30314 5.14892Z"
+                        fill="black"
+                        fill-opacity="0.4"
+                      />
+                    </svg>
+                  </button>
+
+                  <!-- Select List -->
+                  <ul
+                    class="select-list fade-in w-full absolute bg-white rounded-10 font-mulish hidden z-10 shadow-lg"
+                  >
+                    <li
+                      class="flex items-center gap-2 text-black/80 hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
+                      data-value="ru"
+                    >
+                      <button class="uppercase">ru</button>
+                    </li>
+                    <li
+                      class="flex items-center gap-2 text-black/80 hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
+                      data-value="eng"
+                    >
+                      <button class="uppercase">eng</button>
+                    </li>
+                    <li
+                      class="flex items-center gap-2 text-black/80 hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
+                      data-value="chn"
+                    >
+                      <button class="uppercase">chn</button>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Catalog -->
+            <div class="relative max-h-fit">
+              <!-- Top Icon -->
+              <svg
+                width="13"
+                height="8"
+                viewBox="0 0 13 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="absolute left-1/2 -translate-x-1/2 -top-5"
+              >
+                <path
+                  d="M12.265 7.74012C12.5917 7.39479 12.5917 6.83803 12.265 6.4927L6.725 0.636192C6.465 0.361338 6.045 0.361338 5.785 0.636192L0.245 6.4927C-0.0816665 6.83803 -0.0816666 7.39479 0.245 7.74012C0.571667 8.08544 1.09833 8.08544 1.425 7.74012L6.25833 2.63769L11.0917 7.74716C11.4117 8.08545 11.945 8.08545 12.265 7.74012Z"
+                  fill="black"
+                  fill-opacity="0.2"
+                />
+              </svg>
+
+              <!-- Catalog -->
+              <ul
+                class="custom-scroll max-h-screen space-y-3.5 text-sm font-extrabold text-black/60 overflow-y-auto pr-5"
+              >
+                <!-- Catalog Item 1 -->
+                <li>
+                  <a
+                    href="#"
+                    class="h-12 max-w-[207px] gap-6 flex items-center justify-between border-[1.5px] border-black/20 rounded-10 px-2.5"
+                  >
+                    <span class="max-w-36">Zenless Zone Zero</span>
+                    <div
+                      class="size-9 relative shrink-0 bg-brand-purple/5 border-2 border-brand-purple/40 rounded-full overflow-hidden after:absolute after:inset-0 after:bg-brand-purple/20"
+                    >
+                      <img
+                        src="./assets/images/catalog-1.jpg"
+                        alt="Image"
+                        class="size-full object-cover"
+                      />
+                    </div>
+                  </a>
+                </li>
+                <!-- Catalog Item 2 -->
+                <li>
+                  <a
+                    href="#"
+                    class="h-12 max-w-[207px] gap-6 flex items-center justify-between border-[1.5px] border-black/20 rounded-10 px-2.5"
+                  >
+                    <span class="max-w-36">Honkai: Star Rail</span>
+                    <div
+                      class="size-9 relative shrink-0 bg-brand-purple/5 border-2 border-brand-purple/40 rounded-full overflow-hidden after:absolute after:inset-0 after:bg-brand-purple/20"
+                    >
+                      <img
+                        src="./assets/images/catalog-2.jpg"
+                        alt="Image"
+                        class="size-full object-cover"
+                      />
+                    </div>
+                  </a>
+                </li>
+                <!-- Catalog Item 3 -->
+                <li>
+                  <a
+                    href="#"
+                    class="h-12 max-w-[207px] gap-6 flex items-center justify-between border-[1.5px] border-black/20 rounded-10 px-2.5"
+                  >
+                    <span class="max-w-36">Genshin Impact</span>
+                    <div
+                      class="size-9 relative shrink-0 bg-brand-purple/5 border-2 border-brand-purple/40 rounded-full overflow-hidden after:absolute after:inset-0 after:bg-brand-purple/20"
+                    >
+                      <img
+                        src="./assets/images/catalog-3.jpg"
+                        alt="Image"
+                        class="size-full object-cover"
+                      />
+                    </div>
+                  </a>
+                </li>
+                <!-- Catalog Item 4 -->
+                <li>
+                  <a
+                    href="#"
+                    class="h-12 max-w-[207px] gap-6 flex items-center justify-between border-[1.5px] border-black/20 rounded-10 px-2.5"
+                  >
+                    <span class="max-w-36">Arena Breakout</span>
+                    <div
+                      class="size-9 relative shrink-0 bg-brand-purple/5 border-2 border-brand-purple/40 rounded-full overflow-hidden after:absolute after:inset-0 after:bg-brand-purple/20"
+                    >
+                      <img
+                        src="./assets/images/catalog-4.jpg"
+                        alt="Image"
+                        class="size-full object-cover"
+                      />
+                    </div>
+                  </a>
+                </li>
+                <!-- Catalog Item 5 -->
+                <li>
+                  <a
+                    href="#"
+                    class="h-12 max-w-[207px] gap-6 flex items-center justify-between border-[1.5px] border-black/20 rounded-10 px-2.5"
+                  >
+                    <span class="max-w-36">PUBG MOBILE</span>
+                    <div
+                      class="size-9 relative shrink-0 bg-brand-purple/5 border-2 border-brand-purple/40 rounded-full overflow-hidden after:absolute after:inset-0 after:bg-brand-purple/20"
+                    >
+                      <img
+                        src="./assets/images/catalog-5.jpg"
+                        alt="Image"
+                        class="size-full object-cover"
+                      />
+                    </div>
+                  </a>
+                </li>
+                <!-- Catalog Item 6 -->
+                <li>
+                  <a
+                    href="#"
+                    class="h-12 max-w-[207px] gap-6 flex items-center justify-between border-[1.5px] border-black/20 rounded-10 px-2.5"
+                  >
+                    <span class="max-w-36">Tower of Fantasy</span>
+                    <div
+                      class="size-9 relative shrink-0 bg-brand-purple/5 border-2 border-brand-purple/40 rounded-full overflow-hidden after:absolute after:inset-0 after:bg-brand-purple/20"
+                    >
+                      <img
+                        src="./assets/images/catalog-6.jpg"
+                        alt="Image"
+                        class="size-full object-cover"
+                      />
+                    </div>
+                  </a>
+                </li>
+                <!-- Catalog Item 7 -->
+                <li>
+                  <a
+                    href="#"
+                    class="h-12 max-w-[207px] gap-6 flex items-center justify-between border-[1.5px] border-black/20 rounded-10 px-2.5"
+                  >
+                    <span class="max-w-36">Goddess of Victory: Nikke</span>
+                    <div
+                      class="size-9 relative shrink-0 bg-brand-purple/5 border-2 border-brand-purple/40 rounded-full overflow-hidden after:absolute after:inset-0 after:bg-brand-purple/20"
+                    >
+                      <img
+                        src="./assets/images/catalog-7.jpg"
+                        alt="Image"
+                        class="size-full object-cover"
+                      />
+                    </div>
+                  </a>
+                </li>
+                <!-- Catalog Item 8 -->
+                <li>
+                  <a
+                    href="#"
+                    class="h-12 max-w-[207px] gap-6 flex items-center justify-between border-[1.5px] border-black/20 rounded-10 px-2.5"
+                  >
+                    <span class="max-w-36">Mobile Legends (Global)</span>
+                    <div
+                      class="size-9 relative shrink-0 bg-brand-purple/5 border-2 border-brand-purple/40 rounded-full overflow-hidden after:absolute after:inset-0 after:bg-brand-purple/20"
+                    >
+                      <img
+                        src="./assets/images/catalog-8.jpg"
+                        alt="Image"
+                        class="size-full object-cover"
+                      />
+                    </div>
+                  </a>
+                </li>
+                <!-- Catalog Item 9 -->
+                <li>
+                  <a
+                    href="#"
+                    class="h-12 max-w-[207px] gap-6 flex items-center justify-between border-[1.5px] border-black/20 rounded-10 px-2.5"
+                  >
+                    <span class="max-w-36 opacity-30"
+                      >Mobile Legends (Global)</span
+                    >
+                    <div
+                      class="size-9 relative shrink-0 bg-brand-purple/5 border-2 border-brand-purple/40 rounded-full overflow-hidden after:absolute after:inset-0 after:bg-brand-purple/20"
+                    >
+                      <!-- <img
+                        src="./assets/images/catalog-8.jpg"
+                        alt="Image"
+                        class="size-full object-cover"
+                      /> -->
+                    </div>
+                  </a>
+                </li>
+                <!-- Catalog Item 10 -->
+                <li>
+                  <a
+                    href="#"
+                    class="h-12 max-w-[207px] gap-6 flex items-center justify-between border-[1.5px] border-black/20 rounded-10 px-2.5"
+                  >
+                    <span class="max-w-36 opacity-30"
+                      >Mobile Legends (Global)</span
+                    >
+                    <div
+                      class="size-9 relative shrink-0 bg-brand-purple/5 border-2 border-brand-purple/40 rounded-full overflow-hidden after:absolute after:inset-0 after:bg-brand-purple/20"
+                    >
+                      <!-- <img
+                        src="./assets/images/catalog-8.jpg"
+                        alt="Image"
+                        class="size-full object-cover"
+                      /> -->
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Bottom Icon -->
+              <svg
+                width="13"
+                height="8"
+                viewBox="0 0 13 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="absolute left-1/2 -translate-x-1/2 bottom-5"
+              >
+                <path
+                  d="M0.735002 0.259884C0.408335 0.605214 0.408335 1.16197 0.735001 1.5073L6.275 7.36381C6.535 7.63866 6.955 7.63866 7.215 7.36381L12.755 1.5073C13.0817 1.16197 13.0817 0.605215 12.755 0.259885C12.4283 -0.0854447 11.9017 -0.0854447 11.575 0.259885L6.74167 5.36231L1.90833 0.252837C1.58833 -0.0854453 1.055 -0.0854453 0.735002 0.259884Z"
+                  fill="black"
+                  fill-opacity="0.6"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Socials -->
+          <ul class="flex items-center justify-end gap-6 pr-8">
+            <li>
+              <a href="#">
+                <img
+                  src="./assets/svgs/message.svg"
+                  alt="Icon"
+                  class="size-9"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="./assets/svgs/message-2.svg"
+                  alt="Icon"
+                  class="size-9"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./assets/svgs/vk.svg" alt="Icon" class="size-9" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="./assets/svgs/telegram.svg"
+                  alt="Icon"
+                  class="size-9"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./assets/svgs/tel.svg" alt="Icon" class="size-9" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
 
     <!-- Socials -->
@@ -155,7 +545,7 @@
             <img
               src="./assets/bg-images/hero-left.png"
               alt="Bg img"
-              class="hidden sm:block absolute inset-0 size-full -scale-x-[1] w-[15s0%] rounded-45"
+              class="hidden sm:block absolute inset-0 size-full -scale-x-[1] w-[150%] rounded-45"
             />
 
             <!-- BG Mobile -->
@@ -782,8 +1172,9 @@
           class="max-w-base mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-2.5 sm:gap-5 pt-5 px-2.5 md:px-12 xl:px-2.5"
         >
           <!-- Product 1 -->
-          <div
-            class="relative sm:rounded-30 overflow-hidden px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
+          <a
+            href="#"
+            class="relative rounded-20 sm:rounded-30 overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-200 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
           >
             <!-- BG Image -->
             <img
@@ -837,10 +1228,11 @@
                 </svg>
               </button>
             </div>
-          </div>
+          </a>
           <!-- Product 2 -->
-          <div
-            class="relative sm:rounded-30 overflow-hidden px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
+          <a
+            href="#"
+            class="relative rounded-20 sm:rounded-30 overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-200 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
           >
             <!-- BG Image -->
             <img
@@ -894,10 +1286,11 @@
                 </svg>
               </button>
             </div>
-          </div>
+          </a>
           <!-- Product 3 -->
-          <div
-            class="relative rounded-20 sm:rounded-30 overflow-hidden px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
+          <a
+            href="#"
+            class="relative rounded-20 sm:rounded-30 overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-200 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
           >
             <!-- BG Image -->
             <img
@@ -951,10 +1344,11 @@
                 </svg>
               </button>
             </div>
-          </div>
+          </a>
           <!-- Product 4 -->
-          <div
-            class="relative sm:rounded-30 overflow-hidden px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
+          <a
+            href="#"
+            class="relative rounded-20 sm:rounded-30 overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-200 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
           >
             <!-- BG Image -->
             <img
@@ -1008,10 +1402,11 @@
                 </svg>
               </button>
             </div>
-          </div>
+          </a>
           <!-- Product 5 -->
-          <div
-            class="relative sm:rounded-30 overflow-hidden px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
+          <a
+            href="#"
+            class="relative rounded-20 sm:rounded-30 overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-200 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
           >
             <!-- BG Image -->
             <img
@@ -1065,10 +1460,11 @@
                 </svg>
               </button>
             </div>
-          </div>
+          </a>
           <!-- Product 6 -->
-          <div
-            class="relative sm:rounded-30 overflow-hidden px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
+          <a
+            href="#"
+            class="relative rounded-20 sm:rounded-30 overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-200 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
           >
             <!-- BG Image -->
             <img
@@ -1122,10 +1518,11 @@
                 </svg>
               </button>
             </div>
-          </div>
+          </a>
           <!-- Product 7 -->
-          <div
-            class="relative sm:rounded-30 overflow-hidden px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
+          <a
+            href="#"
+            class="relative rounded-20 sm:rounded-30 overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-200 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
           >
             <!-- BG Image -->
             <img
@@ -1179,10 +1576,11 @@
                 </svg>
               </button>
             </div>
-          </div>
+          </a>
           <!-- Product 8 -->
-          <div
-            class="relative sm:rounded-30 overflow-hidden px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
+          <a
+            href="#"
+            class="relative rounded-20 sm:rounded-30 overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-200 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
           >
             <!-- BG Image -->
             <img
@@ -1236,10 +1634,11 @@
                 </svg>
               </button>
             </div>
-          </div>
+          </a>
           <!-- Product 9 -->
-          <div
-            class="relative sm:rounded-30 overflow-hidden px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
+          <a
+            href="#"
+            class="relative rounded-20 sm:rounded-30 overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-200 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
           >
             <!-- BG Image -->
             <img
@@ -1293,10 +1692,11 @@
                 </svg>
               </button>
             </div>
-          </div>
+          </a>
           <!-- Product 10 -->
-          <div
-            class="relative sm:rounded-30 overflow-hidden px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
+          <a
+            href="#"
+            class="relative rounded-20 sm:rounded-30 overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-200 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
           >
             <!-- BG Image -->
             <img
@@ -1350,10 +1750,11 @@
                 </svg>
               </button>
             </div>
-          </div>
+          </a>
           <!-- Product 11 -->
-          <div
-            class="relative sm:rounded-30 overflow-hidden px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
+          <a
+            href="#"
+            class="relative rounded-20 sm:rounded-30 overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-200 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
           >
             <!-- BG Image -->
             <img
@@ -1407,17 +1808,17 @@
                 </svg>
               </button>
             </div>
-          </div>
+          </a>
         </div>
 
         <a
           href="#"
-          class="w-fit h-[74px] relative mx-auto hidden lg:block font-mulish font-extrabold uppercase text-white text-[17.5px] leading-6 mt-8 px-8"
+          class="block w-fit h-[74px] relative mx-auto hidden lg:block font-mulish font-extrabold uppercase text-white text-[17.5px] leading-6 hover:shadow-lg transition-all duration-200 rounded-30 mt-8 px-8"
         >
           <img
             src="./assets/bg-images/button.png"
             alt="button"
-            class="absolute inset-0 object-cover rounded-30"
+            class="absolute inset-0 object-cover"
           />
           <div
             class="relative flex flex-col items-center justify-center z-10 py-4"
@@ -1491,12 +1892,12 @@
                   </div>
                   <a
                     href="#"
-                    class="max-w-[150px] sm:max-w-[303px] mx-auto sm:mx-0 relative flex items-center justify-center uppercase text-white font-mulish font-extrabold text-sm lg:text-[26px] py-3 sm:py-3.5"
+                    class="block max-w-[150px] sm:max-w-[303px] mx-auto sm:mx-0 relative flex items-center justify-center uppercase text-white font-mulish font-extrabold text-sm lg:text-[26px] hover:shadow-lg transition-all duration-200 rounded-full overflow-hidden py-3 sm:py-3.5"
                   >
                     <img
                       src="./assets/bg-images/button.png"
                       alt="button"
-                      class="absolute inset-0 size-full object-cover rounded-full"
+                      class="absolute inset-0 size-full object-cover"
                     />
                     <span class="relative z-10">о нас</span></a
                   >
@@ -2443,12 +2844,12 @@
 
             <a
               href="#"
-              class="w-fit ml-auto relative flex items-center justify-center uppercase text-white font-mulish font-extrabold text-sm lg:text-[26px] mt-5 mr-2.5 md:mr-12 lg:mr-2.5 px-8 py-3 sm:py-3.5"
+              class="block w-fit ml-auto relative flex items-center justify-center uppercase text-white font-mulish font-extrabold text-sm lg:text-[26px] mt-5 mr-2.5 md:mr-12 lg:mr-2.5 rounded-full hover:shadow-lg transition-all duration-200 overflow-hidden px-8 py-3 sm:py-3.5"
             >
               <img
                 src="./assets/bg-images/button.png"
                 alt="button"
-                class="absolute inset-0 size-full object-cover rounded-full"
+                class="absolute inset-0 size-full object-cover"
               />
               <span class="relative z-10">Читать больше гайдов</span>
             </a>
@@ -2619,12 +3020,12 @@
 
                 <div class="flex justify-center sm:justify-start">
                   <button
-                    class="w-fit h-10 sm:h-14 relative flex items-center justify-center uppercase text-white font-mulish font-extrabold text-sm lg:text-[26px] mt-5 mr-2.5 md:mr-12 lg:mr-2.5 px-8 py-3 sm:py-3.5 sm:px-16"
+                    class="w-fit h-10 sm:h-14 relative flex items-center justify-center uppercase text-white font-mulish font-extrabold text-sm lg:text-[26px] mt-5 mr-2.5 md:mr-12 lg:mr-2.5 rounded-full overflow-hidden hover:shadow-lg transition-all duration-200 px-8 py-3 sm:py-3.5 sm:px-16"
                   >
                     <img
                       src="./assets/bg-images/button.png"
                       alt="button"
-                      class="absolute inset-0 size-full object-cover rounded-full"
+                      class="absolute inset-0 size-full object-cover"
                     />
                     <span class="relative z-10">отправить</span>
                   </button>
