@@ -745,6 +745,27 @@ p{
 .-top-\[3\%\]{
   top: -3%;
 }
+.left-\[15\%\]{
+  left: 15%;
+}
+.left-\[14\%\]{
+  left: 14%;
+}
+.left-\[40\%\]{
+  left: 40%;
+}
+.top-3{
+  top: 0.75rem;
+}
+.right-\[5\%\]{
+  right: 5%;
+}
+.-top-14{
+  top: -3.5rem;
+}
+.-right-3{
+  right: -0.75rem;
+}
 .z-10{
   z-index: 10;
 }
@@ -2537,6 +2558,14 @@ input[type="checkbox"]:checked + div .custom-check{
 
   .lg\:-top-\[10\%\]{
     top: -10%;
+  }
+
+  .lg\:-right-0{
+    right: -0px;
+  }
+
+  .lg\:right-0{
+    right: 0px;
   }
 
   .lg\:mx-auto{
