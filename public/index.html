@@ -121,23 +121,22 @@
         </div>
 
         <!-- Mobile Menu Btn -->
-        <div
-          class="lg:hidden relative z-50 bg-white rounded-bl-20 sm:rounded-bl-[32px] lg:rounded-bl-[45px] mt-2 sm:mt-0 pb-2 pl-5 sm:pt-3 sm:pb-5"
+        <button
+          id="mobile-menu-btn"
+          class="lg:hidden relative z-50 bg-white rounded-bl-20 sm:rounded-bl-[32px] lg:rounded-bl-[45px] mt-2 sm:mt-0 pb-4 pl-5 sm:pt-3 sm:pb-5"
         >
-          <button id="mobile-menu-btn">
-            <img
-              src="./assets/svgs/hamburger.svg"
-              alt="hamburger icon"
-              class="w-6"
-            />
-          </button>
-        </div>
+          <img
+            src="./assets/svgs/hamburger.svg"
+            alt="hamburger icon"
+            class="w-6"
+          />
+        </button>
       </nav>
 
       <!-- Mobile Menu -->
       <div
         id="mobile-menu"
-        class="fixed inset-0 z-[80] size-full -translate-x-full transition-all duration-200 lg:hidden bg-white pt-5 pb-8 px-2.5"
+        class="fixed inset-0 z-[80] size-full -translate-x-full transition-all duration-500 lg:hidden bg-white pt-5 pb-8 px-2.5"
       >
         <!-- Header -->
         <div class="flex items-center justify-between">
@@ -501,7 +500,7 @@
     </header>
 
     <!-- Socials -->
-    <ul class="fixed right-2 top-52 z-[70] space-y-2.5">
+    <ul class="fixed right-2 top-52 z-[70] space-y-2.5 hidden lg:block">
       <li>
         <a href="#">
           <img src="./assets/svgs/message.svg" alt="Icon" />
@@ -693,9 +692,9 @@
                   сейчас</span
                 >
                 <img
-                  src="./assets/svgs/rounded-arrow.svg"
+                  src="./assets/svgs/rounded-arrow.png"
                   alt="Arrow Icon"
-                  class="size-6 sm:size-auto shrink-0 group-hover:-rotate-45 transition-all duration-300"
+                  class="size-6 sm:size-14 shrink-0 group-hover:-rotate-45 transition-all duration-300"
                 />
               </button>
             </div>
@@ -741,9 +740,9 @@
                 class="group font-extrabold uppercase text-start text-sm sm:text-[28px] leading-5 sm:leading-8"
               >
                 <img
-                  src="./assets/svgs/rounded-arrow.svg"
+                  src="./assets/svgs/rounded-arrow.png"
                   alt="Arrow Icon"
-                  class="size-6 sm:size-auto shrink-0 group-hover:-rotate-45 transition-all duration-300"
+                  class="size-6 sm:size-14 shrink-0 group-hover:-rotate-45 transition-all duration-300"
                 />
               </button>
             </div>
@@ -1986,9 +1985,9 @@
                       больше</span
                     >
                     <img
-                      src="./assets/svgs/rounded-arrow.svg"
+                      src="./assets/svgs/rounded-arrow.png"
                       alt="Arrow Icon"
-                      class="size-6 sm:size-auto shrink-0 group-hover:-rotate-45 transition-all duration-300"
+                      class="size-6 sm:size-14 shrink-0 group-hover:-rotate-45 transition-all duration-300"
                     />
                   </button>
                 </div>
@@ -2738,7 +2737,7 @@
 
           <!-- Navigating Btns -->
           <div
-            class="w-full absolute bottom-10 flex items-center justify-between"
+            class="w-full absolute bottom-10 z-30 flex items-center justify-between"
           >
             <!-- Prev -->
             <button class="review-prev">

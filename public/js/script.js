@@ -14,7 +14,7 @@ var swiper = new Swiper(".reviews-swiper", {
     nextEl: ".review-next",
     prevEl: ".review-prev",
   },
-  slidesPerView: 4, // Default for larger screens
+  slidesPerView: 4,
   spaceBetween: 20,
   centeredSlides: true,
   loop: true,
@@ -37,10 +37,15 @@ var swiper = new Swiper(".reviews-swiper", {
     },
   },
   on: {
-    slideChangeTransitionEnd: () => updateSlideClasses(),
-    init: () => updateSlideClasses(),
+    init: function () {
+      setTimeout(updateSlideClasses, 100); // Delay to ensure Swiper initializes
+    },
+    slideChangeTransitionEnd: updateSlideClasses,
   },
 });
+
+// Force initial update after a slight delay to ensure Swiper is ready
+setTimeout(updateSlideClasses, 100);
 
 function updateSlideClasses() {
   const slides = swiper.slides;
@@ -50,13 +55,11 @@ function updateSlideClasses() {
   slides.forEach((slide, index) => {
     const reviewText = slide.querySelector(".review-text");
 
-    // Determine if the slide is the most centered (active)
     const isCurrent = index === swiper.activeIndex;
     const isAdjacent =
       index === (swiper.activeIndex - 1 + totalSlides) % totalSlides ||
       index === (swiper.activeIndex + 1) % totalSlides;
 
-    // Handle opacity: active and adjacent slides should be fully visible, others should be dimmed
     if (isCurrent || isAdjacent) {
       slide.classList.remove("opacity-50");
       slide.classList.add("opacity-100");
@@ -65,10 +68,8 @@ function updateSlideClasses() {
       slide.classList.remove("opacity-100");
     }
 
-    // Handle text size based on screen width
     if (reviewText) {
       if (screenWidth < 640) {
-        // Under 640px: Active slide `text-sm`, others `text-[10px]`
         if (isCurrent) {
           reviewText.classList.add("text-sm");
           reviewText.classList.remove("text-[10px]");
@@ -77,7 +78,6 @@ function updateSlideClasses() {
           reviewText.classList.remove("text-sm");
         }
       } else {
-        // Above 640px: Active slide `text-lg`, others `text-sm`
         if (isCurrent) {
           reviewText.classList.add("text-lg");
           reviewText.classList.remove("text-sm", "text-[10px]");
@@ -90,7 +90,6 @@ function updateSlideClasses() {
   });
 }
 
-// Reapply classes on window resize to handle screen size changes
 window.addEventListener("resize", updateSlideClasses);
 
 const accordionButtons = document.querySelectorAll(".faq-button");
@@ -111,7 +110,7 @@ accordionButtons.forEach((button) => {
         );
         faqContent.previousElementSibling
           .querySelector("img")
-          .classList.remove("rotate-180");
+          .classList.remove("rotate-45");
       }
     });
 
@@ -119,11 +118,11 @@ accordionButtons.forEach((button) => {
     if (isExpanded) {
       button.setAttribute("aria-expanded", "false");
       content.style.maxHeight = "0";
-      button.querySelector("img").classList.remove("rotate-180");
+      button.querySelector("img").classList.remove("rotate-45");
     } else {
       button.setAttribute("aria-expanded", "true");
       content.style.maxHeight = content.scrollHeight + "px";
-      button.querySelector("img").classList.add("rotate-180");
+      button.querySelector("img").classList.add("rotate-45");
     }
   });
 });
@@ -136,7 +135,7 @@ document.addEventListener("click", (e) => {
       faqContent.previousElementSibling.setAttribute("aria-expanded", "false");
       faqContent.previousElementSibling
         .querySelector("img")
-        .classList.remove("rotate-180");
+        .classList.remove("rotate-45");
     });
   }
 });
@@ -183,15 +182,19 @@ const userIdPoppup = document.getElementById("user-id-poppup");
 const userIdOpenBtn = document.getElementById("user-id-open-btn");
 const userIdCloseBtn = document.getElementById("user-id-close-btn");
 
-userIdOpenBtn.addEventListener("click", function () {
-  userIdPoppup.classList.remove("hidden");
-  document.body.classList.add("overflow-hidden");
-});
+if (userIdPoppup && userIdOpenBtn && userIdCloseBtn) {
+  userIdOpenBtn.addEventListener("click", function () {
+    userIdPoppup.classList.remove("hidden");
+    document.body.classList.add("overflow-hidden");
+  });
 
-userIdCloseBtn.addEventListener("click", function () {
-  userIdPoppup.classList.add("hidden");
-  document.body.classList.remove("overflow-hidden");
-});
+  userIdCloseBtn.addEventListener("click", function () {
+    userIdPoppup.classList.add("hidden");
+    document.body.classList.remove("overflow-hidden");
+  });
+} else {
+  console.warn("One or more elements are missing on this page.");
+}
 
 // Product Poppup
 const productPoppup = document.getElementById("product-poppup");
@@ -220,3 +223,10 @@ mobMenuBtn.addEventListener("click", function () {
   mobMenu.classList.remove("-translate-x-full");
   document.body.classList.add("overflow-hidden");
 });
+
+mobMenu.querySelectorAll("a, button").forEach((item) =>
+  item.addEventListener("click", function () {
+    mobMenu.classList.add("-translate-x-full");
+    document.body.classList.remove("overflow-hidden");
+  })
+);
