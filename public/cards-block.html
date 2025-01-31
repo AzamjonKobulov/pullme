@@ -387,7 +387,9 @@
           </ul>
 
           <!-- Filters -->
-          <div class="max-w-secondary flex items-center justify-between py-5">
+          <div
+            class="max-w-secondary mx-auto xl:mx-0 flex items-center justify-between py-5"
+          >
             <div class="hidden sm:flex items-center sm:gap-6">
               <!-- Mobile/Desktop Games -->
               <div class="flex items-center gap-1 text-xs font-bold uppercase">
@@ -432,7 +434,7 @@
           <!-- Main Part -->
           <div class="flex flex-col xl:flex-row items-start gap-5">
             <div
-              class="max-w-secondary w-full flex flex-col lg:flex-row gap-8 font-bold text-black/40 text-center lg:text-start text-xs lg:text-base"
+              class="max-w-secondary w-full mx-auto xl:mx-0 flex flex-col lg:flex-row gap-8 font-bold text-black/40 text-center lg:text-start text-xs lg:text-base"
             >
               <!-- Catalogs Desktop -->
               <ul
@@ -643,11 +645,13 @@
               <!-- Products -->
               <div class="flex-1 w-full space-y-2.5 sm:space-y-5">
                 <!-- Product 1 -->
-                <div class="relative flex sm:rounded-30 overflow-hidden p-5">
+                <div
+                  class="relative flex rounded-20 sm:rounded-30 p-2.5 sm:p-5"
+                >
                   <!-- Check -->
                   <label
                     id="1"
-                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-5"
+                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-2.5 sm:p-5"
                   >
                     <input type="checkbox" class="product-check hidden" />
 
@@ -681,11 +685,16 @@
 
                   <!-- Image & Title -->
                   <div class="w-full relative z-10 flex gap-2.5">
-                    <img
-                      src="./assets/images/product-block.png"
-                      alt="Product"
-                      class="aspect-square xs:aspect-auto max-w-[115px] xs:max-w-none"
-                    />
+                    <!-- Image -->
+                    <div
+                      class="w-[139px] h-[130px] sm:w-[225px] sm:h-[170px] rounded-30 overflow-hidden"
+                    >
+                      <img
+                        src="./assets/images/product-block.png"
+                        alt="Product"
+                        class="size-full object-cover"
+                      />
+                    </div>
 
                     <div class="flex-1 flex flex-col justify-between">
                       <p
@@ -708,21 +717,494 @@
                         </div>
 
                         <button
-                          class="h-8 w-max flex items-center gap-1 font-extrabold bg-white text-brand-purple whitespace-normal text-xs sm:text-[22px] border-3 border-brand-purple rounded-full px-5"
+                          class="h-6 sm:h-8 w-max flex items-center gap-1 font-extrabold bg-white text-brand-purple whitespace-normal text-xs sm:text-[22px] border-2 border-brand-purple rounded-full px-5"
                         >
                           <span>RUB 7370</span>
-                          <svg
-                            width="10"
-                            height="11"
-                            viewBox="0 0 10 11"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M2.08987 9.88191L8.37272 3.59906L8.37272 9.08882C8.37272 9.52755 8.7327 9.88754 9.17143 9.88754C9.61017 9.88754 9.96452 9.53318 9.96452 9.09445L9.96452 1.68102C9.96452 1.24229 9.61017 0.887933 9.17143 0.887933L1.75801 0.876684C1.5476 0.876448 1.34573 0.959929 1.19695 1.10871C1.04817 1.2575 0.964684 1.45936 0.964921 1.66977C0.964921 2.10851 1.31928 2.46286 1.75801 2.46286L7.24777 2.47411L0.964921 8.75696C0.655559 9.06632 0.655559 9.57255 0.964921 9.88191C1.27428 10.1913 1.78051 10.1913 2.08987 9.88191Z"
-                              fill="#A68CE9"
-                            />
-                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Product 2 -->
+                <div
+                  class="relative flex rounded-20 sm:rounded-30 p-2.5 sm:p-5"
+                >
+                  <!-- Check -->
+                  <label
+                    id="1"
+                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-2.5 sm:p-5"
+                  >
+                    <input type="checkbox" class="product-check hidden" />
+
+                    <div
+                      class="size-fit relative flex items-center justify-center cursor-pointer"
+                    >
+                      <img
+                        src="./assets/images/rounded-check.png"
+                        alt="Icon"
+                        class="size-[30px] lg:size-10"
+                      />
+                      <img
+                        src="./assets/svgs/check-desktop.svg"
+                        alt="Check Icon"
+                        class="custom-check w-7 h-5 lg:size-auto hidden absolute left-1 top-0.5 lg:left-2 lg:top-1"
+                      />
+                    </div>
+                  </label>
+
+                  <!-- Question Button -->
+                  <button class="absolute right-4 bottom-11 z-10">
+                    <img src="./assets/svgs/question.svg" alt="Question" />
+                  </button>
+
+                  <!-- BG Image -->
+                  <img
+                    src="./assets/bg-images/product-block-2.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill"
+                  />
+
+                  <!-- Image & Title -->
+                  <div class="w-full relative z-10 flex gap-2.5">
+                    <!-- Image -->
+                    <div
+                      class="w-[139px] h-[130px] sm:w-[225px] sm:h-[170px] rounded-30 overflow-hidden"
+                    >
+                      <img
+                        src="./assets/images/product-block.png"
+                        alt="Product"
+                        class="size-full object-cover"
+                      />
+                    </div>
+
+                    <div class="flex-1 flex flex-col justify-between">
+                      <p
+                        class="max-w-[170px] sm:max-w-[260px] text-start text-white text-sm sm:text-[26px] font-bold leading-[100%]"
+                      >
+                        3280+600 Кристаллов Сотворения
+                      </p>
+
+                      <!-- Cost -->
+                      <div
+                        class="relative w-full z-10 flex items-end justify-end gap-2.5 uppercase mt-2.5 xs:mt-6 md:mt-11 pr-6"
+                      >
+                        <div
+                          class="relative text-white text-xs sm:text-lg font-extrabold"
+                        >
+                          RUB 7370
+                          <span
+                            class="h-px w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-red rounded-full"
+                          ></span>
+                        </div>
+
+                        <button
+                          class="h-6 sm:h-8 w-max flex items-center gap-1 font-extrabold bg-white text-brand-purple whitespace-normal text-xs sm:text-[22px] border-2 border-brand-purple rounded-full px-5"
+                        >
+                          <span>RUB 3680</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Product 3 -->
+                <div
+                  class="relative flex rounded-20 sm:rounded-30 p-2.5 sm:p-5"
+                >
+                  <!-- Check -->
+                  <label
+                    id="1"
+                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-2.5 sm:p-5"
+                  >
+                    <input type="checkbox" class="product-check hidden" />
+
+                    <div
+                      class="size-fit relative flex items-center justify-center cursor-pointer"
+                    >
+                      <img
+                        src="./assets/images/rounded-check.png"
+                        alt="Icon"
+                        class="size-[30px] lg:size-10"
+                      />
+                      <img
+                        src="./assets/svgs/check-desktop.svg"
+                        alt="Check Icon"
+                        class="custom-check w-7 h-5 lg:size-auto hidden absolute left-1 top-0.5 lg:left-2 lg:top-1"
+                      />
+                    </div>
+                  </label>
+
+                  <!-- Question Button -->
+                  <button class="absolute right-4 bottom-11 z-10">
+                    <img src="./assets/svgs/question.svg" alt="Question" />
+                  </button>
+
+                  <!-- BG Image -->
+                  <img
+                    src="./assets/bg-images/product-block-2.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill"
+                  />
+
+                  <!-- Image & Title -->
+                  <div class="w-full relative z-10 flex gap-2.5">
+                    <!-- Image -->
+                    <div
+                      class="w-[139px] h-[130px] sm:w-[225px] sm:h-[170px] rounded-30 overflow-hidden"
+                    >
+                      <img
+                        src="./assets/images/product-block.png"
+                        alt="Product"
+                        class="size-full object-cover"
+                      />
+                    </div>
+
+                    <div class="flex-1 flex flex-col justify-between">
+                      <p
+                        class="max-w-[170px] sm:max-w-[260px] text-start text-white text-sm sm:text-[26px] font-bold leading-[100%]"
+                      >
+                        1980+260 Кристаллов Сотворения
+                      </p>
+
+                      <!-- Cost -->
+                      <div
+                        class="relative w-full z-10 flex items-end justify-end gap-2.5 uppercase mt-2.5 xs:mt-6 md:mt-11 pr-6"
+                      >
+                        <div
+                          class="relative text-white text-xs sm:text-lg font-extrabold"
+                        >
+                          RUB 7370
+                          <span
+                            class="h-px w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-red rounded-full"
+                          ></span>
+                        </div>
+
+                        <button
+                          class="h-6 sm:h-8 w-max flex items-center gap-1 font-extrabold bg-white text-brand-purple whitespace-normal text-xs sm:text-[22px] border-2 border-brand-purple rounded-full px-5"
+                        >
+                          <span>RUB 2400</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Product 4 -->
+                <div
+                  class="relative flex rounded-20 sm:rounded-30 p-2.5 sm:p-5"
+                >
+                  <!-- Check -->
+                  <label
+                    id="1"
+                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-2.5 sm:p-5"
+                  >
+                    <input type="checkbox" class="product-check hidden" />
+
+                    <div
+                      class="size-fit relative flex items-center justify-center cursor-pointer"
+                    >
+                      <img
+                        src="./assets/images/rounded-check.png"
+                        alt="Icon"
+                        class="size-[30px] lg:size-10"
+                      />
+                      <img
+                        src="./assets/svgs/check-desktop.svg"
+                        alt="Check Icon"
+                        class="custom-check w-7 h-5 lg:size-auto hidden absolute left-1 top-0.5 lg:left-2 lg:top-1"
+                      />
+                    </div>
+                  </label>
+
+                  <!-- Question Button -->
+                  <button class="absolute right-4 bottom-11 z-10">
+                    <img src="./assets/svgs/question.svg" alt="Question" />
+                  </button>
+
+                  <!-- BG Image -->
+                  <img
+                    src="./assets/bg-images/product-block-1.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill"
+                  />
+
+                  <!-- Image & Title -->
+                  <div class="w-full relative z-10 flex gap-2.5">
+                    <!-- Image -->
+                    <div
+                      class="w-[139px] h-[130px] sm:w-[225px] sm:h-[170px] rounded-30 overflow-hidden"
+                    >
+                      <img
+                        src="./assets/images/product-block.png"
+                        alt="Product"
+                        class="size-full object-cover"
+                      />
+                    </div>
+
+                    <div class="flex-1 flex flex-col justify-between">
+                      <p
+                        class="max-w-[170px] sm:max-w-[260px] text-start text-white text-sm sm:text-[26px] font-bold leading-[100%]"
+                      >
+                        6480+1600 Кристаллов Сотворения
+                      </p>
+
+                      <!-- Cost -->
+                      <div
+                        class="relative w-full z-10 flex items-end justify-end gap-2.5 uppercase mt-2.5 xs:mt-6 md:mt-11 pr-6"
+                      >
+                        <div
+                          class="relative text-white text-xs sm:text-lg font-extrabold"
+                        >
+                          RUB 7370
+                          <span
+                            class="h-px w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-red rounded-full"
+                          ></span>
+                        </div>
+
+                        <button
+                          class="h-6 sm:h-8 w-max flex items-center gap-1 font-extrabold bg-white text-brand-purple whitespace-normal text-xs sm:text-[22px] border-2 border-brand-purple rounded-full px-5"
+                        >
+                          <span>RUB 7370</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Product 5 -->
+                <div
+                  class="relative flex rounded-20 sm:rounded-30 p-2.5 sm:p-5"
+                >
+                  <!-- Check -->
+                  <label
+                    id="1"
+                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-2.5 sm:p-5"
+                  >
+                    <input type="checkbox" class="product-check hidden" />
+
+                    <div
+                      class="size-fit relative flex items-center justify-center cursor-pointer"
+                    >
+                      <img
+                        src="./assets/images/rounded-check.png"
+                        alt="Icon"
+                        class="size-[30px] lg:size-10"
+                      />
+                      <img
+                        src="./assets/svgs/check-desktop.svg"
+                        alt="Check Icon"
+                        class="custom-check w-7 h-5 lg:size-auto hidden absolute left-1 top-0.5 lg:left-2 lg:top-1"
+                      />
+                    </div>
+                  </label>
+
+                  <!-- Question Button -->
+                  <button class="absolute right-4 bottom-11 z-10">
+                    <img src="./assets/svgs/question.svg" alt="Question" />
+                  </button>
+
+                  <!-- BG Image -->
+                  <img
+                    src="./assets/bg-images/product-block-1.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill"
+                  />
+
+                  <!-- Image & Title -->
+                  <div class="w-full relative z-10 flex gap-2.5">
+                    <!-- Image -->
+                    <div
+                      class="w-[139px] h-[130px] sm:w-[225px] sm:h-[170px] rounded-30 overflow-hidden"
+                    >
+                      <img
+                        src="./assets/images/product-block.png"
+                        alt="Product"
+                        class="size-full object-cover"
+                      />
+                    </div>
+
+                    <div class="flex-1 flex flex-col justify-between">
+                      <p
+                        class="max-w-[170px] sm:max-w-[260px] text-start text-white text-sm sm:text-[26px] font-bold leading-[100%]"
+                      >
+                        300+30 Кристаллов Сотворения
+                      </p>
+
+                      <!-- Cost -->
+                      <div
+                        class="relative w-full z-10 flex items-end justify-end gap-2.5 uppercase mt-2.5 xs:mt-6 md:mt-11 pr-6"
+                      >
+                        <div
+                          class="relative text-white text-xs sm:text-lg font-extrabold"
+                        >
+                          RUB 7370
+                          <span
+                            class="h-px w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-red rounded-full"
+                          ></span>
+                        </div>
+
+                        <button
+                          class="h-6 sm:h-8 w-max flex items-center gap-1 font-extrabold bg-white text-brand-purple whitespace-normal text-xs sm:text-[22px] border-2 border-brand-purple rounded-full px-5"
+                        >
+                          <span>RUB 359</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Product 6 -->
+                <div
+                  class="relative flex rounded-20 sm:rounded-30 p-2.5 sm:p-5"
+                >
+                  <!-- Check -->
+                  <label
+                    id="1"
+                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-2.5 sm:p-5"
+                  >
+                    <input type="checkbox" class="product-check hidden" />
+
+                    <div
+                      class="size-fit relative flex items-center justify-center cursor-pointer"
+                    >
+                      <img
+                        src="./assets/images/rounded-check.png"
+                        alt="Icon"
+                        class="size-[30px] lg:size-10"
+                      />
+                      <img
+                        src="./assets/svgs/check-desktop.svg"
+                        alt="Check Icon"
+                        class="custom-check w-7 h-5 lg:size-auto hidden absolute left-1 top-0.5 lg:left-2 lg:top-1"
+                      />
+                    </div>
+                  </label>
+
+                  <!-- Question Button -->
+                  <button class="absolute right-4 bottom-11 z-10">
+                    <img src="./assets/svgs/question.svg" alt="Question" />
+                  </button>
+
+                  <!-- BG Image -->
+                  <img
+                    src="./assets/bg-images/product-block-1.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill"
+                  />
+
+                  <!-- Image & Title -->
+                  <div class="w-full relative z-10 flex gap-2.5">
+                    <!-- Image -->
+                    <div
+                      class="w-[139px] h-[130px] sm:w-[225px] sm:h-[170px] rounded-30 overflow-hidden"
+                    >
+                      <img
+                        src="./assets/images/product-block.png"
+                        alt="Product"
+                        class="size-full object-cover"
+                      />
+                    </div>
+
+                    <div class="flex-1 flex flex-col justify-between">
+                      <p
+                        class="max-w-[170px] sm:max-w-[260px] text-start text-white text-sm sm:text-[26px] font-bold leading-[100%]"
+                      >
+                        60 Кристаллов Сотворения
+                      </p>
+
+                      <!-- Cost -->
+                      <div
+                        class="relative w-full z-10 flex items-end justify-end gap-2.5 uppercase mt-2.5 xs:mt-6 md:mt-11 pr-6"
+                      >
+                        <div
+                          class="relative text-white text-xs sm:text-lg font-extrabold"
+                        >
+                          RUB 7370
+                          <span
+                            class="h-px w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-red rounded-full"
+                          ></span>
+                        </div>
+
+                        <button
+                          class="h-6 sm:h-8 w-max flex items-center gap-1 font-extrabold bg-white text-brand-purple whitespace-normal text-xs sm:text-[22px] border-2 border-brand-purple rounded-full px-5"
+                        >
+                          <span>RUB 69</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Product 7 -->
+                <div
+                  class="relative flex rounded-20 sm:rounded-30 p-2.5 sm:p-5"
+                >
+                  <!-- Check -->
+                  <label
+                    id="1"
+                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-2.5 sm:p-5"
+                  >
+                    <input type="checkbox" class="product-check hidden" />
+
+                    <div
+                      class="size-fit relative flex items-center justify-center cursor-pointer"
+                    >
+                      <img
+                        src="./assets/images/rounded-check.png"
+                        alt="Icon"
+                        class="size-[30px] lg:size-10"
+                      />
+                      <img
+                        src="./assets/svgs/check-desktop.svg"
+                        alt="Check Icon"
+                        class="custom-check w-7 h-5 lg:size-auto hidden absolute left-1 top-0.5 lg:left-2 lg:top-1"
+                      />
+                    </div>
+                  </label>
+
+                  <!-- Question Button -->
+                  <button class="absolute right-4 bottom-11 z-10">
+                    <img src="./assets/svgs/question.svg" alt="Question" />
+                  </button>
+
+                  <!-- BG Image -->
+                  <img
+                    src="./assets/bg-images/product-block-1.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill"
+                  />
+
+                  <!-- Image & Title -->
+                  <div class="w-full relative z-10 flex gap-2.5">
+                    <div
+                      class="w-[139px] h-[130px] sm:w-[225px] sm:h-[170px] rounded-30 overflow-hidden"
+                    >
+                      <img
+                        src="./assets/images/girl-image.png"
+                        alt="Product"
+                        class="size-full object-cover"
+                      />
+                    </div>
+
+                    <div class="flex-1 flex flex-col justify-between">
+                      <p
+                        class="max-w-[170px] sm:max-w-[260px] text-start text-white text-sm sm:text-[26px] font-bold leading-[100%]"
+                      >
+                        Благословение полой луны
+                      </p>
+
+                      <!-- Cost -->
+                      <div
+                        class="relative w-full z-10 flex items-end justify-end gap-2.5 uppercase mt-2.5 xs:mt-6 md:mt-11 pr-6"
+                      >
+                        <div
+                          class="relative text-white text-xs sm:text-lg font-extrabold"
+                        >
+                          RUB 7370
+                          <span
+                            class="h-px w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-red rounded-full"
+                          ></span>
+                        </div>
+
+                        <button
+                          class="h-6 sm:h-8 w-max flex items-center gap-1 font-extrabold bg-white text-brand-purple whitespace-normal text-xs sm:text-[22px] border-2 border-brand-purple rounded-full px-5"
+                        >
+                          <span>RUB 69</span>
                         </button>
                       </div>
                     </div>
@@ -732,305 +1214,316 @@
             </div>
 
             <!-- Form -->
-            <div class="max-w-fit 2xl:max-w-[493px] space-y-10 mt-10 xl:mt-0">
-              <div class="relative rounded-30">
-                <!-- BG Image -->
-                <img
-                  src="./assets/bg-images/product-form.png"
-                  alt="Bg Images"
-                  class="absolute size-full inset-0 object-fill"
-                />
+            <div class="max-w-secondary xl:max-w-min w-full mx-auto xl:mx-0">
+              <div
+                class="max-w-[493px] ml-auto space-y-10 mt-7 xs:mt-10 xl:mt-0"
+              >
+                <div class="relative rounded-30">
+                  <!-- BG Image -->
+                  <img
+                    src="./assets/bg-images/product-form.png"
+                    alt="Bg Images"
+                    class="absolute size-full inset-0 object-fill"
+                  />
 
-                <!-- Game Image -->
-                <img
-                  src="./assets/images/product-form-image.png"
-                  alt="Bg Images"
-                  class="w-2/3 xs:size-auto absolute object-fill -top-16 xl:-top-28 -right-5 z-20"
-                />
+                  <!-- Game Image -->
+                  <img
+                    src="./assets/images/product-form-image.png"
+                    alt="Bg Images"
+                    class="w-2/3 xs:size-auto absolute object-fill -top-16 xs:-top-28 -right-5 z-20"
+                  />
 
-                <div class="relative z-10 size-full p-5">
-                  <h3 class="text-5xl xs:text-6xl text-white leading-[90%]">
-                    Genshin <br />
-                    Impact
-                  </h3>
+                  <div class="relative z-10 size-full p-5">
+                    <h3 class="text-5xl xs:text-6xl text-white leading-[90%]">
+                      Genshin <br />
+                      Impact
+                    </h3>
 
-                  <div
-                    class="space-y-[30px] font-oswald text-white mt-24 xs:mt-20"
-                  >
-                    <!-- User ID & Server ID -->
-                    <div class="space-y-3.5">
-                      <h5
-                        class="xs:text-[22px] text-white font-oswald leading-normal"
-                      >
-                        ПОЖАЛУЙСТА, ВВЕДИТЕ ВАШ ID ДЛЯ ДОСТАВКИ
-                      </h5>
+                    <div
+                      class="space-y-[30px] font-oswald text-white mt-24 xs:mt-20"
+                    >
+                      <!-- User ID & Server ID -->
+                      <div class="space-y-3.5">
+                        <h5
+                          class="xs:text-[22px] text-white font-oswald leading-normal"
+                        >
+                          ПОЖАЛУЙСТА, ВВЕДИТЕ ВАШ ID ДЛЯ ДОСТАВКИ
+                        </h5>
 
+                        <label
+                          for="userId"
+                          class="max-w-[345px] block space-y-2.5"
+                        >
+                          <div class="flex">
+                            <span class="font-bold text-xs xs:text-base"
+                              >USER ID</span
+                            >
+                            <img
+                              src="./assets/svgs/question.svg"
+                              alt="Qeustion"
+                            />
+                          </div>
+                          <input
+                            type="text"
+                            id="userId"
+                            class="w-full h-11 xs:h-8 rounded-10 font-mulish text-black px-3 py-1"
+                          />
+                        </label>
+
+                        <!-- Select Container -->
+                        <div class="max-w-[345px] relative select space-y-2.5">
+                          <span class="font-bold text-xs xs:text-base"
+                            >SERVER ID</span
+                          >
+
+                          <!-- Select Button -->
+                          <button
+                            class="select-button h-11 xs:h-8 w-full flex items-center justify-between text-black bg-white rounded-10 px-2.5"
+                          >
+                            <span
+                              class="select-label font-mulish text-black"
+                            ></span>
+                            <img
+                              src="./assets/svgs/angle-down.svg"
+                              alt="Angle Down"
+                              class="select-icon transition-all duration-200"
+                            />
+                          </button>
+
+                          <!-- Select List -->
+                          <ul
+                            class="select-list fade-in w-full absolute bg-white rounded-10 font-mulish hidden z-10 shadow-lg"
+                          >
+                            <li
+                              class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
+                              data-value="lorem"
+                            >
+                              lorem
+                            </li>
+                            <li
+                              class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
+                              data-value="lorem"
+                            >
+                              ipsum
+                            </li>
+                            <li
+                              class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
+                              data-value="lorem"
+                            >
+                              dolor
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <!-- Product -->
+                      <div class="space-y-3.5">
+                        <div class="flex items-center justify-between gap-5">
+                          <h5
+                            class="flex-1 xs:text-[22px] text-white font-oswald uppercase"
+                          >
+                            Товар
+                          </h5>
+                          <h6
+                            class="w-[83px] text-xs xs:text-sm text-white font-oswald uppercase"
+                          >
+                            Количество
+                          </h6>
+                        </div>
+
+                        <!-- Products -->
+                        <div class="space-y-2.5">
+                          <!-- Product 1 -->
+                          <div fo class="flex items-center gap-2.5 xs:gap-5">
+                            <div
+                              class="max-w-[345px] w-full h-11 xs:h-8 flex items-center bg-white font-mulish line-clamp-1 text-sm xs:text-lg text-black/40 rounded-10 px-2.5"
+                            >
+                              3280+600 Кристаллов Сотворения
+                            </div>
+
+                            <!-- Product Qty Counter -->
+                            <div
+                              class="w-[83px] h-11 xs:h-8 flex items-center justify-center font-mulish gap-2 bg-white text-black/40 text-lg rounded-10"
+                            >
+                              <button class="w-full text-right">-</button>
+                              <span>1</span>
+                              <button class="w-full text-left">+</button>
+                            </div>
+                          </div>
+                          <!-- Product 2 -->
+                          <div fo class="flex items-center gap-2.5 xs:gap-5">
+                            <div
+                              class="max-w-[345px] w-full h-11 xs:h-8 flex items-center bg-white font-mulish line-clamp-1 text-sm xs:text-lg text-black/40 rounded-10 px-2.5"
+                            >
+                              1980+260 Кристаллов Сотворения
+                            </div>
+                            <!-- Product Qty Counter -->
+                            <div
+                              class="w-[83px] h-11 xs:h-8 flex items-center justify-center font-mulish gap-2 bg-white text-black/40 text-lg rounded-10"
+                            >
+                              <button class="w-full text-right">-</button>
+                              <span>1</span>
+                              <button class="w-full text-left">+</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Promocode -->
                       <label
-                        for="userId"
+                        for="promoCode"
                         class="max-w-[345px] block space-y-2.5"
                       >
-                        <div class="flex">
-                          <span class="font-bold text-xs xs:text-base"
-                            >USER ID</span
-                          >
-                          <img
-                            src="./assets/svgs/question.svg"
-                            alt="Qeustion"
-                          />
-                        </div>
+                        <h5
+                          class="xs:text-[22px] text-white font-oswald uppercase"
+                        >
+                          промокод
+                        </h5>
                         <input
                           type="text"
-                          id="userId"
-                          class="w-full h-11 xs:h-8 rounded-10 font-mulish text-black px-3 py-1"
+                          id="promoCode"
+                          class="w-full h-11 xs:h-8 text-sm xs:text-base rounded-10 font-mulish text-black px-3 py-1"
+                          placeholder="Если есть, введите промокод"
                         />
                       </label>
 
-                      <!-- Select Container -->
-                      <div class="max-w-[345px] relative select space-y-2.5">
-                        <span class="font-bold text-xs xs:text-base"
-                          >SERVER ID</span
-                        >
-
-                        <!-- Select Button -->
-                        <button
-                          class="select-button h-11 xs:h-8 w-full flex items-center justify-between text-black bg-white rounded-10 px-2.5"
-                        >
-                          <span
-                            class="select-label font-mulish text-black"
-                          ></span>
-                          <img
-                            src="./assets/svgs/angle-down.svg"
-                            alt="Angle Down"
-                            class="select-icon transition-all duration-200"
-                          />
-                        </button>
-
-                        <!-- Select List -->
-                        <ul
-                          class="select-list fade-in w-full absolute bg-white rounded-10 font-mulish hidden z-10 shadow-lg"
-                        >
-                          <li
-                            class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
-                            data-value="lorem"
-                          >
-                            lorem
-                          </li>
-                          <li
-                            class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
-                            data-value="lorem"
-                          >
-                            ipsum
-                          </li>
-                          <li
-                            class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
-                            data-value="lorem"
-                          >
-                            dolor
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    <!-- Product -->
-                    <div class="space-y-3.5">
-                      <div class="flex items-center justify-between gap-5">
-                        <h5
-                          class="flex-1 xs:text-[22px] text-white font-oswald uppercase"
-                        >
-                          Товар
-                        </h5>
-                        <h6
-                          class="w-[83px] text-xs xs:text-sm text-white font-oswald uppercase"
-                        >
-                          Количество
-                        </h6>
-                      </div>
-
-                      <!-- Products -->
-                      <div class="space-y-2.5">
-                        <!-- Product 1 -->
-                        <div fo class="flex items-center gap-2.5 xs:gap-5">
-                          <div
-                            class="max-w-[345px] w-full h-11 xs:h-8 flex items-center bg-white font-mulish line-clamp-1 text-sm xs:text-lg text-black/40 rounded-10 px-2.5"
-                          >
-                            3280+600 Кристаллов Сотворения
-                          </div>
-
-                          <!-- Product Qty Counter -->
-                          <div
-                            class="w-[83px] h-11 xs:h-8 flex items-center justify-center font-mulish gap-2 bg-white text-black/40 text-lg rounded-10"
-                          >
-                            <button class="w-full text-right">-</button>
-                            <span>1</span>
-                            <button class="w-full text-left">+</button>
-                          </div>
-                        </div>
-                        <!-- Product 2 -->
-                        <div fo class="flex items-center gap-2.5 xs:gap-5">
-                          <div
-                            class="max-w-[345px] w-full h-11 xs:h-8 flex items-center bg-white font-mulish line-clamp-1 text-sm xs:text-lg text-black/40 rounded-10 px-2.5"
-                          >
-                            1980+260 Кристаллов Сотворения
-                          </div>
-                          <!-- Product Qty Counter -->
-                          <div
-                            class="w-[83px] h-11 xs:h-8 flex items-center justify-center font-mulish gap-2 bg-white text-black/40 text-lg rounded-10"
-                          >
-                            <button class="w-full text-right">-</button>
-                            <span>1</span>
-                            <button class="w-full text-left">+</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Promocode -->
-                    <label
-                      for="promoCode"
-                      class="max-w-[345px] block space-y-2.5"
-                    >
-                      <h5
-                        class="xs:text-[22px] text-white font-oswald uppercase"
+                      <!-- Email -->
+                      <label
+                        for="email"
+                        class="max-w-[345px] block space-y-2.5"
                       >
-                        промокод
-                      </h5>
-                      <input
-                        type="text"
-                        id="promoCode"
-                        class="w-full h-11 xs:h-8 text-sm xs:text-base rounded-10 font-mulish text-black px-3 py-1"
-                        placeholder="Если есть, введите промокод"
-                      />
-                    </label>
-
-                    <!-- Email -->
-                    <label for="email" class="max-w-[345px] block space-y-2.5">
-                      <h5
-                        class="xs:text-[22px] text-white font-oswald uppercase"
-                      >
-                        почта
-                      </h5>
-                      <input
-                        type="text"
-                        id="email"
-                        class="w-full h-11 xs:h-8 text-sm xs:text-base rounded-10 font-mulish text-black outline-none px-3 py-1"
-                        placeholder="Опционально"
-                      />
-                    </label>
-
-                    <!-- Payment Methods -->
-                    <div class="space-y-5">
-                      <div class="space-y-1">
                         <h5
-                          class="text-base xs:text-[22px] text-white font-oswald uppercase"
+                          class="xs:text-[22px] text-white font-oswald uppercase"
                         >
-                          Способ оплаты
+                          почта
                         </h5>
-                        <div class="flex items-center gap-8">
-                          <span
-                            class="text-sm text-white font-oswald uppercase"
-                          >
-                            без комиссии
-                          </span>
-                          <span
-                            class="text-sm text-white font-oswald uppercase"
-                          >
-                            комиссия 1%
-                          </span>
-                          <span
-                            class="text-sm text-white font-oswald uppercase"
-                          >
-                            комиссия 5%
-                          </span>
-                        </div>
-                      </div>
+                        <input
+                          type="text"
+                          id="email"
+                          class="w-full h-11 xs:h-8 text-sm xs:text-base rounded-10 font-mulish text-black outline-none px-3 py-1"
+                          placeholder="Опционально"
+                        />
+                      </label>
 
-                      <!-- Payments Methods -->
-                      <div class="flex items-center gap-3.5 sm:gap-5">
-                        <!-- Methods 1 -->
-                        <div
-                          class="size-[75px] xs:size-24 shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
-                        >
-                          <img
-                            src="./assets/images/spb-payment.png"
-                            alt="SPB"
-                            class="size-full object-cover"
-                          />
+                      <!-- Payment Methods -->
+                      <div class="space-y-5">
+                        <div class="space-y-1">
+                          <h5
+                            class="text-base xs:text-[22px] text-white font-oswald uppercase"
+                          >
+                            Способ оплаты
+                          </h5>
+                          <div class="flex items-center gap-8">
+                            <span
+                              class="text-sm text-white font-oswald uppercase"
+                            >
+                              без комиссии
+                            </span>
+                            <span
+                              class="text-sm text-white font-oswald uppercase"
+                            >
+                              комиссия 1%
+                            </span>
+                            <span
+                              class="text-sm text-white font-oswald uppercase"
+                            >
+                              комиссия 5%
+                            </span>
+                          </div>
                         </div>
-                        <!-- Methods 2 -->
-                        <div
-                          class="size-[75px] xs:size-24 shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
-                        >
-                          <!-- <img
-                            src="./assets/images/spb-payment.png"
-                            alt="SPB"
-                            class="size-full object-cover"
-                          /> -->
-                        </div>
-                        <!-- Methods 3 -->
-                        <div
-                          class="size-[75px] xs:size-24 shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
-                        >
-                          <!-- <img
-                            src="./assets/images/spb-payment.png"
-                            alt="SPB"
-                            class="size-full object-cover"
-                          /> -->
-                        </div>
-                        <!-- Methods 4 -->
-                        <div
-                          class="size-[75px] xs:size-24 shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
-                        >
-                          <!-- <img
-                            src="./assets/images/spb-payment.png"
-                            alt="SPB"
-                            class="size-full object-cover"
-                          /> -->
+
+                        <!-- Payments Methods -->
+                        <div class="flex items-center gap-3.5 sm:gap-5">
+                          <!-- Methods 1 -->
+                          <div
+                            class="size-[75px] xs:size-24 shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
+                          >
+                            <img
+                              src="./assets/images/spb-payment.png"
+                              alt="SPB"
+                              class="size-full object-cover"
+                            />
+                          </div>
+                          <!-- Methods 2 -->
+                          <div
+                            class="size-[75px] xs:size-24 shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
+                          >
+                            <!-- <img
+                              src="./assets/images/spb-payment.png"
+                              alt="SPB"
+                              class="size-full object-cover"
+                            /> -->
+                          </div>
+                          <!-- Methods 3 -->
+                          <div
+                            class="size-[75px] xs:size-24 shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
+                          >
+                            <!-- <img
+                              src="./assets/images/spb-payment.png"
+                              alt="SPB"
+                              class="size-full object-cover"
+                            /> -->
+                          </div>
+                          <!-- Methods 4 -->
+                          <div
+                            class="size-[75px] xs:size-24 shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
+                          >
+                            <!-- <img
+                              src="./assets/images/spb-payment.png"
+                              alt="SPB"
+                              class="size-full object-cover"
+                            /> -->
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="space-y-5">
-                <!-- Cost -->
-                <div
-                  class="flex items-center justify-between text-black/40 uppercase"
-                >
-                  <h5 class="text-lg xs:text-[22px] font-oswald leading-normal">
-                    сумма
-                  </h5>
-                  <h5 class="text-lg xs:text-[22px] font-oswald leading-normal">
-                    6080 rub
-                  </h5>
-                </div>
-
-                <!-- Pay Button -->
-                <div class="space-y-2.5">
-                  <button
-                    class="w-full relative h-10 xs:h-16 font-extrabold xs:text-[28px] text-white border-2 border-brand-purple rounded-full"
+                <div class="space-y-5">
+                  <!-- Cost -->
+                  <div
+                    class="flex items-center justify-between text-black/40 uppercase"
                   >
-                    <img
-                      src="./assets/bg-images/button.png"
-                      alt="button"
-                      class="absolute inset-0 size-full object-cover rounded-30"
-                    />
-                    <span class="relative uppercase z-10">оплатить</span>
-                  </button>
-                  <p
-                    class="block text-[13px] font-bold xs:text-lg text-black/40 leading-[80%]"
-                  >
-                    Нажимая кнопку <span class="uppercase">оплатить</span>, я
-                    принимаю условия <a
-                      href="#"
-                      class="underline underline-offset-2"
-                      >Пользовательского Соглашения</a
-                    > и подтверждаю ознакомление с <a
-                      href="#"
-                      class="underline underline-offset-2"
-                      >FAQ</a
+                    <h5
+                      class="text-lg xs:text-[22px] font-oswald leading-normal"
                     >
-                  </p>
+                      сумма
+                    </h5>
+                    <h5
+                      class="text-lg xs:text-[22px] font-oswald leading-normal"
+                    >
+                      6080 rub
+                    </h5>
+                  </div>
+
+                  <!-- Pay Button -->
+                  <div class="space-y-2.5">
+                    <button
+                      class="w-full relative h-10 xs:h-16 font-extrabold xs:text-[28px] text-white border-2 border-brand-purple rounded-full"
+                    >
+                      <img
+                        src="./assets/bg-images/button.png"
+                        alt="button"
+                        class="absolute inset-0 size-full object-cover rounded-30"
+                      />
+                      <span class="relative uppercase z-10">оплатить</span>
+                    </button>
+                    <p
+                      class="block text-[13px] font-bold xs:text-lg text-black/40 leading-[80%]"
+                    >
+                      Нажимая кнопку <span class="uppercase">оплатить</span>, я
+                      принимаю условия <a
+                        href="#"
+                        class="underline underline-offset-2"
+                        >Пользовательского Соглашения</a
+                      > и подтверждаю ознакомление с <a
+                        href="#"
+                        class="underline underline-offset-2"
+                        >FAQ</a
+                      >
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
