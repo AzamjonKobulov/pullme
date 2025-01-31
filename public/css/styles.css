@@ -509,6 +509,10 @@ video {
   display: none;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   overflow-x: hidden;
   --tw-bg-opacity: 1;
@@ -1096,9 +1100,6 @@ p{
 .max-w-\[75px\]{
   max-width: 75px;
 }
-.max-w-\[900px\]{
-  max-width: 900px;
-}
 .max-w-\[914px\]{
   max-width: 914px;
 }
@@ -1113,12 +1114,6 @@ p{
 }
 .max-w-secondary{
   max-width: 62.9375rem;
-}
-.max-w-4{
-  max-width: 1rem;
-}
-.max-w-4xl{
-  max-width: 56rem;
 }
 .flex-1{
   flex: 1 1 0%;
@@ -1724,6 +1719,10 @@ p{
   --tw-text-opacity: 1;
   color: rgb(135 113 219 / var(--tw-text-opacity, 1));
 }
+.text-brand-red{
+  --tw-text-opacity: 1;
+  color: rgb(205 50 53 / var(--tw-text-opacity, 1));
+}
 .text-brand-text{
   --tw-text-opacity: 1;
   color: rgb(109 125 139 / var(--tw-text-opacity, 1));
@@ -1731,10 +1730,6 @@ p{
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-.text-brand-red{
-  --tw-text-opacity: 1;
-  color: rgb(205 50 53 / var(--tw-text-opacity, 1));
 }
 .underline{
   text-decoration-line: underline;
@@ -2049,10 +2044,6 @@ input[type="checkbox"]:checked + div .custom-check{
     height: 169px;
   }
 
-  .xs\:h-\[74px\]{
-    height: 74px;
-  }
-
   .xs\:h-auto{
     height: auto;
   }
@@ -2067,11 +2058,6 @@ input[type="checkbox"]:checked + div .custom-check{
 
   .xs\:w-14{
     width: 3.5rem;
-  }
-
-  .xs\:w-fit{
-    width: -moz-fit-content;
-    width: fit-content;
   }
 
   .xs\:max-w-none{
@@ -2153,10 +2139,6 @@ input[type="checkbox"]:checked + div .custom-check{
 
   .xs\:text-\[22px\]{
     font-size: 22px;
-  }
-
-  .xs\:text-\[26px\]{
-    font-size: 26px;
   }
 
   .xs\:text-\[28px\]{
@@ -2298,6 +2280,10 @@ input[type="checkbox"]:checked + div .custom-check{
     width: 225px;
   }
 
+  .sm\:max-w-4xl{
+    max-width: 56rem;
+  }
+
   .sm\:max-w-\[230px\]{
     max-width: 230px;
   }
@@ -2322,21 +2308,17 @@ input[type="checkbox"]:checked + div .custom-check{
     max-width: none;
   }
 
-  .sm\:max-w-4xl{
-    max-width: 56rem;
-  }
-
   .sm\:translate-x-0{
     --tw-translate-x: 0px;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
-  .sm\:grid-cols-3{
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   .sm\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sm\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .sm\:flex-row{
@@ -2755,28 +2737,24 @@ input[type="checkbox"]:checked + div .custom-check{
     width: auto;
   }
 
-  .lg\:max-w-none{
-    max-width: none;
-  }
-
-  .lg\:max-w-secondary{
-    max-width: 62.9375rem;
-  }
-
   .lg\:max-w-6xl{
     max-width: 72rem;
-  }
-
-  .lg\:max-w-\[900px\]{
-    max-width: 900px;
   }
 
   .lg\:max-w-7xl{
     max-width: 80rem;
   }
 
-  .lg\:max-w-7{
-    max-width: 1.75rem;
+  .lg\:max-w-\[900px\]{
+    max-width: 900px;
+  }
+
+  .lg\:max-w-none{
+    max-width: none;
+  }
+
+  .lg\:max-w-secondary{
+    max-width: 62.9375rem;
   }
 
   .lg\:rotate-0{
@@ -2824,16 +2802,16 @@ input[type="checkbox"]:checked + div .custom-check{
     gap: 1.25rem;
   }
 
+  .lg\:gap-7{
+    gap: 1.75rem;
+  }
+
   .lg\:gap-8{
     gap: 2rem;
   }
 
   .lg\:gap-\[180px\]{
     gap: 180px;
-  }
-
-  .lg\:gap-7{
-    gap: 1.75rem;
   }
 
   .lg\:space-y-10 > :not([hidden]) ~ :not([hidden]){
@@ -3059,10 +3037,6 @@ input[type="checkbox"]:checked + div .custom-check{
 
   .xl\:w-\[900px\]{
     width: 900px;
-  }
-
-  .xl\:max-w-6xl{
-    max-width: 72rem;
   }
 
   .xl\:max-w-min{
