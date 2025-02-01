@@ -230,3 +230,24 @@ mobMenu.querySelectorAll("a, button").forEach((item) =>
     document.body.classList.remove("overflow-hidden");
   })
 );
+
+document.addEventListener("DOMContentLoaded", function () {
+  const catalog = document.getElementById("catalog");
+  const scrollUpIcon = document.getElementById("scrollUpIcon");
+  const scrollDownIcon = document.getElementById("scrollDownIcon");
+
+  function updateScrollIndicators() {
+    const isAtTop = catalog.scrollTop === 0;
+    const isAtBottom =
+      catalog.scrollHeight - catalog.scrollTop <= catalog.clientHeight + 1;
+
+    scrollUpIcon.classList.toggle("opacity-20", isAtTop);
+    scrollUpIcon.classList.toggle("opacity-60", !isAtTop);
+
+    scrollDownIcon.classList.toggle("opacity-20", isAtBottom);
+    scrollDownIcon.classList.toggle("opacity-60", !isAtBottom);
+  }
+
+  catalog.addEventListener("scroll", updateScrollIndicators);
+  updateScrollIndicators(); // Initial check on page load
+});
