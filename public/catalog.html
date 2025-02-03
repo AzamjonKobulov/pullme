@@ -23,9 +23,18 @@
         >
           <a
             href="./index.html"
-            class="inline-block w-12 h-8 xs:w-14 xs:h-8 sm:w-24 sm:h-12 lg:w-40 lg:h-[77px] overflow-hidden shrink-0"
+            class="group inline-block w-12 h-8 xs:w-14 xs:h-8 sm:w-24 sm:h-12 lg:w-40 lg:h-[77px] overflow-hidden shrink-0"
           >
-            <img src="./assets/svgs/logo.svg" alt="LOGO" class="size-full" />
+            <img
+              src="./assets/svgs/logo.svg"
+              alt="LOGO"
+              class="size-full group-hover:hidden"
+            />
+            <img
+              src="./assets/svgs/logo-hover.svg"
+              alt="LOGO"
+              class="size-full hidden group-hover:block"
+            />
           </a>
         </div>
 
@@ -36,27 +45,37 @@
           <!-- Links -->
           <ul class="flex items-center gap-6">
             <li>
-              <a href="#" class="hover:text-black transition-all duration-200"
+              <a
+                href="./catalog.html"
+                class="hover:text-black transition-all duration-200"
                 >все игры</a
               >
             </li>
             <li>
-              <a href="#" class="hover:text-black transition-all duration-200"
+              <a
+                href="#bonus"
+                class="hover:text-black transition-all duration-200"
                 >Бонусы</a
               >
             </li>
             <li>
-              <a href="#" class="hover:text-black transition-all duration-200"
+              <a
+                href="#secrets"
+                class="hover:text-black transition-all duration-200"
                 >Гайды</a
               >
             </li>
             <li>
-              <a href="#" class="hover:text-black transition-all duration-200"
+              <a
+                href="#about"
+                class="hover:text-black transition-all duration-200"
                 >О нас</a
               >
             </li>
             <li>
-              <a href="#" class="hover:text-black transition-all duration-200"
+              <a
+                href="#contact"
+                class="hover:text-black transition-all duration-200"
                 >Контакты</a
               >
             </li>
@@ -65,7 +84,6 @@
           <!-- Cart & Lang -->
           <div class="flex items-center gap-6">
             <!-- Cart -->
-
             <button class="flex items-center gap-1">
               <img src="./assets/svgs/cart.svg" alt="Cart Icon" />
               <span>2</span>
@@ -95,25 +113,155 @@
 
               <!-- Select List -->
               <ul
-                class="select-list fade-in w-full absolute bg-white rounded-10 font-mulish hidden z-10 shadow-lg"
+                class="w-max select-list fade-in absolute right-0 bg-white font-extrabold font-mulish text-black/40 text-xl hidden z-[60] border-[3px] border-brand-purple rounded-30 shadow-lg p-4"
               >
+                <!-- Lang 1 -->
                 <li
-                  class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="cn"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-cn.svg" alt="Flag" />
+                  <span>cn</span>
+                </li>
+                <!-- Lang 2 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="id"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-id.svg" alt="Flag" />
+                  <span>id</span>
+                </li>
+                <!-- Lang 3 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="kr"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-kr.svg" alt="Flag" />
+                  <span>kr</span>
+                </li>
+                <!-- Lang 4 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="my"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-my.svg" alt="Flag" />
+                  <span>my</span>
+                </li>
+                <!-- Lang 5 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="ph"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-ph.svg" alt="Flag" />
+                  <span>ph</span>
+                </li>
+                <!-- Lang 6 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="th"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-th.svg" alt="Flag" />
+                  <span>th</span>
+                </li>
+                <!-- Lang 7 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="jp"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-jp.svg" alt="Flag" />
+                  <span>jp</span>
+                </li>
+                <!-- Lang 8 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="sg"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-sg.svg" alt="Flag" />
+                  <span>sg</span>
+                </li>
+                <!-- Lang 9 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="vn"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-vn.svg" alt="Flag" />
+                  <span>vn</span>
+                </li>
+                <!-- Lang 10 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="tw"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-tw.svg" alt="Flag" />
+                  <span>tw</span>
+                </li>
+                <!-- Lang 11 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
                   data-value="ru"
                 >
-                  ru
+                  <!-- Flag -->
+                  <img
+                    src="./assets/svgs/flag-ru.svg"
+                    alt="Flag"
+                    class="opacity-50"
+                  />
+                  <span>ru</span>
                 </li>
+                <!-- Lang 12 -->
                 <li
-                  class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
-                  data-value="eng"
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="by"
                 >
-                  eng
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-by.svg" alt="Flag" />
+                  <span>by</span>
                 </li>
+                <!-- Lang 13 -->
                 <li
-                  class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
-                  data-value="chn"
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="ua"
                 >
-                  chn
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-ua.svg" alt="Flag" />
+                  <span>ua</span>
+                </li>
+                <!-- Lang 14 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="kz"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-kz.svg" alt="Flag" />
+                  <span>kz</span>
+                </li>
+                <!-- Lang 15 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="br"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-br.svg" alt="Flag" />
+                  <span>br</span>
+                </li>
+                <!-- Lang 16 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="us"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-us.svg" alt="Flag" />
+                  <span>us</span>
                 </li>
               </ul>
             </div>
@@ -184,7 +332,10 @@
                 <!-- Lang Select Container -->
                 <div class="w-20 relative select space-y-2.5">
                   <!-- Select Button -->
-                  <div class="select-button flex items-center gap-1">
+                  <div
+                    class="select-button cursor-pointer flex items-center gap-1"
+                  >
+                    <img src="./assets/svgs/globe.svg" alt="Cart Icon" />
                     <span class="select-label uppercase">RU</span>
                     <svg
                       width="9"
@@ -204,25 +355,155 @@
 
                   <!-- Select List -->
                   <ul
-                    class="select-list fade-in w-full absolute bg-white rounded-10 font-mulish hidden z-10 shadow-lg"
+                    class="no-scroll h-80 select-list fade-in absolute left-0 bg-white font-extrabold font-mulish text-black/40 hidden z-[60] border-[3px] border-brand-purple rounded-20 shadow-lg overflow-auto p-2"
                   >
+                    <!-- Lang 1 -->
                     <li
-                      class="flex items-center gap-2 text-black/80 hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="cn"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-cn.svg" alt="Flag" />
+                      <span>cn</span>
+                    </li>
+                    <!-- Lang 2 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="id"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-id.svg" alt="Flag" />
+                      <span>id</span>
+                    </li>
+                    <!-- Lang 3 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="kr"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-kr.svg" alt="Flag" />
+                      <span>kr</span>
+                    </li>
+                    <!-- Lang 4 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="my"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-my.svg" alt="Flag" />
+                      <span>my</span>
+                    </li>
+                    <!-- Lang 5 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="ph"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-ph.svg" alt="Flag" />
+                      <span>ph</span>
+                    </li>
+                    <!-- Lang 6 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="th"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-th.svg" alt="Flag" />
+                      <span>th</span>
+                    </li>
+                    <!-- Lang 7 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="jp"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-jp.svg" alt="Flag" />
+                      <span>jp</span>
+                    </li>
+                    <!-- Lang 8 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="sg"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-sg.svg" alt="Flag" />
+                      <span>sg</span>
+                    </li>
+                    <!-- Lang 9 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="vn"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-vn.svg" alt="Flag" />
+                      <span>vn</span>
+                    </li>
+                    <!-- Lang 10 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="tw"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-tw.svg" alt="Flag" />
+                      <span>tw</span>
+                    </li>
+                    <!-- Lang 11 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
                       data-value="ru"
                     >
-                      <button class="uppercase">ru</button>
+                      <!-- Flag -->
+                      <img
+                        src="./assets/svgs/flag-ru.svg"
+                        alt="Flag"
+                        class="opacity-50"
+                      />
+                      <span>ru</span>
                     </li>
+                    <!-- Lang 12 -->
                     <li
-                      class="flex items-center gap-2 text-black/80 hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
-                      data-value="eng"
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="by"
                     >
-                      <button class="uppercase">eng</button>
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-by.svg" alt="Flag" />
+                      <span>by</span>
                     </li>
+                    <!-- Lang 13 -->
                     <li
-                      class="flex items-center gap-2 text-black/80 hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
-                      data-value="chn"
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="ua"
                     >
-                      <button class="uppercase">chn</button>
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-ua.svg" alt="Flag" />
+                      <span>ua</span>
+                    </li>
+                    <!-- Lang 14 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="kz"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-kz.svg" alt="Flag" />
+                      <span>kz</span>
+                    </li>
+                    <!-- Lang 15 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="br"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-br.svg" alt="Flag" />
+                      <span>br</span>
+                    </li>
+                    <!-- Lang 16 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="us"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-us.svg" alt="Flag" />
+                      <span>us</span>
                     </li>
                   </ul>
                 </div>
@@ -290,7 +571,7 @@
                 <!-- Catalog Item 3 -->
                 <li>
                   <a
-                    href="#"
+                    href="./cards-grid.html"
                     class="h-12 max-w-[207px] gap-6 flex items-center justify-between border-[1.5px] border-black/20 rounded-10 px-2.5"
                   >
                     <span class="max-w-36">Genshin Impact</span>
@@ -499,33 +780,37 @@
     </header>
 
     <!-- Socials -->
-    <ul class="fixed right-2 top-52 z-[70] space-y-2.5 hidden lg:block">
-      <li>
-        <a href="#">
-          <img src="./assets/svgs/message.svg" alt="Icon" />
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="./assets/svgs/message-2.svg" alt="Icon" />
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="./assets/svgs/vk.svg" alt="Icon" />
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="./assets/svgs/telegram.svg" alt="Icon" />
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="./assets/svgs/tel.svg" alt="Icon" />
-        </a>
-      </li>
-    </ul>
+    <div
+      class="fixed max-w-[1600px] w-full left-1/2 -translate-x-1/2 hidden lg:flex justify-end right-2 top-52"
+    >
+      <ul class="space-y-2.5 hidden lg:block relative z-[80]">
+        <li>
+          <a href="#">
+            <img src="./assets/svgs/message.svg" alt="Icon" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./assets/svgs/message-2.svg" alt="Icon" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./assets/svgs/vk.svg" alt="Icon" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./assets/svgs/telegram.svg" alt="Icon" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./assets/svgs/tel.svg" alt="Icon" />
+          </a>
+        </li>
+      </ul>
+    </div>
 
     <!-- MAIN -->
     <main class="relative">
@@ -686,14 +971,27 @@
               <button
                 class="flex items-center gap-3 lg:gap-8 group font-extrabold uppercase text-start text-sm sm:text-[28px] leading-5 sm:leading-8"
               >
-                <span class="text-trsprt-section-title"
+                <span class="text-trsprt-section-title group-hover:hidden"
                   >Пополнить <br />
                   сейчас</span
                 >
+
+                <span class="text-brand-purple hidden group-hover:block"
+                  >Пополнить <br />
+                  сейчас</span
+                >
+
                 <img
                   src="./assets/svgs/rounded-arrow.png"
                   alt="Arrow Icon"
-                  class="size-6 sm:size-14 shrink-0 group-hover:-rotate-45 transition-all duration-300"
+                  class="size-6 sm:size-14 shrink-0 group-hover:hidden"
+                />
+
+                <!-- Hover -->
+                <img
+                  src="./assets/svgs/rounded-arrow-hover.png"
+                  alt="Arrow Icon"
+                  class="size-6 sm:size-14 shrink-0 hidden group-hover:block"
                 />
               </button>
             </div>
@@ -701,12 +999,12 @@
 
           <!-- Right Content -->
           <div
-            class="min-h-64 xs:min-h-80 sm:min-h-[420px] col-span-2 xl:col-span-1 relative flex items-end rounded-20 sm:rounded-45 overflow-hidden"
+            class="min-h-64 xs:min-h-80 sm:min-h-[420px] col-span-2 xl:col-span-1 relative flex items-end"
           >
             <img
               src="./assets/bg-images/hero-right.png"
               alt="Bg image"
-              class="absolute inset-0 size-full rotate-180"
+              class="absolute inset-0 size-full rotate-180 rounded-20 sm:rounded-45"
             />
 
             <img
@@ -741,7 +1039,14 @@
                 <img
                   src="./assets/svgs/rounded-arrow.png"
                   alt="Arrow Icon"
-                  class="size-6 sm:size-14 shrink-0 group-hover:-rotate-45 transition-all duration-300"
+                  class="size-6 sm:size-14 shrink-0 group-hover:hidden"
+                />
+
+                <!-- Hover -->
+                <img
+                  src="./assets/svgs/rounded-arrow-hover.png"
+                  alt="Arrow Icon"
+                  class="size-6 sm:size-14 shrink-0 hidden group-hover:block"
                 />
               </button>
             </div>
@@ -770,7 +1075,7 @@
 
                 <!-- Image -->
                 <div
-                  class="relative size-full border-3 border-brand-purple/40 rounded-20 xs:rounded-br-none rounded-tr-20 rounded-bl-20 lg:rounded-tr-45 lg:rounded-bl-45 overflow-hidden after:absolute after:inset-0 after:size-full after:bg-brand-purple/30"
+                  class="relative size-full border-3 border-brand-purple/40 rounded-20 xs:rounded-br-none rounded-tr-20 rounded-bl-20 lg:rounded-tr-45 lg:rounded-bl-45 overflow-hidden after:absolute after:inset-0 after:size-full after:bg-brand-purple/30 group-hover:after:hidden"
                 >
                   <img
                     src="./assets/images/catalog-1.jpg"
@@ -793,11 +1098,7 @@
             </div>
 
             <!-- Game Name -->
-            <p
-              class="group-hover:text-brand-purple transition-all duration-200"
-            >
-              Zenless Zone Zero
-            </p>
+            <p class="group-hover:text-black">Zenless Zone Zero</p>
           </a>
           <!-- Catalog Item 2 -->
           <a href="#" class="group space-y-2.5">
@@ -815,7 +1116,7 @@
 
                 <!-- Image -->
                 <div
-                  class="relative size-full border-3 border-brand-purple/40 rounded-20 xs:rounded-br-none rounded-tr-20 rounded-bl-20 lg:rounded-tr-45 lg:rounded-bl-45 overflow-hidden after:absolute after:inset-0 after:size-full after:bg-brand-purple/30"
+                  class="relative size-full border-3 border-brand-purple/40 rounded-20 xs:rounded-br-none rounded-tr-20 rounded-bl-20 lg:rounded-tr-45 lg:rounded-bl-45 overflow-hidden after:absolute after:inset-0 after:size-full after:bg-brand-purple/30 group-hover:after:hidden"
                 >
                   <img
                     src="./assets/images/catalog-2.jpg"
@@ -837,14 +1138,10 @@
               </div>
             </div>
             <!-- Game Name -->
-            <p
-              class="group-hover:text-brand-purple transition-all duration-200"
-            >
-              Honkai: Star Rail
-            </p>
+            <p class="group-hover:text-black">Honkai: Star Rail</p>
           </a>
           <!-- Catalog Item 3 -->
-          <a href="#" class="group space-y-2.5">
+          <a href="./cards-grid.html" class="group space-y-2.5">
             <div class="relative">
               <div class="h-[150px] xs:h-auto xs:max-h-none xs:aspect-video">
                 <!-- Discount -->
@@ -859,7 +1156,7 @@
 
                 <!-- Image -->
                 <div
-                  class="relative size-full border-3 border-brand-purple/40 rounded-20 xs:rounded-br-none rounded-tr-20 rounded-bl-20 lg:rounded-tr-45 lg:rounded-bl-45 overflow-hidden after:absolute after:inset-0 after:size-full after:bg-brand-purple/30"
+                  class="relative size-full border-3 border-brand-purple/40 rounded-20 xs:rounded-br-none rounded-tr-20 rounded-bl-20 lg:rounded-tr-45 lg:rounded-bl-45 overflow-hidden after:absolute after:inset-0 after:size-full after:bg-brand-purple/30 group-hover:after:hidden"
                 >
                   <img
                     src="./assets/images/catalog-3.jpg"
@@ -882,11 +1179,7 @@
             </div>
 
             <!-- Game Name -->
-            <p
-              class="group-hover:text-brand-purple transition-all duration-200"
-            >
-              Genshin Impact
-            </p>
+            <p class="group-hover:text-black">Genshin Impact</p>
           </a>
           <!-- Catalog Item 4 -->
           <a href="#" class="group space-y-2.5">
@@ -904,7 +1197,7 @@
 
                 <!-- Image -->
                 <div
-                  class="relative size-full border-3 border-brand-purple/40 rounded-20 xs:rounded-br-none rounded-tr-20 rounded-bl-20 lg:rounded-tr-45 lg:rounded-bl-45 overflow-hidden after:absolute after:inset-0 after:size-full after:bg-brand-purple/30"
+                  class="relative size-full border-3 border-brand-purple/40 rounded-20 xs:rounded-br-none rounded-tr-20 rounded-bl-20 lg:rounded-tr-45 lg:rounded-bl-45 overflow-hidden after:absolute after:inset-0 after:size-full after:bg-brand-purple/30 group-hover:after:hidden"
                 >
                   <img
                     src="./assets/images/catalog-4.jpg"
@@ -926,11 +1219,7 @@
               </div>
             </div>
             <!-- Game Name -->
-            <p
-              class="group-hover:text-brand-purple transition-all duration-200 mt-2.5"
-            >
-              Arena Breakout
-            </p>
+            <p class="group-hover:text-black mt-2.5">Arena Breakout</p>
           </a>
           <!-- Catalog Item 5 -->
           <a href="#" class="group space-y-2.5">
@@ -947,7 +1236,7 @@
                 </div>
                 <!-- Image -->
                 <div
-                  class="relative size-full border-3 border-brand-purple/40 rounded-20 xs:rounded-br-none rounded-tr-20 rounded-bl-20 lg:rounded-tr-45 lg:rounded-bl-45 overflow-hidden after:absolute after:inset-0 after:size-full after:bg-brand-purple/30"
+                  class="relative size-full border-3 border-brand-purple/40 rounded-20 xs:rounded-br-none rounded-tr-20 rounded-bl-20 lg:rounded-tr-45 lg:rounded-bl-45 overflow-hidden after:absolute after:inset-0 after:size-full after:bg-brand-purple/30 group-hover:after:hidden"
                 >
                   <img
                     src="./assets/images/catalog-5.jpg"
@@ -969,11 +1258,7 @@
               </div>
             </div>
             <!-- Game Name -->
-            <p
-              class="group-hover:text-brand-purple transition-all duration-200 mt-2.5"
-            >
-              PUBG MOBILE
-            </p>
+            <p class="group-hover:text-black mt-2.5">PUBG MOBILE</p>
           </a>
           <!-- Catalog Item 6 -->
           <a href="#" class="group space-y-2.5">
@@ -991,7 +1276,7 @@
 
                 <!-- Image -->
                 <div
-                  class="relative size-full border-3 border-brand-purple/40 rounded-20 xs:rounded-br-none rounded-tr-20 rounded-bl-20 lg:rounded-tr-45 lg:rounded-bl-45 overflow-hidden after:absolute after:inset-0 after:size-full after:bg-brand-purple/30"
+                  class="relative size-full border-3 border-brand-purple/40 rounded-20 xs:rounded-br-none rounded-tr-20 rounded-bl-20 lg:rounded-tr-45 lg:rounded-bl-45 overflow-hidden after:absolute after:inset-0 after:size-full after:bg-brand-purple/30 group-hover:after:hidden"
                 >
                   <img
                     src="./assets/images/catalog-6.jpg"
@@ -1013,11 +1298,7 @@
               </div>
             </div>
             <!-- Game Name -->
-            <p
-              class="group-hover:text-brand-purple transition-all duration-200 mt-2.5"
-            >
-              Tower of Fantasy
-            </p>
+            <p class="group-hover:text-black mt-2.5">Tower of Fantasy</p>
           </a>
           <!-- Catalog Item 7 -->
           <a href="#" class="group space-y-2.5">
@@ -1035,7 +1316,7 @@
 
                 <!-- Image -->
                 <div
-                  class="relative size-full border-3 border-brand-purple/40 rounded-20 xs:rounded-br-none rounded-tr-20 rounded-tl-20 rounded-bl-20 lg:rounded-tr-45 lg:rounded-tl-45 lg:rounded-bl-45 overflow-hidden after:absolute after:inset-0 after:size-full after:bg-brand-purple/30"
+                  class="relative size-full border-3 border-brand-purple/40 rounded-20 xs:rounded-br-none rounded-tr-20 rounded-tl-20 rounded-bl-20 lg:rounded-tr-45 lg:rounded-tl-45 lg:rounded-bl-45 overflow-hidden after:absolute after:inset-0 after:size-full after:bg-brand-purple/30 group-hover:after:hidden"
                 >
                   <img
                     src="./assets/images/catalog-7.jpg"
@@ -1057,9 +1338,7 @@
               </div>
             </div>
             <!-- Game Name -->
-            <p
-              class="group-hover:text-brand-purple transition-all duration-200 mt-2.5"
-            >
+            <p class="group-hover:text-black mt-2.5">
               Goddess of Victory: Nikke
             </p>
           </a>
@@ -1079,7 +1358,7 @@
 
                 <!-- Image -->
                 <div
-                  class="relative size-full border-3 border-brand-purple/40 rounded-20 xs:rounded-br-none rounded-tr-20 rounded-tl-20 rounded-bl-20 lg:rounded-tr-45 lg:rounded-tl-45 lg:rounded-bl-45 overflow-hidden after:absolute after:inset-0 after:size-full after:bg-brand-purple/30"
+                  class="relative size-full border-3 border-brand-purple/40 rounded-20 xs:rounded-br-none rounded-tr-20 rounded-tl-20 rounded-bl-20 lg:rounded-tr-45 lg:rounded-tl-45 lg:rounded-bl-45 overflow-hidden after:absolute after:inset-0 after:size-full after:bg-brand-purple/30 group-hover:after:hidden"
                 >
                   <img
                     src="./assets/images/catalog-3.jpg"
@@ -1101,11 +1380,7 @@
               </div>
             </div>
             <!-- Game Name -->
-            <p
-              class="group-hover:text-brand-purple transition-all duration-200 mt-2.5"
-            >
-              Arena Breakout
-            </p>
+            <p class="group-hover:text-black mt-2.5">Arena Breakout</p>
           </a>
         </div>
       </section>
@@ -1119,12 +1394,17 @@
         <!-- Logo -->
         <a
           href="./index.html"
-          class="inline-block w-[85px] h-10 xs:w-14 xs:h-8 sm:w-[118px] sm:h-14 overflow-hidden shrink-0"
+          class="group inline-block w-[85px] h-10 xs:w-14 xs:h-8 sm:w-[118px] sm:h-14 overflow-hidden shrink-0"
         >
           <img
-            src="./assets/svgs/logo-footer.svg"
+            src="./assets/svgs/logo.svg"
             alt="LOGO"
-            class="size-full"
+            class="size-full group-hover:hidden"
+          />
+          <img
+            src="./assets/svgs/logo-hover.svg"
+            alt="LOGO"
+            class="size-full hidden group-hover:block"
           />
         </a>
 
@@ -1135,35 +1415,35 @@
           <ul class="space-y-3.5 lg:space-y-5">
             <li>
               <a
-                href="#"
+                href="#products"
                 class="hover:text-brand-purple transition-all duration-300"
                 >Продукты</a
               >
             </li>
             <li>
               <a
-                href="#"
+                href="#bonuses"
                 class="hover:text-brand-purple transition-all duration-300"
                 >Бонусы</a
               >
             </li>
             <li>
               <a
-                href="#"
+                href="#secrets"
                 class="hover:text-brand-purple transition-all duration-300"
                 >Гайды</a
               >
             </li>
             <li>
               <a
-                href="#"
+                href="#about"
                 class="hover:text-brand-purple transition-all duration-300"
                 >О нас</a
               >
             </li>
             <li>
               <a
-                href="#"
+                href="#contact"
                 class="hover:text-brand-purple transition-all duration-300"
                 >Контакты</a
               >

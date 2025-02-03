@@ -632,6 +632,15 @@ p{
     line-height: 1.5rem;
   }
 }
+.text-trsprt-section-title{
+  background: url('../assets/bg-images/hero-left.png') -20px -20px no-repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  transition: background 0.3s ease-in-out;
+}
+.group:hover .text-trsprt-section-title{
+  background: linear-gradient(90deg, #7D3C98, #D2B4DE);
+}
 .fixed{
   position: fixed;
 }
@@ -647,11 +656,18 @@ p{
 .inset-0{
   inset: 0px;
 }
+.inset-x-0{
+  left: 0px;
+  right: 0px;
+}
 .-left-10{
   left: -2.5rem;
 }
 .-left-3{
   left: -0.75rem;
+}
+.-right-14{
+  right: -3.5rem;
 }
 .-right-16{
   right: -4rem;
@@ -746,14 +762,14 @@ p{
 .top-52{
   top: 13rem;
 }
-.left-20{
-  left: 5rem;
+.top-20{
+  top: 5rem;
 }
-.left-60{
-  left: 15rem;
+.-top-2{
+  top: -0.5rem;
 }
-.left-40{
-  left: 10rem;
+.-top-10{
+  top: -2.5rem;
 }
 .z-10{
   z-index: 10;
@@ -776,6 +792,9 @@ p{
 .z-\[80\]{
   z-index: 80;
 }
+.z-40{
+  z-index: 40;
+}
 .col-span-2{
   grid-column: span 2 / span 2;
 }
@@ -786,6 +805,10 @@ p{
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
+}
+.my-auto{
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .-mb-10{
   margin-bottom: -2.5rem;
@@ -931,6 +954,10 @@ p{
   width: 100%;
   height: 100%;
 }
+.size-3\.5{
+  width: 0.875rem;
+  height: 0.875rem;
+}
 .h-10{
   height: 2.5rem;
 }
@@ -954,6 +981,9 @@ p{
 }
 .h-8{
   height: 2rem;
+}
+.h-80{
+  height: 20rem;
 }
 .h-\[130px\]{
   height: 130px;
@@ -983,6 +1013,9 @@ p{
 .h-px{
   height: 1px;
 }
+.h-20{
+  height: 5rem;
+}
 .max-h-0{
   max-height: 0px;
 }
@@ -992,6 +1025,15 @@ p{
 }
 .max-h-screen{
   max-height: 100vh;
+}
+.max-h-\[calc\(100vh-\[200px\]\)\]{
+  max-height: calc(100vh - [200px]);
+}
+.max-h-\[calc\(100vh-200px\)\]{
+  max-height: calc(100vh - 200px);
+}
+.max-h-\[calc\(100vh-400px\)\]{
+  max-height: calc(100vh - 400px);
 }
 .min-h-64{
   min-height: 16rem;
@@ -1073,6 +1115,9 @@ p{
 .max-w-\[153px\]{
   max-width: 153px;
 }
+.max-w-\[1600px\]{
+  max-width: 1600px;
+}
 .max-w-\[169px\]{
   max-width: 169px;
 }
@@ -1124,6 +1169,29 @@ p{
 .max-w-secondary{
   max-width: 62.9375rem;
 }
+.max-w-fit{
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+.max-w-min{
+  max-width: -moz-min-content;
+  max-width: min-content;
+}
+.max-w-20{
+  max-width: 5rem;
+}
+.max-w-\[168px\]{
+  max-width: 168px;
+}
+.max-w-44{
+  max-width: 11rem;
+}
+.max-w-40{
+  max-width: 10rem;
+}
+.max-w-48{
+  max-width: 12rem;
+}
 .flex-1{
   flex: 1 1 0%;
 }
@@ -1140,14 +1208,6 @@ p{
 }
 .-translate-y-1\/2{
   --tw-translate-y: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-.translate-x-40{
-  --tw-translate-x: 10rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-.translate-x-28{
-  --tw-translate-x: 7rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .translate-x-24{
@@ -1460,6 +1520,37 @@ p{
 .bg-white\/90{
   background-color: rgb(255 255 255 / 0.9);
 }
+.bg-gradient-to-t{
+  background-image: linear-gradient(to top, var(--tw-gradient-stops));
+}
+.from-white{
+  --tw-gradient-from: #fff var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.via-white\/50{
+  --tw-gradient-to: rgb(255 255 255 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), rgb(255 255 255 / 0.5) var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+.via-white\/80{
+  --tw-gradient-to: rgb(255 255 255 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), rgb(255 255 255 / 0.8) var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+.to-white\/50{
+  --tw-gradient-to: rgb(255 255 255 / 0.5) var(--tw-gradient-to-position);
+}
+.to-white\/30{
+  --tw-gradient-to: rgb(255 255 255 / 0.3) var(--tw-gradient-to-position);
+}
+.to-white\/80{
+  --tw-gradient-to: rgb(255 255 255 / 0.8) var(--tw-gradient-to-position);
+}
+.to-white\/10{
+  --tw-gradient-to: rgb(255 255 255 / 0.1) var(--tw-gradient-to-position);
+}
+.to-white\/70{
+  --tw-gradient-to: rgb(255 255 255 / 0.7) var(--tw-gradient-to-position);
+}
 .fill-black{
   fill: #000;
 }
@@ -1474,6 +1565,9 @@ p{
 .object-top{
   -o-object-position: top;
      object-position: top;
+}
+.p-2{
+  padding: 0.5rem;
 }
 .p-2\.5{
   padding: 0.625rem;
@@ -1536,6 +1630,22 @@ p{
   padding-top: 18px;
   padding-bottom: 18px;
 }
+.px-10{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+.px-7{
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+.py-10{
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.py-2{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
 .pb-1{
   padding-bottom: 0.25rem;
 }
@@ -1553,6 +1663,9 @@ p{
 }
 .pb-3\.5{
   padding-bottom: 0.875rem;
+}
+.pb-32{
+  padding-bottom: 8rem;
 }
 .pb-4{
   padding-bottom: 1rem;
@@ -1614,20 +1727,32 @@ p{
 .pt-96{
   padding-top: 24rem;
 }
-.pb-20{
-  padding-bottom: 5rem;
+.pl-7{
+  padding-left: 1.75rem;
 }
-.pb-40{
-  padding-bottom: 10rem;
+.pl-4{
+  padding-left: 1rem;
+}
+.pl-6{
+  padding-left: 1.5rem;
+}
+.pl-2{
+  padding-left: 0.5rem;
+}
+.pl-1{
+  padding-left: 0.25rem;
 }
 .pb-24{
   padding-bottom: 6rem;
 }
-.pb-28{
-  padding-bottom: 7rem;
+.pb-44{
+  padding-bottom: 11rem;
 }
-.pb-32{
-  padding-bottom: 8rem;
+.pb-96{
+  padding-bottom: 24rem;
+}
+.pt-14{
+  padding-top: 3.5rem;
 }
 .text-left{
   text-align: left;
@@ -1689,6 +1814,10 @@ p{
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
@@ -1738,6 +1867,9 @@ p{
 .tracking-\[0\.6px\]{
   letter-spacing: 0.6px;
 }
+.tracking-wider{
+  letter-spacing: 0.05em;
+}
 .text-black{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
@@ -1779,14 +1911,14 @@ p{
 .opacity-100{
   opacity: 1;
 }
+.opacity-20{
+  opacity: 0.2;
+}
 .opacity-30{
   opacity: 0.3;
 }
 .opacity-50{
   opacity: 0.5;
-}
-.opacity-20{
-  opacity: 0.2;
 }
 .opacity-60{
   opacity: 0.6;
@@ -1872,16 +2004,22 @@ p{
   -webkit-background-clip: text;
 }
 
-.text-trsprt-section-title {
+/* .text-trsprt-section-title {
   background: url("../assets/bg-images/hero-left.png") -20px -20px no-repeat;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+} */
+
+.home-swiper .swiper-pagination{
+  z-index: 10;
 }
 
 .home-swiper .swiper-pagination-bullet{
   width: 0.5rem !important;
   height: 0.5rem !important;
-  background-color: rgb(255 255 255 / 0.9) !important;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
+  opacity: 0.5 !important;
 }
 
 @media (min-width: 480px){
@@ -1895,12 +2033,18 @@ p{
 .home-swiper .swiper-pagination-bullet-active{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
+  opacity: 1 !important;
 }
 
 /* Target the scrollbar track */
 .custom-scroll::-webkit-scrollbar{
   height: 0.125rem;
   width: 0.125rem;
+}
+
+.no-scroll::-webkit-scrollbar{
+  height: 0px;
+  width: 0px;
 }
 
 /* Track (background) */
@@ -1919,7 +2063,15 @@ p{
 }
 
 /* Checkbox */
-input[type="checkbox"]:checked + div .custom-check{
+input[type="checkbox"]:checked + label div .custom-check{
+  display: block;
+}
+
+input[type="checkbox"]:checked ~ img:first-of-type{
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ img:last-of-type{
   display: block;
 }
 
@@ -1938,6 +2090,38 @@ input[type="checkbox"]:checked + div .custom-check{
   }
 }
 
+.before\:absolute::before{
+  content: var(--tw-content);
+  position: absolute;
+}
+
+.before\:z-10::before{
+  content: var(--tw-content);
+  z-index: 10;
+}
+
+.before\:h-10::before{
+  content: var(--tw-content);
+  height: 2.5rem;
+}
+
+.before\:bg-gradient-to-t::before{
+  content: var(--tw-content);
+  background-image: linear-gradient(to top, var(--tw-gradient-stops));
+}
+
+.before\:from-white::before{
+  content: var(--tw-content);
+  --tw-gradient-from: #fff var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.before\:to-white\/50::before{
+  content: var(--tw-content);
+  --tw-gradient-to: rgb(255 255 255 / 0.5) var(--tw-gradient-to-position);
+}
+
 .after\:absolute::after{
   content: var(--tw-content);
   position: absolute;
@@ -1948,10 +2132,67 @@ input[type="checkbox"]:checked + div .custom-check{
   inset: 0px;
 }
 
+.after\:inset-x-0::after{
+  content: var(--tw-content);
+  left: 0px;
+  right: 0px;
+}
+
+.after\:bottom-0::after{
+  content: var(--tw-content);
+  bottom: 0px;
+}
+
+.after\:top-0::after{
+  content: var(--tw-content);
+  top: 0px;
+}
+
+.after\:z-20::after{
+  content: var(--tw-content);
+  z-index: 20;
+}
+
+.after\:z-30::after{
+  content: var(--tw-content);
+  z-index: 30;
+}
+
 .after\:size-full::after{
   content: var(--tw-content);
   width: 100%;
   height: 100%;
+}
+
+.after\:h-20::after{
+  content: var(--tw-content);
+  height: 5rem;
+}
+
+.after\:h-40::after{
+  content: var(--tw-content);
+  height: 10rem;
+}
+
+.after\:h-10::after{
+  content: var(--tw-content);
+  height: 2.5rem;
+}
+
+.after\:w-full::after{
+  content: var(--tw-content);
+  width: 100%;
+}
+
+.after\:-rotate-12::after{
+  content: var(--tw-content);
+  --tw-rotate: -12deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.after\:border::after{
+  content: var(--tw-content);
+  border-width: 1px;
 }
 
 .after\:bg-brand-purple\/20::after{
@@ -1969,10 +2210,26 @@ input[type="checkbox"]:checked + div .custom-check{
   background-image: linear-gradient(0deg, rgba(170, 151, 234, 0.95) 8.77%, rgba(170, 151, 234, 0.095) 73.06%);;
 }
 
-.hover\:scale-105:hover{
-  --tw-scale-x: 1.05;
-  --tw-scale-y: 1.05;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+.after\:bg-gradient-to-t::after{
+  content: var(--tw-content);
+  background-image: linear-gradient(to top, var(--tw-gradient-stops));
+}
+
+.after\:from-white::after{
+  content: var(--tw-content);
+  --tw-gradient-from: #fff var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.after\:to-white\/10::after{
+  content: var(--tw-content);
+  --tw-gradient-to: rgb(255 255 255 / 0.1) var(--tw-gradient-to-position);
+}
+
+.after\:to-white\/50::after{
+  content: var(--tw-content);
+  --tw-gradient-to: rgb(255 255 255 / 0.5) var(--tw-gradient-to-position);
 }
 
 .hover\:text-black:hover{
@@ -1985,16 +2242,18 @@ input[type="checkbox"]:checked + div .custom-check{
   color: rgb(135 113 219 / var(--tw-text-opacity, 1));
 }
 
-.hover\:shadow-2xl:hover{
-  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .hover\:shadow-lg:hover{
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.group:hover .group-hover\:block{
+  display: block;
+}
+
+.group:hover .group-hover\:hidden{
+  display: none;
 }
 
 .group:hover .group-hover\:-rotate-45{
@@ -2002,9 +2261,14 @@ input[type="checkbox"]:checked + div .custom-check{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.group:hover .group-hover\:text-brand-purple{
+.group:hover .group-hover\:text-black{
   --tw-text-opacity: 1;
-  color: rgb(135 113 219 / var(--tw-text-opacity, 1));
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+}
+
+.group:hover .group-hover\:after\:hidden::after{
+  content: var(--tw-content);
+  display: none;
 }
 
 @media (min-width: 480px){
@@ -2107,6 +2371,10 @@ input[type="checkbox"]:checked + div .custom-check{
 
   .xs\:max-w-none{
     max-width: none;
+  }
+
+  .xs\:max-w-40{
+    max-width: 10rem;
   }
 
   .xs\:grid-cols-2{
@@ -2325,6 +2593,10 @@ input[type="checkbox"]:checked + div .custom-check{
     width: 225px;
   }
 
+  .sm\:w-72{
+    width: 18rem;
+  }
+
   .sm\:max-w-4xl{
     max-width: 56rem;
   }
@@ -2351,6 +2623,11 @@ input[type="checkbox"]:checked + div .custom-check{
 
   .sm\:max-w-none{
     max-width: none;
+  }
+
+  .sm\:max-w-fit{
+    max-width: -moz-fit-content;
+    max-width: fit-content;
   }
 
   .sm\:translate-x-0{
@@ -2512,10 +2789,6 @@ input[type="checkbox"]:checked + div .custom-check{
     padding-top: 0.5rem;
   }
 
-  .sm\:pt-2\.5{
-    padding-top: 0.625rem;
-  }
-
   .sm\:pt-3{
     padding-top: 0.75rem;
   }
@@ -2573,8 +2846,17 @@ input[type="checkbox"]:checked + div .custom-check{
     line-height: 1.75rem;
   }
 
+  .sm\:text-xs{
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
   .sm\:leading-8{
     line-height: 2rem;
+  }
+
+  .sm\:tracking-\[3\.6px\]{
+    letter-spacing: 3.6px;
   }
 
   .after\:sm\:bg-cards-hero::after{
@@ -2688,6 +2970,11 @@ input[type="checkbox"]:checked + div .custom-check{
     margin-right: auto;
   }
 
+  .lg\:mx-0{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
   .lg\:-ml-10{
     margin-left: -2.5rem;
   }
@@ -2758,6 +3045,10 @@ input[type="checkbox"]:checked + div .custom-check{
     height: auto;
   }
 
+  .lg\:h-20{
+    height: 5rem;
+  }
+
   .lg\:h-\[77px\]{
     height: 77px;
   }
@@ -2768,6 +3059,10 @@ input[type="checkbox"]:checked + div .custom-check{
 
   .lg\:max-h-none{
     max-height: none;
+  }
+
+  .lg\:max-h-\[calc\(100vh-200px\)\]{
+    max-height: calc(100vh - 200px);
   }
 
   .lg\:w-40{
@@ -2944,6 +3239,11 @@ input[type="checkbox"]:checked + div .custom-check{
     border-width: 2px;
   }
 
+  .lg\:border-y-4{
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+  }
+
   .lg\:border-b-4{
     border-bottom-width: 4px;
   }
@@ -2970,6 +3270,11 @@ input[type="checkbox"]:checked + div .custom-check{
   .lg\:py-7{
     padding-top: 1.75rem;
     padding-bottom: 1.75rem;
+  }
+
+  .lg\:px-5{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
   .lg\:pl-4{
@@ -3038,6 +3343,14 @@ input[type="checkbox"]:checked + div .custom-check{
 
 @media (min-width: 1280px){
 
+  .xl\:left-1{
+    left: 0.25rem;
+  }
+
+  .xl\:top-0\.5{
+    top: 0.125rem;
+  }
+
   .xl\:col-span-1{
     grid-column: span 1 / span 1;
   }
@@ -3067,6 +3380,10 @@ input[type="checkbox"]:checked + div .custom-check{
     margin-top: 0px;
   }
 
+  .xl\:mt-3{
+    margin-top: 0.75rem;
+  }
+
   .xl\:block{
     display: block;
   }
@@ -3075,13 +3392,34 @@ input[type="checkbox"]:checked + div .custom-check{
     display: grid;
   }
 
+  .xl\:size-\[30px\]{
+    width: 30px;
+    height: 30px;
+  }
+
   .xl\:size-auto{
     width: auto;
     height: auto;
   }
 
+  .xl\:h-5{
+    height: 1.25rem;
+  }
+
+  .xl\:h-\[74px\]{
+    height: 74px;
+  }
+
   .xl\:w-\[900px\]{
     width: 900px;
+  }
+
+  .xl\:w-7{
+    width: 1.75rem;
+  }
+
+  .xl\:max-w-\[115px\]{
+    max-width: 115px;
   }
 
   .xl\:max-w-min{
@@ -3089,12 +3427,12 @@ input[type="checkbox"]:checked + div .custom-check{
     max-width: min-content;
   }
 
-  .xl\:shrink-0{
-    flex-shrink: 0;
+  .xl\:max-w-20{
+    max-width: 5rem;
   }
 
-  .xl\:grid-cols-2{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .xl\:shrink-0{
+    flex-shrink: 0;
   }
 
   .xl\:grid-cols-3{
@@ -3109,6 +3447,10 @@ input[type="checkbox"]:checked + div .custom-check{
     flex-direction: row;
   }
 
+  .xl\:flex-col-reverse{
+    flex-direction: column-reverse;
+  }
+
   .xl\:items-end{
     align-items: flex-end;
   }
@@ -3121,6 +3463,10 @@ input[type="checkbox"]:checked + div .custom-check{
     gap: 2.5rem;
   }
 
+  .xl\:gap-2\.5{
+    gap: 0.625rem;
+  }
+
   .xl\:rounded-45{
     border-radius: 45px;
   }
@@ -3130,19 +3476,68 @@ input[type="checkbox"]:checked + div .custom-check{
     padding-right: 0.625rem;
   }
 
+  .xl\:px-4{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .xl\:pb-1{
+    padding-bottom: 0.25rem;
+  }
+
   .xl\:text-\[26px\]{
     font-size: 26px;
+  }
+
+  .xl\:text-xs{
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 }
 
 @media (min-width: 1440px){
 
+  .\32xl\:left-2{
+    left: 0.5rem;
+  }
+
+  .\32xl\:top-1{
+    top: 0.25rem;
+  }
+
+  .\32xl\:mx-0{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .\32xl\:mt-11{
+    margin-top: 2.75rem;
+  }
+
   .\32xl\:block{
     display: block;
   }
 
+  .\32xl\:size-10{
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .\32xl\:size-auto{
+    width: auto;
+    height: auto;
+  }
+
   .\32xl\:h-\[170px\]{
     height: 170px;
+  }
+
+  .\32xl\:h-\[74px\]{
+    height: 74px;
+  }
+
+  .\32xl\:h-20{
+    height: 5rem;
   }
 
   .\32xl\:w-\[1024px\]{
@@ -3153,11 +3548,96 @@ input[type="checkbox"]:checked + div .custom-check{
     width: 225px;
   }
 
-  .\32xl\:grid-cols-3{
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .\32xl\:max-w-none{
+    max-width: none;
+  }
+
+  .\32xl\:max-w-40{
+    max-width: 10rem;
   }
 
   .\32xl\:grid-cols-6{
     grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .\32xl\:flex-row{
+    flex-direction: row;
+  }
+
+  .\32xl\:gap-5{
+    gap: 1.25rem;
+  }
+
+  .\32xl\:gap-10{
+    gap: 2.5rem;
+  }
+
+  .\32xl\:space-y-24 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(6rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(6rem * var(--tw-space-y-reverse));
+  }
+
+  .\32xl\:space-y-28 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(7rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(7rem * var(--tw-space-y-reverse));
+  }
+
+  .\32xl\:space-y-20 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(5rem * var(--tw-space-y-reverse));
+  }
+
+  .\32xl\:space-y-16 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(4rem * var(--tw-space-y-reverse));
+  }
+
+  .\32xl\:space-y-10 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
+  }
+
+  .\32xl\:py-4{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .\32xl\:pb-4{
+    padding-bottom: 1rem;
+  }
+
+  .\32xl\:pt-5{
+    padding-top: 1.25rem;
+  }
+
+  .\32xl\:pb-40{
+    padding-bottom: 10rem;
+  }
+
+  .\32xl\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .\32xl\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .\32xl\:text-\[120px\]{
+    font-size: 120px;
+  }
+
+  .\32xl\:text-\[100px\]{
+    font-size: 100px;
+  }
+
+  .\32xl\:text-\[26px\]{
+    font-size: 26px;
   }
 }

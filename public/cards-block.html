@@ -23,9 +23,18 @@
         >
           <a
             href="./index.html"
-            class="inline-block w-12 h-8 xs:w-14 xs:h-8 sm:w-24 sm:h-12 lg:w-40 lg:h-[77px] overflow-hidden shrink-0"
+            class="group inline-block w-12 h-8 xs:w-14 xs:h-8 sm:w-24 sm:h-12 lg:w-40 lg:h-[77px] overflow-hidden shrink-0"
           >
-            <img src="./assets/svgs/logo.svg" alt="LOGO" class="size-full" />
+            <img
+              src="./assets/svgs/logo.svg"
+              alt="LOGO"
+              class="size-full group-hover:hidden"
+            />
+            <img
+              src="./assets/svgs/logo-hover.svg"
+              alt="LOGO"
+              class="size-full hidden group-hover:block"
+            />
           </a>
         </div>
 
@@ -36,27 +45,37 @@
           <!-- Links -->
           <ul class="flex items-center gap-6">
             <li>
-              <a href="#" class="hover:text-black transition-all duration-200"
+              <a
+                href="./catalog.html"
+                class="hover:text-black transition-all duration-200"
                 >все игры</a
               >
             </li>
             <li>
-              <a href="#" class="hover:text-black transition-all duration-200"
+              <a
+                href="#bonus"
+                class="hover:text-black transition-all duration-200"
                 >Бонусы</a
               >
             </li>
             <li>
-              <a href="#" class="hover:text-black transition-all duration-200"
+              <a
+                href="#secrets"
+                class="hover:text-black transition-all duration-200"
                 >Гайды</a
               >
             </li>
             <li>
-              <a href="#" class="hover:text-black transition-all duration-200"
+              <a
+                href="#about"
+                class="hover:text-black transition-all duration-200"
                 >О нас</a
               >
             </li>
             <li>
-              <a href="#" class="hover:text-black transition-all duration-200"
+              <a
+                href="#contact"
+                class="hover:text-black transition-all duration-200"
                 >Контакты</a
               >
             </li>
@@ -65,7 +84,6 @@
           <!-- Cart & Lang -->
           <div class="flex items-center gap-6">
             <!-- Cart -->
-
             <button class="flex items-center gap-1">
               <img src="./assets/svgs/cart.svg" alt="Cart Icon" />
               <span>2</span>
@@ -95,25 +113,155 @@
 
               <!-- Select List -->
               <ul
-                class="select-list fade-in w-full absolute bg-white rounded-10 font-mulish hidden z-10 shadow-lg"
+                class="w-max select-list fade-in absolute right-0 bg-white font-extrabold font-mulish text-black/40 text-xl hidden z-[60] border-[3px] border-brand-purple rounded-30 shadow-lg p-4"
               >
+                <!-- Lang 1 -->
                 <li
-                  class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="cn"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-cn.svg" alt="Flag" />
+                  <span>cn</span>
+                </li>
+                <!-- Lang 2 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="id"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-id.svg" alt="Flag" />
+                  <span>id</span>
+                </li>
+                <!-- Lang 3 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="kr"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-kr.svg" alt="Flag" />
+                  <span>kr</span>
+                </li>
+                <!-- Lang 4 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="my"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-my.svg" alt="Flag" />
+                  <span>my</span>
+                </li>
+                <!-- Lang 5 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="ph"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-ph.svg" alt="Flag" />
+                  <span>ph</span>
+                </li>
+                <!-- Lang 6 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="th"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-th.svg" alt="Flag" />
+                  <span>th</span>
+                </li>
+                <!-- Lang 7 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="jp"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-jp.svg" alt="Flag" />
+                  <span>jp</span>
+                </li>
+                <!-- Lang 8 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="sg"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-sg.svg" alt="Flag" />
+                  <span>sg</span>
+                </li>
+                <!-- Lang 9 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="vn"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-vn.svg" alt="Flag" />
+                  <span>vn</span>
+                </li>
+                <!-- Lang 10 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="tw"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-tw.svg" alt="Flag" />
+                  <span>tw</span>
+                </li>
+                <!-- Lang 11 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
                   data-value="ru"
                 >
-                  ru
+                  <!-- Flag -->
+                  <img
+                    src="./assets/svgs/flag-ru.svg"
+                    alt="Flag"
+                    class="opacity-50"
+                  />
+                  <span>ru</span>
                 </li>
+                <!-- Lang 12 -->
                 <li
-                  class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
-                  data-value="eng"
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="by"
                 >
-                  eng
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-by.svg" alt="Flag" />
+                  <span>by</span>
                 </li>
+                <!-- Lang 13 -->
                 <li
-                  class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
-                  data-value="chn"
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="ua"
                 >
-                  chn
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-ua.svg" alt="Flag" />
+                  <span>ua</span>
+                </li>
+                <!-- Lang 14 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="kz"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-kz.svg" alt="Flag" />
+                  <span>kz</span>
+                </li>
+                <!-- Lang 15 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="br"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-br.svg" alt="Flag" />
+                  <span>br</span>
+                </li>
+                <!-- Lang 16 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="us"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-us.svg" alt="Flag" />
+                  <span>us</span>
                 </li>
               </ul>
             </div>
@@ -184,7 +332,10 @@
                 <!-- Lang Select Container -->
                 <div class="w-20 relative select space-y-2.5">
                   <!-- Select Button -->
-                  <div class="select-button flex items-center gap-1">
+                  <div
+                    class="select-button cursor-pointer flex items-center gap-1"
+                  >
+                    <img src="./assets/svgs/globe.svg" alt="Cart Icon" />
                     <span class="select-label uppercase">RU</span>
                     <svg
                       width="9"
@@ -204,25 +355,155 @@
 
                   <!-- Select List -->
                   <ul
-                    class="select-list fade-in w-full absolute bg-white rounded-10 font-mulish hidden z-10 shadow-lg"
+                    class="no-scroll h-80 select-list fade-in absolute left-0 bg-white font-extrabold font-mulish text-black/40 hidden z-[60] border-[3px] border-brand-purple rounded-20 shadow-lg overflow-auto p-2"
                   >
+                    <!-- Lang 1 -->
                     <li
-                      class="flex items-center gap-2 text-black/80 hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="cn"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-cn.svg" alt="Flag" />
+                      <span>cn</span>
+                    </li>
+                    <!-- Lang 2 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="id"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-id.svg" alt="Flag" />
+                      <span>id</span>
+                    </li>
+                    <!-- Lang 3 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="kr"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-kr.svg" alt="Flag" />
+                      <span>kr</span>
+                    </li>
+                    <!-- Lang 4 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="my"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-my.svg" alt="Flag" />
+                      <span>my</span>
+                    </li>
+                    <!-- Lang 5 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="ph"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-ph.svg" alt="Flag" />
+                      <span>ph</span>
+                    </li>
+                    <!-- Lang 6 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="th"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-th.svg" alt="Flag" />
+                      <span>th</span>
+                    </li>
+                    <!-- Lang 7 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="jp"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-jp.svg" alt="Flag" />
+                      <span>jp</span>
+                    </li>
+                    <!-- Lang 8 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="sg"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-sg.svg" alt="Flag" />
+                      <span>sg</span>
+                    </li>
+                    <!-- Lang 9 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="vn"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-vn.svg" alt="Flag" />
+                      <span>vn</span>
+                    </li>
+                    <!-- Lang 10 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="tw"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-tw.svg" alt="Flag" />
+                      <span>tw</span>
+                    </li>
+                    <!-- Lang 11 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
                       data-value="ru"
                     >
-                      <button class="uppercase">ru</button>
+                      <!-- Flag -->
+                      <img
+                        src="./assets/svgs/flag-ru.svg"
+                        alt="Flag"
+                        class="opacity-50"
+                      />
+                      <span>ru</span>
                     </li>
+                    <!-- Lang 12 -->
                     <li
-                      class="flex items-center gap-2 text-black/80 hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
-                      data-value="eng"
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="by"
                     >
-                      <button class="uppercase">eng</button>
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-by.svg" alt="Flag" />
+                      <span>by</span>
                     </li>
+                    <!-- Lang 13 -->
                     <li
-                      class="flex items-center gap-2 text-black/80 hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
-                      data-value="chn"
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="ua"
                     >
-                      <button class="uppercase">chn</button>
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-ua.svg" alt="Flag" />
+                      <span>ua</span>
+                    </li>
+                    <!-- Lang 14 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="kz"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-kz.svg" alt="Flag" />
+                      <span>kz</span>
+                    </li>
+                    <!-- Lang 15 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="br"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-br.svg" alt="Flag" />
+                      <span>br</span>
+                    </li>
+                    <!-- Lang 16 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="us"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-us.svg" alt="Flag" />
+                      <span>us</span>
                     </li>
                   </ul>
                 </div>
@@ -290,7 +571,7 @@
                 <!-- Catalog Item 3 -->
                 <li>
                   <a
-                    href="#"
+                    href="./cards-grid.html"
                     class="h-12 max-w-[207px] gap-6 flex items-center justify-between border-[1.5px] border-black/20 rounded-10 px-2.5"
                   >
                     <span class="max-w-36">Genshin Impact</span>
@@ -499,33 +780,37 @@
     </header>
 
     <!-- Socials -->
-    <ul class="fixed right-2 top-52 z-[70] space-y-2.5 hidden lg:block">
-      <li>
-        <a href="#">
-          <img src="./assets/svgs/message.svg" alt="Icon" />
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="./assets/svgs/message-2.svg" alt="Icon" />
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="./assets/svgs/vk.svg" alt="Icon" />
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="./assets/svgs/telegram.svg" alt="Icon" />
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="./assets/svgs/tel.svg" alt="Icon" />
-        </a>
-      </li>
-    </ul>
+    <div
+      class="fixed max-w-[1600px] w-full left-1/2 -translate-x-1/2 hidden lg:flex justify-end right-2 top-52"
+    >
+      <ul class="space-y-2.5 hidden lg:block relative z-[80]">
+        <li>
+          <a href="#">
+            <img src="./assets/svgs/message.svg" alt="Icon" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./assets/svgs/message-2.svg" alt="Icon" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./assets/svgs/vk.svg" alt="Icon" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./assets/svgs/telegram.svg" alt="Icon" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./assets/svgs/tel.svg" alt="Icon" />
+          </a>
+        </li>
+      </ul>
+    </div>
 
     <!-- MAIN -->
     <main class="relative">
@@ -584,7 +869,7 @@
 
                 <!-- Game Name -->
                 <span
-                  class="text-xs text-center line-clamp-2 group-hover:text-brand-purple transition-all duration-200"
+                  class="text-xs text-center line-clamp-2 group-hover:text-black transition-all duration-200"
                 >
                   Zenless Zone Zero
                 </span>
@@ -609,7 +894,7 @@
 
                 <!-- Game Name -->
                 <span
-                  class="text-xs text-center line-clamp-2 group-hover:text-brand-purple transition-all duration-200"
+                  class="text-xs text-center line-clamp-2 group-hover:text-black transition-all duration-200"
                 >
                   Honkai: Star Rail
                 </span>
@@ -634,7 +919,7 @@
 
                 <!-- Game Name -->
                 <span
-                  class="text-xs text-center line-clamp-2 group-hover:text-brand-purple transition-all duration-200"
+                  class="text-xs text-center line-clamp-2 group-hover:text-black transition-all duration-200"
                 >
                   Genshin Impact
                 </span>
@@ -659,7 +944,7 @@
 
                 <!-- Game Name -->
                 <span
-                  class="text-xs text-center line-clamp-2 group-hover:text-brand-purple transition-all duration-200"
+                  class="text-xs text-center line-clamp-2 group-hover:text-black transition-all duration-200"
                 >
                   Arena Breakout
                 </span>
@@ -684,7 +969,7 @@
 
                 <!-- Game Name -->
                 <span
-                  class="text-xs text-center line-clamp-2 group-hover:text-brand-purple transition-all duration-200"
+                  class="text-xs text-center line-clamp-2 group-hover:text-black transition-all duration-200"
                 >
                   PUBG MOBILE
                 </span>
@@ -709,7 +994,7 @@
 
                 <!-- Game Name -->
                 <span
-                  class="text-xs text-center line-clamp-2 group-hover:text-brand-purple transition-all duration-200"
+                  class="text-xs text-center line-clamp-2 group-hover:text-black transition-all duration-200"
                 >
                   Tower of Fantasy
                 </span>
@@ -734,7 +1019,7 @@
 
                 <!-- Game Name -->
                 <span
-                  class="text-xs text-center line-clamp-2 group-hover:text-brand-purple transition-all duration-200"
+                  class="text-xs text-center line-clamp-2 group-hover:text-black transition-all duration-200"
                 >
                   Goddess of Victory: Nikke
                 </span>
@@ -759,7 +1044,7 @@
 
                 <!-- Game Name -->
                 <span
-                  class="text-xs text-center line-clamp-2 group-hover:text-brand-purple transition-all duration-200"
+                  class="text-xs text-center line-clamp-2 group-hover:text-black transition-all duration-200"
                 >
                   Mobile Legends: Bang Bang (Global)
                 </span>
@@ -774,42 +1059,131 @@
             <div class="hidden sm:flex items-center sm:gap-6">
               <!-- Mobile/Desktop Games -->
               <div class="flex items-center gap-1 text-xs font-bold uppercase">
-                <span class="text-black/80">Мобильные игры</span>
+                <a href="#" class="text-black/40">Мобильные игры</a>
                 <span class="text-black/40">/</span>
-                <span class="text-black/40">Мобильные игры</span>
+                <a href="#" class="text-black/40">Мобильные игры</a>
               </div>
 
               <!-- List -->
-              <div class="flex items-center gap-1 text-xs font-bold uppercase">
-                <span class="text-black/80">список</span>
+              <div
+                class="list flex items-center gap-1 text-xs font-bold uppercase"
+              >
+                <a href="./cards-block.html" class="text-black/80">список</a>
                 <span class="text-black/40">/</span>
-                <span class="text-black/40">сетка</span>
+                <a href="./cards-grid.html" class="text-black/40">сетка</a>
               </div>
             </div>
 
             <!-- Mobile/Desktop Games(Mobile) -->
-            <button
-              class="h-6 flex sm:hidden items-center gap-2.5 uppercase text-black/40 font-bold text-xs"
+            <div
+              class="relative select space-y-2.5 sm:hidden text-black/40 font-bold text-[10px] sm:text-xs whitespace-nowrap z-[80]"
             >
-              <span>Мобильные игры</span>
-              <img src="./assets/svgs/angle-down.svg" alt="Angle" />
-            </button>
+              <!-- Select Button -->
+              <button
+                class="select-button h-6 flex items-center gap-2.5 uppercase sm:border border-black/40 rounded-full px-4"
+              >
+                <span class="select-label tracking-wider sm:tracking-[3.6px]"
+                  >Мобильные игры</span
+                >
+                <img
+                  src="./assets/svgs/angle-down.svg"
+                  alt="Angle"
+                  class="select-icon"
+                />
+              </button>
+
+              <!-- Select List -->
+              <ul
+                class="select-list fade-in w-full space-y-5 absolute z-50 bg-white uppercase font-mulish hidden border-2 border-brand-purple rounded-10 py-5 px-2.5"
+              >
+                <li
+                  class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
+                  data-value="Мобильные игры"
+                >
+                  <a href="#">Мобильные игры</a>
+                </li>
+                <li
+                  class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
+                  data-value="Игры для ПК"
+                >
+                  <a href="#">Игры для ПК</a>
+                </li>
+              </ul>
+            </div>
 
             <!-- List Mobile -->
-            <button
-              class="h-6 flex sm:hidden items-center gap-2.5 uppercase text-black/40 font-bold text-xs"
+            <div
+              class="relative select space-y-2.5 sm:hidden text-black/40 font-bold text-[10px] sm:text-xs whitespace-nowrap z-[80]"
             >
-              <span>список</span>
-              <img src="./assets/svgs/angle-down.svg" alt="Angle" />
-            </button>
+              <!-- Select Button -->
+              <button
+                class="select-button h-6 flex items-center gap-2.5 uppercase sm:border border-black/40 rounded-full px-4"
+              >
+                <span class="select-label tracking-wider sm:tracking-[3.6px]"
+                  >список</span
+                >
+                <img
+                  src="./assets/svgs/angle-down.svg"
+                  alt="Angle"
+                  class="select-icon"
+                />
+              </button>
 
-            <!-- Filter -->
-            <button
-              class="h-6 flex items-center gap-2.5 uppercase text-black/40 font-bold text-xs sm:border border-black/40 rounded-full px-4"
+              <!-- Select List -->
+              <ul
+                class="list-mobile select-list fade-in w-full space-y-5 absolute z-50 bg-white uppercase font-mulish hidden border-2 border-brand-purple rounded-10 py-5 px-2.5"
+              >
+                <li
+                  class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
+                  data-value="список"
+                >
+                  <a href="./cards-block.html">список</a>
+                </li>
+                <li
+                  class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
+                  data-value="сетка"
+                >
+                  <a href="./cards-grid.html">сетка</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Filter Container -->
+            <div
+              class="relative select space-y-2.5 text-black/40 font-bold text-[10px] sm:text-xs whitespace-nowrap"
             >
-              <span>сортировать</span>
-              <img src="./assets/svgs/angle-down.svg" alt="Angle" />
-            </button>
+              <!-- Select Button -->
+              <button
+                class="select-button h-6 flex items-center gap-2.5 uppercase sm:border border-black/40 rounded-full px-4"
+              >
+                <span class="select-label tracking-wider sm:tracking-[3.6px]"
+                  >сортировать</span
+                >
+                <img
+                  src="./assets/svgs/angle-down.svg"
+                  alt="Angle"
+                  class="select-icon"
+                />
+              </button>
+
+              <!-- Select List -->
+              <ul
+                class="select-list fade-in w-full space-y-5 absolute z-50 bg-white uppercase font-mulish hidden border-2 border-brand-purple rounded-10 py-5 px-2.5"
+              >
+                <li
+                  class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
+                  data-value="сортировать2"
+                >
+                  сортировать2
+                </li>
+                <li
+                  class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
+                  data-value="сортировать3"
+                >
+                  сортировать3
+                </li>
+              </ul>
+            </div>
           </div>
 
           <!-- Main Part -->
@@ -839,9 +1213,7 @@
                     </div>
 
                     <!-- Game Name -->
-                    <span
-                      class="group-hover:text-brand-purple transition-all duration-200"
-                    >
+                    <span class="group-hover:text-black">
                       Zenless Zone Zero
                     </span>
                   </a>
@@ -864,9 +1236,7 @@
                     </div>
 
                     <!-- Game Name -->
-                    <span
-                      class="group-hover:text-brand-purple transition-all duration-200"
-                    >
+                    <span class="group-hover:text-black">
                       Honkai: Star Rail
                     </span>
                   </a>
@@ -889,11 +1259,7 @@
                     </div>
 
                     <!-- Game Name -->
-                    <span
-                      class="group-hover:text-brand-purple transition-all duration-200"
-                    >
-                      Genshin Impact
-                    </span>
+                    <span class="group-hover:text-black"> Genshin Impact </span>
                   </a>
                 </li>
                 <!-- Catalog Item 4 -->
@@ -914,11 +1280,7 @@
                     </div>
 
                     <!-- Game Name -->
-                    <span
-                      class="group-hover:text-brand-purple transition-all duration-200"
-                    >
-                      Arena Breakout
-                    </span>
+                    <span class="group-hover:text-black"> Arena Breakout </span>
                   </a>
                 </li>
                 <!-- Catalog Item 5 -->
@@ -939,11 +1301,7 @@
                     </div>
 
                     <!-- Game Name -->
-                    <span
-                      class="group-hover:text-brand-purple transition-all duration-200"
-                    >
-                      PUBG MOBILE
-                    </span>
+                    <span class="group-hover:text-black"> PUBG MOBILE </span>
                   </a>
                 </li>
                 <!-- Catalog Item 6 -->
@@ -964,9 +1322,7 @@
                     </div>
 
                     <!-- Game Name -->
-                    <span
-                      class="group-hover:text-brand-purple transition-all duration-200"
-                    >
+                    <span class="group-hover:text-black">
                       Tower of Fantasy
                     </span>
                   </a>
@@ -989,9 +1345,7 @@
                     </div>
 
                     <!-- Game Name -->
-                    <span
-                      class="group-hover:text-brand-purple transition-all duration-200"
-                    >
+                    <span class="group-hover:text-black">
                       Goddess of Victory: Nikke
                     </span>
                   </a>
@@ -1014,9 +1368,7 @@
                     </div>
 
                     <!-- Game Name -->
-                    <span
-                      class="group-hover:text-brand-purple transition-all duration-200"
-                    >
+                    <span class="group-hover:text-black">
                       Mobile Legends: Bang Bang (Global)
                     </span>
                   </a>
@@ -1028,15 +1380,15 @@
                 <!-- Product 1 -->
                 <a
                   href="#"
-                  class="relative flex rounded-20 sm:rounded-30 hover:shadow-2xl hover:scale-105 transition-all duration-200 p-2.5 sm:p-5"
+                  class="relative flex rounded-20 sm:rounded-30 p-2.5 sm:p-5"
                 >
                   <!-- Check -->
-                  <label
-                    id="1"
-                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-2.5 sm:p-5"
-                  >
-                    <input type="checkbox" class="product-check hidden" />
+                  <input type="checkbox" class="hidden" id="1" />
 
+                  <label
+                    for="1"
+                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-4"
+                  >
                     <div
                       class="size-fit relative flex items-center justify-center cursor-pointer"
                     >
@@ -1045,6 +1397,7 @@
                         alt="Icon"
                         class="size-[30px] lg:size-10"
                       />
+
                       <img
                         src="./assets/svgs/check-desktop.svg"
                         alt="Check Icon"
@@ -1053,19 +1406,26 @@
                     </div>
                   </label>
 
+                  <!-- BG Image -->
+                  <img
+                    src="./assets/bg-images/product-block-1.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill group-hover:hidden"
+                  />
+
+                  <!-- BG Hover -->
+                  <img
+                    src="./assets/bg-images/product-block-hover.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill hidden group-hover:block"
+                  />
+
                   <!-- Question Button -->
                   <button
                     class="product-open-btn absolute right-4 bottom-11 z-20"
                   >
                     <img src="./assets/svgs/question.svg" alt="Question" />
                   </button>
-
-                  <!-- BG Image -->
-                  <img
-                    src="./assets/bg-images/product-block-1.png"
-                    alt="BG"
-                    class="absolute inset-0 size-full object-fill"
-                  />
 
                   <!-- Image & Title -->
                   <div class="w-full relative z-10 flex gap-2.5">
@@ -1112,15 +1472,15 @@
                 <!-- Product 2 -->
                 <a
                   href="#"
-                  class="relative flex rounded-20 sm:rounded-30 hover:shadow-2xl hover:scale-105 transition-all duration-200 p-2.5 sm:p-5"
+                  class="relative flex rounded-20 sm:rounded-30 p-2.5 sm:p-5"
                 >
                   <!-- Check -->
-                  <label
-                    id="1"
-                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-2.5 sm:p-5"
-                  >
-                    <input type="checkbox" class="product-check hidden" />
+                  <input type="checkbox" class="hidden" id="2" />
 
+                  <label
+                    for="2"
+                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-4"
+                  >
                     <div
                       class="size-fit relative flex items-center justify-center cursor-pointer"
                     >
@@ -1129,6 +1489,7 @@
                         alt="Icon"
                         class="size-[30px] lg:size-10"
                       />
+
                       <img
                         src="./assets/svgs/check-desktop.svg"
                         alt="Check Icon"
@@ -1137,19 +1498,26 @@
                     </div>
                   </label>
 
+                  <!-- BG Image -->
+                  <img
+                    src="./assets/bg-images/product-block-1.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill group-hover:hidden"
+                  />
+
+                  <!-- BG Hover -->
+                  <img
+                    src="./assets/bg-images/product-block-hover.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill hidden group-hover:block"
+                  />
+
                   <!-- Question Button -->
                   <button
                     class="product-open-btn absolute right-4 bottom-11 z-20"
                   >
                     <img src="./assets/svgs/question.svg" alt="Question" />
                   </button>
-
-                  <!-- BG Image -->
-                  <img
-                    src="./assets/bg-images/product-block-2.png"
-                    alt="BG"
-                    class="absolute inset-0 size-full object-fill"
-                  />
 
                   <!-- Image & Title -->
                   <div class="w-full relative z-10 flex gap-2.5">
@@ -1196,15 +1564,15 @@
                 <!-- Product 3 -->
                 <a
                   href="#"
-                  class="relative flex rounded-20 sm:rounded-30 hover:shadow-2xl hover:scale-105 transition-all duration-200 p-2.5 sm:p-5"
+                  class="relative flex rounded-20 sm:rounded-30 p-2.5 sm:p-5"
                 >
                   <!-- Check -->
-                  <label
-                    id="1"
-                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-2.5 sm:p-5"
-                  >
-                    <input type="checkbox" class="product-check hidden" />
+                  <input type="checkbox" class="hidden" id="3" />
 
+                  <label
+                    for="3"
+                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-4"
+                  >
                     <div
                       class="size-fit relative flex items-center justify-center cursor-pointer"
                     >
@@ -1213,6 +1581,7 @@
                         alt="Icon"
                         class="size-[30px] lg:size-10"
                       />
+
                       <img
                         src="./assets/svgs/check-desktop.svg"
                         alt="Check Icon"
@@ -1221,19 +1590,26 @@
                     </div>
                   </label>
 
+                  <!-- BG Image -->
+                  <img
+                    src="./assets/bg-images/product-block-1.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill group-hover:hidden"
+                  />
+
+                  <!-- BG Hover -->
+                  <img
+                    src="./assets/bg-images/product-block-hover.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill hidden group-hover:block"
+                  />
+
                   <!-- Question Button -->
                   <button
                     class="product-open-btn absolute right-4 bottom-11 z-20"
                   >
                     <img src="./assets/svgs/question.svg" alt="Question" />
                   </button>
-
-                  <!-- BG Image -->
-                  <img
-                    src="./assets/bg-images/product-block-2.png"
-                    alt="BG"
-                    class="absolute inset-0 size-full object-fill"
-                  />
 
                   <!-- Image & Title -->
                   <div class="w-full relative z-10 flex gap-2.5">
@@ -1280,15 +1656,15 @@
                 <!-- Product 4 -->
                 <a
                   href="#"
-                  class="relative flex rounded-20 sm:rounded-30 hover:shadow-2xl hover:scale-105 transition-all duration-200 p-2.5 sm:p-5"
+                  class="relative flex rounded-20 sm:rounded-30 p-2.5 sm:p-5"
                 >
                   <!-- Check -->
-                  <label
-                    id="1"
-                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-2.5 sm:p-5"
-                  >
-                    <input type="checkbox" class="product-check hidden" />
+                  <input type="checkbox" class="hidden" id="4" />
 
+                  <label
+                    for="4"
+                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-4"
+                  >
                     <div
                       class="size-fit relative flex items-center justify-center cursor-pointer"
                     >
@@ -1297,6 +1673,7 @@
                         alt="Icon"
                         class="size-[30px] lg:size-10"
                       />
+
                       <img
                         src="./assets/svgs/check-desktop.svg"
                         alt="Check Icon"
@@ -1305,19 +1682,26 @@
                     </div>
                   </label>
 
+                  <!-- BG Image -->
+                  <img
+                    src="./assets/bg-images/product-block-1.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill group-hover:hidden"
+                  />
+
+                  <!-- BG Hover -->
+                  <img
+                    src="./assets/bg-images/product-block-hover.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill hidden group-hover:block"
+                  />
+
                   <!-- Question Button -->
                   <button
                     class="product-open-btn absolute right-4 bottom-11 z-20"
                   >
                     <img src="./assets/svgs/question.svg" alt="Question" />
                   </button>
-
-                  <!-- BG Image -->
-                  <img
-                    src="./assets/bg-images/product-block-1.png"
-                    alt="BG"
-                    class="absolute inset-0 size-full object-fill"
-                  />
 
                   <!-- Image & Title -->
                   <div class="w-full relative z-10 flex gap-2.5">
@@ -1336,7 +1720,7 @@
                       <p
                         class="max-w-[170px] sm:max-w-[260px] text-start text-white text-sm sm:text-[26px] font-bold leading-[100%]"
                       >
-                        6480+1600 Кристаллов Сотворения
+                        980+110 Кристаллов Сотворения
                       </p>
 
                       <!-- Cost -->
@@ -1355,7 +1739,7 @@
                         <button
                           class="h-6 sm:h-8 w-max flex items-center gap-1 font-extrabold bg-white text-brand-purple whitespace-normal text-xs sm:text-[22px] border-2 border-brand-purple rounded-full px-5"
                         >
-                          <span>RUB 7370</span>
+                          <span>RUB 1100</span>
                         </button>
                       </div>
                     </div>
@@ -1364,15 +1748,15 @@
                 <!-- Product 5 -->
                 <a
                   href="#"
-                  class="relative flex rounded-20 sm:rounded-30 hover:shadow-2xl hover:scale-105 transition-all duration-200 p-2.5 sm:p-5"
+                  class="relative flex rounded-20 sm:rounded-30 p-2.5 sm:p-5"
                 >
                   <!-- Check -->
-                  <label
-                    id="1"
-                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-2.5 sm:p-5"
-                  >
-                    <input type="checkbox" class="product-check hidden" />
+                  <input type="checkbox" class="hidden" id="5" />
 
+                  <label
+                    for="5"
+                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-4"
+                  >
                     <div
                       class="size-fit relative flex items-center justify-center cursor-pointer"
                     >
@@ -1381,6 +1765,7 @@
                         alt="Icon"
                         class="size-[30px] lg:size-10"
                       />
+
                       <img
                         src="./assets/svgs/check-desktop.svg"
                         alt="Check Icon"
@@ -1389,19 +1774,26 @@
                     </div>
                   </label>
 
+                  <!-- BG Image -->
+                  <img
+                    src="./assets/bg-images/product-block-1.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill group-hover:hidden"
+                  />
+
+                  <!-- BG Hover -->
+                  <img
+                    src="./assets/bg-images/product-block-hover.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill hidden group-hover:block"
+                  />
+
                   <!-- Question Button -->
                   <button
                     class="product-open-btn absolute right-4 bottom-11 z-20"
                   >
                     <img src="./assets/svgs/question.svg" alt="Question" />
                   </button>
-
-                  <!-- BG Image -->
-                  <img
-                    src="./assets/bg-images/product-block-1.png"
-                    alt="BG"
-                    class="absolute inset-0 size-full object-fill"
-                  />
 
                   <!-- Image & Title -->
                   <div class="w-full relative z-10 flex gap-2.5">
@@ -1448,15 +1840,15 @@
                 <!-- Product 6 -->
                 <a
                   href="#"
-                  class="relative flex rounded-20 sm:rounded-30 hover:shadow-2xl hover:scale-105 transition-all duration-200 p-2.5 sm:p-5"
+                  class="relative flex rounded-20 sm:rounded-30 p-2.5 sm:p-5"
                 >
                   <!-- Check -->
-                  <label
-                    id="1"
-                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-2.5 sm:p-5"
-                  >
-                    <input type="checkbox" class="product-check hidden" />
+                  <input type="checkbox" class="hidden" id="6" />
 
+                  <label
+                    for="6"
+                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-4"
+                  >
                     <div
                       class="size-fit relative flex items-center justify-center cursor-pointer"
                     >
@@ -1465,6 +1857,7 @@
                         alt="Icon"
                         class="size-[30px] lg:size-10"
                       />
+
                       <img
                         src="./assets/svgs/check-desktop.svg"
                         alt="Check Icon"
@@ -1473,19 +1866,26 @@
                     </div>
                   </label>
 
+                  <!-- BG Image -->
+                  <img
+                    src="./assets/bg-images/product-block-1.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill group-hover:hidden"
+                  />
+
+                  <!-- BG Hover -->
+                  <img
+                    src="./assets/bg-images/product-block-hover.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill hidden group-hover:block"
+                  />
+
                   <!-- Question Button -->
                   <button
                     class="product-open-btn absolute right-4 bottom-11 z-20"
                   >
                     <img src="./assets/svgs/question.svg" alt="Question" />
                   </button>
-
-                  <!-- BG Image -->
-                  <img
-                    src="./assets/bg-images/product-block-1.png"
-                    alt="BG"
-                    class="absolute inset-0 size-full object-fill"
-                  />
 
                   <!-- Image & Title -->
                   <div class="w-full relative z-10 flex gap-2.5">
@@ -1532,15 +1932,15 @@
                 <!-- Product 7 -->
                 <a
                   href="#"
-                  class="relative flex rounded-20 sm:rounded-30 hover:shadow-2xl hover:scale-105 transition-all duration-200 p-2.5 sm:p-5"
+                  class="relative flex rounded-20 sm:rounded-30 p-2.5 sm:p-5"
                 >
                   <!-- Check -->
-                  <label
-                    id="1"
-                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-2.5 sm:p-5"
-                  >
-                    <input type="checkbox" class="product-check hidden" />
+                  <input type="checkbox" class="hidden" id="7" />
 
+                  <label
+                    for="7"
+                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-4"
+                  >
                     <div
                       class="size-fit relative flex items-center justify-center cursor-pointer"
                     >
@@ -1549,6 +1949,7 @@
                         alt="Icon"
                         class="size-[30px] lg:size-10"
                       />
+
                       <img
                         src="./assets/svgs/check-desktop.svg"
                         alt="Check Icon"
@@ -1557,6 +1958,20 @@
                     </div>
                   </label>
 
+                  <!-- BG Image -->
+                  <img
+                    src="./assets/bg-images/product-block-1.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill group-hover:hidden"
+                  />
+
+                  <!-- BG Hover -->
+                  <img
+                    src="./assets/bg-images/product-block-hover.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill hidden group-hover:block"
+                  />
+
                   <!-- Question Button -->
                   <button
                     class="product-open-btn absolute right-4 bottom-11 z-20"
@@ -1564,15 +1979,9 @@
                     <img src="./assets/svgs/question.svg" alt="Question" />
                   </button>
 
-                  <!-- BG Image -->
-                  <img
-                    src="./assets/bg-images/product-block-1.png"
-                    alt="BG"
-                    class="absolute inset-0 size-full object-fill"
-                  />
-
                   <!-- Image & Title -->
                   <div class="w-full relative z-10 flex gap-2.5">
+                    <!-- Image -->
                     <div
                       class="w-[139px] h-[130px] sm:w-[225px] sm:h-[170px] xl:size-auto 2xl:w-[225px] 2xl:h-[170px] rounded-30 overflow-hidden"
                     >
@@ -1764,7 +2173,7 @@
                           for="userId"
                           class="max-w-[345px] block space-y-2.5"
                         >
-                          <div class="flex">
+                          <div class="flex gap-2.5">
                             <span class="font-bold text-xs xs:text-base"
                               >USER ID</span
                             >
@@ -1948,7 +2357,8 @@
                         <!-- Payments Methods -->
                         <div class="flex items-center gap-3.5 sm:gap-5">
                           <!-- Methods 1 -->
-                          <div
+                          <a
+                            href="#"
                             class="size-[75px] xs:size-24 shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
                           >
                             <img
@@ -1956,9 +2366,10 @@
                               alt="SPB"
                               class="size-full object-cover"
                             />
-                          </div>
+                          </a>
                           <!-- Methods 2 -->
-                          <div
+                          <a
+                            href="#"
                             class="size-[75px] xs:size-24 shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
                           >
                             <!-- <img
@@ -1966,9 +2377,10 @@
                               alt="SPB"
                               class="size-full object-cover"
                             /> -->
-                          </div>
+                          </a>
                           <!-- Methods 3 -->
-                          <div
+                          <a
+                            href="#"
                             class="size-[75px] xs:size-24 shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
                           >
                             <!-- <img
@@ -1976,9 +2388,10 @@
                               alt="SPB"
                               class="size-full object-cover"
                             /> -->
-                          </div>
+                          </a>
                           <!-- Methods 4 -->
-                          <div
+                          <a
+                            href="#"
                             class="size-[75px] xs:size-24 shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
                           >
                             <!-- <img
@@ -1986,7 +2399,7 @@
                               alt="SPB"
                               class="size-full object-cover"
                             /> -->
-                          </div>
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -2090,12 +2503,17 @@
         <!-- Logo -->
         <a
           href="./index.html"
-          class="inline-block w-[85px] h-10 xs:w-14 xs:h-8 sm:w-[118px] sm:h-14 overflow-hidden shrink-0"
+          class="group inline-block w-[85px] h-10 xs:w-14 xs:h-8 sm:w-[118px] sm:h-14 overflow-hidden shrink-0"
         >
           <img
-            src="./assets/svgs/logo-footer.svg"
+            src="./assets/svgs/logo.svg"
             alt="LOGO"
-            class="size-full"
+            class="size-full group-hover:hidden"
+          />
+          <img
+            src="./assets/svgs/logo-hover.svg"
+            alt="LOGO"
+            class="size-full hidden group-hover:block"
           />
         </a>
 
@@ -2106,35 +2524,35 @@
           <ul class="space-y-3.5 lg:space-y-5">
             <li>
               <a
-                href="#"
+                href="#products"
                 class="hover:text-brand-purple transition-all duration-300"
                 >Продукты</a
               >
             </li>
             <li>
               <a
-                href="#"
+                href="#bonuses"
                 class="hover:text-brand-purple transition-all duration-300"
                 >Бонусы</a
               >
             </li>
             <li>
               <a
-                href="#"
+                href="#secrets"
                 class="hover:text-brand-purple transition-all duration-300"
                 >Гайды</a
               >
             </li>
             <li>
               <a
-                href="#"
+                href="#about"
                 class="hover:text-brand-purple transition-all duration-300"
                 >О нас</a
               >
             </li>
             <li>
               <a
-                href="#"
+                href="#contact"
                 class="hover:text-brand-purple transition-all duration-300"
                 >Контакты</a
               >

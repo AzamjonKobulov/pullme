@@ -1,6 +1,7 @@
 var swiper = new Swiper(".home-swiper", {
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
   },
   autoplay: {
     delay: 5000,
@@ -162,7 +163,16 @@ document.addEventListener("DOMContentLoaded", () => {
       const target = e.target.closest("li");
       if (!target) return;
 
+      // Remove 'text-black' class from previously selected item
+      list.querySelectorAll("li").forEach((item) => {
+        item.classList.remove("text-black");
+      });
+
+      // Update label and apply styles
       label.textContent = target.dataset.value;
+      target.classList.add("text-black");
+
+      // Hide dropdown
       list.classList.add("hidden");
       icon.classList.remove("rotate-180");
     });
@@ -250,4 +260,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
   catalog.addEventListener("scroll", updateScrollIndicators);
   updateScrollIndicators(); // Initial check on page load
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const currentPath = window.location.pathname.split("/").pop(); // Get current page filename
+
+  // Desktop Tabs
+  document.querySelectorAll(".list a").forEach((link) => {
+    link.classList.remove("text-black/80"); // Ensure no old classes exist
+    link.classList.add("text-black/40"); // Set default state
+
+    if (link.getAttribute("href") === `./${currentPath}`) {
+      link.classList.remove("text-black/40");
+      link.classList.add("text-brand-80"); // Set active state
+    }
+  });
+
+  // Mobile Dropdown Tabs
+  document.querySelectorAll(".list-mobile a").forEach((item) => {
+    if (item.dataset.value === currentPath.replace(".html", "")) {
+      item.classList.add("text-brand-80");
+
+      // Update the dropdown label to match the active tab
+      const selectLabel = document.querySelector(".select-label");
+      if (selectLabel) selectLabel.textContent = item.dataset.value;
+    }
+  });
 });

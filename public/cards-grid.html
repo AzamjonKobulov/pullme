@@ -23,9 +23,18 @@
         >
           <a
             href="./index.html"
-            class="inline-block w-12 h-8 xs:w-14 xs:h-8 sm:w-24 sm:h-12 lg:w-40 lg:h-[77px] overflow-hidden shrink-0"
+            class="group inline-block w-12 h-8 xs:w-14 xs:h-8 sm:w-24 sm:h-12 lg:w-40 lg:h-[77px] overflow-hidden shrink-0"
           >
-            <img src="./assets/svgs/logo.svg" alt="LOGO" class="size-full" />
+            <img
+              src="./assets/svgs/logo.svg"
+              alt="LOGO"
+              class="size-full group-hover:hidden"
+            />
+            <img
+              src="./assets/svgs/logo-hover.svg"
+              alt="LOGO"
+              class="size-full hidden group-hover:block"
+            />
           </a>
         </div>
 
@@ -36,27 +45,37 @@
           <!-- Links -->
           <ul class="flex items-center gap-6">
             <li>
-              <a href="#" class="hover:text-black transition-all duration-200"
+              <a
+                href="./catalog.html"
+                class="hover:text-black transition-all duration-200"
                 >все игры</a
               >
             </li>
             <li>
-              <a href="#" class="hover:text-black transition-all duration-200"
+              <a
+                href="#bonus"
+                class="hover:text-black transition-all duration-200"
                 >Бонусы</a
               >
             </li>
             <li>
-              <a href="#" class="hover:text-black transition-all duration-200"
+              <a
+                href="#secrets"
+                class="hover:text-black transition-all duration-200"
                 >Гайды</a
               >
             </li>
             <li>
-              <a href="#" class="hover:text-black transition-all duration-200"
+              <a
+                href="#about"
+                class="hover:text-black transition-all duration-200"
                 >О нас</a
               >
             </li>
             <li>
-              <a href="#" class="hover:text-black transition-all duration-200"
+              <a
+                href="#contact"
+                class="hover:text-black transition-all duration-200"
                 >Контакты</a
               >
             </li>
@@ -65,7 +84,6 @@
           <!-- Cart & Lang -->
           <div class="flex items-center gap-6">
             <!-- Cart -->
-
             <button class="flex items-center gap-1">
               <img src="./assets/svgs/cart.svg" alt="Cart Icon" />
               <span>2</span>
@@ -95,25 +113,155 @@
 
               <!-- Select List -->
               <ul
-                class="select-list fade-in w-full absolute bg-white rounded-10 font-mulish hidden z-10 shadow-lg"
+                class="w-max select-list fade-in absolute right-0 bg-white font-extrabold font-mulish text-black/40 text-xl hidden z-[60] border-[3px] border-brand-purple rounded-30 shadow-lg p-4"
               >
+                <!-- Lang 1 -->
                 <li
-                  class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="cn"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-cn.svg" alt="Flag" />
+                  <span>cn</span>
+                </li>
+                <!-- Lang 2 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="id"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-id.svg" alt="Flag" />
+                  <span>id</span>
+                </li>
+                <!-- Lang 3 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="kr"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-kr.svg" alt="Flag" />
+                  <span>kr</span>
+                </li>
+                <!-- Lang 4 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="my"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-my.svg" alt="Flag" />
+                  <span>my</span>
+                </li>
+                <!-- Lang 5 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="ph"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-ph.svg" alt="Flag" />
+                  <span>ph</span>
+                </li>
+                <!-- Lang 6 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="th"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-th.svg" alt="Flag" />
+                  <span>th</span>
+                </li>
+                <!-- Lang 7 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="jp"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-jp.svg" alt="Flag" />
+                  <span>jp</span>
+                </li>
+                <!-- Lang 8 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="sg"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-sg.svg" alt="Flag" />
+                  <span>sg</span>
+                </li>
+                <!-- Lang 9 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="vn"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-vn.svg" alt="Flag" />
+                  <span>vn</span>
+                </li>
+                <!-- Lang 10 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="tw"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-tw.svg" alt="Flag" />
+                  <span>tw</span>
+                </li>
+                <!-- Lang 11 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
                   data-value="ru"
                 >
-                  ru
+                  <!-- Flag -->
+                  <img
+                    src="./assets/svgs/flag-ru.svg"
+                    alt="Flag"
+                    class="opacity-50"
+                  />
+                  <span>ru</span>
                 </li>
+                <!-- Lang 12 -->
                 <li
-                  class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
-                  data-value="eng"
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="by"
                 >
-                  eng
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-by.svg" alt="Flag" />
+                  <span>by</span>
                 </li>
+                <!-- Lang 13 -->
                 <li
-                  class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
-                  data-value="chn"
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="ua"
                 >
-                  chn
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-ua.svg" alt="Flag" />
+                  <span>ua</span>
+                </li>
+                <!-- Lang 14 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="kz"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-kz.svg" alt="Flag" />
+                  <span>kz</span>
+                </li>
+                <!-- Lang 15 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="br"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-br.svg" alt="Flag" />
+                  <span>br</span>
+                </li>
+                <!-- Lang 16 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="us"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-us.svg" alt="Flag" />
+                  <span>us</span>
                 </li>
               </ul>
             </div>
@@ -184,7 +332,10 @@
                 <!-- Lang Select Container -->
                 <div class="w-20 relative select space-y-2.5">
                   <!-- Select Button -->
-                  <div class="select-button flex items-center gap-1">
+                  <div
+                    class="select-button cursor-pointer flex items-center gap-1"
+                  >
+                    <img src="./assets/svgs/globe.svg" alt="Cart Icon" />
                     <span class="select-label uppercase">RU</span>
                     <svg
                       width="9"
@@ -204,25 +355,155 @@
 
                   <!-- Select List -->
                   <ul
-                    class="select-list fade-in w-full absolute bg-white rounded-10 font-mulish hidden z-10 shadow-lg"
+                    class="no-scroll h-80 select-list fade-in absolute left-0 bg-white font-extrabold font-mulish text-black/40 hidden z-[60] border-[3px] border-brand-purple rounded-20 shadow-lg overflow-auto p-2"
                   >
+                    <!-- Lang 1 -->
                     <li
-                      class="flex items-center gap-2 text-black/80 hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="cn"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-cn.svg" alt="Flag" />
+                      <span>cn</span>
+                    </li>
+                    <!-- Lang 2 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="id"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-id.svg" alt="Flag" />
+                      <span>id</span>
+                    </li>
+                    <!-- Lang 3 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="kr"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-kr.svg" alt="Flag" />
+                      <span>kr</span>
+                    </li>
+                    <!-- Lang 4 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="my"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-my.svg" alt="Flag" />
+                      <span>my</span>
+                    </li>
+                    <!-- Lang 5 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="ph"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-ph.svg" alt="Flag" />
+                      <span>ph</span>
+                    </li>
+                    <!-- Lang 6 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="th"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-th.svg" alt="Flag" />
+                      <span>th</span>
+                    </li>
+                    <!-- Lang 7 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="jp"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-jp.svg" alt="Flag" />
+                      <span>jp</span>
+                    </li>
+                    <!-- Lang 8 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="sg"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-sg.svg" alt="Flag" />
+                      <span>sg</span>
+                    </li>
+                    <!-- Lang 9 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="vn"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-vn.svg" alt="Flag" />
+                      <span>vn</span>
+                    </li>
+                    <!-- Lang 10 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="tw"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-tw.svg" alt="Flag" />
+                      <span>tw</span>
+                    </li>
+                    <!-- Lang 11 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
                       data-value="ru"
                     >
-                      <button class="uppercase">ru</button>
+                      <!-- Flag -->
+                      <img
+                        src="./assets/svgs/flag-ru.svg"
+                        alt="Flag"
+                        class="opacity-50"
+                      />
+                      <span>ru</span>
                     </li>
+                    <!-- Lang 12 -->
                     <li
-                      class="flex items-center gap-2 text-black/80 hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
-                      data-value="eng"
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="by"
                     >
-                      <button class="uppercase">eng</button>
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-by.svg" alt="Flag" />
+                      <span>by</span>
                     </li>
+                    <!-- Lang 13 -->
                     <li
-                      class="flex items-center gap-2 text-black/80 hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
-                      data-value="chn"
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="ua"
                     >
-                      <button class="uppercase">chn</button>
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-ua.svg" alt="Flag" />
+                      <span>ua</span>
+                    </li>
+                    <!-- Lang 14 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="kz"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-kz.svg" alt="Flag" />
+                      <span>kz</span>
+                    </li>
+                    <!-- Lang 15 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="br"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-br.svg" alt="Flag" />
+                      <span>br</span>
+                    </li>
+                    <!-- Lang 16 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="us"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-us.svg" alt="Flag" />
+                      <span>us</span>
                     </li>
                   </ul>
                 </div>
@@ -290,7 +571,7 @@
                 <!-- Catalog Item 3 -->
                 <li>
                   <a
-                    href="#"
+                    href="./cards-grid.html"
                     class="h-12 max-w-[207px] gap-6 flex items-center justify-between border-[1.5px] border-black/20 rounded-10 px-2.5"
                   >
                     <span class="max-w-36">Genshin Impact</span>
@@ -499,33 +780,37 @@
     </header>
 
     <!-- Socials -->
-    <ul class="fixed right-2 top-52 z-[70] space-y-2.5 hidden lg:block">
-      <li>
-        <a href="#">
-          <img src="./assets/svgs/message.svg" alt="Icon" />
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="./assets/svgs/message-2.svg" alt="Icon" />
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="./assets/svgs/vk.svg" alt="Icon" />
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="./assets/svgs/telegram.svg" alt="Icon" />
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="./assets/svgs/tel.svg" alt="Icon" />
-        </a>
-      </li>
-    </ul>
+    <div
+      class="fixed max-w-[1600px] w-full left-1/2 -translate-x-1/2 hidden lg:flex justify-end right-2 top-52"
+    >
+      <ul class="space-y-2.5 hidden lg:block relative z-[80]">
+        <li>
+          <a href="#">
+            <img src="./assets/svgs/message.svg" alt="Icon" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./assets/svgs/message-2.svg" alt="Icon" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./assets/svgs/vk.svg" alt="Icon" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./assets/svgs/telegram.svg" alt="Icon" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./assets/svgs/tel.svg" alt="Icon" />
+          </a>
+        </li>
+      </ul>
+    </div>
 
     <!-- MAIN -->
     <main class="relative">
@@ -568,7 +853,7 @@
       <!-- Cards -->
       <section id="cards">
         <div class="max-w-base mx-auto px-2.5 md:px-12 lg:px-2.5">
-          <!-- Catalogs Mobile -->
+          <!-- Catalog Mobile -->
           <ul
             class="custom-scroll lg:hidden lg:w-56 shrink-0 flex lg:flex-col gap-2.5 overflow-auto mt-5 pb-5"
           >
@@ -591,7 +876,7 @@
 
                 <!-- Game Name -->
                 <span
-                  class="text-xs text-center line-clamp-2 group-hover:text-brand-purple transition-all duration-200"
+                  class="text-xs text-center line-clamp-2 group-hover:text-black"
                 >
                   Zenless Zone Zero
                 </span>
@@ -616,7 +901,7 @@
 
                 <!-- Game Name -->
                 <span
-                  class="text-xs text-center line-clamp-2 group-hover:text-brand-purple transition-all duration-200"
+                  class="text-xs text-center line-clamp-2 group-hover:text-black"
                 >
                   Honkai: Star Rail
                 </span>
@@ -641,7 +926,7 @@
 
                 <!-- Game Name -->
                 <span
-                  class="text-xs text-center line-clamp-2 group-hover:text-brand-purple transition-all duration-200"
+                  class="text-xs text-center line-clamp-2 group-hover:text-black"
                 >
                   Genshin Impact
                 </span>
@@ -666,7 +951,7 @@
 
                 <!-- Game Name -->
                 <span
-                  class="text-xs text-center line-clamp-2 group-hover:text-brand-purple transition-all duration-200"
+                  class="text-xs text-center line-clamp-2 group-hover:text-black"
                 >
                   Arena Breakout
                 </span>
@@ -691,7 +976,7 @@
 
                 <!-- Game Name -->
                 <span
-                  class="text-xs text-center line-clamp-2 group-hover:text-brand-purple transition-all duration-200"
+                  class="text-xs text-center line-clamp-2 group-hover:text-black"
                 >
                   PUBG MOBILE
                 </span>
@@ -716,7 +1001,7 @@
 
                 <!-- Game Name -->
                 <span
-                  class="text-xs text-center line-clamp-2 group-hover:text-brand-purple transition-all duration-200"
+                  class="text-xs text-center line-clamp-2 group-hover:text-black"
                 >
                   Tower of Fantasy
                 </span>
@@ -741,7 +1026,7 @@
 
                 <!-- Game Name -->
                 <span
-                  class="text-xs text-center line-clamp-2 group-hover:text-brand-purple transition-all duration-200"
+                  class="text-xs text-center line-clamp-2 group-hover:text-black"
                 >
                   Goddess of Victory: Nikke
                 </span>
@@ -766,7 +1051,7 @@
 
                 <!-- Game Name -->
                 <span
-                  class="text-xs text-center line-clamp-2 group-hover:text-brand-purple transition-all duration-200"
+                  class="text-xs text-center line-clamp-2 group-hover:text-black"
                 >
                   Mobile Legends: Bang Bang (Global)
                 </span>
@@ -781,42 +1066,131 @@
             <div class="hidden sm:flex items-center sm:gap-6">
               <!-- Mobile/Desktop Games -->
               <div class="flex items-center gap-1 text-xs font-bold uppercase">
-                <span class="text-black/80">Мобильные игры</span>
+                <a href="#" class="text-black/40">Мобильные игры</a>
                 <span class="text-black/40">/</span>
-                <span class="text-black/40">Мобильные игры</span>
+                <a href="#" class="text-black/40">Мобильные игры</a>
               </div>
 
               <!-- List -->
-              <div class="flex items-center gap-1 text-xs font-bold uppercase">
-                <span class="text-black/80">список</span>
+              <div
+                class="list flex items-center gap-1 text-xs font-bold uppercase"
+              >
+                <a href="./cards-block.html" class="text-black/80">список</a>
                 <span class="text-black/40">/</span>
-                <span class="text-black/40">сетка</span>
+                <a href="./cards-grid.html" class="text-black/40">сетка</a>
               </div>
             </div>
 
             <!-- Mobile/Desktop Games(Mobile) -->
-            <button
-              class="h-6 flex sm:hidden items-center gap-2.5 uppercase text-black/40 font-bold text-xs"
+            <div
+              class="relative select space-y-2.5 sm:hidden text-black/40 font-bold text-[10px] sm:text-xs whitespace-nowrap z-[80]"
             >
-              <span>Мобильные игры</span>
-              <img src="./assets/svgs/angle-down.svg" alt="Angle" />
-            </button>
+              <!-- Select Button -->
+              <button
+                class="select-button h-6 flex items-center gap-2.5 uppercase sm:border border-black/40 rounded-full px-4"
+              >
+                <span class="select-label tracking-wider sm:tracking-[3.6px]"
+                  >Мобильные игры</span
+                >
+                <img
+                  src="./assets/svgs/angle-down.svg"
+                  alt="Angle"
+                  class="select-icon"
+                />
+              </button>
+
+              <!-- Select List -->
+              <ul
+                class="select-list fade-in w-full space-y-5 absolute z-50 bg-white uppercase font-mulish hidden border-2 border-brand-purple rounded-10 py-5 px-2.5"
+              >
+                <li
+                  class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
+                  data-value="Мобильные игры"
+                >
+                  <a href="#">Мобильные игры</a>
+                </li>
+                <li
+                  class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
+                  data-value="Игры для ПК"
+                >
+                  <a href="#">Игры для ПК</a>
+                </li>
+              </ul>
+            </div>
 
             <!-- List Mobile -->
-            <button
-              class="h-6 flex sm:hidden items-center gap-2.5 uppercase text-black/40 font-bold text-xs"
+            <div
+              class="relative select space-y-2.5 sm:hidden text-black/40 font-bold text-[10px] sm:text-xs whitespace-nowrap z-[80]"
             >
-              <span>список</span>
-              <img src="./assets/svgs/angle-down.svg" alt="Angle" />
-            </button>
+              <!-- Select Button -->
+              <button
+                class="select-button h-6 flex items-center gap-2.5 uppercase sm:border border-black/40 rounded-full px-4"
+              >
+                <span class="select-label tracking-wider sm:tracking-[3.6px]"
+                  >сетка</span
+                >
+                <img
+                  src="./assets/svgs/angle-down.svg"
+                  alt="Angle"
+                  class="select-icon"
+                />
+              </button>
 
-            <!-- Filter -->
-            <button
-              class="h-6 flex items-center gap-2.5 uppercase text-black/40 font-bold text-xs sm:border border-black/40 rounded-full px-4"
+              <!-- Select List -->
+              <ul
+                class="list-mobile select-list fade-in w-full space-y-5 absolute z-50 bg-white uppercase font-mulish hidden border-2 border-brand-purple rounded-10 py-5 px-2.5"
+              >
+                <li
+                  class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
+                  data-value="сетка"
+                >
+                  <a href="./cards-grid.html">сетка</a>
+                </li>
+                <li
+                  class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
+                  data-value="список"
+                >
+                  <a href="./cards-block.html">список</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Filter Container -->
+            <div
+              class="relative select space-y-2.5 text-black/40 font-bold text-[10px] sm:text-xs whitespace-nowrap"
             >
-              <span>сортировать</span>
-              <img src="./assets/svgs/angle-down.svg" alt="Angle" />
-            </button>
+              <!-- Select Button -->
+              <button
+                class="select-button h-6 flex items-center gap-2.5 uppercase sm:border border-black/40 rounded-full px-4"
+              >
+                <span class="select-label tracking-wider sm:tracking-[3.6px]"
+                  >сортировать</span
+                >
+                <img
+                  src="./assets/svgs/angle-down.svg"
+                  alt="Angle"
+                  class="select-icon"
+                />
+              </button>
+
+              <!-- Select List -->
+              <ul
+                class="select-list fade-in w-full space-y-5 absolute z-50 bg-white uppercase font-mulish hidden border-2 border-brand-purple rounded-10 py-5 px-2.5"
+              >
+                <li
+                  class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
+                  data-value="сортировать2"
+                >
+                  сортировать2
+                </li>
+                <li
+                  class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
+                  data-value="сортировать3"
+                >
+                  сортировать3
+                </li>
+              </ul>
+            </div>
           </div>
 
           <!-- Main Part -->
@@ -846,9 +1220,7 @@
                     </div>
 
                     <!-- Game Name -->
-                    <span
-                      class="group-hover:text-brand-purple transition-all duration-200"
-                    >
+                    <span class="group-hover:text-black">
                       Zenless Zone Zero
                     </span>
                   </a>
@@ -871,9 +1243,7 @@
                     </div>
 
                     <!-- Game Name -->
-                    <span
-                      class="group-hover:text-brand-purple transition-all duration-200"
-                    >
+                    <span class="group-hover:text-black">
                       Honkai: Star Rail
                     </span>
                   </a>
@@ -896,11 +1266,7 @@
                     </div>
 
                     <!-- Game Name -->
-                    <span
-                      class="group-hover:text-brand-purple transition-all duration-200"
-                    >
-                      Genshin Impact
-                    </span>
+                    <span class="group-hover:text-black"> Genshin Impact </span>
                   </a>
                 </li>
                 <!-- Catalog Item 4 -->
@@ -921,11 +1287,7 @@
                     </div>
 
                     <!-- Game Name -->
-                    <span
-                      class="group-hover:text-brand-purple transition-all duration-200"
-                    >
-                      Arena Breakout
-                    </span>
+                    <span class="group-hover:text-black"> Arena Breakout </span>
                   </a>
                 </li>
                 <!-- Catalog Item 5 -->
@@ -946,11 +1308,7 @@
                     </div>
 
                     <!-- Game Name -->
-                    <span
-                      class="group-hover:text-brand-purple transition-all duration-200"
-                    >
-                      PUBG MOBILE
-                    </span>
+                    <span class="group-hover:text-black"> PUBG MOBILE </span>
                   </a>
                 </li>
                 <!-- Catalog Item 6 -->
@@ -971,9 +1329,7 @@
                     </div>
 
                     <!-- Game Name -->
-                    <span
-                      class="group-hover:text-brand-purple transition-all duration-200"
-                    >
+                    <span class="group-hover:text-black">
                       Tower of Fantasy
                     </span>
                   </a>
@@ -996,9 +1352,7 @@
                     </div>
 
                     <!-- Game Name -->
-                    <span
-                      class="group-hover:text-brand-purple transition-all duration-200"
-                    >
+                    <span class="group-hover:text-black">
                       Goddess of Victory: Nikke
                     </span>
                   </a>
@@ -1021,9 +1375,7 @@
                     </div>
 
                     <!-- Game Name -->
-                    <span
-                      class="group-hover:text-brand-purple transition-all duration-200"
-                    >
+                    <span class="group-hover:text-black">
                       Mobile Legends: Bang Bang (Global)
                     </span>
                   </a>
@@ -1032,35 +1384,50 @@
 
               <!-- Products -->
               <div
-                class="flex-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-2 2xl:grid-cols-3 gap-2.5 sm:gap-5"
+                class="flex-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-2.5 sm:gap-5 xl:gap-2.5 2xl:gap-5"
               >
                 <!-- Product 1 -->
                 <a
                   href="#"
-                  class="block relative group sm:rounded-30 overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-200 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
+                  class="relative group flex flex-col justify-between sm:rounded-30 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5 xl:pb-1 2xl:pb-4 2xl:pt-5"
                 >
                   <!-- Check -->
+                  <input type="checkbox" class="hidden" id="1" />
+
                   <label
-                    id="1"
+                    for="1"
                     class="absolute top-0 right-0 flex items-end justify-end z-30 p-4"
                   >
-                    <input type="checkbox" class="product-check hidden" />
-
                     <div
                       class="size-fit relative flex items-center justify-center cursor-pointer"
                     >
                       <img
                         src="./assets/images/rounded-check.png"
                         alt="Icon"
-                        class="size-[30px] lg:size-10"
+                        class="size-[30px] lg:size-10 xl:size-[30px] 2xl:size-10"
                       />
+
                       <img
                         src="./assets/svgs/check-desktop.svg"
                         alt="Check Icon"
-                        class="custom-check w-7 h-5 lg:size-auto hidden absolute left-1 top-0.5 lg:left-2 lg:top-1"
+                        class="custom-check w-7 h-5 lg:size-auto xl:w-7 xl:h-5 2xl:size-auto hidden absolute left-1 top-0.5 lg:left-2 lg:top-1 xl:left-1 xl:top-0.5 2xl:left-2 2xl:top-1"
                       />
                     </div>
                   </label>
+
+                  <!-- BG Image -->
+                  <img
+                    src="./assets/bg-images/product-1.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill group-hover:hidden"
+                  />
+
+                  <!-- BG Hover -->
+                  <img
+                    src="./assets/bg-images/product-hover.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill hidden group-hover:block"
+                  />
 
                   <!-- Question Button -->
                   <button
@@ -1069,13 +1436,6 @@
                     <img src="./assets/svgs/question.svg" alt="Question" />
                   </button>
 
-                  <!-- BG Image -->
-                  <img
-                    src="./assets/bg-images/product-1.png"
-                    alt="BG"
-                    class="absolute inset-0 size-full object-fill"
-                  />
-
                   <!-- Image & Title -->
                   <div
                     class="relative z-10 flex flex-col items-center space-y-2.5 px-2"
@@ -1083,10 +1443,10 @@
                     <img
                       src="./assets/images/product.png"
                       alt="Product"
-                      class="max-w-[115px] xs:max-w-none"
+                      class="max-w-[115px] xs:max-w-none xl:max-w-[115px] 2xl:max-w-none"
                     />
                     <p
-                      class="text-center md:text-start text-white text-sm xs:text-base font-bold leading-4"
+                      class="text-center text-white text-sm xs:text-base xl:text-xs 2xl:text-base font-bold leading-4"
                     >
                       6480+1600 Кристаллов Сотворения
                     </p>
@@ -1094,7 +1454,7 @@
 
                   <!-- Cost -->
                   <div
-                    class="relative z-10 flex flex-col-reverse md:flex-row items-center justify-center gap-2.5 uppercase mt-2.5 xs:mt-6 md:mt-11"
+                    class="relative z-10 flex flex-col-reverse md:flex-row xl:flex-col-reverse 2xl:flex-row items-center justify-center gap-2.5 uppercase mt-2.5 xs:mt-6 md:mt-11 xl:mt-3 2xl:mt-11"
                   >
                     <div class="relative text-white text-xs font-extrabold">
                       RUB 7370
@@ -1104,7 +1464,7 @@
                     </div>
 
                     <button
-                      class="h-6 flex items-center gap-1 font-extrabold bg-white text-brand-purple text-xs sm:text-sm border-3 border-brand-purple rounded-full px-2"
+                      class="h-6 flex items-center gap-1 font-extrabold bg-white text-brand-purple text-xs sm:text-sm xl:text-xs 2xl:text-sm border-3 border-brand-purple rounded-full px-2"
                     >
                       <span>RUB 7370</span>
                       <svg
@@ -1124,31 +1484,46 @@
                 </a>
                 <!-- Product 2 -->
                 <a
-                  href=""
-                  class="block relative group sm:rounded-30 overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-200 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
+                  href="#"
+                  class="relative group flex flex-col justify-between sm:rounded-30 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5 xl:pb-1 2xl:pb-4 2xl:pt-5"
                 >
                   <!-- Check -->
+                  <input type="checkbox" class="hidden" id="2" />
+
                   <label
-                    id="1"
+                    for="2"
                     class="absolute top-0 right-0 flex items-end justify-end z-30 p-4"
                   >
-                    <input type="checkbox" class="product-check hidden" />
-
                     <div
                       class="size-fit relative flex items-center justify-center cursor-pointer"
                     >
                       <img
                         src="./assets/images/rounded-check.png"
                         alt="Icon"
-                        class="size-[30px] lg:size-10"
+                        class="size-[30px] lg:size-10 xl:size-[30px] 2xl:size-10"
                       />
+
                       <img
                         src="./assets/svgs/check-desktop.svg"
                         alt="Check Icon"
-                        class="custom-check w-7 h-5 lg:size-auto hidden absolute left-1 top-0.5 lg:left-2 lg:top-1"
+                        class="custom-check w-7 h-5 lg:size-auto xl:w-7 xl:h-5 2xl:size-auto hidden absolute left-1 top-0.5 lg:left-2 lg:top-1 xl:left-1 xl:top-0.5 2xl:left-2 2xl:top-1"
                       />
                     </div>
                   </label>
+
+                  <!-- BG Image -->
+                  <img
+                    src="./assets/bg-images/product-1.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill group-hover:hidden"
+                  />
+
+                  <!-- BG Hover -->
+                  <img
+                    src="./assets/bg-images/product-hover.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill hidden group-hover:block"
+                  />
 
                   <!-- Question Button -->
                   <button
@@ -1157,13 +1532,6 @@
                     <img src="./assets/svgs/question.svg" alt="Question" />
                   </button>
 
-                  <!-- BG Image -->
-                  <img
-                    src="./assets/bg-images/product-2.png"
-                    alt="BG"
-                    class="absolute inset-0 size-full object-fill"
-                  />
-
                   <!-- Image & Title -->
                   <div
                     class="relative z-10 flex flex-col items-center space-y-2.5 px-2"
@@ -1171,10 +1539,10 @@
                     <img
                       src="./assets/images/product.png"
                       alt="Product"
-                      class="max-w-[115px] xs:max-w-none"
+                      class="max-w-[115px] xs:max-w-none xl:max-w-[115px] 2xl:max-w-none"
                     />
                     <p
-                      class="text-center md:text-start text-white text-sm xs:text-base font-bold leading-4"
+                      class="text-center text-left text-white text-sm xs:text-base xl:text-xs 2xl:text-base font-bold leading-4"
                     >
                       3280+600 Кристаллов Сотворения
                     </p>
@@ -1182,7 +1550,7 @@
 
                   <!-- Cost -->
                   <div
-                    class="relative z-10 flex flex-col-reverse md:flex-row items-center justify-center gap-2.5 uppercase mt-2.5 xs:mt-6 md:mt-11"
+                    class="relative z-10 flex flex-col-reverse md:flex-row xl:flex-col-reverse 2xl:flex-row items-center justify-center gap-2.5 uppercase mt-2.5 xs:mt-6 md:mt-11 xl:mt-3 2xl:mt-11"
                   >
                     <div class="relative text-white text-xs font-extrabold">
                       RUB 7370
@@ -1192,7 +1560,7 @@
                     </div>
 
                     <button
-                      class="h-6 flex items-center gap-1 font-extrabold bg-white text-brand-purple text-xs sm:text-sm border-3 border-brand-purple rounded-full px-2"
+                      class="h-6 flex items-center gap-1 font-extrabold bg-white text-brand-purple text-xs sm:text-sm xl:text-xs 2xl:text-sm border-3 border-brand-purple rounded-full px-2"
                     >
                       <span>RUB 3680</span>
                       <svg
@@ -1213,30 +1581,45 @@
                 <!-- Product 3 -->
                 <a
                   href="#"
-                  class="block relative group sm:rounded-30 overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-200 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
+                  class="relative group flex flex-col justify-between sm:rounded-30 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5 xl:pb-1 2xl:pb-4 2xl:pt-5"
                 >
                   <!-- Check -->
+                  <input type="checkbox" class="hidden" id="3" />
+
                   <label
-                    id="1"
+                    for="3"
                     class="absolute top-0 right-0 flex items-end justify-end z-30 p-4"
                   >
-                    <input type="checkbox" class="product-check hidden" />
-
                     <div
                       class="size-fit relative flex items-center justify-center cursor-pointer"
                     >
                       <img
                         src="./assets/images/rounded-check.png"
                         alt="Icon"
-                        class="size-[30px] lg:size-10"
+                        class="size-[30px] lg:size-10 xl:size-[30px] 2xl:size-10"
                       />
+
                       <img
                         src="./assets/svgs/check-desktop.svg"
                         alt="Check Icon"
-                        class="custom-check w-7 h-5 lg:size-auto hidden absolute left-1 top-0.5 lg:left-2 lg:top-1"
+                        class="custom-check w-7 h-5 lg:size-auto xl:w-7 xl:h-5 2xl:size-auto hidden absolute left-1 top-0.5 lg:left-2 lg:top-1 xl:left-1 xl:top-0.5 2xl:left-2 2xl:top-1"
                       />
                     </div>
                   </label>
+
+                  <!-- BG Image -->
+                  <img
+                    src="./assets/bg-images/product-3.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill group-hover:hidden"
+                  />
+
+                  <!-- BG Hover -->
+                  <img
+                    src="./assets/bg-images/product-hover.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill hidden group-hover:block"
+                  />
 
                   <!-- Question Button -->
                   <button
@@ -1245,13 +1628,6 @@
                     <img src="./assets/svgs/question.svg" alt="Question" />
                   </button>
 
-                  <!-- BG Image -->
-                  <img
-                    src="./assets/bg-images/product-3.png"
-                    alt="BG"
-                    class="absolute inset-0 size-full object-fill"
-                  />
-
                   <!-- Image & Title -->
                   <div
                     class="relative z-10 flex flex-col items-center space-y-2.5 px-2"
@@ -1259,18 +1635,18 @@
                     <img
                       src="./assets/images/product.png"
                       alt="Product"
-                      class="max-w-[115px] xs:max-w-none"
+                      class="max-w-[115px] xs:max-w-none xl:max-w-[115px] 2xl:max-w-none"
                     />
                     <p
-                      class="text-center md:text-start text-white text-sm xs:text-base font-bold leading-4"
+                      class="text-center text-white text-sm xs:text-base xl:text-xs 2xl:text-base font-bold leading-4"
                     >
-                      3280+600 Кристаллов Сотворения
+                      1980+260 Кристаллов Сотворения
                     </p>
                   </div>
 
                   <!-- Cost -->
                   <div
-                    class="relative z-10 flex flex-col-reverse md:flex-row items-center justify-center gap-2.5 uppercase mt-2.5 xs:mt-6 md:mt-11"
+                    class="relative z-10 flex flex-col-reverse md:flex-row xl:flex-col-reverse 2xl:flex-row items-center justify-center gap-2.5 uppercase mt-2.5 xs:mt-6 md:mt-11 xl:mt-3 2xl:mt-11"
                   >
                     <div class="relative text-white text-xs font-extrabold">
                       RUB 7370
@@ -1280,9 +1656,9 @@
                     </div>
 
                     <button
-                      class="h-6 flex items-center gap-1 font-extrabold bg-white text-brand-purple text-xs sm:text-sm border-3 border-brand-purple rounded-full px-2"
+                      class="h-6 flex items-center gap-1 font-extrabold bg-white text-brand-purple text-xs sm:text-sm xl:text-xs 2xl:text-sm border-3 border-brand-purple rounded-full px-2"
                     >
-                      <span>RUB 3680</span>
+                      <span>RUB 2400</span>
                       <svg
                         width="10"
                         height="11"
@@ -1301,30 +1677,45 @@
                 <!-- Product 4 -->
                 <a
                   href="#"
-                  class="block relative group sm:rounded-30 overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-200 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
+                  class="relative group flex flex-col justify-between sm:rounded-30 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5 xl:pb-1 2xl:pb-4 2xl:pt-5"
                 >
                   <!-- Check -->
+                  <input type="checkbox" class="hidden" id="4" />
+
                   <label
-                    id="1"
+                    for="4"
                     class="absolute top-0 right-0 flex items-end justify-end z-30 p-4"
                   >
-                    <input type="checkbox" class="product-check hidden" />
-
                     <div
                       class="size-fit relative flex items-center justify-center cursor-pointer"
                     >
                       <img
                         src="./assets/images/rounded-check.png"
                         alt="Icon"
-                        class="size-[30px] lg:size-10"
+                        class="size-[30px] lg:size-10 xl:size-[30px] 2xl:size-10"
                       />
+
                       <img
                         src="./assets/svgs/check-desktop.svg"
                         alt="Check Icon"
-                        class="custom-check w-7 h-5 lg:size-auto hidden absolute left-1 top-0.5 lg:left-2 lg:top-1"
+                        class="custom-check w-7 h-5 lg:size-auto xl:w-7 xl:h-5 2xl:size-auto hidden absolute left-1 top-0.5 lg:left-2 lg:top-1 xl:left-1 xl:top-0.5 2xl:left-2 2xl:top-1"
                       />
                     </div>
                   </label>
+
+                  <!-- BG Image -->
+                  <img
+                    src="./assets/bg-images/product-4.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill group-hover:hidden"
+                  />
+
+                  <!-- BG Hover -->
+                  <img
+                    src="./assets/bg-images/product-hover.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill hidden group-hover:block"
+                  />
 
                   <!-- Question Button -->
                   <button
@@ -1333,13 +1724,6 @@
                     <img src="./assets/svgs/question.svg" alt="Question" />
                   </button>
 
-                  <!-- BG Image -->
-                  <img
-                    src="./assets/bg-images/product-1.png"
-                    alt="BG"
-                    class="absolute inset-0 size-full object-fill"
-                  />
-
                   <!-- Image & Title -->
                   <div
                     class="relative z-10 flex flex-col items-center space-y-2.5 px-2"
@@ -1347,18 +1731,18 @@
                     <img
                       src="./assets/images/product.png"
                       alt="Product"
-                      class="max-w-[115px] xs:max-w-none"
+                      class="max-w-[115px] xs:max-w-none xl:max-w-[115px] 2xl:max-w-none"
                     />
                     <p
-                      class="text-center md:text-start text-white text-sm xs:text-base font-bold leading-4"
+                      class="text-center text-white text-sm xs:text-base xl:text-xs 2xl:text-base font-bold leading-4"
                     >
-                      3280+600 Кристаллов Сотворения
+                      980+110 Кристаллов Сотворения
                     </p>
                   </div>
 
                   <!-- Cost -->
                   <div
-                    class="relative z-10 flex flex-col-reverse md:flex-row items-center justify-center gap-2.5 uppercase mt-2.5 xs:mt-6 md:mt-11"
+                    class="relative z-10 flex flex-col-reverse md:flex-row xl:flex-col-reverse 2xl:flex-row items-center justify-center gap-2.5 uppercase mt-2.5 xs:mt-6 md:mt-11 xl:mt-3 2xl:mt-11"
                   >
                     <div class="relative text-white text-xs font-extrabold">
                       RUB 7370
@@ -1368,9 +1752,9 @@
                     </div>
 
                     <button
-                      class="h-6 flex items-center gap-1 font-extrabold bg-white text-brand-purple text-xs sm:text-sm border-3 border-brand-purple rounded-full px-2"
+                      class="h-6 flex items-center gap-1 font-extrabold bg-white text-brand-purple text-xs sm:text-sm xl:text-xs 2xl:text-sm border-3 border-brand-purple rounded-full px-2"
                     >
-                      <span>RUB 3680</span>
+                      <span>RUB 1100</span>
                       <svg
                         width="10"
                         height="11"
@@ -1389,30 +1773,45 @@
                 <!-- Product 5 -->
                 <a
                   href="#"
-                  class="block relative group sm:rounded-30 overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-200 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
+                  class="relative group flex flex-col justify-between sm:rounded-30 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5 xl:pb-1 2xl:pb-4 2xl:pt-5"
                 >
                   <!-- Check -->
+                  <input type="checkbox" class="hidden" id="5" />
+
                   <label
-                    id="1"
+                    for="5"
                     class="absolute top-0 right-0 flex items-end justify-end z-30 p-4"
                   >
-                    <input type="checkbox" class="product-check hidden" />
-
                     <div
                       class="size-fit relative flex items-center justify-center cursor-pointer"
                     >
                       <img
                         src="./assets/images/rounded-check.png"
                         alt="Icon"
-                        class="size-[30px] lg:size-10"
+                        class="size-[30px] lg:size-10 xl:size-[30px] 2xl:size-10"
                       />
+
                       <img
                         src="./assets/svgs/check-desktop.svg"
                         alt="Check Icon"
-                        class="custom-check w-7 h-5 lg:size-auto hidden absolute left-1 top-0.5 lg:left-2 lg:top-1"
+                        class="custom-check w-7 h-5 lg:size-auto xl:w-7 xl:h-5 2xl:size-auto hidden absolute left-1 top-0.5 lg:left-2 lg:top-1 xl:left-1 xl:top-0.5 2xl:left-2 2xl:top-1"
                       />
                     </div>
                   </label>
+
+                  <!-- BG Image -->
+                  <img
+                    src="./assets/bg-images/product-5.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill group-hover:hidden"
+                  />
+
+                  <!-- BG Hover -->
+                  <img
+                    src="./assets/bg-images/product-hover.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill hidden group-hover:block"
+                  />
 
                   <!-- Question Button -->
                   <button
@@ -1421,13 +1820,6 @@
                     <img src="./assets/svgs/question.svg" alt="Question" />
                   </button>
 
-                  <!-- BG Image -->
-                  <img
-                    src="./assets/bg-images/product-1.png"
-                    alt="BG"
-                    class="absolute inset-0 size-full object-fill"
-                  />
-
                   <!-- Image & Title -->
                   <div
                     class="relative z-10 flex flex-col items-center space-y-2.5 px-2"
@@ -1435,18 +1827,18 @@
                     <img
                       src="./assets/images/product.png"
                       alt="Product"
-                      class="max-w-[115px] xs:max-w-none"
+                      class="max-w-[115px] xs:max-w-none xl:max-w-[115px] 2xl:max-w-none"
                     />
                     <p
-                      class="text-center md:text-start text-white text-sm xs:text-base font-bold leading-4"
+                      class="text-center text-white text-sm xs:text-base xl:text-xs 2xl:text-base font-bold leading-4"
                     >
-                      3280+600 Кристаллов Сотворения
+                      300+30 Кристаллов Сотворения
                     </p>
                   </div>
 
                   <!-- Cost -->
                   <div
-                    class="relative z-10 flex flex-col-reverse md:flex-row items-center justify-center gap-2.5 uppercase mt-2.5 xs:mt-6 md:mt-11"
+                    class="relative z-10 flex flex-col-reverse md:flex-row xl:flex-col-reverse 2xl:flex-row items-center justify-center gap-2.5 uppercase mt-2.5 xs:mt-6 md:mt-11 xl:mt-3 2xl:mt-11"
                   >
                     <div class="relative text-white text-xs font-extrabold">
                       RUB 7370
@@ -1456,9 +1848,9 @@
                     </div>
 
                     <button
-                      class="h-6 flex items-center gap-1 font-extrabold bg-white text-brand-purple text-xs sm:text-sm border-3 border-brand-purple rounded-full px-2"
+                      class="h-6 flex items-center gap-1 font-extrabold bg-white text-brand-purple text-xs sm:text-sm xl:text-xs 2xl:text-sm border-3 border-brand-purple rounded-full px-2"
                     >
-                      <span>RUB 3680</span>
+                      <span>RUB 359</span>
                       <svg
                         width="10"
                         height="11"
@@ -1477,30 +1869,45 @@
                 <!-- Product 6 -->
                 <a
                   href="#"
-                  class="block relative group sm:rounded-30 overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-200 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
+                  class="relative group flex flex-col justify-between sm:rounded-30 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5 xl:pb-1 2xl:pb-4 2xl:pt-5"
                 >
                   <!-- Check -->
+                  <input type="checkbox" class="hidden" id="6" />
+
                   <label
-                    id="1"
+                    for="6"
                     class="absolute top-0 right-0 flex items-end justify-end z-30 p-4"
                   >
-                    <input type="checkbox" class="product-check hidden" />
-
                     <div
                       class="size-fit relative flex items-center justify-center cursor-pointer"
                     >
                       <img
                         src="./assets/images/rounded-check.png"
                         alt="Icon"
-                        class="size-[30px] lg:size-10"
+                        class="size-[30px] lg:size-10 xl:size-[30px] 2xl:size-10"
                       />
+
                       <img
                         src="./assets/svgs/check-desktop.svg"
                         alt="Check Icon"
-                        class="custom-check w-7 h-5 lg:size-auto hidden absolute left-1 top-0.5 lg:left-2 lg:top-1"
+                        class="custom-check w-7 h-5 lg:size-auto xl:w-7 xl:h-5 2xl:size-auto hidden absolute left-1 top-0.5 lg:left-2 lg:top-1 xl:left-1 xl:top-0.5 2xl:left-2 2xl:top-1"
                       />
                     </div>
                   </label>
+
+                  <!-- BG Image -->
+                  <img
+                    src="./assets/bg-images/product-6.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill group-hover:hidden"
+                  />
+
+                  <!-- BG Hover -->
+                  <img
+                    src="./assets/bg-images/product-hover.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill hidden group-hover:block"
+                  />
 
                   <!-- Question Button -->
                   <button
@@ -1509,13 +1916,6 @@
                     <img src="./assets/svgs/question.svg" alt="Question" />
                   </button>
 
-                  <!-- BG Image -->
-                  <img
-                    src="./assets/bg-images/product-1.png"
-                    alt="BG"
-                    class="absolute inset-0 size-full object-fill"
-                  />
-
                   <!-- Image & Title -->
                   <div
                     class="relative z-10 flex flex-col items-center space-y-2.5 px-2"
@@ -1523,18 +1923,18 @@
                     <img
                       src="./assets/images/product.png"
                       alt="Product"
-                      class="max-w-[115px] xs:max-w-none"
+                      class="max-w-[115px] xs:max-w-none xl:max-w-[115px] 2xl:max-w-none"
                     />
                     <p
-                      class="text-center md:text-start text-white text-sm xs:text-base font-bold leading-4"
+                      class="text-center text-white text-sm xs:text-base xl:text-xs 2xl:text-base font-bold leading-4"
                     >
-                      3280+600 Кристаллов Сотворения
+                      60 Кристаллов Сотворения
                     </p>
                   </div>
 
                   <!-- Cost -->
                   <div
-                    class="relative z-10 flex flex-col-reverse md:flex-row items-center justify-center gap-2.5 uppercase mt-2.5 xs:mt-6 md:mt-11"
+                    class="relative z-10 flex flex-col-reverse md:flex-row xl:flex-col-reverse 2xl:flex-row items-center justify-center gap-2.5 uppercase mt-2.5 xs:mt-6 md:mt-11 xl:mt-3 2xl:mt-11"
                   >
                     <div class="relative text-white text-xs font-extrabold">
                       RUB 7370
@@ -1544,9 +1944,9 @@
                     </div>
 
                     <button
-                      class="h-6 flex items-center gap-1 font-extrabold bg-white text-brand-purple text-xs sm:text-sm border-3 border-brand-purple rounded-full px-2"
+                      class="h-6 flex items-center gap-1 font-extrabold bg-white text-brand-purple text-xs sm:text-sm xl:text-xs 2xl:text-sm border-3 border-brand-purple rounded-full px-2"
                     >
-                      <span>RUB 3680</span>
+                      <span>RUB 69</span>
                       <svg
                         width="10"
                         height="11"
@@ -1565,30 +1965,45 @@
                 <!-- Product 7 -->
                 <a
                   href="#"
-                  class="block relative group sm:rounded-30 overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-200 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5"
+                  class="relative group flex flex-col justify-between sm:rounded-30 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5 xl:pb-1 2xl:pb-4 2xl:pt-5"
                 >
                   <!-- Check -->
+                  <input type="checkbox" class="hidden" id="7" />
+
                   <label
-                    id="1"
+                    for="7"
                     class="absolute top-0 right-0 flex items-end justify-end z-30 p-4"
                   >
-                    <input type="checkbox" class="product-check hidden" />
-
                     <div
                       class="size-fit relative flex items-center justify-center cursor-pointer"
                     >
                       <img
                         src="./assets/images/rounded-check.png"
                         alt="Icon"
-                        class="size-[30px] lg:size-10"
+                        class="size-[30px] lg:size-10 xl:size-[30px] 2xl:size-10"
                       />
+
                       <img
                         src="./assets/svgs/check-desktop.svg"
                         alt="Check Icon"
-                        class="custom-check w-7 h-5 lg:size-auto hidden absolute left-1 top-0.5 lg:left-2 lg:top-1"
+                        class="custom-check w-7 h-5 lg:size-auto xl:w-7 xl:h-5 2xl:size-auto hidden absolute left-1 top-0.5 lg:left-2 lg:top-1 xl:left-1 xl:top-0.5 2xl:left-2 2xl:top-1"
                       />
                     </div>
                   </label>
+
+                  <!-- BG Image -->
+                  <img
+                    src="./assets/bg-images/product-7.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill group-hover:hidden"
+                  />
+
+                  <!-- BG Hover -->
+                  <img
+                    src="./assets/bg-images/product-hover.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill hidden group-hover:block"
+                  />
 
                   <!-- Question Button -->
                   <button
@@ -1597,13 +2012,6 @@
                     <img src="./assets/svgs/question.svg" alt="Question" />
                   </button>
 
-                  <!-- BG Image -->
-                  <img
-                    src="./assets/bg-images/product-1.png"
-                    alt="BG"
-                    class="absolute inset-0 size-full object-fill"
-                  />
-
                   <!-- Image & Title -->
                   <div
                     class="relative z-10 flex flex-col items-center space-y-2.5 px-2"
@@ -1611,18 +2019,18 @@
                     <img
                       src="./assets/images/girl-image.png"
                       alt="Product"
-                      class="max-w-[115px] xs:max-w-none"
+                      class="max-w-[115px] xs:max-w-none xl:max-w-[115px] 2xl:max-w-none"
                     />
                     <p
-                      class="text-center md:text-start text-white text-sm xs:text-base font-bold leading-4"
+                      class="text-center text-white text-sm xs:text-base xl:text-xs 2xl:text-base font-bold leading-4"
                     >
-                      3280+600 Кристаллов Сотворения
+                      Благословение полой луны
                     </p>
                   </div>
 
                   <!-- Cost -->
                   <div
-                    class="relative z-10 flex flex-col-reverse md:flex-row items-center justify-center gap-2.5 uppercase mt-2.5 xs:mt-6 md:mt-11"
+                    class="relative z-10 flex flex-col-reverse md:flex-row xl:flex-col-reverse 2xl:flex-row items-center justify-center gap-2.5 uppercase mt-2.5 xs:mt-6 md:mt-11 xl:mt-3 2xl:mt-11"
                   >
                     <div class="relative text-white text-xs font-extrabold">
                       RUB 7370
@@ -1632,9 +2040,9 @@
                     </div>
 
                     <button
-                      class="h-6 flex items-center gap-1 font-extrabold bg-white text-brand-purple text-xs sm:text-sm border-3 border-brand-purple rounded-full px-2"
+                      class="h-6 flex items-center gap-1 font-extrabold bg-white text-brand-purple text-xs sm:text-sm xl:text-xs 2xl:text-sm border-3 border-brand-purple rounded-full px-2"
                     >
-                      <span>RUB 3680</span>
+                      <span>RUB 359</span>
                       <svg
                         width="10"
                         height="11"
@@ -1802,7 +2210,7 @@
                           for="userId"
                           class="max-w-[345px] block space-y-2.5"
                         >
-                          <div class="flex">
+                          <div class="flex gap-2.5">
                             <span class="font-bold text-xs xs:text-base"
                               >USER ID</span
                             >
@@ -1883,7 +2291,7 @@
                         </div>
 
                         <!-- Products -->
-                        <div class="space-y-2.5">
+                        <div class="space-y-2.5 font-bold">
                           <!-- Product 1 -->
                           <div fo class="flex items-center gap-2.5 xs:gap-5">
                             <div
@@ -1986,7 +2394,8 @@
                         <!-- Payments Methods -->
                         <div class="flex items-center gap-3.5 sm:gap-5">
                           <!-- Methods 1 -->
-                          <div
+                          <a
+                            href="#"
                             class="size-[75px] xs:size-24 shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
                           >
                             <img
@@ -1994,37 +2403,40 @@
                               alt="SPB"
                               class="size-full object-cover"
                             />
-                          </div>
+                          </a>
                           <!-- Methods 2 -->
-                          <div
+                          <a
+                            href="#"
                             class="size-[75px] xs:size-24 shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
                           >
                             <!-- <img
-                            src="./assets/images/spb-payment.png"
-                            alt="SPB"
-                            class="size-full object-cover"
-                          /> -->
-                          </div>
+                              src="./assets/images/spb-payment.png"
+                              alt="SPB"
+                              class="size-full object-cover"
+                            /> -->
+                          </a>
                           <!-- Methods 3 -->
-                          <div
+                          <a
+                            href="#"
                             class="size-[75px] xs:size-24 shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
                           >
                             <!-- <img
-                            src="./assets/images/spb-payment.png"
-                            alt="SPB"
-                            class="size-full object-cover"
-                          /> -->
-                          </div>
+                              src="./assets/images/spb-payment.png"
+                              alt="SPB"
+                              class="size-full object-cover"
+                            /> -->
+                          </a>
                           <!-- Methods 4 -->
-                          <div
+                          <a
+                            href="#"
                             class="size-[75px] xs:size-24 shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
                           >
                             <!-- <img
-                            src="./assets/images/spb-payment.png"
-                            alt="SPB"
-                            class="size-full object-cover"
-                          /> -->
-                          </div>
+                              src="./assets/images/spb-payment.png"
+                              alt="SPB"
+                              class="size-full object-cover"
+                            /> -->
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -2128,12 +2540,17 @@
         <!-- Logo -->
         <a
           href="./index.html"
-          class="inline-block w-[85px] h-10 xs:w-14 xs:h-8 sm:w-[118px] sm:h-14 overflow-hidden shrink-0"
+          class="group inline-block w-[85px] h-10 xs:w-14 xs:h-8 sm:w-[118px] sm:h-14 overflow-hidden shrink-0"
         >
           <img
-            src="./assets/svgs/logo-footer.svg"
+            src="./assets/svgs/logo.svg"
             alt="LOGO"
-            class="size-full"
+            class="size-full group-hover:hidden"
+          />
+          <img
+            src="./assets/svgs/logo-hover.svg"
+            alt="LOGO"
+            class="size-full hidden group-hover:block"
           />
         </a>
 
@@ -2144,35 +2561,35 @@
           <ul class="space-y-3.5 lg:space-y-5">
             <li>
               <a
-                href="#"
+                href="#products"
                 class="hover:text-brand-purple transition-all duration-300"
                 >Продукты</a
               >
             </li>
             <li>
               <a
-                href="#"
+                href="#bonuses"
                 class="hover:text-brand-purple transition-all duration-300"
                 >Бонусы</a
               >
             </li>
             <li>
               <a
-                href="#"
+                href="#secrets"
                 class="hover:text-brand-purple transition-all duration-300"
                 >Гайды</a
               >
             </li>
             <li>
               <a
-                href="#"
+                href="#about"
                 class="hover:text-brand-purple transition-all duration-300"
                 >О нас</a
               >
             </li>
             <li>
               <a
-                href="#"
+                href="#contact"
                 class="hover:text-brand-purple transition-all duration-300"
                 >Контакты</a
               >

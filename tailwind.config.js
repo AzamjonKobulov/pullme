@@ -64,5 +64,21 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addComponents }) {
+      addComponents({
+        ".text-trsprt-section-title": {
+          background:
+            "url('../assets/bg-images/hero-left.png') -20px -20px no-repeat",
+          "-webkit-text-fill-color": "transparent",
+          "-webkit-background-clip": "text",
+          transition: "background 0.3s ease-in-out",
+        },
+        ".group:hover .text-trsprt-section-title": {
+          background:
+            "linear-gradient(90deg, #7D3C98, #D2B4DE)" /* Example brand purple gradient */,
+        },
+      });
+    },
+  ],
 };
