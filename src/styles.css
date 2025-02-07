@@ -143,12 +143,12 @@ input[type="checkbox"]:checked + label div .custom-check {
   @apply block;
 }
 
-input[type="checkbox"]:checked ~ img:first-of-type {
+/* input[type="checkbox"]:checked ~ img:first-of-type {
   @apply hidden;
-}
+} */
 
 input[type="checkbox"]:checked ~ img:last-of-type {
-  @apply block;
+  @apply opacity-100;
 }
 
 .fade-in {

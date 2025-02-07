@@ -51,11 +51,8 @@ setTimeout(updateSlideClasses, 100);
 function updateSlideClasses() {
   const slides = swiper.slides;
   const totalSlides = slides.length;
-  const screenWidth = window.innerWidth;
 
   slides.forEach((slide, index) => {
-    const reviewText = slide.querySelector(".review-text");
-
     const isCurrent = index === swiper.activeIndex;
     const isAdjacent =
       index === (swiper.activeIndex - 1 + totalSlides) % totalSlides ||
@@ -69,24 +66,10 @@ function updateSlideClasses() {
       slide.classList.remove("opacity-100");
     }
 
-    if (reviewText) {
-      if (screenWidth < 640) {
-        if (isCurrent) {
-          reviewText.classList.add("text-sm");
-          reviewText.classList.remove("text-[10px]");
-        } else {
-          reviewText.classList.add("text-[10px]");
-          reviewText.classList.remove("text-sm");
-        }
-      } else {
-        if (isCurrent) {
-          reviewText.classList.add("text-lg");
-          reviewText.classList.remove("text-sm", "text-[10px]");
-        } else {
-          reviewText.classList.add("text-sm");
-          reviewText.classList.remove("text-lg", "text-[10px]");
-        }
-      }
+    if (isCurrent) {
+      slide.classList.add("!scale-125", "!px-5", "lg:!px-8");
+    } else {
+      slide.classList.remove("!scale-125", "!px-5", "lg:!px-8");
     }
   });
 }
