@@ -41,7 +41,7 @@
 
         <!-- Links & Cart & Lang -->
         <div
-          class="h-fit hidden lg:flex items-center gap-6 font-extrabold uppercase text-black/40 text-xs"
+          class="h-fit relative z-10 hidden lg:flex items-center gap-6 font-extrabold uppercase text-black/40 text-xs"
         >
           <!-- Links -->
           <ul class="flex items-center gap-6">
@@ -114,7 +114,7 @@
 
               <!-- Select List -->
               <ul
-                class="w-max select-list fade-in absolute right-0 bg-white font-extrabold font-mulish text-black/40 text-xl hidden z-[60] border-[3px] border-brand-purple rounded-30 shadow-lg p-4"
+                class="w-max select-list fade-in absolute right-0 bg-white font-extrabold font-mulish text-black/40 text-xl hidden z-[80] border-[3px] border-brand-purple rounded-30 shadow-lg p-4"
               >
                 <!-- Lang 1 -->
                 <li
@@ -782,7 +782,7 @@
 
     <!-- Socials -->
     <div
-      class="fixed max-w-[1600px] w-full left-1/2 -translate-x-1/2 hidden lg:flex justify-end right-2 top-52"
+      class="fixed z-50 max-w-[1600px] w-full left-1/2 -translate-x-1/2 hidden lg:flex justify-end right-2 top-52"
     >
       <ul class="space-y-2.5 hidden lg:block relative z-[80]">
         <li>
@@ -1024,7 +1024,7 @@
                 Накопи бонусы
               </h2>
               <p
-                class="max-w-[242px] xs:max-w-none font-extrabold uppercase xs:text-xl sm:text-[28px] text-white leading-normal"
+                class="max-w-[242px] xs:max-w-none font-extrabold uppercase xs:text-xl sm:text-[26px] text-white leading-normal"
               >
                 и получи реальные или внутриигровые товары!
               </p>
@@ -1032,7 +1032,7 @@
 
             <!-- Topup Balance Btn -->
             <div
-              class="w-fit absolute bottom-0 right-0 z-50 bg-white rounded-tl-2xl xs:rounded-tl-[32px] lg:rounded-tl-[45px] pl-2.5 pt-2.5 sm:pl-5 sm:pt-5"
+              class="w-fit absolute bottom-0 right-0 bg-white rounded-tl-2xl xs:rounded-tl-[32px] lg:rounded-tl-[45px] pl-2.5 pt-2.5 sm:pl-5 sm:pt-5"
             >
               <button
                 class="group font-extrabold uppercase text-start text-sm sm:text-[28px] leading-5 sm:leading-8"
@@ -1093,7 +1093,7 @@
                   <img
                     src="./assets/svgs/arrow-catalog-1.svg"
                     alt="Arrow"
-                    class="size-6 lg:size-auto group-hover:-rotate-45 transition-all duration-200"
+                    class="size-6 lg:size-auto"
                   />
                 </div>
               </div>
@@ -1135,7 +1135,7 @@
                   <img
                     src="./assets/svgs/arrow-catalog-2.svg"
                     alt="Arrow"
-                    class="size-6 lg:size-auto group-hover:-rotate-45 transition-all duration-200"
+                    class="size-6 lg:size-auto"
                   />
                 </div>
               </div>
@@ -1176,7 +1176,7 @@
                   <img
                     src="./assets/svgs/arrow-catalog-4.svg"
                     alt="Arrow"
-                    class="size-6 lg:size-auto group-hover:-rotate-45 transition-all duration-200"
+                    class="size-6 lg:size-auto"
                   />
                 </div>
               </div>
@@ -1218,7 +1218,7 @@
                   <img
                     src="./assets/svgs/arrow-catalog-4.svg"
                     alt="Arrow"
-                    class="size-6 lg:size-auto group-hover:-rotate-45 transition-all duration-200"
+                    class="size-6 lg:size-auto"
                   />
                 </div>
               </div>
@@ -1258,7 +1258,7 @@
                   <img
                     src="./assets/svgs/arrow-catalog-5.svg"
                     alt="Arrow"
-                    class="size-6 lg:size-auto group-hover:-rotate-45 transition-all duration-200"
+                    class="size-6 lg:size-auto"
                   />
                 </div>
               </div>
@@ -1299,7 +1299,7 @@
                   <img
                     src="./assets/svgs/arrow-catalog-6.svg"
                     alt="Arrow"
-                    class="size-6 lg:size-auto group-hover:-rotate-45 transition-all duration-200"
+                    class="size-6 lg:size-auto"
                   />
                 </div>
               </div>
@@ -1340,7 +1340,7 @@
                   <img
                     src="./assets/svgs/arrow-catalog-7.svg"
                     alt="Arrow"
-                    class="size-6 lg:size-auto group-hover:-rotate-45 transition-all duration-200"
+                    class="size-6 lg:size-auto"
                   />
                 </div>
               </div>
@@ -1383,7 +1383,7 @@
                   <img
                     src="./assets/svgs/arrow-catalog-8.svg"
                     alt="Arrow"
-                    class="size-6 lg:size-auto group-hover:-rotate-45 transition-all duration-200"
+                    class="size-6 lg:size-auto"
                   />
                 </div>
               </div>
@@ -1424,7 +1424,7 @@
                   <img
                     src="./assets/svgs/arrow-catalog-9.svg"
                     alt="Arrow"
-                    class="size-6 lg:size-auto group-hover:-rotate-45 transition-all duration-200"
+                    class="size-6 lg:size-auto"
                   />
                 </div>
               </div>
@@ -2157,13 +2157,14 @@
 
         <a
           href="#"
-          class="block w-fit h-[74px] relative mx-auto hidden lg:block font-mulish font-extrabold uppercase text-white text-[17.5px] leading-6 hover:shadow-lg transition-all duration-200 rounded-30 overflow-hidden mt-8 px-8"
+          class="block w-fit h-[74px] group relative mx-auto hidden lg:block font-mulish font-extrabold uppercase text-white text-[17.5px] leading-6 rounded-30 overflow-hidden hover:opacity-80 transition-all duration-200 mt-8 px-8"
         >
           <img
             src="./assets/bg-images/button.png"
             alt="button"
             class="absolute inset-0 size-full object-cover"
           />
+
           <div
             class="relative flex flex-col items-center justify-center z-10 py-4"
           >
@@ -2177,7 +2178,9 @@
           class="max-w-base mx-auto relative flex justify-center gap-5 overflow-hidden pt-20 lg:pt-40 px-2.5 md:px-12 lg:px-2.5"
         >
           <!-- Left Floating Images -->
-          <div class="hidden xl:block sticky top-0 left-2.5 pt-96">
+          <div
+            class="w-max shrink-0 hidden xl:block sticky top-0 left-2.5 pt-96"
+          >
             <img
               src="./assets/images/left-floating-image-1.png"
               alt="Image"
@@ -2265,7 +2268,7 @@
                   </div>
                   <a
                     href="#"
-                    class="max-w-[150px] sm:max-w-[303px] mx-auto sm:mx-0 relative flex items-center justify-center uppercase text-white font-mulish font-extrabold text-sm lg:text-[26px] hover:shadow-lg transition-all duration-200 rounded-full overflow-hidden py-3 sm:py-3.5"
+                    class="max-w-[150px] sm:max-w-[303px] mx-auto sm:mx-0 relative flex items-center justify-center uppercase text-white font-mulish font-extrabold text-sm lg:text-[26px] rounded-full overflow-hidden hover:opacity-80 transition-all duration-200 py-3 sm:py-3.5"
                   >
                     <img
                       src="./assets/bg-images/button.png"
@@ -3337,7 +3340,7 @@
 
             <a
               href="#"
-              class="block w-fit ml-auto relative flex items-center justify-center uppercase text-white font-mulish font-extrabold text-sm lg:text-[26px] mt-5 mr-2.5 md:mr-12 lg:mr-2.5 rounded-full hover:shadow-lg transition-all duration-200 overflow-hidden px-8 py-3 sm:py-3.5"
+              class="block w-fit ml-auto relative flex items-center justify-center uppercase text-white font-mulish font-extrabold text-sm lg:text-[26px] mt-5 mr-2.5 md:mr-12 lg:mr-2.5 rounded-full hover:opacity-80 transition-all duration-200 overflow-hidden px-8 py-3 sm:py-3.5"
             >
               <img
                 src="./assets/bg-images/button.png"
@@ -3513,7 +3516,7 @@
 
                 <div class="flex justify-center sm:justify-start">
                   <button
-                    class="w-fit h-10 sm:h-14 relative flex items-center justify-center uppercase text-white font-mulish font-extrabold text-sm lg:text-[26px] mt-5 mr-2.5 md:mr-12 lg:mr-2.5 rounded-full overflow-hidden hover:shadow-lg transition-all duration-200 px-8 py-3 sm:py-3.5 sm:px-16"
+                    class="w-fit h-10 sm:h-14 relative flex items-center justify-center uppercase text-white font-mulish font-extrabold text-sm lg:text-[26px] mt-5 mr-2.5 md:mr-12 lg:mr-2.5 rounded-full overflow-hidden hover:opacity-80 transition-all duration-200 px-8 py-3 sm:py-3.5 sm:px-16"
                   >
                     <img
                       src="./assets/bg-images/button.png"
