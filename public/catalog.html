@@ -13,9 +13,9 @@
   </head>
   <body>
     <!-- HEADER -->
-    <header>
+    <header class="relative z-50">
       <nav
-        class="max-w-base mx-auto flex items-start justify-between pb-3.5 pt-3 sm:py-5 px-2.5 md:px-12 xl:px-2.5"
+        class="max-w-base mx-auto relative flex items-start justify-between pb-3.5 pt-3 sm:py-5 px-2.5 md:px-12 xl:px-2.5"
       >
         <!-- Logo -->
         <div
@@ -47,35 +47,35 @@
             <li>
               <a
                 href="./catalog.html"
-                class="hover:text-black transition-all duration-200"
+                class="hover:text-black transition-all duration-200 ease-in-out"
                 >все игры</a
               >
             </li>
             <li>
               <a
                 href="#bonus"
-                class="hover:text-black transition-all duration-200"
+                class="hover:text-black transition-all duration-200 ease-in-out"
                 >Бонусы</a
               >
             </li>
             <li>
               <a
                 href="#secrets"
-                class="hover:text-black transition-all duration-200"
+                class="hover:text-black transition-all duration-200 ease-in-out"
                 >Гайды</a
               >
             </li>
             <li>
               <a
                 href="#about"
-                class="hover:text-black transition-all duration-200"
+                class="hover:text-black transition-all duration-200 ease-in-out"
                 >О нас</a
               >
             </li>
             <li>
               <a
                 href="#contact"
-                class="hover:text-black transition-all duration-200"
+                class="hover:text-black transition-all duration-200 ease-in-out"
                 >Контакты</a
               >
             </li>
@@ -84,9 +84,9 @@
           <!-- Cart & Lang -->
           <div class="flex items-center gap-6">
             <!-- Cart -->
-            <button class="flex items-center gap-1">
+            <button class="cart-btn flex items-center gap-1">
               <img src="./assets/svgs/cart.svg" alt="Cart Icon" />
-              <span>2</span>
+              <span class="selected-products-qty">0</span>
             </button>
 
             <!-- Lang Select Container -->
@@ -279,6 +279,264 @@
             class="w-6"
           />
         </button>
+
+        <!-- Product Purchasing Form -->
+        <div
+          class="cart fade-in hidden max-w-96 absolute top-14 right-2.5 bg-white border-[3px] border-brand-purple border-opacity-80 rounded-30 pt-9 pb-5 px-2.5"
+        >
+          <div class="space-y-10">
+            <div class="relative rounded-30">
+              <!-- BG Image Mobile -->
+              <img
+                src="./assets/bg-images/product-form-mobile.png"
+                alt="Bg Images"
+                class="absolute size-full inset-0 object-fill"
+              />
+
+              <!-- Game Image -->
+              <img
+                src="./assets/images/product-form-image.png"
+                alt="Bg Images"
+                class="w-2/3 absolute object-fill -top-16 -right-5 z-20"
+              />
+
+              <div class="relative z-10 size-full px-2.5 pb-2.5 pt-5">
+                <h3 class="text-5xl text-white leading-[90%]">
+                  Genshin <br />
+                  Impact
+                </h3>
+
+                <div
+                  class="space-y-[30px] font-oswald text-white mt-24 xs:mt-20"
+                >
+                  <!-- User ID & Server ID -->
+                  <div class="space-y-3.5">
+                    <h5 class="text-base text-white font-oswald leading-normal">
+                      ПОЖАЛУЙСТА, ВВЕДИТЕ ВАШ ID ДЛЯ ДОСТАВКИ
+                    </h5>
+
+                    <label for="userId" class="max-w-[345px] block space-y-2.5">
+                      <div class="flex gap-2.5">
+                        <span class="font-bold text-xs">USER ID</span>
+                        <!-- User ID Btn -->
+                        <button id="user-id-open-btn">
+                          <img
+                            src="./assets/svgs/question.svg"
+                            alt="Qeustion"
+                          />
+                        </button>
+                      </div>
+                      <input
+                        type="text"
+                        id="userId"
+                        class="w-full h-11 rounded-10 font-mulish text-black px-3 py-1"
+                      />
+                    </label>
+
+                    <!-- Select Container -->
+                    <div class="max-w-[345px] relative select space-y-2.5">
+                      <span class="font-bold text-xs">SERVER ID</span>
+
+                      <!-- Select Button -->
+                      <button
+                        class="select-button h-11 w-full flex items-center justify-between text-black bg-white rounded-10 px-2.5"
+                      >
+                        <span
+                          class="select-label font-mulish text-black"
+                        ></span>
+                        <img
+                          src="./assets/svgs/angle-down.svg"
+                          alt="Angle Down"
+                          class="select-icon transition-all duration-200 ease-in-out"
+                        />
+                      </button>
+
+                      <!-- Select List -->
+                      <ul
+                        class="select-list fade-in w-full absolute bg-white rounded-10 font-mulish hidden z-10 shadow-lg"
+                      >
+                        <li
+                          class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
+                          data-value="lorem"
+                        >
+                          lorem
+                        </li>
+                        <li
+                          class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
+                          data-value="lorem"
+                        >
+                          ipsum
+                        </li>
+                        <li
+                          class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
+                          data-value="lorem"
+                        >
+                          dolor
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Product -->
+                  <div class="space-y-3.5">
+                    <div class="flex items-center justify-between gap-5">
+                      <h5
+                        class="flex-1 text-base text-white font-oswald uppercase"
+                      >
+                        Товар
+                      </h5>
+                      <h6
+                        class="w-[83px] text-xs text-white font-oswald uppercase"
+                      >
+                        Количество
+                      </h6>
+                    </div>
+
+                    <!-- Selected Products -->
+                    <div
+                      class="selected-products products-cart space-y-2.5 font-bold"
+                    ></div>
+                  </div>
+
+                  <!-- Promocode -->
+                  <label
+                    for="promoCode"
+                    class="max-w-[345px] block space-y-2.5"
+                  >
+                    <h5 class="text-base text-white font-oswald uppercase">
+                      промокод
+                    </h5>
+                    <input
+                      type="text"
+                      id="promoCode"
+                      class="w-full h-11 text-sm xs:text-base rounded-10 font-mulish text-black px-3 py-1"
+                      placeholder="Если есть, введите промокод"
+                    />
+                  </label>
+
+                  <!-- Email -->
+                  <label for="email" class="max-w-[345px] block space-y-2.5">
+                    <h5 class="text-base text-white font-oswald uppercase">
+                      почта
+                    </h5>
+                    <input
+                      type="text"
+                      id="email"
+                      class="w-full h-11 text-sm rounded-10 font-mulish text-black outline-none px-3 py-1"
+                      placeholder="Опционально"
+                    />
+                  </label>
+
+                  <!-- Payment Methods -->
+                  <div class="space-y-5">
+                    <div class="space-y-1">
+                      <h5 class="text-base text-white font-oswald uppercase">
+                        Способ оплаты
+                      </h5>
+                      <div class="flex items-center gap-8">
+                        <span class="text-sm text-white font-oswald uppercase">
+                          без комиссии
+                        </span>
+                        <span class="text-sm text-white font-oswald uppercase">
+                          комиссия 1%
+                        </span>
+                        <span class="text-sm text-white font-oswald uppercase">
+                          комиссия 5%
+                        </span>
+                      </div>
+                    </div>
+
+                    <!-- Payments Methods -->
+                    <div class="flex items-center gap-3.5">
+                      <!-- Methods 1 -->
+                      <a
+                        href="#"
+                        class="size-[75px] shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
+                      >
+                        <img
+                          src="./assets/images/spb-payment.png"
+                          alt="SPB"
+                          class="size-full object-cover"
+                        />
+                      </a>
+                      <!-- Methods 2 -->
+                      <a
+                        href="#"
+                        class="size-[75px] shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
+                      >
+                        <!-- <img
+                        src="./assets/images/spb-payment.png"
+                        alt="SPB"
+                        class="size-full object-cover"
+                      /> -->
+                      </a>
+                      <!-- Methods 3 -->
+                      <a
+                        href="#"
+                        class="size-[75px] shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
+                      >
+                        <!-- <img
+                        src="./assets/images/spb-payment.png"
+                        alt="SPB"
+                        class="size-full object-cover"
+                      /> -->
+                      </a>
+                      <!-- Methods 4 -->
+                      <a
+                        href="#"
+                        class="size-[75px] shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
+                      >
+                        <!-- <img
+                        src="./assets/images/spb-payment.png"
+                        alt="SPB"
+                        class="size-full object-cover"
+                      /> -->
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-5">
+              <!-- Cost -->
+              <div
+                class="flex items-center justify-between text-black/40 uppercase"
+              >
+                <h5 class="text-lg font-oswald leading-normal">сумма</h5>
+                <h5 class="text-lg font-oswald leading-normal">6080 rub</h5>
+              </div>
+
+              <!-- Pay Button -->
+              <div class="space-y-2.5">
+                <button
+                  class="w-full relative h-10 font-extrabold text-white border-2 border-brand-purple rounded-full hover:opacity-80 transition-all du20"
+                >
+                  <img
+                    src="./assets/bg-images/button.png"
+                    alt="button"
+                    class="absolute inset-0 size-full object-cover rounded-30"
+                  />
+                  <span class="relative uppercase z-10">оплатить</span>
+                </button>
+                <p
+                  class="block text-[13px] font-bold text-black/40 leading-[80%]"
+                >
+                  Нажимая кнопку <span class="uppercase">оплатить</span>, я
+                  принимаю условия <a
+                    href="#"
+                    class="underline underline-offset-2"
+                    >Пользовательского Соглашения</a
+                  > и подтверждаю ознакомление с <a
+                    href="#"
+                    class="underline underline-offset-2"
+                    >FAQ</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </nav>
 
       <!-- Mobile Menu -->
@@ -296,9 +554,12 @@
           <!-- Cart & Close Btn -->
           <div class="flex items-center gap-7">
             <!-- Cart -->
-            <button class="flex items-center gap-1">
+            <button class="cart-btn flex items-center gap-1">
               <img src="./assets/svgs/cart.svg" alt="Cart Icon" />
-              <span class="text-xs font-extrabold text-black/40">1</span>
+              <span
+                class="selected-products-qty text-xs font-extrabold text-black/40"
+                >0</span
+              >
             </button>
 
             <!-- Close Btn -->
@@ -842,7 +1103,7 @@
             <div class="swiper home-swiper">
               <div class="swiper-wrapper">
                 <div
-                  class="swiper-slide swiper-slide-reviews transition-all duration-200"
+                  class="swiper-slide swiper-slide-reviews transition-all duration-200 ease-in-out"
                 >
                   <div class="flex flex-col-reverse lg:pt-24">
                     <!-- Texts & Images -->
@@ -966,7 +1227,7 @@
 
             <!-- Fill Balance Btn -->
             <div
-              class="w-fit absolute bottom-0 right-0 z-50 bg-white rounded-tl-2xl xs:rounded-tl-[32px] lg:rounded-tl-[45px] pl-2.5 pt-2.5 sm:pl-5 sm:pt-5"
+              class="w-fit absolute bottom-0 right-0 z-30 bg-white rounded-tl-2xl xs:rounded-tl-[32px] lg:rounded-tl-[45px] pl-2.5 pt-2.5 sm:pl-5 sm:pt-5"
             >
               <button
                 class="flex items-center gap-3 lg:gap-8 group font-extrabold uppercase text-start text-sm sm:text-[28px] leading-5 sm:leading-8"

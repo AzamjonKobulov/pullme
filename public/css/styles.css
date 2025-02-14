@@ -632,6 +632,82 @@ p{
     line-height: 1.5rem;
   }
 }
+.container{
+  width: 100%;
+}
+.\!container{
+  width: 100% !important;
+}
+@media (min-width: 390px){
+
+  .container{
+    max-width: 390px;
+  }
+
+  .\!container{
+    max-width: 390px !important;
+  }
+}
+@media (min-width: 480px){
+
+  .container{
+    max-width: 480px;
+  }
+
+  .\!container{
+    max-width: 480px !important;
+  }
+}
+@media (min-width: 640px){
+
+  .container{
+    max-width: 640px;
+  }
+
+  .\!container{
+    max-width: 640px !important;
+  }
+}
+@media (min-width: 768px){
+
+  .container{
+    max-width: 768px;
+  }
+
+  .\!container{
+    max-width: 768px !important;
+  }
+}
+@media (min-width: 1024px){
+
+  .container{
+    max-width: 1024px;
+  }
+
+  .\!container{
+    max-width: 1024px !important;
+  }
+}
+@media (min-width: 1280px){
+
+  .container{
+    max-width: 1280px;
+  }
+
+  .\!container{
+    max-width: 1280px !important;
+  }
+}
+@media (min-width: 1440px){
+
+  .container{
+    max-width: 1440px;
+  }
+
+  .\!container{
+    max-width: 1440px !important;
+  }
+}
 .text-trsprt-section-title{
   background: url('../assets/bg-images/hero-left.png') -20px -20px no-repeat;
   -webkit-text-fill-color: transparent;
@@ -720,9 +796,6 @@ p{
 .left-2\.5{
   left: 0.625rem;
 }
-.left-5{
-  left: 1.25rem;
-}
 .left-\[14\%\]{
   left: 14%;
 }
@@ -749,6 +822,9 @@ p{
 }
 .top-1\/2{
   top: 50%;
+}
+.top-14{
+  top: 3.5rem;
 }
 .top-24{
   top: 6rem;
@@ -785,12 +861,6 @@ p{
 }
 .z-\[80\]{
   z-index: 80;
-}
-.\!z-\[80\]{
-  z-index: 80 !important;
-}
-.z-0{
-  z-index: 0;
 }
 .col-span-2{
   grid-column: span 2 / span 2;
@@ -1021,6 +1091,9 @@ p{
 }
 .min-h-64{
   min-height: 16rem;
+}
+.min-h-96{
+  min-height: 24rem;
 }
 .min-h-full{
   min-height: 100%;
@@ -1348,11 +1421,11 @@ p{
 .overflow-hidden{
   overflow: hidden;
 }
+.\!overflow-visible{
+  overflow: visible !important;
+}
 .overflow-y-auto{
   overflow-y: auto;
-}
-.overflow-y-visible{
-  overflow-y: visible;
 }
 .whitespace-normal{
   white-space: normal;
@@ -1451,6 +1524,9 @@ p{
 }
 .border-brand-purple\/50{
   border-color: rgb(135 113 219 / 0.5);
+}
+.border-opacity-80{
+  --tw-border-opacity: 0.8;
 }
 .bg-brand-purple\/5{
   background-color: rgb(135 113 219 / 0.05);
@@ -1570,6 +1646,9 @@ p{
 .pb-12{
   padding-bottom: 3rem;
 }
+.pb-2\.5{
+  padding-bottom: 0.625rem;
+}
 .pb-3{
   padding-bottom: 0.75rem;
 }
@@ -1635,6 +1714,9 @@ p{
 }
 .pt-5{
   padding-top: 1.25rem;
+}
+.pt-9{
+  padding-top: 2.25rem;
 }
 .pt-96{
   padding-top: 24rem;
@@ -1793,6 +1875,9 @@ p{
 .underline-offset-2{
   text-underline-offset: 2px;
 }
+.opacity-0{
+  opacity: 0;
+}
 .opacity-100{
   opacity: 1;
 }
@@ -1819,6 +1904,9 @@ p{
 .outline-none{
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+.filter{
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .transition-all{
   transition-property: all;
@@ -2147,6 +2235,10 @@ input[type="checkbox"]:checked ~ img:last-of-type{
 
   .xs\:w-14{
     width: 3.5rem;
+  }
+
+  .xs\:max-w-96{
+    max-width: 24rem;
   }
 
   .xs\:max-w-none{
@@ -3212,6 +3304,10 @@ input[type="checkbox"]:checked ~ img:last-of-type{
     font-size: 0.75rem;
     line-height: 1rem;
   }
+
+  .group:hover .xl\:group-hover\:opacity-100{
+    opacity: 1;
+  }
 }
 
 @media (min-width: 1440px){
@@ -3231,10 +3327,6 @@ input[type="checkbox"]:checked ~ img:last-of-type{
 
   .\32xl\:mt-11{
     margin-top: 2.75rem;
-  }
-
-  .\32xl\:block{
-    display: block;
   }
 
   .\32xl\:size-10{

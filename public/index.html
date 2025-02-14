@@ -14,9 +14,9 @@
   </head>
   <body>
     <!-- HEADER -->
-    <header>
+    <header class="relative z-50">
       <nav
-        class="max-w-base mx-auto flex items-start justify-between pb-3.5 pt-3 sm:py-5 px-2.5 md:px-12 xl:px-2.5"
+        class="max-w-base mx-auto relative flex items-start justify-between pb-3.5 pt-3 sm:py-5 px-2.5 md:px-12 xl:px-2.5"
       >
         <!-- Logo -->
         <div
@@ -48,35 +48,35 @@
             <li>
               <a
                 href="./catalog.html"
-                class="hover:text-black transition-all duration-200"
+                class="hover:text-black transition-all duration-200 ease-in-out"
                 >все игры</a
               >
             </li>
             <li>
               <a
                 href="#bonus"
-                class="hover:text-black transition-all duration-200"
+                class="hover:text-black transition-all duration-200 ease-in-out"
                 >Бонусы</a
               >
             </li>
             <li>
               <a
                 href="#secrets"
-                class="hover:text-black transition-all duration-200"
+                class="hover:text-black transition-all duration-200 ease-in-out"
                 >Гайды</a
               >
             </li>
             <li>
               <a
                 href="#about"
-                class="hover:text-black transition-all duration-200"
+                class="hover:text-black transition-all duration-200 ease-in-out"
                 >О нас</a
               >
             </li>
             <li>
               <a
                 href="#contact"
-                class="hover:text-black transition-all duration-200"
+                class="hover:text-black transition-all duration-200 ease-in-out"
                 >Контакты</a
               >
             </li>
@@ -85,9 +85,9 @@
           <!-- Cart & Lang -->
           <div class="flex items-center gap-6">
             <!-- Cart -->
-            <button class="flex items-center gap-1">
+            <button class="cart-btn flex items-center gap-1">
               <img src="./assets/svgs/cart.svg" alt="Cart Icon" />
-              <span>2</span>
+              <span class="selected-products-qty">0</span>
             </button>
 
             <!-- Lang Select Container -->
@@ -280,6 +280,262 @@
             class="w-6"
           />
         </button>
+
+        <!-- Product Purchasing Form -->
+        <div
+          class="cart fade-in hidden max-w-96 absolute top-14 right-2.5 bg-white border-[3px] border-brand-purple border-opacity-80 rounded-30 pt-9 pb-5 px-2.5"
+        >
+          <div class="space-y-10">
+            <div class="relative rounded-30">
+              <!-- BG Image Mobile -->
+              <img
+                src="./assets/bg-images/product-form-mobile.png"
+                alt="Bg Images"
+                class="absolute size-full inset-0 object-fill"
+              />
+
+              <!-- Game Image -->
+              <img
+                src="./assets/images/product-form-image.png"
+                alt="Bg Images"
+                class="w-2/3 absolute object-fill -top-16 -right-5 z-20"
+              />
+
+              <div class="relative z-10 size-full px-2.5 pb-2.5 pt-5">
+                <h3 class="text-5xl text-white leading-[90%]">
+                  Genshin <br />
+                  Impact
+                </h3>
+
+                <div
+                  class="space-y-[30px] font-oswald text-white mt-24 xs:mt-20"
+                >
+                  <!-- User ID & Server ID -->
+                  <div class="space-y-3.5">
+                    <h5 class="text-base text-white font-oswald leading-normal">
+                      ПОЖАЛУЙСТА, ВВЕДИТЕ ВАШ ID ДЛЯ ДОСТАВКИ
+                    </h5>
+
+                    <label for="userId" class="max-w-[345px] block space-y-2.5">
+                      <div class="flex gap-2.5">
+                        <span class="font-bold text-xs">USER ID</span>
+                        <!-- User ID Btn -->
+                        <button id="user-id-open-btn">
+                          <img
+                            src="./assets/svgs/question.svg"
+                            alt="Qeustion"
+                          />
+                        </button>
+                      </div>
+                      <input
+                        type="text"
+                        id="userId"
+                        class="w-full h-11 rounded-10 font-mulish text-black px-3 py-1"
+                      />
+                    </label>
+
+                    <!-- Select Container -->
+                    <div class="max-w-[345px] relative select space-y-2.5">
+                      <span class="font-bold text-xs">SERVER ID</span>
+
+                      <!-- Select Button -->
+                      <button
+                        class="select-button h-11 w-full flex items-center justify-between text-black bg-white rounded-10 px-2.5"
+                      >
+                        <span
+                          class="select-label font-mulish text-black"
+                        ></span>
+                        <img
+                          src="./assets/svgs/angle-down.svg"
+                          alt="Angle Down"
+                          class="select-icon transition-all duration-200 ease-in-out"
+                        />
+                      </button>
+
+                      <!-- Select List -->
+                      <ul
+                        class="select-list fade-in w-full absolute bg-white rounded-10 font-mulish hidden z-10 shadow-lg"
+                      >
+                        <li
+                          class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
+                          data-value="lorem"
+                        >
+                          lorem
+                        </li>
+                        <li
+                          class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
+                          data-value="lorem"
+                        >
+                          ipsum
+                        </li>
+                        <li
+                          class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
+                          data-value="lorem"
+                        >
+                          dolor
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Product -->
+                  <div class="space-y-3.5">
+                    <div class="flex items-center justify-between gap-5">
+                      <h5
+                        class="flex-1 text-base text-white font-oswald uppercase"
+                      >
+                        Товар
+                      </h5>
+                      <h6
+                        class="w-[83px] text-xs text-white font-oswald uppercase"
+                      >
+                        Количество
+                      </h6>
+                    </div>
+
+                    <!-- Selected Products -->
+                    <div class="selected-products space-y-2.5 font-bold"></div>
+                  </div>
+
+                  <!-- Promocode -->
+                  <label
+                    for="promoCode"
+                    class="max-w-[345px] block space-y-2.5"
+                  >
+                    <h5 class="text-base text-white font-oswald uppercase">
+                      промокод
+                    </h5>
+                    <input
+                      type="text"
+                      id="promoCode"
+                      class="w-full h-11 text-sm xs:text-base rounded-10 font-mulish text-black px-3 py-1"
+                      placeholder="Если есть, введите промокод"
+                    />
+                  </label>
+
+                  <!-- Email -->
+                  <label for="email" class="max-w-[345px] block space-y-2.5">
+                    <h5 class="text-base text-white font-oswald uppercase">
+                      почта
+                    </h5>
+                    <input
+                      type="text"
+                      id="email"
+                      class="w-full h-11 text-sm rounded-10 font-mulish text-black outline-none px-3 py-1"
+                      placeholder="Опционально"
+                    />
+                  </label>
+
+                  <!-- Payment Methods -->
+                  <div class="space-y-5">
+                    <div class="space-y-1">
+                      <h5 class="text-base text-white font-oswald uppercase">
+                        Способ оплаты
+                      </h5>
+                      <div class="flex items-center gap-8">
+                        <span class="text-sm text-white font-oswald uppercase">
+                          без комиссии
+                        </span>
+                        <span class="text-sm text-white font-oswald uppercase">
+                          комиссия 1%
+                        </span>
+                        <span class="text-sm text-white font-oswald uppercase">
+                          комиссия 5%
+                        </span>
+                      </div>
+                    </div>
+
+                    <!-- Payments Methods -->
+                    <div class="flex items-center gap-3.5">
+                      <!-- Methods 1 -->
+                      <a
+                        href="#"
+                        class="size-[75px] shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
+                      >
+                        <img
+                          src="./assets/images/spb-payment.png"
+                          alt="SPB"
+                          class="size-full object-cover"
+                        />
+                      </a>
+                      <!-- Methods 2 -->
+                      <a
+                        href="#"
+                        class="size-[75px] shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
+                      >
+                        <!-- <img
+                        src="./assets/images/spb-payment.png"
+                        alt="SPB"
+                        class="size-full object-cover"
+                      /> -->
+                      </a>
+                      <!-- Methods 3 -->
+                      <a
+                        href="#"
+                        class="size-[75px] shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
+                      >
+                        <!-- <img
+                        src="./assets/images/spb-payment.png"
+                        alt="SPB"
+                        class="size-full object-cover"
+                      /> -->
+                      </a>
+                      <!-- Methods 4 -->
+                      <a
+                        href="#"
+                        class="size-[75px] shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
+                      >
+                        <!-- <img
+                        src="./assets/images/spb-payment.png"
+                        alt="SPB"
+                        class="size-full object-cover"
+                      /> -->
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-5">
+              <!-- Cost -->
+              <div
+                class="flex items-center justify-between text-black/40 uppercase"
+              >
+                <h5 class="text-lg font-oswald leading-normal">сумма</h5>
+                <h5 class="text-lg font-oswald leading-normal">6080 rub</h5>
+              </div>
+
+              <!-- Pay Button -->
+              <div class="space-y-2.5">
+                <button
+                  class="w-full relative h-10 font-extrabold text-white border-2 border-brand-purple rounded-full hover:opacity-80 transition-all du20"
+                >
+                  <img
+                    src="./assets/bg-images/button.png"
+                    alt="button"
+                    class="absolute inset-0 size-full object-cover rounded-30"
+                  />
+                  <span class="relative uppercase z-10">оплатить</span>
+                </button>
+                <p
+                  class="block text-[13px] font-bold text-black/40 leading-[80%]"
+                >
+                  Нажимая кнопку <span class="uppercase">оплатить</span>, я
+                  принимаю условия <a
+                    href="#"
+                    class="underline underline-offset-2"
+                    >Пользовательского Соглашения</a
+                  > и подтверждаю ознакомление с <a
+                    href="#"
+                    class="underline underline-offset-2"
+                    >FAQ</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </nav>
 
       <!-- Mobile Menu -->
@@ -297,9 +553,12 @@
           <!-- Cart & Close Btn -->
           <div class="flex items-center gap-7">
             <!-- Cart -->
-            <button class="flex items-center gap-1">
+            <button class="cart-btn flex items-center gap-1">
               <img src="./assets/svgs/cart.svg" alt="Cart Icon" />
-              <span class="text-xs font-extrabold text-black/40">1</span>
+              <span
+                class="selected-products-qty text-xs font-extrabold text-black/40"
+                >0</span
+              >
             </button>
 
             <!-- Close Btn -->
@@ -842,7 +1101,9 @@
             <!-- Swiper -->
             <div class="swiper home-swiper relative">
               <div class="swiper-wrapper">
-                <div class="swiper-slide transition-all duration-200">
+                <div
+                  class="swiper-slide transition-all duration-200 ease-in-out"
+                >
                   <div class="flex flex-col-reverse lg:pt-24">
                     <!-- Texts & Images -->
                     <div class="size-full relative flex flex-col-reverse">
@@ -965,7 +1226,7 @@
 
             <!-- Topup Balance Btn -->
             <div
-              class="w-fit group absolute bottom-0 right-0 z-50 bg-white rounded-tl-2xl xs:rounded-tl-[32px] lg:rounded-tl-[45px] pl-2.5 pt-2.5 sm:pl-5 sm:pt-5"
+              class="w-fit group absolute bottom-0 right-0 z-30 bg-white rounded-tl-2xl xs:rounded-tl-[32px] lg:rounded-tl-[45px] pl-2.5 pt-2.5 sm:pl-5 sm:pt-5"
             >
               <button
                 class="flex items-center gap-3 lg:gap-8 group font-extrabold uppercase text-start text-sm sm:text-[28px] leading-5 sm:leading-8"
@@ -1448,7 +1709,7 @@
             <img
               src="./assets/bg-images/product-hover.png"
               alt="BG"
-              class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200"
+              class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200 ease-in-out"
             />
 
             <!-- Image & Title -->
@@ -1506,7 +1767,7 @@
             <img
               src="./assets/bg-images/product-hover.png"
               alt="BG"
-              class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200"
+              class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200 ease-in-out"
             />
 
             <!-- Image & Title -->
@@ -1564,7 +1825,7 @@
             <img
               src="./assets/bg-images/product-hover.png"
               alt="BG"
-              class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200"
+              class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200 ease-in-out"
             />
 
             <!-- Image & Title -->
@@ -1622,7 +1883,7 @@
             <img
               src="./assets/bg-images/product-hover.png"
               alt="BG"
-              class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200"
+              class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200 ease-in-out"
             />
 
             <!-- Image & Title -->
@@ -1680,7 +1941,7 @@
             <img
               src="./assets/bg-images/product-hover.png"
               alt="BG"
-              class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200"
+              class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200 ease-in-out"
             />
             <!-- Image & Title -->
             <div
@@ -1737,7 +1998,7 @@
             <img
               src="./assets/bg-images/product-hover.png"
               alt="BG"
-              class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200"
+              class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200 ease-in-out"
             />
             <!-- Image & Title -->
             <div
@@ -1794,7 +2055,7 @@
             <img
               src="./assets/bg-images/product-hover.png"
               alt="BG"
-              class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200"
+              class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200 ease-in-out"
             />
 
             <!-- Image & Title -->
@@ -1852,7 +2113,7 @@
             <img
               src="./assets/bg-images/product-hover.png"
               alt="BG"
-              class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200"
+              class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200 ease-in-out"
             />
 
             <!-- Image & Title -->
@@ -1910,7 +2171,7 @@
             <img
               src="./assets/bg-images/product-hover.png"
               alt="BG"
-              class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200"
+              class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200 ease-in-out"
             />
 
             <!-- Image & Title -->
@@ -1968,7 +2229,7 @@
             <img
               src="./assets/bg-images/product-hover.png"
               alt="BG"
-              class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200"
+              class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200 ease-in-out"
             />
             <!-- Image & Title -->
             <div
@@ -2025,7 +2286,7 @@
             <img
               src="./assets/bg-images/product-hover.png"
               alt="BG"
-              class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200"
+              class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200 ease-in-out"
             />
 
             <!-- Image & Title -->
@@ -2078,7 +2339,7 @@
 
         <a
           href="#"
-          class="block w-fit h-[74px] group relative mx-auto hidden lg:block font-mulish font-extrabold uppercase text-white text-[17.5px] leading-6 rounded-30 overflow-hidden hover:opacity-80 transition-all duration-200 mt-8 px-8"
+          class="block w-fit h-[74px] group relative mx-auto hidden lg:block font-mulish font-extrabold uppercase text-white text-[17.5px] leading-6 rounded-30 overflow-hidden hover:opacity-80 transition-all duration-200 ease-in-out mt-8 px-8"
         >
           <img
             src="./assets/bg-images/button.png"
@@ -2189,7 +2450,7 @@
                   </div>
                   <a
                     href="#"
-                    class="max-w-[150px] sm:max-w-[303px] mx-auto sm:mx-0 relative flex items-center justify-center uppercase text-white font-mulish font-extrabold text-sm lg:text-[26px] rounded-full overflow-hidden hover:opacity-80 transition-all duration-200 py-3 sm:py-3.5"
+                    class="max-w-[150px] sm:max-w-[303px] mx-auto sm:mx-0 relative flex items-center justify-center uppercase text-white font-mulish font-extrabold text-sm lg:text-[26px] rounded-full overflow-hidden hover:opacity-80 transition-all duration-200 ease-in-out py-3 sm:py-3.5"
                   >
                     <img
                       src="./assets/bg-images/button.png"
@@ -2354,7 +2615,7 @@
                       />
                     </button>
                     <div
-                      class="faq-content space-y-5 text-sm sm:text-lg text-brand-text font-normal overflow-hidden max-h-0 transition-all duration-300 ease-in-out mt-2"
+                      class="faq-content space-y-5 text-sm sm:text-lg text-brand-text font-normal overflow-hidden max-h-0 transition-all duration-200 ease-in-out mt-2"
                     >
                       <p>
                         Если у вас возникли вопросы по поводу оплаты или вам
@@ -2380,7 +2641,7 @@
                       />
                     </button>
                     <div
-                      class="faq-content space-y-5 text-sm sm:text-lg text-brand-text font-normal overflow-hidden max-h-0 transition-all duration-300 ease-in-out mt-2"
+                      class="faq-content space-y-5 text-sm sm:text-lg text-brand-text font-normal overflow-hidden max-h-0 transition-all duration-200 ease-in-out ease-in-out mt-2"
                     >
                       <p>
                         В нашем магазине мы предлагаем несколько удобных
@@ -2453,7 +2714,7 @@
                       />
                     </button>
                     <div
-                      class="faq-content space-y-5 text-sm sm:text-lg text-brand-text font-normal overflow-hidden max-h-0 transition-all duration-300 ease-in-out mt-2"
+                      class="faq-content space-y-5 text-sm sm:text-lg text-brand-text font-normal overflow-hidden max-h-0 transition-all duration-200 ease-in-out ease-in-out mt-2"
                     >
                       <p>
                         Если у вас возникли вопросы по поводу оплаты или вам
@@ -2479,7 +2740,7 @@
                       />
                     </button>
                     <div
-                      class="faq-content space-y-5 text-sm sm:text-lg text-brand-text font-normal overflow-hidden max-h-0 transition-all duration-300 ease-in-out mt-2"
+                      class="faq-content space-y-5 text-sm sm:text-lg text-brand-text font-normal overflow-hidden max-h-0 transition-all duration-200 ease-in-out ease-in-out mt-2"
                     >
                       <p>
                         Если у вас возникли вопросы по поводу оплаты или вам
@@ -2505,7 +2766,7 @@
                       />
                     </button>
                     <div
-                      class="faq-content space-y-5 text-sm sm:text-lg text-brand-text font-normal overflow-hidden max-h-0 transition-all duration-300 ease-in-out mt-2"
+                      class="faq-content space-y-5 text-sm sm:text-lg text-brand-text font-normal overflow-hidden max-h-0 transition-all duration-200 ease-in-out ease-in-out mt-2"
                     >
                       <p>
                         Если у вас возникли вопросы по поводу оплаты или вам
@@ -2531,7 +2792,7 @@
                       />
                     </button>
                     <div
-                      class="faq-content space-y-5 text-sm sm:text-lg text-brand-text font-normal overflow-hidden max-h-0 transition-all duration-300 ease-in-out mt-2"
+                      class="faq-content space-y-5 text-sm sm:text-lg text-brand-text font-normal overflow-hidden max-h-0 transition-all duration-200 ease-in-out ease-in-out mt-2"
                     >
                       <p>
                         Если у вас возникли вопросы по поводу оплаты или вам
@@ -2557,7 +2818,7 @@
                       />
                     </button>
                     <div
-                      class="faq-content space-y-5 text-sm sm:text-lg text-brand-text font-normal overflow-hidden max-h-0 transition-all duration-300 ease-in-out mt-2"
+                      class="faq-content space-y-5 text-sm sm:text-lg text-brand-text font-normal overflow-hidden max-h-0 transition-all duration-200 ease-in-out ease-in-out mt-2"
                     >
                       <p>
                         Если у вас возникли вопросы по поводу оплаты или вам
@@ -2576,13 +2837,15 @@
       <!-- Reviews -->
       <section id="reviews">
         <div
-          class="max-w-base mx-auto overflow-y-visible relative pt-16 lg:pt-32"
+          class="min-h-96 max-w-base overflow-hidden mx-auto relative pt-16 lg:pt-32"
         >
           <!-- Reviews Swiper -->
           <div class="swiper reviews-swiper">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper !overflow-visible">
               <!-- Review 1 -->
-              <div class="swiper-slide transition-all duration-200">
+              <div
+                class="swiper-slide swiper-slide-reviews transition-all duration-200 ease-in-out"
+              >
                 <div class="flex gap-5">
                   <!-- Avatar -->
                   <div
@@ -2631,7 +2894,7 @@
                       </div>
                     </div>
                     <p
-                      class="text-sm text-brand-text transition-all duration-200"
+                      class="review-text text-sm text-brand-text transition-all duration-200 ease-in-out"
                     >
                       "<span
                         >Отличный ресурс для геймеров! Чёткие инструкции и
@@ -2646,7 +2909,9 @@
                 </div>
               </div>
               <!-- Review 2 -->
-              <div class="swiper-slide transition-all duration-200">
+              <div
+                class="swiper-slide swiper-slide-reviews transition-all duration-200 ease-in-out"
+              >
                 <div class="flex gap-5">
                   <!-- Avatar -->
                   <div
@@ -2695,7 +2960,7 @@
                       </div>
                     </div>
                     <p
-                      class="text-sm text-brand-text transition-all duration-200"
+                      class="review-text text-sm text-brand-text transition-all duration-200 ease-in-out"
                     >
                       "<span>
                         Этот сайт — настоящая находка! Узнал много нового о
@@ -2710,7 +2975,9 @@
                 </div>
               </div>
               <!-- Review 3 -->
-              <div class="swiper-slide transition-all duration-200">
+              <div
+                class="swiper-slide swiper-slide-reviews transition-all duration-200 ease-in-out"
+              >
                 <div class="flex gap-5">
                   <!-- Avatar -->
                   <div
@@ -2759,7 +3026,7 @@
                       </div>
                     </div>
                     <p
-                      class="text-sm text-brand-text transition-all duration-200"
+                      class="review-text text-sm text-brand-text transition-all duration-200 ease-in-out"
                     >
                       "<span
                         >Мне всегда было сложно улучшать свои результаты, но
@@ -2774,7 +3041,9 @@
                 </div>
               </div>
               <!-- Review 4 -->
-              <div class="swiper-slide transition-all duration-200">
+              <div
+                class="swiper-slide swiper-slide-reviews transition-all duration-200 ease-in-out"
+              >
                 <div class="flex gap-5">
                   <!-- Avatar -->
                   <div
@@ -2823,7 +3092,7 @@
                       </div>
                     </div>
                     <p
-                      class="text-sm text-brand-text transition-all duration-200"
+                      class="review-text text-sm text-brand-text transition-all duration-200 ease-in-out"
                     >
                       "<span
                         >Секреты, которые я нашла здесь, помогли мне наконец
@@ -2839,7 +3108,9 @@
               </div>
 
               <!-- Review 1 -->
-              <div class="swiper-slide transition-all duration-200">
+              <div
+                class="swiper-slide swiper-slide-reviews transition-all duration-200 ease-in-out"
+              >
                 <div class="flex gap-5">
                   <!-- Avatar -->
                   <div
@@ -2888,7 +3159,7 @@
                       </div>
                     </div>
                     <p
-                      class="text-sm text-brand-text transition-all duration-200"
+                      class="review-text text-sm text-brand-text transition-all duration-200 ease-in-out"
                     >
                       "<span
                         >Отличный ресурс для геймеров! Чёткие инструкции и
@@ -2903,7 +3174,9 @@
                 </div>
               </div>
               <!-- Review 2 -->
-              <div class="swiper-slide transition-all duration-200">
+              <div
+                class="swiper-slide swiper-slide-reviews transition-all duration-200 ease-in-out"
+              >
                 <div class="flex gap-5">
                   <!-- Avatar -->
                   <div
@@ -2952,7 +3225,7 @@
                       </div>
                     </div>
                     <p
-                      class="text-sm text-brand-text transition-all duration-200"
+                      class="review-text text-sm text-brand-text transition-all duration-200 ease-in-out"
                     >
                       "<span>
                         Этот сайт — настоящая находка! Узнал много нового о
@@ -2967,7 +3240,9 @@
                 </div>
               </div>
               <!-- Review 3 -->
-              <div class="swiper-slide transition-all duration-200">
+              <div
+                class="swiper-slide swiper-slide-reviews transition-all duration-200 ease-in-out"
+              >
                 <div class="flex gap-5">
                   <!-- Avatar -->
                   <div
@@ -3016,7 +3291,7 @@
                       </div>
                     </div>
                     <p
-                      class="text-sm text-brand-text transition-all duration-200"
+                      class="review-text text-sm text-brand-text transition-all duration-200 ease-in-out"
                     >
                       "<span
                         >Мне всегда было сложно улучшать свои результаты, но
@@ -3031,7 +3306,9 @@
                 </div>
               </div>
               <!-- Review 4 -->
-              <div class="swiper-slide transition-all duration-200">
+              <div
+                class="swiper-slide swiper-slide-reviews transition-all duration-200 ease-in-out"
+              >
                 <div class="flex gap-5">
                   <!-- Avatar -->
                   <div
@@ -3080,7 +3357,7 @@
                       </div>
                     </div>
                     <p
-                      class="text-sm text-brand-text transition-all duration-200"
+                      class="review-text text-sm text-brand-text transition-all duration-200 ease-in-out"
                     >
                       "<span
                         >Секреты, которые я нашла здесь, помогли мне наконец
@@ -3156,18 +3433,18 @@
 
           <div>
             <ul>
-              <li class="group relative lg:rounded-l-30 overflow-hidden">
+              <li class="group relative">
                 <div
-                  class="max-w-[96%] mx-auto lg:mr-0 lg:max-w-secondary ml-auto border-y-2 lg:border-y-4 border-brand-gray-100 py-[18px] lg:py-7 px-2.5 md:px-12 lg:px-2.5"
+                  class="max-w-[96%] mx-auto lg:mr-0 lg:max-w-secondary ml-auto border-y-2 lg:border-y-4 border-brand-gray-100 px-2.5 md:px-12 lg:px-2.5"
                 >
                   <img
                     src="./assets/images/secret.png"
                     alt="Image"
-                    class="absolute inset-0 size-full hidden group-hover:block object-fill"
+                    class="absolute inset-0 size-full hidden group-hover:block object-fill lg:rounded-l-30"
                   />
 
                   <h4 class="relative z-10">
-                    <a href="#">
+                    <a href="#" class="block py-[18px] lg:py-7">
                       <span class="text-trsprt-section-title group-hover:hidden"
                         >5 ключевых советов для победы в сложных уровнях</span
                       >
@@ -3177,18 +3454,24 @@
                     </a>
                   </h4>
                 </div>
+
+                <img
+                  src="./assets/images/secret-image.png"
+                  alt="Image"
+                  class="hidden xl:block opacity-0 xl:group-hover:opacity-100 absolute left-0 bottom-0 transition-all duration-200 ease-in-out ease-in-out"
+                />
               </li>
-              <li class="group relative lg:rounded-l-30 overflow-hidden">
+              <li class="group relative">
                 <img
                   src="./assets/images/secret.png"
                   alt="Image"
-                  class="absolute inset-0 size-full hidden group-hover:block object-fill"
+                  class="absolute inset-0 size-full hidden group-hover:block object-fill lg:rounded-l-30"
                 />
                 <div
-                  class="max-w-[96%] mx-auto lg:mr-0 lg:max-w-secondary ml-auto border-b-2 lg:border-b-4 border-brand-gray-100 py-[18px] lg:py-7 px-2.5 md:px-12 lg:px-2.5"
+                  class="max-w-[96%] mx-auto lg:mr-0 lg:max-w-secondary ml-auto border-b-2 lg:border-b-4 border-brand-gray-100 px-2.5 md:px-12 lg:px-2.5"
                 >
                   <h4 class="relative z-10">
-                    <a href="#">
+                    <a href="#" class="block py-[18px] lg:py-7">
                       <span class="text-trsprt-section-title group-hover:hidden"
                         >Как стать мастером тактики: секреты опытных
                         игроков</span
@@ -3200,18 +3483,24 @@
                     </a>
                   </h4>
                 </div>
+
+                <img
+                  src="./assets/images/secret-image.png"
+                  alt="Image"
+                  class="hidden xl:block opacity-0 xl:group-hover:opacity-100 absolute left-0 bottom-0 transition-all duration-200 ease-in-out"
+                />
               </li>
-              <li class="group relative lg:rounded-l-30 overflow-hidden">
+              <li class="group relative">
                 <img
                   src="./assets/images/secret.png"
                   alt="Image"
-                  class="absolute inset-0 size-full hidden group-hover:block object-fill"
+                  class="absolute inset-0 size-full hidden group-hover:block object-fill lg:rounded-l-30"
                 />
                 <div
-                  class="max-w-[96%] mx-auto lg:mr-0 lg:max-w-secondary ml-auto border-b-2 lg:border-b-4 border-brand-gray-100 py-[18px] lg:py-7 px-2.5 md:px-12 lg:px-2.5"
+                  class="max-w-[96%] mx-auto lg:mr-0 lg:max-w-secondary ml-auto border-b-2 lg:border-b-4 border-brand-gray-100 px-2.5 md:px-12 lg:px-2.5"
                 >
                   <h4 class="relative z-10">
-                    <a href="#">
+                    <a href="#" class="block py-[18px] lg:py-7">
                       <span class="text-trsprt-section-title group-hover:hidden"
                         >Лучшие стратегии: играем на результат</span
                       >
@@ -3221,18 +3510,24 @@
                     </a>
                   </h4>
                 </div>
+
+                <img
+                  src="./assets/images/secret-image.png"
+                  alt="Image"
+                  class="hidden xl:block opacity-0 xl:group-hover:opacity-100 absolute left-0 bottom-0 transition-all duration-200 ease-in-out"
+                />
               </li>
-              <li class="group relative lg:rounded-l-30 overflow-hidden">
+              <li class="group relative">
                 <img
                   src="./assets/images/secret.png"
                   alt="Image"
-                  class="absolute inset-0 size-full hidden group-hover:block object-fill"
+                  class="absolute inset-0 size-full hidden group-hover:block object-fill lg:rounded-l-30"
                 />
                 <div
-                  class="max-w-[96%] mx-auto lg:mr-0 lg:max-w-secondary ml-auto border-b-2 lg:border-b-4 border-brand-gray-100 py-[18px] lg:py-7 px-2.5 md:px-12 lg:px-2.5"
+                  class="max-w-[96%] mx-auto lg:mr-0 lg:max-w-secondary ml-auto border-b-2 lg:border-b-4 border-brand-gray-100 px-2.5 md:px-12 lg:px-2.5"
                 >
                   <h4 class="relative z-10">
-                    <a href="#">
+                    <a href="#" class="block py-[18px] lg:py-7">
                       <span class="text-trsprt-section-title group-hover:hidden"
                         >Как повысить свою реакцию и скорость в игре</span
                       >
@@ -3242,12 +3537,18 @@
                     </a>
                   </h4>
                 </div>
+
+                <img
+                  src="./assets/images/secret-image.png"
+                  alt="Image"
+                  class="hidden xl:block opacity-0 xl:group-hover:opacity-100 absolute left-0 bottom-0 transition-all duration-200 ease-in-out"
+                />
               </li>
             </ul>
 
             <a
               href="#"
-              class="block w-fit ml-auto relative flex items-center justify-center uppercase text-white font-mulish font-extrabold text-sm lg:text-[26px] mt-5 mr-2.5 md:mr-12 lg:mr-2.5 rounded-full hover:opacity-80 transition-all duration-200 overflow-hidden px-8 py-3 sm:py-3.5"
+              class="block w-fit ml-auto relative flex items-center justify-center uppercase text-white font-mulish font-extrabold text-sm lg:text-[26px] mt-5 mr-2.5 md:mr-12 lg:mr-2.5 rounded-full hover:opacity-80 transition-all duration-200 ease-in-out overflow-hidden px-8 py-3 sm:py-3.5"
             >
               <img
                 src="./assets/bg-images/button.png"
@@ -3257,13 +3558,6 @@
               <span class="relative z-10">Читать больше гайдов</span>
             </a>
           </div>
-
-          <!-- Image -->
-          <img
-            src="./assets/images/secret-image.png"
-            alt="Image"
-            class="hidden 2xl:block absolute left-5 bottom-0"
-          />
         </div>
       </section>
 
@@ -3423,7 +3717,7 @@
 
                 <div class="flex justify-center sm:justify-start">
                   <button
-                    class="w-fit h-10 sm:h-14 relative flex items-center justify-center uppercase text-white font-mulish font-extrabold text-sm lg:text-[26px] mt-5 mr-2.5 md:mr-12 lg:mr-2.5 rounded-full overflow-hidden hover:opacity-80 transition-all duration-200 px-8 py-3 sm:py-3.5 sm:px-16"
+                    class="w-fit h-10 sm:h-14 relative flex items-center justify-center uppercase text-white font-mulish font-extrabold text-sm lg:text-[26px] mt-5 mr-2.5 md:mr-12 lg:mr-2.5 rounded-full overflow-hidden hover:opacity-80 transition-all duration-200 ease-in-out px-8 py-3 sm:py-3.5 sm:px-16"
                   >
                     <img
                       src="./assets/bg-images/button.png"
@@ -3470,35 +3764,35 @@
             <li>
               <a
                 href="#products"
-                class="hover:text-brand-purple transition-all duration-300"
+                class="hover:text-brand-purple transition-all duration-200 ease-in-out"
                 >Продукты</a
               >
             </li>
             <li>
               <a
                 href="#bonuses"
-                class="hover:text-brand-purple transition-all duration-300"
+                class="hover:text-brand-purple transition-all duration-200 ease-in-out"
                 >Бонусы</a
               >
             </li>
             <li>
               <a
                 href="#secrets"
-                class="hover:text-brand-purple transition-all duration-300"
+                class="hover:text-brand-purple transition-all duration-200 ease-in-out"
                 >Гайды</a
               >
             </li>
             <li>
               <a
                 href="#about"
-                class="hover:text-brand-purple transition-all duration-300"
+                class="hover:text-brand-purple transition-all duration-200 ease-in-out"
                 >О нас</a
               >
             </li>
             <li>
               <a
                 href="#contact"
-                class="hover:text-brand-purple transition-all duration-300"
+                class="hover:text-brand-purple transition-all duration-200 ease-in-out"
                 >Контакты</a
               >
             </li>
@@ -3507,28 +3801,28 @@
             <li>
               <a
                 href="#"
-                class="hover:text-brand-purple transition-all duration-300"
+                class="hover:text-brand-purple transition-all duration-200 ease-in-out"
                 >Поддержка</a
               >
             </li>
             <li>
               <a
                 href="#"
-                class="hover:text-brand-purple transition-all duration-300"
+                class="hover:text-brand-purple transition-all duration-200 ease-in-out"
                 >Политика конфиденциальности</a
               >
             </li>
             <li>
               <a
                 href="#"
-                class="hover:text-brand-purple transition-all duration-300"
+                class="hover:text-brand-purple transition-all duration-200 ease-in-out"
                 >Политика конфиденциальности</a
               >
             </li>
             <li>
               <a
                 href="#"
-                class="hover:text-brand-purple transition-all duration-300"
+                class="hover:text-brand-purple transition-all duration-200 ease-in-out"
                 >Правила поведения</a
               >
             </li>

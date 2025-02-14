@@ -270,3 +270,159 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// Func to toggle cart in the navbar
+// Get all cart buttons and cart containers across all pages
+const cartButtons = document.querySelectorAll(".cart-btn");
+const carts = document.querySelectorAll(".cart");
+
+// Add event listeners to toggle visibility of carts when buttons are clicked
+cartButtons.forEach((button, index) => {
+  button.addEventListener("click", (e) => {
+    e.stopPropagation(); // Prevent click from propagating to document
+    carts[index].classList.toggle("hidden"); // Toggle the visibility of the respective cart
+  });
+});
+
+// Close any open cart if clicking outside of any cart
+document.addEventListener("click", (e) => {
+  carts.forEach((cart) => {
+    // If the click is outside of any cart or its respective button, hide the cart
+    if (
+      !cart.contains(e.target) &&
+      !cartButtons[Array.from(carts).indexOf(cart)].contains(e.target)
+    ) {
+      cart.classList.add("hidden");
+    }
+  });
+});
+
+// Func for selecting products to cart
+
+// Add product to cart
+function addProductToCart(productId, productTitle, checkbox) {
+  const selectedProductsContainers =
+    document.querySelectorAll(".selected-products");
+  const selectedQtyContainers = document.querySelectorAll(
+    ".selected-products-qty"
+  );
+
+  // Create a new selected product element
+  const selectedProduct = document.createElement("div");
+  selectedProduct.classList.add(
+    "selected-product",
+    "flex",
+    "items-center",
+    "gap-2.5",
+    "xs:gap-5"
+  );
+  selectedProduct.setAttribute("data-id", productId);
+
+  selectedProduct.innerHTML = `
+    <div class="max-w-[345px] w-full h-11 xs:h-8 flex items-center bg-white font-mulish line-clamp-1 text-sm xs:text-lg text-black/40 rounded-10 px-2.5">
+      ${productTitle}
+    </div>
+    <div class="w-[83px] h-11 xs:h-8 flex items-center justify-center font-mulish gap-2 bg-white text-black/40 text-lg rounded-10">
+      <button class="decrease w-full text-right">-</button>
+      <span class="quantity">1</span>
+      <button class="increase w-full text-left">+</button>
+    </div>
+  `;
+
+  // Add the new selected product to each selected products container
+  selectedProductsContainers.forEach((container) => {
+    container.appendChild(selectedProduct);
+  });
+
+  // Add event listeners for the increase and decrease buttons
+  selectedProduct
+    .querySelector(".increase")
+    .addEventListener("click", () =>
+      increaseQuantity(selectedProduct, selectedQtyContainers)
+    );
+  selectedProduct
+    .querySelector(".decrease")
+    .addEventListener("click", () =>
+      decreaseQuantity(selectedProduct, checkbox, selectedQtyContainers)
+    );
+
+  // Update the total selected quantity in each container
+  updateSelectedQuantity(selectedQtyContainers);
+}
+
+// Function to increase the product quantity
+function increaseQuantity(selectedProduct, selectedQtyContainers) {
+  const quantityElement = selectedProduct.querySelector(".quantity");
+  let quantity = parseInt(quantityElement.textContent);
+  quantity++;
+  quantityElement.textContent = quantity;
+
+  // Update the total selected product count
+  updateSelectedQuantity(selectedQtyContainers);
+}
+
+// Function to decrease the product quantity
+function decreaseQuantity(selectedProduct, checkbox, selectedQtyContainers) {
+  const quantityElement = selectedProduct.querySelector(".quantity");
+  let quantity = parseInt(quantityElement.textContent);
+
+  if (quantity > 1) {
+    quantity--;
+    quantityElement.textContent = quantity;
+  } else {
+    // Remove product if quantity is 1 and the decrease button is clicked
+    selectedProduct.remove();
+    // Uncheck the checkbox corresponding to the removed product
+    checkbox.checked = false;
+  }
+
+  // Update the total selected product count
+  updateSelectedQuantity(selectedQtyContainers);
+}
+
+// Function to update the total quantity
+function updateSelectedQuantity(selectedQtyContainers) {
+  let totalSelected = 0;
+
+  // Sum up all product quantities
+  document
+    .querySelectorAll(".selected-product .quantity")
+    .forEach((qtyElement) => {
+      totalSelected += parseInt(qtyElement.textContent);
+    });
+
+  // Update the quantity in each selected products qty container
+  selectedQtyContainers.forEach((container) => {
+    container.textContent = totalSelected;
+  });
+}
+
+// Event listener for checkbox selection
+document
+  .querySelectorAll('.product-item input[type="checkbox"]')
+  .forEach((checkbox) => {
+    checkbox.addEventListener("change", (e) => {
+      const productId = e.target.id;
+      const productTitle = e.target
+        .closest(".product-item")
+        .querySelector("p").textContent;
+
+      if (e.target.checked) {
+        addProductToCart(productId, productTitle, e.target);
+      } else {
+        removeProductFromCart(productId, e.target);
+      }
+    });
+  });
+
+// Function to remove a product from the cart
+function removeProductFromCart(productId, checkbox) {
+  const productToRemove = document.querySelector(
+    `.selected-product[data-id="${productId}"]`
+  );
+  if (productToRemove) {
+    productToRemove.remove();
+    // After removal, update the quantity
+    updateSelectedQuantity(document.querySelectorAll(".selected-products-qty"));
+  }
+}
