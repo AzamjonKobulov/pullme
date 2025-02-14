@@ -635,17 +635,10 @@ p{
 .container{
   width: 100%;
 }
-.\!container{
-  width: 100% !important;
-}
 @media (min-width: 390px){
 
   .container{
     max-width: 390px;
-  }
-
-  .\!container{
-    max-width: 390px !important;
   }
 }
 @media (min-width: 480px){
@@ -653,19 +646,11 @@ p{
   .container{
     max-width: 480px;
   }
-
-  .\!container{
-    max-width: 480px !important;
-  }
 }
 @media (min-width: 640px){
 
   .container{
     max-width: 640px;
-  }
-
-  .\!container{
-    max-width: 640px !important;
   }
 }
 @media (min-width: 768px){
@@ -673,19 +658,11 @@ p{
   .container{
     max-width: 768px;
   }
-
-  .\!container{
-    max-width: 768px !important;
-  }
 }
 @media (min-width: 1024px){
 
   .container{
     max-width: 1024px;
-  }
-
-  .\!container{
-    max-width: 1024px !important;
   }
 }
 @media (min-width: 1280px){
@@ -693,19 +670,11 @@ p{
   .container{
     max-width: 1280px;
   }
-
-  .\!container{
-    max-width: 1280px !important;
-  }
 }
 @media (min-width: 1440px){
 
   .container{
     max-width: 1440px;
-  }
-
-  .\!container{
-    max-width: 1440px !important;
   }
 }
 .text-trsprt-section-title{
@@ -759,6 +728,9 @@ p{
 }
 .-top-16{
   top: -4rem;
+}
+.-top-3{
+  top: -0.75rem;
 }
 .-top-5{
   top: -1.25rem;
@@ -1076,6 +1048,9 @@ p{
 .h-px{
   height: 1px;
 }
+.h-\[70px\]{
+  height: 70px;
+}
 .max-h-0{
   max-height: 0px;
 }
@@ -1261,9 +1236,9 @@ p{
   --tw-rotate: 45deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-.\!scale-125{
-  --tw-scale-x: 1.25 !important;
-  --tw-scale-y: 1.25 !important;
+.\!scale-110{
+  --tw-scale-x: 1.1 !important;
+  --tw-scale-y: 1.1 !important;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
 }
 .-scale-x-\[1\]{
@@ -1551,6 +1526,9 @@ p{
 .bg-white\/90{
   background-color: rgb(255 255 255 / 0.9);
 }
+.bg-whitish{
+  background-image: linear-gradient(0deg, #FFF 49.28%, rgba(255, 255, 255, 0.00) 99.95%);;
+}
 .fill-black{
   fill: #000;
 }
@@ -1577,10 +1555,6 @@ p{
 }
 .p-5{
   padding: 1.25rem;
-}
-.\!px-5{
-  padding-left: 1.25rem !important;
-  padding-right: 1.25rem !important;
 }
 .px-2{
   padding-left: 0.5rem;
@@ -1613,6 +1587,10 @@ p{
 .py-2\.5{
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
+}
+.py-20{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 .py-3{
   padding-top: 0.75rem;
@@ -1905,9 +1883,6 @@ p{
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
-.filter{
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
 .transition-all{
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -2076,10 +2051,30 @@ input[type="checkbox"]:checked ~ img:last-of-type{
   inset: 0px;
 }
 
+.after\:-top-3::after{
+  content: var(--tw-content);
+  top: -0.75rem;
+}
+
+.after\:z-20::after{
+  content: var(--tw-content);
+  z-index: 20;
+}
+
 .after\:size-full::after{
   content: var(--tw-content);
   width: 100%;
   height: 100%;
+}
+
+.after\:h-\[70px\]::after{
+  content: var(--tw-content);
+  height: 70px;
+}
+
+.after\:w-full::after{
+  content: var(--tw-content);
+  width: 100%;
 }
 
 .after\:bg-brand-purple\/20::after{
@@ -2095,6 +2090,11 @@ input[type="checkbox"]:checked ~ img:last-of-type{
 .after\:bg-cards-hero-mobile::after{
   content: var(--tw-content);
   background-image: linear-gradient(0deg, rgba(170, 151, 234, 0.95) 8.77%, rgba(170, 151, 234, 0.095) 73.06%);;
+}
+
+.after\:bg-whitish::after{
+  content: var(--tw-content);
+  background-image: linear-gradient(0deg, #FFF 49.28%, rgba(255, 255, 255, 0.00) 99.95%);;
 }
 
 .hover\:text-black:hover{
@@ -2344,6 +2344,11 @@ input[type="checkbox"]:checked ~ img:last-of-type{
   .xs\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .after\:xs\:hidden::after{
+    content: var(--tw-content);
+    display: none;
   }
 }
 
@@ -3073,11 +3078,6 @@ input[type="checkbox"]:checked ~ img:last-of-type{
 
   .lg\:border-b-4{
     border-bottom-width: 4px;
-  }
-
-  .lg\:\!px-8{
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
   }
 
   .lg\:px-2\.5{

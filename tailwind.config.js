@@ -61,6 +61,8 @@ module.exports = {
           "linear-gradient(90deg, rgba(170, 151, 234, 0.95) 8.77%, rgba(170, 151, 234, 0.095) 73.06%);",
         "cards-hero-mobile":
           "linear-gradient(0deg, rgba(170, 151, 234, 0.95) 8.77%, rgba(170, 151, 234, 0.095) 73.06%);",
+        whitish:
+          "linear-gradient(0deg, #FFF 49.28%, rgba(255, 255, 255, 0.00) 99.95%);",
       },
     },
   },

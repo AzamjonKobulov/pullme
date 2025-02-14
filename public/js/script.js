@@ -67,9 +67,9 @@ function updateSlideClasses() {
     }
 
     if (isCurrent) {
-      slide.classList.add("!scale-125", "!px-5", "lg:!px-8");
+      slide.classList.add("!scale-110");
     } else {
-      slide.classList.remove("!scale-125", "!px-5", "lg:!px-8");
+      slide.classList.remove("!scale-110");
     }
   });
 }
