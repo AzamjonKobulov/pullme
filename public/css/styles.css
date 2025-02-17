@@ -1523,9 +1523,6 @@ p{
 .bg-white\/90{
   background-color: rgb(255 255 255 / 0.9);
 }
-.bg-cover{
-  background-size: cover;
-}
 .fill-black{
   fill: #000;
 }
@@ -1618,9 +1615,6 @@ p{
 .pb-11{
   padding-bottom: 2.75rem;
 }
-.pb-12{
-  padding-bottom: 3rem;
-}
 .pb-2\.5{
   padding-bottom: 0.625rem;
 }
@@ -1695,9 +1689,6 @@ p{
 }
 .pt-96{
   padding-top: 24rem;
-}
-.pb-6{
-  padding-bottom: 1.5rem;
 }
 .text-left{
   text-align: left;
@@ -2044,6 +2035,10 @@ input[type="checkbox"]:checked ~ img:last-of-type{
   }
 }
 
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
 .after\:absolute::after{
   content: var(--tw-content);
   position: absolute;
@@ -2304,32 +2299,16 @@ input[type="checkbox"]:checked ~ img:last-of-type{
     padding-bottom: 0.25rem;
   }
 
-  .xs\:pb-20{
-    padding-bottom: 5rem;
-  }
-
   .xs\:pb-4{
     padding-bottom: 1rem;
-  }
-
-  .xs\:pt-5{
-    padding-top: 1.25rem;
-  }
-
-  .xs\:pb-12{
-    padding-bottom: 3rem;
-  }
-
-  .xs\:pb-5{
-    padding-bottom: 1.25rem;
   }
 
   .xs\:pb-8{
     padding-bottom: 2rem;
   }
 
-  .xs\:pb-6{
-    padding-bottom: 1.5rem;
+  .xs\:pt-5{
+    padding-top: 1.25rem;
   }
 
   .xs\:text-6xl{
