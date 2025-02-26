@@ -2137,6 +2137,54 @@ input[type="checkbox"]:checked ~ img:last-of-type{
   display: none;
 }
 
+.peer\/payment-1:checked ~ .peer-checked\/payment-1\:opacity-100{
+  opacity: 1;
+}
+
+.peer\/payment-2:checked ~ .peer-checked\/payment-2\:opacity-100{
+  opacity: 1;
+}
+
+.peer\/payment-3:checked ~ .peer-checked\/payment-3\:opacity-100{
+  opacity: 1;
+}
+
+.peer\/payment-4:checked ~ .peer-checked\/payment-4\:opacity-100{
+  opacity: 1;
+}
+
+.peer\/payment-5:checked ~ .peer-checked\/payment-5\:opacity-100{
+  opacity: 1;
+}
+
+.peer\/payment-6:checked ~ .peer-checked\/payment-6\:opacity-100{
+  opacity: 1;
+}
+
+.peer\/payment-7:checked ~ .peer-checked\/payment-7\:opacity-100{
+  opacity: 1;
+}
+
+.peer\/payment-8:checked ~ .peer-checked\/payment-8\:opacity-100{
+  opacity: 1;
+}
+
+.peer\/payment-cart-1:checked ~ .peer-checked\/payment-cart-1\:opacity-100{
+  opacity: 1;
+}
+
+.peer\/payment-cart-2:checked ~ .peer-checked\/payment-cart-2\:opacity-100{
+  opacity: 1;
+}
+
+.peer\/payment-cart-4:checked ~ .peer-checked\/payment-cart-4\:opacity-100{
+  opacity: 1;
+}
+
+.peer\/payment-cart-8:checked ~ .peer-checked\/payment-cart-8\:opacity-100{
+  opacity: 1;
+}
+
 @media (min-width: 480px){
 
   .xs\:-top-28{

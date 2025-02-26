@@ -430,7 +430,9 @@
                   <!-- Payment Methods -->
                   <div class="space-y-5">
                     <div class="space-y-1">
-                      <h5 class="text-base text-white font-oswald uppercase">
+                      <h5
+                        class="text-base xs:text-[22px] text-white font-oswald uppercase"
+                      >
                         Способ оплаты
                       </h5>
                       <div class="flex items-center gap-8">
@@ -446,52 +448,80 @@
                       </div>
                     </div>
 
-                    <!-- Payments Methods -->
+                    <!-- Payment Methods -->
                     <div class="flex items-center gap-3.5">
-                      <!-- Methods 1 -->
-                      <a
-                        href="#"
-                        class="size-[75px] shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
+                      <!-- Method 1 -->
+                      <input
+                        type="radio"
+                        name="payment-cart"
+                        id="payment-cart-1"
+                        class="hidden peer/payment-cart-1"
+                        checked
+                      />
+                      <label
+                        for="payment-cart-1"
+                        class="size-[75px] shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden block cursor-pointer opacity-50 peer-checked/payment-cart-1:opacity-100"
                       >
                         <img
                           src="./assets/images/spb-payment.png"
                           alt="SPB"
                           class="size-full object-cover"
                         />
-                      </a>
-                      <!-- Methods 2 -->
-                      <a
-                        href="#"
-                        class="size-[75px] shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
+                      </label>
+
+                      <!-- Method 2 -->
+                      <input
+                        type="radio"
+                        name="payment-cart"
+                        id="payment-cart-2"
+                        class="hidden peer/payment-cart-2"
+                      />
+                      <label
+                        for="payment-cart-2"
+                        class="size-[75px] shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden block cursor-pointer opacity-50 peer-checked/payment-cart-2:opacity-100"
                       >
-                        <!-- <img
-                        src="./assets/images/spb-payment.png"
-                        alt="SPB"
-                        class="size-full object-cover"
-                      /> -->
-                      </a>
-                      <!-- Methods 3 -->
-                      <a
-                        href="#"
-                        class="size-[75px] shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
+                        <img
+                          src="./assets/images/spb-payment.png"
+                          alt="SPB"
+                          class="size-full object-cover"
+                        />
+                      </label>
+
+                      <!-- Method 3 -->
+                      <input
+                        type="radio"
+                        name="payment-cart"
+                        id="payment-cart-8"
+                        class="hidden peer/payment-cart-8"
+                      />
+                      <label
+                        for="payment-cart-8"
+                        class="size-[75px] shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden block cursor-pointer opacity-50 peer-checked/payment-cart-8:opacity-100"
                       >
-                        <!-- <img
-                        src="./assets/images/spb-payment.png"
-                        alt="SPB"
-                        class="size-full object-cover"
-                      /> -->
-                      </a>
-                      <!-- Methods 4 -->
-                      <a
-                        href="#"
-                        class="size-[75px] shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
+                        <img
+                          src="./assets/images/spb-payment.png"
+                          alt="SPB"
+                          class="size-full object-cover"
+                        />
+                      </label>
+
+                      <!-- Method 4 -->
+                      <input
+                        type="radio"
+                        name="payment-cart"
+                        id="payment-cart-4"
+                        class="hidden peer/payment-cart-4"
+                      />
+                      <label
+                        for="payment-cart-4"
+                        class="size-[75px] shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden block cursor-pointer opacity-50 peer-checked/payment-cart-4:opacity-100"
                       >
-                        <!-- <img
-                        src="./assets/images/spb-payment.png"
-                        alt="SPB"
-                        class="size-full object-cover"
-                      /> -->
-                      </a>
+                        <img
+                          src="./assets/images/spb-payment.png"
+                          alt="SPB"
+                          class="size-full object-cover"
+                        />
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -2534,52 +2564,80 @@
                           </div>
                         </div>
 
-                        <!-- Payments Methods -->
+                        <!-- Payment Methods -->
                         <div class="flex items-center gap-3.5 sm:gap-5">
-                          <!-- Methods 1 -->
-                          <a
-                            href="#"
-                            class="size-[75px] xs:size-24 shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
+                          <!-- Method 1 -->
+                          <input
+                            type="radio"
+                            name="payment"
+                            id="payment-1"
+                            class="hidden peer/payment-1"
+                            checked
+                          />
+                          <label
+                            for="payment-1"
+                            class="size-[75px] xs:size-24 shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden block cursor-pointer opacity-50 peer-checked/payment-1:opacity-100"
                           >
                             <img
                               src="./assets/images/spb-payment.png"
                               alt="SPB"
                               class="size-full object-cover"
                             />
-                          </a>
-                          <!-- Methods 2 -->
-                          <a
-                            href="#"
-                            class="size-[75px] xs:size-24 shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
+                          </label>
+
+                          <!-- Method 2 -->
+                          <input
+                            type="radio"
+                            name="payment"
+                            id="payment-2"
+                            class="hidden peer/payment-2"
+                          />
+                          <label
+                            for="payment-2"
+                            class="size-[75px] xs:size-24 shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden block cursor-pointer opacity-50 peer-checked/payment-2:opacity-100"
                           >
-                            <!-- <img
+                            <img
                               src="./assets/images/spb-payment.png"
                               alt="SPB"
                               class="size-full object-cover"
-                            /> -->
-                          </a>
-                          <!-- Methods 3 -->
-                          <a
-                            href="#"
-                            class="size-[75px] xs:size-24 shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
+                            />
+                          </label>
+
+                          <!-- Method 3 -->
+                          <input
+                            type="radio"
+                            name="payment"
+                            id="payment-3"
+                            class="hidden peer/payment-3"
+                          />
+                          <label
+                            for="payment-3"
+                            class="size-[75px] xs:size-24 shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden block cursor-pointer opacity-50 peer-checked/payment-3:opacity-100"
                           >
-                            <!-- <img
+                            <img
                               src="./assets/images/spb-payment.png"
                               alt="SPB"
                               class="size-full object-cover"
-                            /> -->
-                          </a>
-                          <!-- Methods 4 -->
-                          <a
-                            href="#"
-                            class="size-[75px] xs:size-24 shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden"
+                            />
+                          </label>
+
+                          <!-- Method 4 -->
+                          <input
+                            type="radio"
+                            name="payment"
+                            id="payment-4"
+                            class="hidden peer/payment-4"
+                          />
+                          <label
+                            for="payment-4"
+                            class="size-[75px] xs:size-24 shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden block cursor-pointer opacity-50 peer-checked/payment-4:opacity-100"
                           >
-                            <!-- <img
+                            <img
                               src="./assets/images/spb-payment.png"
                               alt="SPB"
                               class="size-full object-cover"
-                            /> -->
-                          </a>
+                            />
+                          </label>
                         </div>
                       </div>
                     </div>
