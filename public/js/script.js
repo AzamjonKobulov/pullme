@@ -426,3 +426,13 @@ function removeProductFromCart(productId, checkbox) {
     updateSelectedQuantity(document.querySelectorAll(".selected-products-qty"));
   }
 }
+
+function isSafari() {
+  return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+}
+
+if (isSafari()) {
+  document.querySelectorAll(".hero-left-bg").forEach((el) => {
+    el.classList.remove("rotate-180");
+  });
+}
