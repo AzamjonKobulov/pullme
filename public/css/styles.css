@@ -2153,22 +2153,6 @@ input[type="checkbox"]:checked ~ img:last-of-type{
   opacity: 1;
 }
 
-.peer\/payment-5:checked ~ .peer-checked\/payment-5\:opacity-100{
-  opacity: 1;
-}
-
-.peer\/payment-6:checked ~ .peer-checked\/payment-6\:opacity-100{
-  opacity: 1;
-}
-
-.peer\/payment-7:checked ~ .peer-checked\/payment-7\:opacity-100{
-  opacity: 1;
-}
-
-.peer\/payment-8:checked ~ .peer-checked\/payment-8\:opacity-100{
-  opacity: 1;
-}
-
 .peer\/payment-cart-1:checked ~ .peer-checked\/payment-cart-1\:opacity-100{
   opacity: 1;
 }
@@ -2281,10 +2265,6 @@ input[type="checkbox"]:checked ~ img:last-of-type{
 
   .xs\:w-14{
     width: 3.5rem;
-  }
-
-  .xs\:max-w-96{
-    max-width: 24rem;
   }
 
   .xs\:max-w-none{
@@ -2891,6 +2871,10 @@ input[type="checkbox"]:checked ~ img:last-of-type{
     margin-right: 0.625rem;
   }
 
+  .lg\:mt-0{
+    margin-top: 0px;
+  }
+
   .lg\:mt-10{
     margin-top: 2.5rem;
   }
@@ -3284,12 +3268,12 @@ input[type="checkbox"]:checked ~ img:last-of-type{
     width: 1.75rem;
   }
 
-  .xl\:w-\[900px\]{
-    width: 900px;
-  }
-
   .xl\:max-w-\[115px\]{
     max-width: 115px;
+  }
+
+  .xl\:max-w-\[900px\]{
+    max-width: 900px;
   }
 
   .xl\:max-w-min{
@@ -3346,6 +3330,10 @@ input[type="checkbox"]:checked ~ img:last-of-type{
     padding-bottom: 0.25rem;
   }
 
+  .xl\:pr-7{
+    padding-right: 1.75rem;
+  }
+
   .xl\:text-xs{
     font-size: 0.75rem;
     line-height: 1rem;
@@ -3397,12 +3385,12 @@ input[type="checkbox"]:checked ~ img:last-of-type{
     height: 74px;
   }
 
-  .\32xl\:w-\[1024px\]{
-    width: 1024px;
-  }
-
   .\32xl\:w-\[225px\]{
     width: 225px;
+  }
+
+  .\32xl\:max-w-5xl{
+    max-width: 64rem;
   }
 
   .\32xl\:max-w-none{
