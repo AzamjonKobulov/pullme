@@ -1523,10 +1523,6 @@ p{
 .bg-white\/90{
   background-color: rgb(255 255 255 / 0.9);
 }
-.bg-brand-purple{
-  --tw-bg-opacity: 1;
-  background-color: rgb(135 113 219 / var(--tw-bg-opacity, 1));
-}
 .fill-black{
   fill: #000;
 }
