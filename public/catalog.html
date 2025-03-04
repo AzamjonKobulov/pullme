@@ -435,14 +435,20 @@
                       >
                         Способ оплаты
                       </h5>
-                      <div class="flex items-center gap-8">
-                        <span class="text-sm text-white font-oswald uppercase">
+                      <div class="flex items-center gap-8 font-bold">
+                        <span
+                          class="text-sm text-white font-oswald uppercase font-bold"
+                        >
                           без комиссии
                         </span>
-                        <span class="text-sm text-white font-oswald uppercase">
+                        <span
+                          class="text-sm text-white font-oswald uppercase font-bold"
+                        >
                           комиссия 1%
                         </span>
-                        <span class="text-sm text-white font-oswald uppercase">
+                        <span
+                          class="text-sm text-white font-oswald uppercase font-bold"
+                        >
                           комиссия 5%
                         </span>
                       </div>
@@ -1176,10 +1182,10 @@
             />
 
             <!-- Swiper -->
-            <div class="swiper home-swiper">
-              <div class="swiper-wrapper">
+            <div class="swiper home-swiper relative">
+              <div class="swiper-wrapper pb-5 xs:pb-0 sm:pb-14 lg:pb-0">
                 <div
-                  class="swiper-slide swiper-slide-reviews transition-all duration-200 ease-in-out"
+                  class="swiper-slide transition-all duration-200 ease-in-out"
                 >
                   <div class="flex flex-col-reverse lg:pt-24">
                     <!-- Texts & Images -->
@@ -1208,7 +1214,7 @@
                     <img
                       src="./assets/images/hero-desktop.png"
                       alt="Hero Image"
-                      class="hidden lg:block md:absolute -top-8 -right-16 z-10"
+                      class="hidden lg:block md:absolute -top-8 -right-14 z-10"
                     />
 
                     <!-- Image Mobile -->
@@ -1247,7 +1253,7 @@
                     <img
                       src="./assets/images/hero-desktop.png"
                       alt="Hero Image"
-                      class="hidden lg:block md:absolute -top-8 -right-16 z-10"
+                      class="hidden lg:block md:absolute -top-8 -right-14 z-10"
                     />
 
                     <!-- Image Mobile -->
@@ -1286,7 +1292,7 @@
                     <img
                       src="./assets/images/hero-desktop.png"
                       alt="Hero Image"
-                      class="hidden lg:block md:absolute -top-8 -right-16 z-10"
+                      class="hidden lg:block md:absolute -top-8 -right-14 z-10"
                     />
 
                     <!-- Image Mobile -->
@@ -1301,9 +1307,9 @@
               <div class="swiper-pagination"></div>
             </div>
 
-            <!-- Fill Balance Btn -->
+            <!-- Topup Balance Btn -->
             <div
-              class="w-fit absolute bottom-0 right-0 z-30 bg-white rounded-tl-2xl xs:rounded-tl-[32px] lg:rounded-tl-[45px] pl-2.5 pt-2.5 sm:pl-5 sm:pt-5"
+              class="w-fit group absolute bottom-0 right-0 z-30 bg-white rounded-tl-2xl sm:rounded-tl-[32px] lg:rounded-tl-[45px] pl-2.5 pt-2.5 sm:pl-5 sm:pt-5"
             >
               <button
                 class="flex items-center gap-3 lg:gap-8 group font-extrabold uppercase text-start text-sm sm:text-[28px] leading-5 sm:leading-8"
@@ -1318,17 +1324,32 @@
                   сейчас</span
                 >
 
+                <!-- Default Arrow (Desktop) -->
                 <img
                   src="./assets/svgs/rounded-arrow.png"
                   alt="Arrow Icon"
-                  class="size-6 sm:size-14 shrink-0 group-hover:hidden"
+                  class="size-6 sm:size-14 shrink-0 hidden sm:block group-hover:hidden"
                 />
 
-                <!-- Hover -->
+                <!-- Hover Arrow (Desktop) -->
                 <img
                   src="./assets/svgs/rounded-arrow-hover.png"
                   alt="Arrow Icon"
-                  class="size-6 sm:size-14 shrink-0 hidden group-hover:block"
+                  class="size-6 sm:size-14 shrink-0 hidden sm:group-hover:block"
+                />
+
+                <!-- Default Arrow (Mobile) -->
+                <img
+                  src="./assets/svgs/rounded-arrow-mobile.png"
+                  alt="Arrow Icon"
+                  class="size-6 sm:size-14 shrink-0 sm:hidden group-hover:hidden sm:group-hover:hidden"
+                />
+
+                <!-- Hover Arrow (Mobile) -->
+                <img
+                  src="./assets/svgs/rounded-arrow-mobile-hover.png"
+                  alt="Arrow Icon"
+                  class="size-6 sm:size-14 shrink-0 hidden group-hover:block sm:hidden sm:group-hover:hidden"
                 />
               </button>
             </div>
@@ -1341,7 +1362,7 @@
             <img
               src="./assets/bg-images/hero-right.png"
               alt="Bg image"
-              class="hero-left-bg absolute inset-0 size-full transform rotate-180 rounded-20 sm:rounded-45 will-change-transform"
+              class="hero-left-bg absolute inset-0 size-full rotate-180 rounded-20 sm:rounded-45 backface-hidden"
             />
 
             <img
@@ -1366,24 +1387,39 @@
               </p>
             </div>
 
-            <!-- Fill Balance Btn -->
+            <!-- Topup Balance Btn -->
             <div
-              class="w-fit absolute bottom-0 right-0 z-50 bg-white rounded-tl-2xl xs:rounded-tl-[32px] lg:rounded-tl-[45px] pl-2.5 pt-2.5 sm:pl-5 sm:pt-5"
+              class="w-fit absolute bottom-0 right-0 bg-white rounded-tl-[20px] sm:rounded-tl-[32px] lg:rounded-tl-[45px] pl-2.5 pt-2.5 sm:pl-5 sm:pt-5"
             >
               <button
                 class="group font-extrabold uppercase text-start text-sm sm:text-[28px] leading-5 sm:leading-8"
               >
+                <!-- Default Arrow (Desktop) -->
                 <img
                   src="./assets/svgs/rounded-arrow.png"
                   alt="Arrow Icon"
-                  class="size-6 sm:size-14 shrink-0 group-hover:hidden"
+                  class="size-6 sm:size-14 shrink-0 hidden sm:block group-hover:hidden"
                 />
 
-                <!-- Hover -->
+                <!-- Hover Arrow (Desktop) -->
                 <img
                   src="./assets/svgs/rounded-arrow-hover.png"
                   alt="Arrow Icon"
-                  class="size-6 sm:size-14 shrink-0 hidden group-hover:block"
+                  class="size-6 sm:size-14 shrink-0 hidden sm:group-hover:block"
+                />
+
+                <!-- Default Arrow (Mobile) -->
+                <img
+                  src="./assets/svgs/rounded-arrow-mobile.png"
+                  alt="Arrow Icon"
+                  class="size-6 sm:size-14 shrink-0 sm:hidden group-hover:hidden sm:group-hover:hidden"
+                />
+
+                <!-- Hover Arrow (Mobile) -->
+                <img
+                  src="./assets/svgs/rounded-arrow-mobile-hover.png"
+                  alt="Arrow Icon"
+                  class="size-6 sm:size-14 shrink-0 hidden group-hover:block sm:hidden sm:group-hover:hidden"
                 />
               </button>
             </div>

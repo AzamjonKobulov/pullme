@@ -436,14 +436,20 @@
                       >
                         Способ оплаты
                       </h5>
-                      <div class="flex items-center gap-8">
-                        <span class="text-sm text-white font-oswald uppercase">
+                      <div class="flex items-center gap-8 font-bold">
+                        <span
+                          class="text-sm text-white font-oswald uppercase font-bold"
+                        >
                           без комиссии
                         </span>
-                        <span class="text-sm text-white font-oswald uppercase">
+                        <span
+                          class="text-sm text-white font-oswald uppercase font-bold"
+                        >
                           комиссия 1%
                         </span>
-                        <span class="text-sm text-white font-oswald uppercase">
+                        <span
+                          class="text-sm text-white font-oswald uppercase font-bold"
+                        >
                           комиссия 5%
                         </span>
                       </div>
@@ -1178,7 +1184,7 @@
 
             <!-- Swiper -->
             <div class="swiper home-swiper relative">
-              <div class="swiper-wrapper">
+              <div class="swiper-wrapper pb-5 xs:pb-0 sm:pb-14 lg:pb-0">
                 <div
                   class="swiper-slide transition-all duration-200 ease-in-out"
                 >
@@ -1304,10 +1310,10 @@
 
             <!-- Topup Balance Btn -->
             <div
-              class="w-fit group absolute bottom-0 right-0 z-30 bg-white rounded-tl-2xl xs:rounded-tl-[32px] lg:rounded-tl-[45px] pl-2.5 pt-2.5 sm:pl-5 sm:pt-5"
+              class="w-fit group absolute bottom-0 right-0 z-30 bg-white rounded-tl-2xl sm:rounded-tl-[32px] lg:rounded-tl-[45px] pl-2.5 pt-2.5 sm:pl-5 sm:pt-5"
             >
               <button
-                class="flex lg:items-center gap-3 lg:gap-8 group font-extrabold uppercase text-start text-sm sm:text-[28px] leading-5 sm:leading-8"
+                class="flex items-center gap-3 lg:gap-8 group font-extrabold uppercase text-start text-sm sm:text-[28px] leading-5 sm:leading-8"
               >
                 <span class="text-trsprt-section-title group-hover:hidden"
                   >Пополнить <br />
@@ -1319,17 +1325,32 @@
                   сейчас</span
                 >
 
+                <!-- Default Arrow (Desktop) -->
                 <img
                   src="./assets/svgs/rounded-arrow.png"
                   alt="Arrow Icon"
-                  class="size-6 sm:size-14 shrink-0 group-hover:hidden mt-1 lg:mt-0"
+                  class="size-6 sm:size-14 shrink-0 hidden sm:block group-hover:hidden"
                 />
 
-                <!-- Hover -->
+                <!-- Hover Arrow (Desktop) -->
                 <img
                   src="./assets/svgs/rounded-arrow-hover.png"
                   alt="Arrow Icon"
-                  class="size-6 sm:size-14 shrink-0 hidden group-hover:block mt-1 lg:mt-0"
+                  class="size-6 sm:size-14 shrink-0 hidden sm:group-hover:block"
+                />
+
+                <!-- Default Arrow (Mobile) -->
+                <img
+                  src="./assets/svgs/rounded-arrow-mobile.png"
+                  alt="Arrow Icon"
+                  class="size-6 sm:size-14 shrink-0 sm:hidden group-hover:hidden sm:group-hover:hidden"
+                />
+
+                <!-- Hover Arrow (Mobile) -->
+                <img
+                  src="./assets/svgs/rounded-arrow-mobile-hover.png"
+                  alt="Arrow Icon"
+                  class="size-6 sm:size-14 shrink-0 hidden group-hover:block sm:hidden sm:group-hover:hidden"
                 />
               </button>
             </div>
@@ -1369,22 +1390,37 @@
 
             <!-- Topup Balance Btn -->
             <div
-              class="w-fit absolute bottom-0 right-0 bg-white rounded-tl-2xl xs:rounded-tl-[32px] lg:rounded-tl-[45px] pl-2.5 pt-2.5 sm:pl-5 sm:pt-5"
+              class="w-fit absolute bottom-0 right-0 bg-white rounded-tl-[20px] sm:rounded-tl-[32px] lg:rounded-tl-[45px] pl-2.5 pt-2.5 sm:pl-5 sm:pt-5"
             >
               <button
                 class="group font-extrabold uppercase text-start text-sm sm:text-[28px] leading-5 sm:leading-8"
               >
+                <!-- Default Arrow (Desktop) -->
                 <img
                   src="./assets/svgs/rounded-arrow.png"
                   alt="Arrow Icon"
-                  class="size-6 sm:size-14 shrink-0 group-hover:hidden"
+                  class="size-6 sm:size-14 shrink-0 hidden sm:block group-hover:hidden"
                 />
 
-                <!-- Hover -->
+                <!-- Hover Arrow (Desktop) -->
                 <img
                   src="./assets/svgs/rounded-arrow-hover.png"
                   alt="Arrow Icon"
-                  class="size-6 sm:size-14 shrink-0 hidden group-hover:block"
+                  class="size-6 sm:size-14 shrink-0 hidden sm:group-hover:block"
+                />
+
+                <!-- Default Arrow (Mobile) -->
+                <img
+                  src="./assets/svgs/rounded-arrow-mobile.png"
+                  alt="Arrow Icon"
+                  class="size-6 sm:size-14 shrink-0 sm:hidden group-hover:hidden sm:group-hover:hidden"
+                />
+
+                <!-- Hover Arrow (Mobile) -->
+                <img
+                  src="./assets/svgs/rounded-arrow-mobile-hover.png"
+                  alt="Arrow Icon"
+                  class="size-6 sm:size-14 shrink-0 hidden group-hover:block sm:hidden sm:group-hover:hidden"
                 />
               </button>
             </div>
@@ -3536,7 +3572,7 @@
                 <img
                   src="./assets/images/secret-image.png"
                   alt="Image"
-                  class="hidden xl:block opacity-0 xl:group-hover:opacity-100 absolute left-0 bottom-0 transition-all duration-200 ease-in-out"
+                  class="hidden xl:block opacity-0 xl:group-hover:opacity-100 absolute left-0 -bottom-64 transition-all duration-200 ease-in-out"
                 />
               </li>
               <li class="group relative">
@@ -3565,7 +3601,7 @@
                 <img
                   src="./assets/images/secret-image.png"
                   alt="Image"
-                  class="hidden xl:block opacity-0 xl:group-hover:opacity-100 absolute left-0 bottom-0 transition-all duration-200 ease-in-out"
+                  class="hidden xl:block opacity-0 xl:group-hover:opacity-100 absolute left-0 -bottom-64 transition-all duration-200 ease-in-out"
                 />
               </li>
               <li class="group relative">
@@ -3592,7 +3628,7 @@
                 <img
                   src="./assets/images/secret-image.png"
                   alt="Image"
-                  class="hidden xl:block opacity-0 xl:group-hover:opacity-100 absolute left-0 bottom-0 transition-all duration-200 ease-in-out"
+                  class="hidden xl:block opacity-0 xl:group-hover:opacity-100 absolute left-0 -bottom-64 transition-all duration-200 ease-in-out"
                 />
               </li>
               <li class="group relative">
@@ -3619,7 +3655,7 @@
                 <img
                   src="./assets/images/secret-image.png"
                   alt="Image"
-                  class="hidden xl:block opacity-0 xl:group-hover:opacity-100 absolute left-0 bottom-0 transition-all duration-200 ease-in-out"
+                  class="hidden xl:block opacity-0 xl:group-hover:opacity-100 absolute left-0 -bottom-64 transition-all duration-200 ease-in-out"
                 />
               </li>
             </ul>

@@ -435,14 +435,20 @@
                       >
                         Способ оплаты
                       </h5>
-                      <div class="flex items-center gap-8">
-                        <span class="text-sm text-white font-oswald uppercase">
+                      <div class="flex items-center gap-8 font-bold">
+                        <span
+                          class="text-sm text-white font-oswald uppercase font-bold"
+                        >
                           без комиссии
                         </span>
-                        <span class="text-sm text-white font-oswald uppercase">
+                        <span
+                          class="text-sm text-white font-oswald uppercase font-bold"
+                        >
                           комиссия 1%
                         </span>
-                        <span class="text-sm text-white font-oswald uppercase">
+                        <span
+                          class="text-sm text-white font-oswald uppercase font-bold"
+                        >
                           комиссия 5%
                         </span>
                       </div>
@@ -1391,136 +1397,144 @@
 
           <!-- Filters -->
           <div
-            class="max-w-secondary mx-auto xl:mx-0 relative z-40 flex items-center justify-between py-5"
+            class="max-w-secondary xl:max-w-none mx-auto xl:mx-0 flex items-center justify-between xl:gap-5"
           >
-            <div class="hidden sm:flex items-center sm:gap-6">
-              <!-- Mobile/Desktop Games -->
-              <div class="flex items-center gap-1 text-xs font-bold uppercase">
-                <a href="#" class="text-black/40">Мобильные игры</a>
-                <span class="text-black/40">/</span>
-                <a href="#" class="text-black/40">Мобильные игры</a>
+            <div
+              class="flex-1 relative z-40 flex items-center justify-between py-5"
+            >
+              <div class="hidden sm:flex items-center sm:gap-6">
+                <!-- Mobile/Desktop Games -->
+                <div
+                  class="flex items-center gap-1 text-xs font-bold uppercase"
+                >
+                  <a href="#" class="text-black/40">Мобильные игры</a>
+                  <span class="text-black/40">/</span>
+                  <a href="#" class="text-black/40">Мобильные игры</a>
+                </div>
+
+                <!-- List -->
+                <div
+                  class="list flex items-center gap-1 text-xs font-bold uppercase"
+                >
+                  <a href="./cards-block.html" class="text-black/80">список</a>
+                  <span class="text-black/40">/</span>
+                  <a href="./cards-grid.html" class="text-black/40">сетка</a>
+                </div>
               </div>
 
-              <!-- List -->
+              <!-- Mobile/Desktop Games(Mobile) -->
               <div
-                class="list flex items-center gap-1 text-xs font-bold uppercase"
+                class="relative select space-y-2.5 sm:hidden text-black/40 font-bold text-[10px] sm:text-xs whitespace-nowrap z-[80]"
               >
-                <a href="./cards-block.html" class="text-black/80">список</a>
-                <span class="text-black/40">/</span>
-                <a href="./cards-grid.html" class="text-black/40">сетка</a>
+                <!-- Select Button -->
+                <button
+                  class="select-button h-6 flex items-center gap-2.5 uppercase sm:border border-black/40 rounded-full px-4"
+                >
+                  <span class="select-label tracking-wider sm:tracking-[3.6px]"
+                    >Мобильные игры</span
+                  >
+                  <img
+                    src="./assets/svgs/angle-down.svg"
+                    alt="Angle"
+                    class="select-icon"
+                  />
+                </button>
+
+                <!-- Select List -->
+                <ul
+                  class="select-list fade-in w-full space-y-5 absolute z-50 bg-white uppercase font-mulish hidden border-2 border-brand-purple rounded-10 py-5 px-2.5"
+                >
+                  <li
+                    class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
+                    data-value="Мобильные игры"
+                  >
+                    <a href="#">Мобильные игры</a>
+                  </li>
+                  <li
+                    class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
+                    data-value="Игры для ПК"
+                  >
+                    <a href="#">Игры для ПК</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- List Mobile -->
+              <div
+                class="relative select space-y-2.5 sm:hidden text-black/40 font-bold text-[10px] sm:text-xs whitespace-nowrap z-[80]"
+              >
+                <!-- Select Button -->
+                <button
+                  class="select-button h-6 flex items-center gap-2.5 uppercase sm:border border-black/40 rounded-full px-4"
+                >
+                  <span class="select-label tracking-wider sm:tracking-[3.6px]"
+                    >сетка</span
+                  >
+                  <img
+                    src="./assets/svgs/angle-down.svg"
+                    alt="Angle"
+                    class="select-icon"
+                  />
+                </button>
+
+                <!-- Select List -->
+                <ul
+                  class="list-mobile select-list fade-in w-full space-y-5 absolute z-50 bg-white uppercase font-mulish hidden border-2 border-brand-purple rounded-10 py-5 px-2.5"
+                >
+                  <li
+                    class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
+                    data-value="сетка"
+                  >
+                    <a href="./cards-grid.html">сетка</a>
+                  </li>
+                  <li
+                    class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
+                    data-value="список"
+                  >
+                    <a href="./cards-block.html">список</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Filter Container -->
+              <div
+                class="relative select space-y-2.5 text-black/40 font-bold text-[10px] sm:text-xs whitespace-nowrap"
+              >
+                <!-- Select Button -->
+                <button
+                  class="select-button h-6 flex items-center gap-2.5 uppercase sm:border border-black/40 rounded-full px-4"
+                >
+                  <span class="select-label tracking-wider sm:tracking-[3.6px]"
+                    >сортировать</span
+                  >
+                  <img
+                    src="./assets/svgs/angle-down.svg"
+                    alt="Angle"
+                    class="select-icon"
+                  />
+                </button>
+
+                <!-- Select List -->
+                <ul
+                  class="select-list fade-in w-full space-y-5 absolute z-50 bg-white uppercase font-mulish hidden border-2 border-brand-purple rounded-10 py-5 px-2.5"
+                >
+                  <li
+                    class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
+                    data-value="сортировать2"
+                  >
+                    сортировать2
+                  </li>
+                  <li
+                    class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
+                    data-value="сортировать3"
+                  >
+                    сортировать3
+                  </li>
+                </ul>
               </div>
             </div>
 
-            <!-- Mobile/Desktop Games(Mobile) -->
-            <div
-              class="relative select space-y-2.5 sm:hidden text-black/40 font-bold text-[10px] sm:text-xs whitespace-nowrap z-[80]"
-            >
-              <!-- Select Button -->
-              <button
-                class="select-button h-6 flex items-center gap-2.5 uppercase sm:border border-black/40 rounded-full px-4"
-              >
-                <span class="select-label tracking-wider sm:tracking-[3.6px]"
-                  >Мобильные игры</span
-                >
-                <img
-                  src="./assets/svgs/angle-down.svg"
-                  alt="Angle"
-                  class="select-icon"
-                />
-              </button>
-
-              <!-- Select List -->
-              <ul
-                class="select-list fade-in w-full space-y-5 absolute z-50 bg-white uppercase font-mulish hidden border-2 border-brand-purple rounded-10 py-5 px-2.5"
-              >
-                <li
-                  class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
-                  data-value="Мобильные игры"
-                >
-                  <a href="#">Мобильные игры</a>
-                </li>
-                <li
-                  class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
-                  data-value="Игры для ПК"
-                >
-                  <a href="#">Игры для ПК</a>
-                </li>
-              </ul>
-            </div>
-
-            <!-- List Mobile -->
-            <div
-              class="relative select space-y-2.5 sm:hidden text-black/40 font-bold text-[10px] sm:text-xs whitespace-nowrap z-[80]"
-            >
-              <!-- Select Button -->
-              <button
-                class="select-button h-6 flex items-center gap-2.5 uppercase sm:border border-black/40 rounded-full px-4"
-              >
-                <span class="select-label tracking-wider sm:tracking-[3.6px]"
-                  >список</span
-                >
-                <img
-                  src="./assets/svgs/angle-down.svg"
-                  alt="Angle"
-                  class="select-icon"
-                />
-              </button>
-
-              <!-- Select List -->
-              <ul
-                class="list-mobile select-list fade-in w-full space-y-5 absolute z-50 bg-white uppercase font-mulish hidden border-2 border-brand-purple rounded-10 py-5 px-2.5"
-              >
-                <li
-                  class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
-                  data-value="список"
-                >
-                  <a href="./cards-block.html">список</a>
-                </li>
-                <li
-                  class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
-                  data-value="сетка"
-                >
-                  <a href="./cards-grid.html">сетка</a>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Filter Container -->
-            <div
-              class="relative select space-y-2.5 text-black/40 font-bold text-[10px] sm:text-xs whitespace-nowrap"
-            >
-              <!-- Select Button -->
-              <button
-                class="select-button h-6 flex items-center gap-2.5 uppercase sm:border border-black/40 rounded-full px-4"
-              >
-                <span class="select-label tracking-wider sm:tracking-[3.6px]"
-                  >сортировать</span
-                >
-                <img
-                  src="./assets/svgs/angle-down.svg"
-                  alt="Angle"
-                  class="select-icon"
-                />
-              </button>
-
-              <!-- Select List -->
-              <ul
-                class="select-list fade-in w-full space-y-5 absolute z-50 bg-white uppercase font-mulish hidden border-2 border-brand-purple rounded-10 py-5 px-2.5"
-              >
-                <li
-                  class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
-                  data-value="сортировать2"
-                >
-                  сортировать2
-                </li>
-                <li
-                  class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
-                  data-value="сортировать3"
-                >
-                  сортировать3
-                </li>
-              </ul>
-            </div>
+            <div class="xl:w-[493px]"></div>
           </div>
 
           <!-- Main Part -->
@@ -2591,7 +2605,7 @@
                           >
                             Способ оплаты
                           </h5>
-                          <div class="flex items-center gap-8">
+                          <div class="flex items-center gap-8 font-bold">
                             <span
                               class="text-sm text-white font-oswald uppercase"
                             >
