@@ -13,7 +13,7 @@ module.exports = {
         "2xl": "1440px",
       },
       maxWidth: {
-        base: "96.25rem",
+        base: "98.75rem",
         secondary: "62.9375rem",
       },
       fontFamily: {

@@ -24,7 +24,7 @@
   }
 
   h2 {
-    @apply text-2xl sm:text-[80px] leading-6 sm:leading-[80px];
+    @apply text-2xl sm:text-[80px] leading-6 sm:leading-[80px] pb-5;
   }
 
   h3 {
@@ -97,11 +97,19 @@
   -webkit-background-clip: text;
 }
 
-/* .text-trsprt-section-title {
+.text-trsprt-section-title {
+  background: url("../assets/bg-images/hero-left.png") -20px -20px no-repeat;
+  background-size: cover;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  color: #000; /* Fallback for non-supporting browsers */
+}
+
+.text-trsprt-section-title2 {
   background: url("../assets/bg-images/hero-left.png") -20px -20px no-repeat;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-} */
+}
 
 .home-swiper .swiper-pagination {
   @apply z-10;
