@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-brand-whitish font-mulish overflow-x-hidden;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-oswald font-bold text-brand-black;
+  }
+
+  h1 {
+    @apply text-[72px] lg:text-[120px] leading-9 lg:leading-[108px];
+  }
+
+  h2 {
+    @apply text-2xl sm:text-[80px] leading-6 sm:leading-[80px] pb-5;
+  }
+
+  h3 {
+    @apply text-5xl lg:text-[61px] leading-6 lg:leading-[30px];
+  }
+
+  h4 {
+    @apply font-extrabold lg:font-black text-sm lg:text-[32px] leading-[14px] lg:leading-7;
+  }
+
+  h5 {
+    @apply font-black lg:font-extrabold text-sm lg:text-[28px] leading-[14px] lg:leading-9;
+  }
+
+  h6 {
+    @apply font-black lg:font-extrabold text-sm lg:text-2xl leading-[14px] lg:leading-5 text-transparent;
+  }
+
+  p {
+    @apply text-brand-text text-sm lg:text-lg leading-[18px] lg:leading-6;
+  }
+}
+
+.clip-text {
+  background: url("../assets/bg-images/text-bg.png") lightgray -96.77px -30.627px /
+    181.313% 438.523% no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-trsprt-catalog-1 {
+  background: url("../assets/images/catalog-1.jpg") -20px -20px no-repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.text-trsprt-catalog-2 {
+  background: url("../assets/images/catalog-2.jpg") -20px -20px no-repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.text-trsprt-catalog-3 {
+  background: url("../assets/images/catalog-3.jpg") -20px -20px no-repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.text-trsprt-catalog-4 {
+  background: url("../assets/images/catalog-4.jpg") -20px -20px no-repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.text-trsprt-catalog-5 {
+  background: url("../assets/images/catalog-5.jpg") -20px -20px no-repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.text-trsprt-catalog-6 {
+  background: url("../assets/images/catalog-6.jpg") -20px -20px no-repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.text-trsprt-catalog-7 {
+  background: url("../assets/images/catalog-7.jpg") -20px -20px no-repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.text-trsprt-catalog-8 {
+  background: url("../assets/images/catalog-8.jpg") -20px -20px no-repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.text-trsprt-section-title {
+  background: url("../assets/bg-images/hero-left.png") -20px -20px no-repeat;
+  background-size: cover;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  color: #000; /* Fallback for non-supporting browsers */
+}
+
+.text-trsprt-section-title2 {
+  background: url("../assets/bg-images/hero-left.png") -20px -20px no-repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.home-swiper .swiper-pagination {
+  @apply z-10;
+}
+
+.home-swiper .swiper-pagination-bullet {
+  @apply !size-2 xs:!size-4 !bg-white !opacity-50;
+}
+
+.home-swiper .swiper-pagination-bullet-active {
+  @apply !bg-white !opacity-100;
+}
+
+/* Target the scrollbar track */
+.custom-scroll::-webkit-scrollbar {
+  @apply h-0.5 w-0.5;
+}
+
+.no-scroll::-webkit-scrollbar {
+  @apply h-0 w-0;
+}
+
+/* Track (background) */
+.custom-scroll::-webkit-scrollbar-track {
+  @apply bg-brand-gray-100/50;
+}
+
+/* Handle (thumb) */
+.custom-scroll::-webkit-scrollbar-thumb {
+  @apply bg-brand-gray-200/50 rounded-full;
+}
+
+.icon-transform.rotate-180 {
+  transform: rotate(180deg);
+}
+
+/* Checkbox */
+input[type="checkbox"]:checked + label div .custom-check {
+  @apply block;
+}
+
+/* input[type="checkbox"]:checked ~ img:first-of-type {
+  @apply hidden;
+} */
+
+input[type="checkbox"]:checked ~ img:last-of-type {
+  @apply opacity-100;
+}
+
+.fade-in {
+  animation: fadeIn 0.2s ease-in-out forwards, scaleIn 0.2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}

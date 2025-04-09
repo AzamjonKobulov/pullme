@@ -1,0 +1,2947 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="relative z-50">
+      <nav
+        class="max-w-base mx-auto relative flex items-start justify-between pb-3.5 pt-3 sm:py-5 px-2.5 md:px-12 xl:px-8"
+      >
+        <!-- Logo -->
+        <div
+          class="relative z-50 bg-white rounded-br-[20px] sm:rounded-br-[32px] lg:rounded-br-[45px] mt-1 sm:mt-0 pb-1 sm:pb-3 sm:pt-2 pr-5"
+        >
+          <a
+            href="./index.html"
+            class="group inline-block w-12 h-8 xs:w-14 xs:h-8 sm:w-24 sm:h-12 lg:w-40 lg:h-[77px] overflow-hidden shrink-0"
+          >
+            <img
+              src="./assets/svgs/logo.svg"
+              alt="LOGO"
+              class="size-full group-hover:hidden"
+            />
+            <img
+              src="./assets/svgs/logo-hover.svg"
+              alt="LOGO"
+              class="size-full hidden group-hover:block"
+            />
+          </a>
+        </div>
+
+        <!-- Links & Cart & Lang -->
+        <div
+          class="h-fit relative z-10 hidden lg:flex items-center gap-6 font-extrabold uppercase text-black/40 text-xs"
+        >
+          <!-- Links -->
+          <ul class="flex items-center gap-6">
+            <li>
+              <a
+                href="./catalog.html"
+                class="hover:text-black transition-all duration-200 ease-in-out"
+                >все игры</a
+              >
+            </li>
+            <li>
+              <a
+                href="#bonus"
+                class="hover:text-black transition-all duration-200 ease-in-out"
+                >Бонусы</a
+              >
+            </li>
+            <li>
+              <a
+                href="#secrets"
+                class="hover:text-black transition-all duration-200 ease-in-out"
+                >Гайды</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="hover:text-black transition-all duration-200 ease-in-out"
+                >О нас</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="hover:text-black transition-all duration-200 ease-in-out"
+                >Контакты</a
+              >
+            </li>
+          </ul>
+
+          <!-- Cart & Lang -->
+          <div class="flex items-center gap-6">
+            <!-- Cart -->
+            <button class="cart-btn flex items-center gap-1">
+              <img src="./assets/svgs/cart.svg" alt="Cart Icon" />
+              <span class="selected-products-qty">0</span>
+            </button>
+
+            <!-- Lang Select Container -->
+            <div class="w-20 relative select space-y-2.5">
+              <!-- Select Button -->
+              <button class="select-button flex items-center gap-1">
+                <img src="./assets/svgs/globe.svg" alt="Cart Icon" />
+                <span class="select-label uppercase">RU</span>
+                <svg
+                  width="9"
+                  height="6"
+                  viewBox="0 0 9 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="select-icon"
+                >
+                  <path
+                    d="M5.30314 5.14892L8.59033 1.86173C8.86963 1.58243 8.86963 1.13124 8.59033 0.851941C8.31102 0.572637 7.85984 0.572637 7.58054 0.851941L4.79466 3.63065L2.01595 0.85194C1.73664 0.572637 1.28546 0.572637 1.00616 0.85194C0.726854 1.13124 0.726854 1.58243 1.00616 1.86173L4.29335 5.14892C4.56549 5.42822 5.02383 5.42822 5.30314 5.14892Z"
+                    fill="black"
+                    fill-opacity="0.4"
+                  />
+                </svg>
+              </button>
+
+              <!-- Select List -->
+              <ul
+                class="w-max select-list fade-in absolute right-0 bg-white font-extrabold font-mulish text-black/40 text-xl hidden z-[80] border-[3px] border-brand-purple rounded-30 shadow-lg p-4"
+              >
+                <!-- Lang 1 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="cn"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-cn.svg" alt="Flag" />
+                  <span>cn</span>
+                </li>
+                <!-- Lang 2 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="id"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-id.svg" alt="Flag" />
+                  <span>id</span>
+                </li>
+                <!-- Lang 3 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="kr"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-kr.svg" alt="Flag" />
+                  <span>kr</span>
+                </li>
+                <!-- Lang 4 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="my"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-my.svg" alt="Flag" />
+                  <span>my</span>
+                </li>
+                <!-- Lang 5 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="ph"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-ph.svg" alt="Flag" />
+                  <span>ph</span>
+                </li>
+                <!-- Lang 6 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="th"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-th.svg" alt="Flag" />
+                  <span>th</span>
+                </li>
+                <!-- Lang 7 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="jp"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-jp.svg" alt="Flag" />
+                  <span>jp</span>
+                </li>
+                <!-- Lang 8 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="sg"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-sg.svg" alt="Flag" />
+                  <span>sg</span>
+                </li>
+                <!-- Lang 9 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="vn"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-vn.svg" alt="Flag" />
+                  <span>vn</span>
+                </li>
+                <!-- Lang 10 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="tw"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-tw.svg" alt="Flag" />
+                  <span>tw</span>
+                </li>
+                <!-- Lang 11 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="ru"
+                >
+                  <!-- Flag -->
+                  <img
+                    src="./assets/svgs/flag-ru.svg"
+                    alt="Flag"
+                    class="opacity-50"
+                  />
+                  <span>ru</span>
+                </li>
+                <!-- Lang 12 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="by"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-by.svg" alt="Flag" />
+                  <span>by</span>
+                </li>
+                <!-- Lang 13 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="ua"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-ua.svg" alt="Flag" />
+                  <span>ua</span>
+                </li>
+                <!-- Lang 14 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="kz"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-kz.svg" alt="Flag" />
+                  <span>kz</span>
+                </li>
+                <!-- Lang 15 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="br"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-br.svg" alt="Flag" />
+                  <span>br</span>
+                </li>
+                <!-- Lang 16 -->
+                <li
+                  class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                  data-value="us"
+                >
+                  <!-- Flag -->
+                  <img src="./assets/svgs/flag-us.svg" alt="Flag" />
+                  <span>us</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Btn -->
+        <button
+          id="mobile-menu-btn"
+          class="lg:hidden relative z-50 bg-white rounded-bl-20 sm:rounded-bl-[32px] lg:rounded-bl-[45px] mt-2 sm:mt-0 pb-4 pl-5 sm:pt-3 sm:pb-5"
+        >
+          <img
+            src="./assets/svgs/hamburger.svg"
+            alt="hamburger icon"
+            class="w-6"
+          />
+        </button>
+
+        <!-- Product Purchasing Form -->
+        <div
+          class="cart fade-in hidden max-w-96 absolute top-14 right-2.5 bg-white border-[3px] border-brand-purple border-opacity-80 rounded-30 pt-9 pb-5 px-2.5"
+        >
+          <div class="space-y-10">
+            <div class="relative rounded-30">
+              <!-- BG Image Mobile -->
+              <img
+                src="./assets/bg-images/product-form-mobile.png"
+                alt="Bg Images"
+                class="absolute size-full inset-0 object-fill"
+              />
+
+              <!-- Game Image -->
+              <img
+                src="./assets/images/product-form-image.png"
+                alt="Bg Images"
+                class="w-2/3 absolute object-fill -top-16 -right-5 z-20"
+              />
+
+              <div class="relative z-10 size-full px-2.5 pb-2.5 pt-5">
+                <h3 class="text-5xl text-white leading-[90%]">
+                  Genshin <br />
+                  Impact
+                </h3>
+
+                <div
+                  class="space-y-[30px] font-oswald text-white mt-24 xs:mt-20"
+                >
+                  <!-- User ID & Server ID -->
+                  <div class="space-y-3.5">
+                    <h5 class="text-base text-white font-oswald leading-normal">
+                      ПОЖАЛУЙСТА, ВВЕДИТЕ ВАШ ID ДЛЯ ДОСТАВКИ
+                    </h5>
+
+                    <label for="userId" class="max-w-[345px] block space-y-2.5">
+                      <div class="flex gap-2.5">
+                        <span class="font-bold text-xs">USER ID</span>
+                        <!-- User ID Btn -->
+                        <button id="user-id-open-btn">
+                          <img
+                            src="./assets/svgs/question.svg"
+                            alt="Qeustion"
+                          />
+                        </button>
+                      </div>
+                      <input
+                        type="text"
+                        id="userId"
+                        class="w-full h-11 rounded-10 font-mulish text-black px-3 py-1"
+                      />
+                    </label>
+
+                    <!-- Select Container -->
+                    <div class="max-w-[345px] relative select space-y-2.5">
+                      <span class="font-bold text-xs">SERVER ID</span>
+
+                      <!-- Select Button -->
+                      <button
+                        class="select-button h-11 w-full flex items-center justify-between text-black bg-white rounded-10 px-2.5"
+                      >
+                        <span
+                          class="select-label font-mulish text-black"
+                        ></span>
+                        <img
+                          src="./assets/svgs/angle-down.svg"
+                          alt="Angle Down"
+                          class="select-icon transition-all duration-200 ease-in-out"
+                        />
+                      </button>
+
+                      <!-- Select List -->
+                      <ul
+                        class="select-list fade-in w-full absolute bg-white rounded-10 font-mulish hidden z-10 shadow-lg"
+                      >
+                        <li
+                          class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
+                          data-value="lorem"
+                        >
+                          lorem
+                        </li>
+                        <li
+                          class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
+                          data-value="lorem"
+                        >
+                          ipsum
+                        </li>
+                        <li
+                          class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
+                          data-value="lorem"
+                        >
+                          dolor
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Product -->
+                  <div class="space-y-3.5">
+                    <div class="flex items-center justify-between gap-5">
+                      <h5
+                        class="flex-1 text-base text-white font-oswald uppercase"
+                      >
+                        Товар
+                      </h5>
+                      <h6
+                        class="w-[83px] text-xs text-white font-oswald uppercase"
+                      >
+                        Количество
+                      </h6>
+                    </div>
+
+                    <!-- Selected Products -->
+                    <div
+                      class="selected-products products-cart space-y-2.5 font-bold"
+                    ></div>
+                  </div>
+
+                  <!-- Promocode -->
+                  <label
+                    for="promoCode"
+                    class="max-w-[345px] block space-y-2.5"
+                  >
+                    <h5 class="text-base text-white font-oswald uppercase">
+                      промокод
+                    </h5>
+                    <input
+                      type="text"
+                      id="promoCode"
+                      class="w-full h-11 text-sm xs:text-base rounded-10 font-mulish text-black px-3 py-1"
+                      placeholder="Если есть, введите промокод"
+                    />
+                  </label>
+
+                  <!-- Email -->
+                  <label for="email" class="max-w-[345px] block space-y-2.5">
+                    <h5 class="text-base text-white font-oswald uppercase">
+                      почта
+                    </h5>
+                    <input
+                      type="text"
+                      id="email"
+                      class="w-full h-11 text-sm rounded-10 font-mulish text-black outline-none px-3 py-1"
+                      placeholder="Опционально"
+                    />
+                  </label>
+
+                  <!-- Payment Methods -->
+                  <div class="space-y-5">
+                    <div class="space-y-1">
+                      <h5
+                        class="text-base xs:text-[22px] text-white font-oswald uppercase"
+                      >
+                        Способ оплаты
+                      </h5>
+                      <div class="flex items-center gap-8 font-bold">
+                        <span
+                          class="text-sm text-white font-oswald uppercase font-bold"
+                        >
+                          без комиссии
+                        </span>
+                        <span
+                          class="text-sm text-white font-oswald uppercase font-bold"
+                        >
+                          комиссия 1%
+                        </span>
+                        <span
+                          class="text-sm text-white font-oswald uppercase font-bold"
+                        >
+                          комиссия 5%
+                        </span>
+                      </div>
+                    </div>
+
+                    <!-- Payment Methods -->
+                    <div class="flex items-center gap-3.5">
+                      <!-- Method 1 -->
+                      <input
+                        type="radio"
+                        name="payment-cart"
+                        id="payment-cart-1"
+                        class="hidden peer/payment-cart-1"
+                        checked
+                      />
+                      <label
+                        for="payment-cart-1"
+                        class="size-[75px] shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden block cursor-pointer opacity-50 peer-checked/payment-cart-1:opacity-100"
+                      >
+                        <img
+                          src="./assets/images/spb-payment.png"
+                          alt="SPB"
+                          class="size-full object-cover"
+                        />
+                      </label>
+
+                      <!-- Method 2 -->
+                      <input
+                        type="radio"
+                        name="payment-cart"
+                        id="payment-cart-2"
+                        class="hidden peer/payment-cart-2"
+                      />
+                      <label
+                        for="payment-cart-2"
+                        class="size-[75px] shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden block cursor-pointer opacity-50 peer-checked/payment-cart-2:opacity-100"
+                      >
+                        <img
+                          src="./assets/images/spb-payment.png"
+                          alt="SPB"
+                          class="size-full object-cover"
+                        />
+                      </label>
+
+                      <!-- Method 3 -->
+                      <input
+                        type="radio"
+                        name="payment-cart"
+                        id="payment-cart-8"
+                        class="hidden peer/payment-cart-8"
+                      />
+                      <label
+                        for="payment-cart-8"
+                        class="size-[75px] shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden block cursor-pointer opacity-50 peer-checked/payment-cart-8:opacity-100"
+                      >
+                        <img
+                          src="./assets/images/spb-payment.png"
+                          alt="SPB"
+                          class="size-full object-cover"
+                        />
+                      </label>
+
+                      <!-- Method 4 -->
+                      <input
+                        type="radio"
+                        name="payment-cart"
+                        id="payment-cart-4"
+                        class="hidden peer/payment-cart-4"
+                      />
+                      <label
+                        for="payment-cart-4"
+                        class="size-[75px] shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden block cursor-pointer opacity-50 peer-checked/payment-cart-4:opacity-100"
+                      >
+                        <img
+                          src="./assets/images/spb-payment.png"
+                          alt="SPB"
+                          class="size-full object-cover"
+                        />
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-5">
+              <!-- Cost -->
+              <div
+                class="flex items-center justify-between text-black/40 uppercase"
+              >
+                <h5 class="text-lg font-oswald leading-normal">сумма</h5>
+                <h5 class="text-lg font-oswald leading-normal">6080 rub</h5>
+              </div>
+
+              <!-- Pay Button -->
+              <div class="space-y-2.5">
+                <button
+                  class="w-full relative h-10 font-extrabold text-white border-2 border-brand-purple rounded-full hover:opacity-80 transition-all du20"
+                >
+                  <img
+                    src="./assets/bg-images/button.png"
+                    alt="button"
+                    class="absolute inset-0 size-full object-cover rounded-30"
+                  />
+                  <span class="relative uppercase z-10">оплатить</span>
+                </button>
+                <p
+                  class="block text-[13px] font-bold text-black/40 leading-[80%]"
+                >
+                  Нажимая кнопку <span class="uppercase">оплатить</span>, я
+                  принимаю условия <a
+                    href="#"
+                    class="underline underline-offset-2"
+                    >Пользовательского Соглашения</a
+                  > и подтверждаю ознакомление с <a
+                    href="#"
+                    class="underline underline-offset-2"
+                    >FAQ</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="fixed inset-0 z-[80] size-full -translate-x-full transition-all duration-500 lg:hidden bg-white pt-5 pb-8 px-2.5"
+      >
+        <!-- Header -->
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <a href="/">
+            <img src="./assets/svgs/logo-mob-menu.svg" alt="Logo" />
+          </a>
+
+          <!-- Cart & Close Btn -->
+          <div class="flex items-center gap-7">
+            <!-- Cart -->
+            <button class="cart-btn flex items-center gap-1">
+              <img src="./assets/svgs/cart.svg" alt="Cart Icon" />
+              <span
+                class="selected-products-qty text-xs font-extrabold text-black/40"
+                >0</span
+              >
+            </button>
+
+            <!-- Close Btn -->
+            <button>
+              <img src="./assets/svgs/mob-menu-close.svg" alt="X icon" />
+            </button>
+          </div>
+        </div>
+
+        <!-- Body -->
+        <div class="space-y-14 mt-10">
+          <!-- Links & Catalog -->
+          <div class="flex justify-between">
+            <!-- Links -->
+            <ul
+              class="space-y-5 uppercase font-extrabold text-black/40 text-sm"
+            >
+              <li>
+                <a href="#">все игры</a>
+              </li>
+              <li>
+                <a href="#">О нас</a>
+              </li>
+              <li>
+                <a href="#">FAQ</a>
+              </li>
+              <li>
+                <a href="#">ПОДДЕРЖКА</a>
+              </li>
+              <li>
+                <!-- Lang Select Container -->
+                <div class="w-20 relative select space-y-2.5">
+                  <!-- Select Button -->
+                  <div
+                    class="select-button cursor-pointer flex items-center gap-1"
+                  >
+                    <img src="./assets/svgs/globe.svg" alt="Cart Icon" />
+                    <span class="select-label uppercase">RU</span>
+                    <svg
+                      width="9"
+                      height="6"
+                      viewBox="0 0 9 6"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="select-icon"
+                    >
+                      <path
+                        d="M5.30314 5.14892L8.59033 1.86173C8.86963 1.58243 8.86963 1.13124 8.59033 0.851941C8.31102 0.572637 7.85984 0.572637 7.58054 0.851941L4.79466 3.63065L2.01595 0.85194C1.73664 0.572637 1.28546 0.572637 1.00616 0.85194C0.726854 1.13124 0.726854 1.58243 1.00616 1.86173L4.29335 5.14892C4.56549 5.42822 5.02383 5.42822 5.30314 5.14892Z"
+                        fill="black"
+                        fill-opacity="0.4"
+                      />
+                    </svg>
+                  </div>
+
+                  <!-- Select List -->
+                  <ul
+                    class="no-scroll h-80 select-list fade-in absolute left-0 bg-white font-extrabold font-mulish text-black/40 hidden z-[60] border-[3px] border-brand-purple rounded-20 shadow-lg overflow-auto p-2"
+                  >
+                    <!-- Lang 1 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="cn"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-cn.svg" alt="Flag" />
+                      <span>cn</span>
+                    </li>
+                    <!-- Lang 2 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="id"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-id.svg" alt="Flag" />
+                      <span>id</span>
+                    </li>
+                    <!-- Lang 3 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="kr"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-kr.svg" alt="Flag" />
+                      <span>kr</span>
+                    </li>
+                    <!-- Lang 4 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="my"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-my.svg" alt="Flag" />
+                      <span>my</span>
+                    </li>
+                    <!-- Lang 5 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="ph"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-ph.svg" alt="Flag" />
+                      <span>ph</span>
+                    </li>
+                    <!-- Lang 6 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="th"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-th.svg" alt="Flag" />
+                      <span>th</span>
+                    </li>
+                    <!-- Lang 7 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="jp"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-jp.svg" alt="Flag" />
+                      <span>jp</span>
+                    </li>
+                    <!-- Lang 8 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="sg"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-sg.svg" alt="Flag" />
+                      <span>sg</span>
+                    </li>
+                    <!-- Lang 9 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="vn"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-vn.svg" alt="Flag" />
+                      <span>vn</span>
+                    </li>
+                    <!-- Lang 10 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="tw"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-tw.svg" alt="Flag" />
+                      <span>tw</span>
+                    </li>
+                    <!-- Lang 11 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="ru"
+                    >
+                      <!-- Flag -->
+                      <img
+                        src="./assets/svgs/flag-ru.svg"
+                        alt="Flag"
+                        class="opacity-50"
+                      />
+                      <span>ru</span>
+                    </li>
+                    <!-- Lang 12 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="by"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-by.svg" alt="Flag" />
+                      <span>by</span>
+                    </li>
+                    <!-- Lang 13 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="ua"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-ua.svg" alt="Flag" />
+                      <span>ua</span>
+                    </li>
+                    <!-- Lang 14 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="kz"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-kz.svg" alt="Flag" />
+                      <span>kz</span>
+                    </li>
+                    <!-- Lang 15 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="br"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-br.svg" alt="Flag" />
+                      <span>br</span>
+                    </li>
+                    <!-- Lang 16 -->
+                    <li
+                      class="group flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden pr-1.5 py-1"
+                      data-value="us"
+                    >
+                      <!-- Flag -->
+                      <img src="./assets/svgs/flag-us.svg" alt="Flag" />
+                      <span>us</span>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Catalog -->
+            <div class="relative max-h-fit">
+              <!-- Top Icon -->
+              <svg
+                width="13"
+                height="8"
+                viewBox="0 0 13 8"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                class="fill-black opacity-20 absolute left-1/2 -translate-x-1/2 -top-5"
+                id="scrollUpIcon"
+              >
+                <path
+                  d="M12.265 7.74012C12.5917 7.39479 12.5917 6.83803 12.265 6.4927L6.725 0.636192C6.465 0.361338 6.045 0.361338 5.785 0.636192L0.245 6.4927C-0.0816665 6.83803 -0.0816666 7.39479 0.245 7.74012C0.571667 8.08544 1.09833 8.08544 1.425 7.74012L6.25833 2.63769L11.0917 7.74716C11.4117 8.08545 11.945 8.08545 12.265 7.74012Z"
+                />
+              </svg>
+
+              <!-- Catalog -->
+              <ul
+                id="catalog"
+                class="custom-scroll max-h-screen space-y-3.5 text-sm font-extrabold text-black/60 overflow-y-auto pb-32 pr-5"
+              >
+                <!-- Catalog Item 1 -->
+                <li>
+                  <a
+                    href="#"
+                    class="h-12 max-w-[207px] gap-6 flex items-center justify-between border-[1.5px] border-black/20 rounded-10 px-2.5"
+                  >
+                    <span class="max-w-36">Zenless Zone Zero</span>
+                    <div
+                      class="size-9 relative shrink-0 bg-brand-purple/5 border-2 border-brand-purple/40 rounded-full overflow-hidden after:absolute after:inset-0 after:bg-brand-purple/20"
+                    >
+                      <img
+                        src="./assets/images/catalog-1.jpg"
+                        alt="Image"
+                        class="size-full object-cover"
+                      />
+                    </div>
+                  </a>
+                </li>
+                <!-- Catalog Item 2 -->
+                <li>
+                  <a
+                    href="#"
+                    class="h-12 max-w-[207px] gap-6 flex items-center justify-between border-[1.5px] border-black/20 rounded-10 px-2.5"
+                  >
+                    <span class="max-w-36">Honkai: Star Rail</span>
+                    <div
+                      class="size-9 relative shrink-0 bg-brand-purple/5 border-2 border-brand-purple/40 rounded-full overflow-hidden after:absolute after:inset-0 after:bg-brand-purple/20"
+                    >
+                      <img
+                        src="./assets/images/catalog-2.jpg"
+                        alt="Image"
+                        class="size-full object-cover"
+                      />
+                    </div>
+                  </a>
+                </li>
+                <!-- Catalog Item 3 -->
+                <li>
+                  <a
+                    href="./cards-grid.html"
+                    class="h-12 max-w-[207px] gap-6 flex items-center justify-between border-[1.5px] border-black/20 rounded-10 px-2.5"
+                  >
+                    <span class="max-w-36">Genshin Impact</span>
+                    <div
+                      class="size-9 relative shrink-0 bg-brand-purple/5 border-2 border-brand-purple/40 rounded-full overflow-hidden after:absolute after:inset-0 after:bg-brand-purple/20"
+                    >
+                      <img
+                        src="./assets/images/catalog-3.jpg"
+                        alt="Image"
+                        class="size-full object-cover"
+                      />
+                    </div>
+                  </a>
+                </li>
+                <!-- Catalog Item 4 -->
+                <li>
+                  <a
+                    href="#"
+                    class="h-12 max-w-[207px] gap-6 flex items-center justify-between border-[1.5px] border-black/20 rounded-10 px-2.5"
+                  >
+                    <span class="max-w-36">Arena Breakout</span>
+                    <div
+                      class="size-9 relative shrink-0 bg-brand-purple/5 border-2 border-brand-purple/40 rounded-full overflow-hidden after:absolute after:inset-0 after:bg-brand-purple/20"
+                    >
+                      <img
+                        src="./assets/images/catalog-4.jpg"
+                        alt="Image"
+                        class="size-full object-cover"
+                      />
+                    </div>
+                  </a>
+                </li>
+                <!-- Catalog Item 5 -->
+                <li>
+                  <a
+                    href="#"
+                    class="h-12 max-w-[207px] gap-6 flex items-center justify-between border-[1.5px] border-black/20 rounded-10 px-2.5"
+                  >
+                    <span class="max-w-36">PUBG MOBILE</span>
+                    <div
+                      class="size-9 relative shrink-0 bg-brand-purple/5 border-2 border-brand-purple/40 rounded-full overflow-hidden after:absolute after:inset-0 after:bg-brand-purple/20"
+                    >
+                      <img
+                        src="./assets/images/catalog-5.jpg"
+                        alt="Image"
+                        class="size-full object-cover"
+                      />
+                    </div>
+                  </a>
+                </li>
+                <!-- Catalog Item 6 -->
+                <li>
+                  <a
+                    href="#"
+                    class="h-12 max-w-[207px] gap-6 flex items-center justify-between border-[1.5px] border-black/20 rounded-10 px-2.5"
+                  >
+                    <span class="max-w-36">Tower of Fantasy</span>
+                    <div
+                      class="size-9 relative shrink-0 bg-brand-purple/5 border-2 border-brand-purple/40 rounded-full overflow-hidden after:absolute after:inset-0 after:bg-brand-purple/20"
+                    >
+                      <img
+                        src="./assets/images/catalog-6.jpg"
+                        alt="Image"
+                        class="size-full object-cover"
+                      />
+                    </div>
+                  </a>
+                </li>
+                <!-- Catalog Item 7 -->
+                <li>
+                  <a
+                    href="#"
+                    class="h-12 max-w-[207px] gap-6 flex items-center justify-between border-[1.5px] border-black/20 rounded-10 px-2.5"
+                  >
+                    <span class="max-w-36">Goddess of Victory: Nikke</span>
+                    <div
+                      class="size-9 relative shrink-0 bg-brand-purple/5 border-2 border-brand-purple/40 rounded-full overflow-hidden after:absolute after:inset-0 after:bg-brand-purple/20"
+                    >
+                      <img
+                        src="./assets/images/catalog-7.jpg"
+                        alt="Image"
+                        class="size-full object-cover"
+                      />
+                    </div>
+                  </a>
+                </li>
+                <!-- Catalog Item 8 -->
+                <li>
+                  <a
+                    href="#"
+                    class="h-12 max-w-[207px] gap-6 flex items-center justify-between border-[1.5px] border-black/20 rounded-10 px-2.5"
+                  >
+                    <span class="max-w-36">Mobile Legends (Global)</span>
+                    <div
+                      class="size-9 relative shrink-0 bg-brand-purple/5 border-2 border-brand-purple/40 rounded-full overflow-hidden after:absolute after:inset-0 after:bg-brand-purple/20"
+                    >
+                      <img
+                        src="./assets/images/catalog-8.jpg"
+                        alt="Image"
+                        class="size-full object-cover"
+                      />
+                    </div>
+                  </a>
+                </li>
+                <!-- Catalog Item 9 -->
+                <li>
+                  <a
+                    href="#"
+                    class="h-12 max-w-[207px] gap-6 flex items-center justify-between border-[1.5px] border-black/20 rounded-10 px-2.5"
+                  >
+                    <span class="max-w-36 opacity-30"
+                      >Mobile Legends (Global)</span
+                    >
+                    <div
+                      class="size-9 relative shrink-0 bg-brand-purple/5 border-2 border-brand-purple/40 rounded-full overflow-hidden after:absolute after:inset-0 after:bg-brand-purple/20"
+                    >
+                      <!-- <img
+                        src="./assets/images/catalog-8.jpg"
+                        alt="Image"
+                        class="size-full object-cover"
+                      /> -->
+                    </div>
+                  </a>
+                </li>
+                <!-- Catalog Item 10 -->
+                <li>
+                  <a
+                    href="#"
+                    class="h-12 max-w-[207px] gap-6 flex items-center justify-between border-[1.5px] border-black/20 rounded-10 px-2.5"
+                  >
+                    <span class="max-w-36 opacity-30"
+                      >Mobile Legends (Global)</span
+                    >
+                    <div
+                      class="size-9 relative shrink-0 bg-brand-purple/5 border-2 border-brand-purple/40 rounded-full overflow-hidden after:absolute after:inset-0 after:bg-brand-purple/20"
+                    >
+                      <!-- <img
+                        src="./assets/images/catalog-8.jpg"
+                        alt="Image"
+                        class="size-full object-cover"
+                      /> -->
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Bottom Icon -->
+              <svg
+                width="13"
+                height="8"
+                viewBox="0 0 13 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="fill-black opacity-60 sticky bottom-5 translate-x-24"
+                id="scrollDownIcon"
+              >
+                <path
+                  d="M0.735002 0.259884C0.408335 0.605214 0.408335 1.16197 0.735001 1.5073L6.275 7.36381C6.535 7.63866 6.955 7.63866 7.215 7.36381L12.755 1.5073C13.0817 1.16197 13.0817 0.605215 12.755 0.259885C12.4283 -0.0854447 11.9017 -0.0854447 11.575 0.259885L6.74167 5.36231L1.90833 0.252837C1.58833 -0.0854453 1.055 -0.0854453 0.735002 0.259884Z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Socials -->
+          <ul class="flex items-center justify-end gap-6 pr-8">
+            <li>
+              <a href="#">
+                <img
+                  src="./assets/svgs/message.svg"
+                  alt="Icon"
+                  class="size-9"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="./assets/svgs/message-2.svg"
+                  alt="Icon"
+                  class="size-9"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./assets/svgs/vk.svg" alt="Icon" class="size-9" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="./assets/svgs/telegram.svg"
+                  alt="Icon"
+                  class="size-9"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./assets/svgs/tel.svg" alt="Icon" class="size-9" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Socials -->
+    <div
+      class="fixed z-10 max-w-[1600px] w-full left-1/2 -translate-x-1/2 hidden lg:flex justify-end right-2 top-52"
+    >
+      <ul class="space-y-2.5 hidden lg:block relative z-50 pr-1">
+        <li>
+          <a href="#" class="group">
+            <img
+              src="./assets/svgs/message.svg"
+              alt="Icon"
+              class="group-hover:hidden"
+            />
+            <img
+              src="./assets/svgs/message-hover.svg"
+              alt="Icon"
+              class="hidden group-hover:block"
+            />
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="group">
+            <img
+              src="./assets/svgs/message-2.svg"
+              alt="Icon"
+              class="group-hover:hidden"
+            />
+            <img
+              src="./assets/svgs/message-2-hover.svg"
+              alt="Icon"
+              class="hidden group-hover:block"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="#" class="group">
+            <img
+              src="./assets/svgs/vk.svg"
+              alt="Icon"
+              class="group-hover:hidden"
+            />
+            <img
+              src="./assets/svgs/vk-hover.svg"
+              alt="Icon"
+              class="hidden group-hover:block"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="#" class="group">
+            <img
+              src="./assets/svgs/telegram.svg"
+              alt="Icon"
+              class="group-hover:hidden"
+            />
+            <img
+              src="./assets/svgs/telegram-hover.svg"
+              alt="Icon"
+              class="hidden group-hover:block"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="#" class="group">
+            <img
+              src="./assets/svgs/tel.svg"
+              alt="Icon"
+              class="group-hover:hidden"
+            />
+            <img
+              src="./assets/svgs/tel-hover.svg"
+              alt="Icon"
+              class="hidden group-hover:block"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MAIN -->
+    <main class="relative">
+      <!-- Hero -->
+      <section
+        id="hero"
+        class="-mt-[52px] sm:-mt-[86px] lg:-mt-20 xl:-mt-[86px]"
+      >
+        <div class="max-w-base mx-auto relative px-2.5 md:px-12 xl:px-8">
+          <!-- Discount Image -->
+          <img
+            src="./assets/images/game-discount.png"
+            alt="Discount"
+            class="w-80 h-44 lg:size-auto absolute z-20 left-1/2 -translate-x-1/2 sm:left-[20%] sm:translate-x-0 -top-[3%] lg:-top-[10%]"
+          />
+
+          <div
+            class="h-[500px] sm:h-[414px] relative rounded-20 sm:rounded-30 xl:rounded-45 overflow-hidden after:absolute after:inset-0 after:size-full after:bg-cards-hero-mobile after:sm:bg-cards-hero lg:pt-24"
+          >
+            <!-- BG Image -->
+            <img
+              src="./assets/bg-images/cards-hero.png"
+              alt="Bg img"
+              class="absolute inset-0 size-full object-cover object-top"
+            />
+
+            <!-- Texts -->
+            <did
+              class="h-full lg:h-auto relative z-20 flex items-end text-whites pl-2.5 pb-5 lg:pl-5"
+            >
+              <h1 class="text-white text-7xl lg:text-[120px] leading-[90%]">
+                Genshin <br />
+                Impact
+              </h1>
+            </did>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cards -->
+      <section id="cards">
+        <div class="max-w-base mx-auto px-2.5 md:px-12 lg:px-2.5">
+          <!-- Catalog Mobile -->
+          <ul
+            class="custom-scroll lg:hidden lg:w-56 shrink-0 flex lg:flex-col gap-2.5 overflow-auto mt-5 pb-5"
+          >
+            <!-- Catalog Item 1 -->
+            <li class="max-w-[75px] lg:max-w-none">
+              <a
+                href="#"
+                class="group flex flex-col lg:flex-row items-center gap-1 lg:gap-5"
+              >
+                <div
+                  class="size-[75px] lg:size-12 shrink-0 rounded-full overflow-hidden"
+                >
+                  <!-- Image -->
+                  <img
+                    src="./assets/images/catalog-1.jpg"
+                    alt="Game Image"
+                    class="size-full object-cover"
+                  />
+                </div>
+
+                <!-- Game Name -->
+                <span
+                  class="text-xs text-center line-clamp-2 group-hover:text-black"
+                >
+                  Zenless Zone Zero
+                </span>
+              </a>
+            </li>
+            <!-- Catalog Item 2 -->
+            <li class="max-w-[75px] lg:max-w-none">
+              <a
+                href="#"
+                class="group flex flex-col lg:flex-row items-center gap-1 lg:gap-5"
+              >
+                <div
+                  class="size-[75px] lg:size-12 shrink-0 rounded-full overflow-hidden"
+                >
+                  <!-- Image -->
+                  <img
+                    src="./assets/images/catalog-2.jpg"
+                    alt="Game Image"
+                    class="size-full object-cover"
+                  />
+                </div>
+
+                <!-- Game Name -->
+                <span
+                  class="text-xs text-center line-clamp-2 group-hover:text-black"
+                >
+                  Honkai: Star Rail
+                </span>
+              </a>
+            </li>
+            <!-- Catalog Item 3 -->
+            <li class="max-w-[75px] lg:max-w-none">
+              <a
+                href="#"
+                class="group flex flex-col lg:flex-row items-center gap-1 lg:gap-5"
+              >
+                <div
+                  class="size-[75px] lg:size-12 shrink-0 rounded-full overflow-hidden"
+                >
+                  <!-- Image -->
+                  <img
+                    src="./assets/images/catalog-3.jpg"
+                    alt="Game Image"
+                    class="size-full object-cover"
+                  />
+                </div>
+
+                <!-- Game Name -->
+                <span
+                  class="text-xs text-center line-clamp-2 group-hover:text-black"
+                >
+                  Genshin Impact
+                </span>
+              </a>
+            </li>
+            <!-- Catalog Item 4 -->
+            <li class="max-w-[75px] lg:max-w-none">
+              <a
+                href="#"
+                class="group flex flex-col lg:flex-row items-center gap-1 lg:gap-5"
+              >
+                <div
+                  class="size-[75px] lg:size-12 shrink-0 rounded-full overflow-hidden"
+                >
+                  <!-- Image -->
+                  <img
+                    src="./assets/images/catalog-4.jpg"
+                    alt="Game Image"
+                    class="size-full object-cover"
+                  />
+                </div>
+
+                <!-- Game Name -->
+                <span
+                  class="text-xs text-center line-clamp-2 group-hover:text-black"
+                >
+                  Arena Breakout
+                </span>
+              </a>
+            </li>
+            <!-- Catalog Item 5 -->
+            <li class="max-w-[75px] lg:max-w-none">
+              <a
+                href="#"
+                class="group flex flex-col lg:flex-row items-center gap-1 lg:gap-5"
+              >
+                <div
+                  class="size-[75px] lg:size-12 shrink-0 rounded-full overflow-hidden"
+                >
+                  <!-- Image -->
+                  <img
+                    src="./assets/images/catalog-5.jpg"
+                    alt="Game Image"
+                    class="size-full object-cover"
+                  />
+                </div>
+
+                <!-- Game Name -->
+                <span
+                  class="text-xs text-center line-clamp-2 group-hover:text-black"
+                >
+                  PUBG MOBILE
+                </span>
+              </a>
+            </li>
+            <!-- Catalog Item 6 -->
+            <li class="max-w-[75px] lg:max-w-none">
+              <a
+                href="#"
+                class="group flex flex-col lg:flex-row items-center gap-1 lg:gap-5"
+              >
+                <div
+                  class="size-[75px] lg:size-12 shrink-0 rounded-full overflow-hidden"
+                >
+                  <!-- Image -->
+                  <img
+                    src="./assets/images/catalog-6.jpg"
+                    alt="Game Image"
+                    class="size-full object-cover"
+                  />
+                </div>
+
+                <!-- Game Name -->
+                <span
+                  class="text-xs text-center line-clamp-2 group-hover:text-black"
+                >
+                  Tower of Fantasy
+                </span>
+              </a>
+            </li>
+            <!-- Catalog Item 7 -->
+            <li class="max-w-[75px] lg:max-w-none">
+              <a
+                href="#"
+                class="group flex flex-col lg:flex-row items-center gap-1 lg:gap-5"
+              >
+                <div
+                  class="size-[75px] lg:size-12 shrink-0 rounded-full overflow-hidden"
+                >
+                  <!-- Image -->
+                  <img
+                    src="./assets/images/catalog-7.jpg"
+                    alt="Game Image"
+                    class="size-full object-cover"
+                  />
+                </div>
+
+                <!-- Game Name -->
+                <span
+                  class="text-xs text-center line-clamp-2 group-hover:text-black"
+                >
+                  Goddess of Victory: Nikke
+                </span>
+              </a>
+            </li>
+            <!-- Catalog Item 8 -->
+            <li class="max-w-[75px] lg:max-w-none">
+              <a
+                href="#"
+                class="group flex flex-col lg:flex-row items-center gap-1 lg:gap-5"
+              >
+                <div
+                  class="size-[75px] lg:size-12 shrink-0 rounded-full overflow-hidden"
+                >
+                  <!-- Image -->
+                  <img
+                    src="./assets/images/catalog-8.jpg"
+                    alt="Game Image"
+                    class="size-full object-cover"
+                  />
+                </div>
+
+                <!-- Game Name -->
+                <span
+                  class="text-xs text-center line-clamp-2 group-hover:text-black"
+                >
+                  Mobile Legends: Bang Bang (Global)
+                </span>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Filters -->
+          <div
+            class="max-w-secondary xl:max-w-none mx-auto xl:mx-0 flex items-center justify-between xl:gap-5"
+          >
+            <div
+              class="flex-1 relative z-40 flex items-center justify-between py-5"
+            >
+              <div class="hidden sm:flex items-center sm:gap-6">
+                <!-- Mobile/Desktop Games -->
+                <div
+                  class="flex items-center gap-1 text-xs font-bold uppercase"
+                >
+                  <a href="#" class="text-black/40">Мобильные игры</a>
+                  <span class="text-black/40">/</span>
+                  <a href="#" class="text-black/40">Мобильные игры</a>
+                </div>
+
+                <!-- List -->
+                <div
+                  class="list flex items-center gap-1 text-xs font-bold uppercase"
+                >
+                  <a href="./cards-block.html" class="text-black/80">список</a>
+                  <span class="text-black/40">/</span>
+                  <a href="./cards-grid.html" class="text-black/40">сетка</a>
+                </div>
+              </div>
+
+              <!-- Mobile/Desktop Games(Mobile) -->
+              <div
+                class="relative select space-y-2.5 sm:hidden text-black/40 font-bold text-[10px] sm:text-xs whitespace-nowrap z-[80]"
+              >
+                <!-- Select Button -->
+                <button
+                  class="select-button h-6 flex items-center gap-2.5 uppercase sm:border border-black/40 rounded-full px-4"
+                >
+                  <span class="select-label tracking-wider sm:tracking-[3.6px]"
+                    >Мобильные игры</span
+                  >
+                  <img
+                    src="./assets/svgs/angle-down.svg"
+                    alt="Angle"
+                    class="select-icon"
+                  />
+                </button>
+
+                <!-- Select List -->
+                <ul
+                  class="select-list fade-in w-full space-y-5 absolute z-50 bg-white uppercase font-mulish hidden border-2 border-brand-purple rounded-10 py-5 px-2.5"
+                >
+                  <li
+                    class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
+                    data-value="Мобильные игры"
+                  >
+                    <a href="#">Мобильные игры</a>
+                  </li>
+                  <li
+                    class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
+                    data-value="Игры для ПК"
+                  >
+                    <a href="#">Игры для ПК</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- List Mobile -->
+              <div
+                class="relative select space-y-2.5 sm:hidden text-black/40 font-bold text-[10px] sm:text-xs whitespace-nowrap z-[80]"
+              >
+                <!-- Select Button -->
+                <button
+                  class="select-button h-6 flex items-center gap-2.5 uppercase sm:border border-black/40 rounded-full px-4"
+                >
+                  <span class="select-label tracking-wider sm:tracking-[3.6px]"
+                    >сетка</span
+                  >
+                  <img
+                    src="./assets/svgs/angle-down.svg"
+                    alt="Angle"
+                    class="select-icon"
+                  />
+                </button>
+
+                <!-- Select List -->
+                <ul
+                  class="list-mobile select-list fade-in w-full space-y-5 absolute z-50 bg-white uppercase font-mulish hidden border-2 border-brand-purple rounded-10 py-5 px-2.5"
+                >
+                  <li
+                    class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
+                    data-value="сетка"
+                  >
+                    <a href="./cards-grid.html">сетка</a>
+                  </li>
+                  <li
+                    class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
+                    data-value="список"
+                  >
+                    <a href="./cards-block.html">список</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Filter Container -->
+              <div
+                class="relative select space-y-2.5 text-black/40 font-bold text-[10px] sm:text-xs whitespace-nowrap"
+              >
+                <!-- Select Button -->
+                <button
+                  class="select-button h-6 flex items-center gap-2.5 uppercase sm:border border-black/40 rounded-full px-4"
+                >
+                  <span class="select-label tracking-wider sm:tracking-[3.6px]"
+                    >сортировать</span
+                  >
+                  <img
+                    src="./assets/svgs/angle-down.svg"
+                    alt="Angle"
+                    class="select-icon"
+                  />
+                </button>
+
+                <!-- Select List -->
+                <ul
+                  class="select-list fade-in w-full space-y-5 absolute z-50 bg-white uppercase font-mulish hidden border-2 border-brand-purple rounded-10 py-5 px-2.5"
+                >
+                  <li
+                    class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
+                    data-value="сортировать2"
+                  >
+                    сортировать2
+                  </li>
+                  <li
+                    class="flex items-center gap-2 hover:text-black cursor-pointer overflow-hidden"
+                    data-value="сортировать3"
+                  >
+                    сортировать3
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="xl:w-[493px]"></div>
+          </div>
+
+          <!-- Main Part -->
+          <div class="flex flex-col xl:flex-row items-start gap-5">
+            <div
+              class="max-w-secondary w-full mx-auto xl:mx-0 flex flex-col lg:flex-row gap-8 font-bold text-black/40 text-center lg:text-start text-xs lg:text-base"
+            >
+              <!-- Catalogs Desktop -->
+              <ul
+                class="lg:w-56 shrink-0 hidden lg:flex lg:flex-col gap-2.5 overflow-auto"
+              >
+                <!-- Catalog Item 1 -->
+                <li class="max-w-[75px] lg:max-w-none">
+                  <a
+                    href="#"
+                    class="group flex flex-col lg:flex-row items-center gap-1 lg:gap-5"
+                  >
+                    <div
+                      class="size-[75px] lg:size-12 shrink-0 rounded-full overflow-hidden"
+                    >
+                      <!-- Image -->
+                      <img
+                        src="./assets/images/catalog-1.jpg"
+                        alt="Game Image"
+                        class="size-full object-cover"
+                      />
+                    </div>
+
+                    <!-- Game Name -->
+                    <span class="group-hover:text-black">
+                      Zenless Zone Zero
+                    </span>
+                  </a>
+                </li>
+                <!-- Catalog Item 2 -->
+                <li class="max-w-[75px] lg:max-w-none">
+                  <a
+                    href="#"
+                    class="group flex flex-col lg:flex-row items-center gap-1 lg:gap-5"
+                  >
+                    <div
+                      class="size-[75px] lg:size-12 shrink-0 rounded-full overflow-hidden"
+                    >
+                      <!-- Image -->
+                      <img
+                        src="./assets/images/catalog-2.jpg"
+                        alt="Game Image"
+                        class="size-full object-cover"
+                      />
+                    </div>
+
+                    <!-- Game Name -->
+                    <span class="group-hover:text-black">
+                      Honkai: Star Rail
+                    </span>
+                  </a>
+                </li>
+                <!-- Catalog Item 3 -->
+                <li class="max-w-[75px] lg:max-w-none">
+                  <a
+                    href="#"
+                    class="group flex flex-col lg:flex-row items-center gap-1 lg:gap-5"
+                  >
+                    <div
+                      class="size-[75px] lg:size-12 shrink-0 rounded-full overflow-hidden"
+                    >
+                      <!-- Image -->
+                      <img
+                        src="./assets/images/catalog-3.jpg"
+                        alt="Game Image"
+                        class="size-full object-cover"
+                      />
+                    </div>
+
+                    <!-- Game Name -->
+                    <span class="group-hover:text-black"> Genshin Impact </span>
+                  </a>
+                </li>
+                <!-- Catalog Item 4 -->
+                <li class="max-w-[75px] lg:max-w-none">
+                  <a
+                    href="#"
+                    class="group flex flex-col lg:flex-row items-center gap-1 lg:gap-5"
+                  >
+                    <div
+                      class="size-[75px] lg:size-12 shrink-0 rounded-full overflow-hidden"
+                    >
+                      <!-- Image -->
+                      <img
+                        src="./assets/images/catalog-4.jpg"
+                        alt="Game Image"
+                        class="size-full object-cover"
+                      />
+                    </div>
+
+                    <!-- Game Name -->
+                    <span class="group-hover:text-black"> Arena Breakout </span>
+                  </a>
+                </li>
+                <!-- Catalog Item 5 -->
+                <li class="max-w-[75px] lg:max-w-none">
+                  <a
+                    href="#"
+                    class="group flex flex-col lg:flex-row items-center gap-1 lg:gap-5"
+                  >
+                    <div
+                      class="size-[75px] lg:size-12 shrink-0 rounded-full overflow-hidden"
+                    >
+                      <!-- Image -->
+                      <img
+                        src="./assets/images/catalog-5.jpg"
+                        alt="Game Image"
+                        class="size-full object-cover"
+                      />
+                    </div>
+
+                    <!-- Game Name -->
+                    <span class="group-hover:text-black"> PUBG MOBILE </span>
+                  </a>
+                </li>
+                <!-- Catalog Item 6 -->
+                <li class="max-w-[75px] lg:max-w-none">
+                  <a
+                    href="#"
+                    class="group flex flex-col lg:flex-row items-center gap-1 lg:gap-5"
+                  >
+                    <div
+                      class="size-[75px] lg:size-12 shrink-0 rounded-full overflow-hidden"
+                    >
+                      <!-- Image -->
+                      <img
+                        src="./assets/images/catalog-6.jpg"
+                        alt="Game Image"
+                        class="size-full object-cover"
+                      />
+                    </div>
+
+                    <!-- Game Name -->
+                    <span class="group-hover:text-black">
+                      Tower of Fantasy
+                    </span>
+                  </a>
+                </li>
+                <!-- Catalog Item 7 -->
+                <li class="max-w-[75px] lg:max-w-none">
+                  <a
+                    href="#"
+                    class="group flex flex-col lg:flex-row items-center gap-1 lg:gap-5"
+                  >
+                    <div
+                      class="size-[75px] lg:size-12 shrink-0 rounded-full overflow-hidden"
+                    >
+                      <!-- Image -->
+                      <img
+                        src="./assets/images/catalog-7.jpg"
+                        alt="Game Image"
+                        class="size-full object-cover"
+                      />
+                    </div>
+
+                    <!-- Game Name -->
+                    <span class="group-hover:text-black">
+                      Goddess of Victory: Nikke
+                    </span>
+                  </a>
+                </li>
+                <!-- Catalog Item 8 -->
+                <li class="max-w-[75px] lg:max-w-none">
+                  <a
+                    href="#"
+                    class="group flex flex-col lg:flex-row items-center gap-1 lg:gap-5"
+                  >
+                    <div
+                      class="size-[75px] lg:size-12 shrink-0 rounded-full overflow-hidden"
+                    >
+                      <!-- Image -->
+                      <img
+                        src="./assets/images/catalog-8.jpg"
+                        alt="Game Image"
+                        class="size-full object-cover"
+                      />
+                    </div>
+
+                    <!-- Game Name -->
+                    <span class="group-hover:text-black">
+                      Mobile Legends: Bang Bang (Global)
+                    </span>
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Products -->
+              <div
+                class="flex-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-2.5 sm:gap-5 xl:gap-2.5 2xl:gap-5"
+              >
+                <!-- Product 1 -->
+                <a
+                  href="#"
+                  class="product-item relative group flex flex-col justify-between sm:rounded-30 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5 xl:pb-1 2xl:pb-4 2xl:pt-5"
+                >
+                  <!-- Check -->
+                  <input type="checkbox" class="hidden" id="1" />
+
+                  <label
+                    for="1"
+                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-4"
+                  >
+                    <div
+                      class="size-fit relative flex items-center justify-center cursor-pointer"
+                    >
+                      <img
+                        src="./assets/images/rounded-check.png"
+                        alt="Icon"
+                        class="size-[30px] lg:size-10 xl:size-[30px] 2xl:size-10"
+                      />
+
+                      <img
+                        src="./assets/svgs/check-desktop.svg"
+                        alt="Check Icon"
+                        class="custom-check w-7 h-5 lg:size-auto xl:w-7 xl:h-5 2xl:size-auto hidden absolute left-1 top-0.5 lg:left-2 lg:top-1 xl:left-1 xl:top-0.5 2xl:left-2 2xl:top-1"
+                      />
+                    </div>
+                  </label>
+
+                  <!-- BG Hover -->
+                  <img
+                    src="./assets/bg-images/product-hover.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200 ease-in-out"
+                  />
+
+                  <!-- Question Button -->
+                  <button
+                    class="product-open-btn absolute right-4 bottom-11 z-20"
+                  >
+                    <img src="./assets/svgs/question.svg" alt="Question" />
+                  </button>
+
+                  <!-- Image & Title -->
+                  <div
+                    class="relative z-10 flex flex-col items-center space-y-2.5 px-2"
+                  >
+                    <img
+                      src="./assets/images/product.png"
+                      alt="Product"
+                      class="max-w-[115px] xs:max-w-none xl:max-w-[115px] 2xl:max-w-none"
+                    />
+                    <p
+                      class="text-center text-white text-sm xs:text-base xl:text-xs 2xl:text-base font-bold leading-4"
+                    >
+                      6480+1600 Кристаллов Сотворения
+                    </p>
+                  </div>
+
+                  <!-- Cost -->
+                  <div
+                    class="relative z-10 flex flex-col-reverse md:flex-row xl:flex-col-reverse 2xl:flex-row items-center justify-center gap-2.5 uppercase mt-2.5 xs:mt-6 md:mt-11 xl:mt-3 2xl:mt-11"
+                  >
+                    <div class="relative text-white text-xs font-extrabold">
+                      RUB 7370
+                      <span
+                        class="h-px w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-red rounded-full"
+                      ></span>
+                    </div>
+
+                    <button
+                      class="h-6 flex items-center gap-1 font-extrabold bg-white text-brand-purple text-xs sm:text-sm xl:text-xs 2xl:text-sm border-3 border-brand-purple rounded-full px-2"
+                    >
+                      <span>RUB 7370</span>
+                      <svg
+                        width="10"
+                        height="11"
+                        viewBox="0 0 10 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.08987 9.88191L8.37272 3.59906L8.37272 9.08882C8.37272 9.52755 8.7327 9.88754 9.17143 9.88754C9.61017 9.88754 9.96452 9.53318 9.96452 9.09445L9.96452 1.68102C9.96452 1.24229 9.61017 0.887933 9.17143 0.887933L1.75801 0.876684C1.5476 0.876448 1.34573 0.959929 1.19695 1.10871C1.04817 1.2575 0.964684 1.45936 0.964921 1.66977C0.964921 2.10851 1.31928 2.46286 1.75801 2.46286L7.24777 2.47411L0.964921 8.75696C0.655559 9.06632 0.655559 9.57255 0.964921 9.88191C1.27428 10.1913 1.78051 10.1913 2.08987 9.88191Z"
+                          fill="#A68CE9"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </a>
+                <!-- Product 2 -->
+                <a
+                  href="#"
+                  class="product-item relative group flex flex-col justify-between sm:rounded-30 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5 xl:pb-1 2xl:pb-4 2xl:pt-5"
+                >
+                  <!-- Check -->
+                  <input type="checkbox" class="hidden" id="2" />
+
+                  <label
+                    for="2"
+                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-4"
+                  >
+                    <div
+                      class="size-fit relative flex items-center justify-center cursor-pointer"
+                    >
+                      <img
+                        src="./assets/images/rounded-check.png"
+                        alt="Icon"
+                        class="size-[30px] lg:size-10 xl:size-[30px] 2xl:size-10"
+                      />
+
+                      <img
+                        src="./assets/svgs/check-desktop.svg"
+                        alt="Check Icon"
+                        class="custom-check w-7 h-5 lg:size-auto xl:w-7 xl:h-5 2xl:size-auto hidden absolute left-1 top-0.5 lg:left-2 lg:top-1 xl:left-1 xl:top-0.5 2xl:left-2 2xl:top-1"
+                      />
+                    </div>
+                  </label>
+
+                  <!-- BG Hover -->
+                  <img
+                    src="./assets/bg-images/product-hover.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200 ease-in-out"
+                  />
+
+                  <!-- Question Button -->
+                  <button
+                    class="product-open-btn absolute right-4 bottom-11 z-20"
+                  >
+                    <img src="./assets/svgs/question.svg" alt="Question" />
+                  </button>
+
+                  <!-- Image & Title -->
+                  <div
+                    class="relative z-10 flex flex-col items-center space-y-2.5 px-2"
+                  >
+                    <img
+                      src="./assets/images/product.png"
+                      alt="Product"
+                      class="max-w-[115px] xs:max-w-none xl:max-w-[115px] 2xl:max-w-none"
+                    />
+                    <p
+                      class="text-center text-left text-white text-sm xs:text-base xl:text-xs 2xl:text-base font-bold leading-4"
+                    >
+                      3280+600 Кристаллов Сотворения
+                    </p>
+                  </div>
+
+                  <!-- Cost -->
+                  <div
+                    class="relative z-10 flex flex-col-reverse md:flex-row xl:flex-col-reverse 2xl:flex-row items-center justify-center gap-2.5 uppercase mt-2.5 xs:mt-6 md:mt-11 xl:mt-3 2xl:mt-11"
+                  >
+                    <div class="relative text-white text-xs font-extrabold">
+                      RUB 7370
+                      <span
+                        class="h-px w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-red rounded-full"
+                      ></span>
+                    </div>
+
+                    <button
+                      class="h-6 flex items-center gap-1 font-extrabold bg-white text-brand-purple text-xs sm:text-sm xl:text-xs 2xl:text-sm border-3 border-brand-purple rounded-full px-2"
+                    >
+                      <span>RUB 3680</span>
+                      <svg
+                        width="10"
+                        height="11"
+                        viewBox="0 0 10 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.08987 9.88191L8.37272 3.59906L8.37272 9.08882C8.37272 9.52755 8.7327 9.88754 9.17143 9.88754C9.61017 9.88754 9.96452 9.53318 9.96452 9.09445L9.96452 1.68102C9.96452 1.24229 9.61017 0.887933 9.17143 0.887933L1.75801 0.876684C1.5476 0.876448 1.34573 0.959929 1.19695 1.10871C1.04817 1.2575 0.964684 1.45936 0.964921 1.66977C0.964921 2.10851 1.31928 2.46286 1.75801 2.46286L7.24777 2.47411L0.964921 8.75696C0.655559 9.06632 0.655559 9.57255 0.964921 9.88191C1.27428 10.1913 1.78051 10.1913 2.08987 9.88191Z"
+                          fill="#A68CE9"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </a>
+                <!-- Product 3 -->
+                <a
+                  href="#"
+                  class="product-item relative group flex flex-col justify-between sm:rounded-30 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5 xl:pb-1 2xl:pb-4 2xl:pt-5"
+                >
+                  <!-- Check -->
+                  <input type="checkbox" class="hidden" id="3" />
+
+                  <label
+                    for="3"
+                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-4"
+                  >
+                    <div
+                      class="size-fit relative flex items-center justify-center cursor-pointer"
+                    >
+                      <img
+                        src="./assets/images/rounded-check.png"
+                        alt="Icon"
+                        class="size-[30px] lg:size-10 xl:size-[30px] 2xl:size-10"
+                      />
+
+                      <img
+                        src="./assets/svgs/check-desktop.svg"
+                        alt="Check Icon"
+                        class="custom-check w-7 h-5 lg:size-auto xl:w-7 xl:h-5 2xl:size-auto hidden absolute left-1 top-0.5 lg:left-2 lg:top-1 xl:left-1 xl:top-0.5 2xl:left-2 2xl:top-1"
+                      />
+                    </div>
+                  </label>
+
+                  <!-- BG Hover -->
+                  <img
+                    src="./assets/bg-images/product-hover.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200 ease-in-out"
+                  />
+
+                  <!-- Question Button -->
+                  <button
+                    class="product-open-btn absolute right-4 bottom-11 z-20"
+                  >
+                    <img src="./assets/svgs/question.svg" alt="Question" />
+                  </button>
+
+                  <!-- Image & Title -->
+                  <div
+                    class="relative z-10 flex flex-col items-center space-y-2.5 px-2"
+                  >
+                    <img
+                      src="./assets/images/product.png"
+                      alt="Product"
+                      class="max-w-[115px] xs:max-w-none xl:max-w-[115px] 2xl:max-w-none"
+                    />
+                    <p
+                      class="text-center text-white text-sm xs:text-base xl:text-xs 2xl:text-base font-bold leading-4"
+                    >
+                      1980+260 Кристаллов Сотворения
+                    </p>
+                  </div>
+
+                  <!-- Cost -->
+                  <div
+                    class="relative z-10 flex flex-col-reverse md:flex-row xl:flex-col-reverse 2xl:flex-row items-center justify-center gap-2.5 uppercase mt-2.5 xs:mt-6 md:mt-11 xl:mt-3 2xl:mt-11"
+                  >
+                    <div class="relative text-white text-xs font-extrabold">
+                      RUB 7370
+                      <span
+                        class="h-px w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-red rounded-full"
+                      ></span>
+                    </div>
+
+                    <button
+                      class="h-6 flex items-center gap-1 font-extrabold bg-white text-brand-purple text-xs sm:text-sm xl:text-xs 2xl:text-sm border-3 border-brand-purple rounded-full px-2"
+                    >
+                      <span>RUB 2400</span>
+                      <svg
+                        width="10"
+                        height="11"
+                        viewBox="0 0 10 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.08987 9.88191L8.37272 3.59906L8.37272 9.08882C8.37272 9.52755 8.7327 9.88754 9.17143 9.88754C9.61017 9.88754 9.96452 9.53318 9.96452 9.09445L9.96452 1.68102C9.96452 1.24229 9.61017 0.887933 9.17143 0.887933L1.75801 0.876684C1.5476 0.876448 1.34573 0.959929 1.19695 1.10871C1.04817 1.2575 0.964684 1.45936 0.964921 1.66977C0.964921 2.10851 1.31928 2.46286 1.75801 2.46286L7.24777 2.47411L0.964921 8.75696C0.655559 9.06632 0.655559 9.57255 0.964921 9.88191C1.27428 10.1913 1.78051 10.1913 2.08987 9.88191Z"
+                          fill="#A68CE9"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </a>
+                <!-- Product 4 -->
+                <a
+                  href="#"
+                  class="product-item relative group flex flex-col justify-between sm:rounded-30 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5 xl:pb-1 2xl:pb-4 2xl:pt-5"
+                >
+                  <!-- Check -->
+                  <input type="checkbox" class="hidden" id="4" />
+
+                  <label
+                    for="4"
+                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-4"
+                  >
+                    <div
+                      class="size-fit relative flex items-center justify-center cursor-pointer"
+                    >
+                      <img
+                        src="./assets/images/rounded-check.png"
+                        alt="Icon"
+                        class="size-[30px] lg:size-10 xl:size-[30px] 2xl:size-10"
+                      />
+
+                      <img
+                        src="./assets/svgs/check-desktop.svg"
+                        alt="Check Icon"
+                        class="custom-check w-7 h-5 lg:size-auto xl:w-7 xl:h-5 2xl:size-auto hidden absolute left-1 top-0.5 lg:left-2 lg:top-1 xl:left-1 xl:top-0.5 2xl:left-2 2xl:top-1"
+                      />
+                    </div>
+                  </label>
+
+                  <!-- BG Hover -->
+                  <img
+                    src="./assets/bg-images/product-hover.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200 ease-in-out"
+                  />
+
+                  <!-- Question Button -->
+                  <button
+                    class="product-open-btn absolute right-4 bottom-11 z-20"
+                  >
+                    <img src="./assets/svgs/question.svg" alt="Question" />
+                  </button>
+
+                  <!-- Image & Title -->
+                  <div
+                    class="relative z-10 flex flex-col items-center space-y-2.5 px-2"
+                  >
+                    <img
+                      src="./assets/images/product.png"
+                      alt="Product"
+                      class="max-w-[115px] xs:max-w-none xl:max-w-[115px] 2xl:max-w-none"
+                    />
+                    <p
+                      class="text-center text-white text-sm xs:text-base xl:text-xs 2xl:text-base font-bold leading-4"
+                    >
+                      980+110 Кристаллов Сотворения
+                    </p>
+                  </div>
+
+                  <!-- Cost -->
+                  <div
+                    class="relative z-10 flex flex-col-reverse md:flex-row xl:flex-col-reverse 2xl:flex-row items-center justify-center gap-2.5 uppercase mt-2.5 xs:mt-6 md:mt-11 xl:mt-3 2xl:mt-11"
+                  >
+                    <div class="relative text-white text-xs font-extrabold">
+                      RUB 7370
+                      <span
+                        class="h-px w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-red rounded-full"
+                      ></span>
+                    </div>
+
+                    <button
+                      class="h-6 flex items-center gap-1 font-extrabold bg-white text-brand-purple text-xs sm:text-sm xl:text-xs 2xl:text-sm border-3 border-brand-purple rounded-full px-2"
+                    >
+                      <span>RUB 1100</span>
+                      <svg
+                        width="10"
+                        height="11"
+                        viewBox="0 0 10 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.08987 9.88191L8.37272 3.59906L8.37272 9.08882C8.37272 9.52755 8.7327 9.88754 9.17143 9.88754C9.61017 9.88754 9.96452 9.53318 9.96452 9.09445L9.96452 1.68102C9.96452 1.24229 9.61017 0.887933 9.17143 0.887933L1.75801 0.876684C1.5476 0.876448 1.34573 0.959929 1.19695 1.10871C1.04817 1.2575 0.964684 1.45936 0.964921 1.66977C0.964921 2.10851 1.31928 2.46286 1.75801 2.46286L7.24777 2.47411L0.964921 8.75696C0.655559 9.06632 0.655559 9.57255 0.964921 9.88191C1.27428 10.1913 1.78051 10.1913 2.08987 9.88191Z"
+                          fill="#A68CE9"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </a>
+                <!-- Product 5 -->
+                <a
+                  href="#"
+                  class="product-item relative group flex flex-col justify-between sm:rounded-30 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5 xl:pb-1 2xl:pb-4 2xl:pt-5"
+                >
+                  <!-- Check -->
+                  <input type="checkbox" class="hidden" id="5" />
+
+                  <label
+                    for="5"
+                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-4"
+                  >
+                    <div
+                      class="size-fit relative flex items-center justify-center cursor-pointer"
+                    >
+                      <img
+                        src="./assets/images/rounded-check.png"
+                        alt="Icon"
+                        class="size-[30px] lg:size-10 xl:size-[30px] 2xl:size-10"
+                      />
+
+                      <img
+                        src="./assets/svgs/check-desktop.svg"
+                        alt="Check Icon"
+                        class="custom-check w-7 h-5 lg:size-auto xl:w-7 xl:h-5 2xl:size-auto hidden absolute left-1 top-0.5 lg:left-2 lg:top-1 xl:left-1 xl:top-0.5 2xl:left-2 2xl:top-1"
+                      />
+                    </div>
+                  </label>
+
+                  <!-- BG Hover -->
+                  <img
+                    src="./assets/bg-images/product-hover.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200 ease-in-out"
+                  />
+
+                  <!-- Question Button -->
+                  <button
+                    class="product-open-btn absolute right-4 bottom-11 z-20"
+                  >
+                    <img src="./assets/svgs/question.svg" alt="Question" />
+                  </button>
+
+                  <!-- Image & Title -->
+                  <div
+                    class="relative z-10 flex flex-col items-center space-y-2.5 px-2"
+                  >
+                    <img
+                      src="./assets/images/product.png"
+                      alt="Product"
+                      class="max-w-[115px] xs:max-w-none xl:max-w-[115px] 2xl:max-w-none"
+                    />
+                    <p
+                      class="text-center text-white text-sm xs:text-base xl:text-xs 2xl:text-base font-bold leading-4"
+                    >
+                      300+30 Кристаллов Сотворения
+                    </p>
+                  </div>
+
+                  <!-- Cost -->
+                  <div
+                    class="relative z-10 flex flex-col-reverse md:flex-row xl:flex-col-reverse 2xl:flex-row items-center justify-center gap-2.5 uppercase mt-2.5 xs:mt-6 md:mt-11 xl:mt-3 2xl:mt-11"
+                  >
+                    <div class="relative text-white text-xs font-extrabold">
+                      RUB 7370
+                      <span
+                        class="h-px w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-red rounded-full"
+                      ></span>
+                    </div>
+
+                    <button
+                      class="h-6 flex items-center gap-1 font-extrabold bg-white text-brand-purple text-xs sm:text-sm xl:text-xs 2xl:text-sm border-3 border-brand-purple rounded-full px-2"
+                    >
+                      <span>RUB 359</span>
+                      <svg
+                        width="10"
+                        height="11"
+                        viewBox="0 0 10 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.08987 9.88191L8.37272 3.59906L8.37272 9.08882C8.37272 9.52755 8.7327 9.88754 9.17143 9.88754C9.61017 9.88754 9.96452 9.53318 9.96452 9.09445L9.96452 1.68102C9.96452 1.24229 9.61017 0.887933 9.17143 0.887933L1.75801 0.876684C1.5476 0.876448 1.34573 0.959929 1.19695 1.10871C1.04817 1.2575 0.964684 1.45936 0.964921 1.66977C0.964921 2.10851 1.31928 2.46286 1.75801 2.46286L7.24777 2.47411L0.964921 8.75696C0.655559 9.06632 0.655559 9.57255 0.964921 9.88191C1.27428 10.1913 1.78051 10.1913 2.08987 9.88191Z"
+                          fill="#A68CE9"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </a>
+                <!-- Product 6 -->
+                <a
+                  href="#"
+                  class="product-item relative group flex flex-col justify-between sm:rounded-30 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5 xl:pb-1 2xl:pb-4 2xl:pt-5"
+                >
+                  <!-- Check -->
+                  <input type="checkbox" class="hidden" id="6" />
+
+                  <label
+                    for="6"
+                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-4"
+                  >
+                    <div
+                      class="size-fit relative flex items-center justify-center cursor-pointer"
+                    >
+                      <img
+                        src="./assets/images/rounded-check.png"
+                        alt="Icon"
+                        class="size-[30px] lg:size-10 xl:size-[30px] 2xl:size-10"
+                      />
+
+                      <img
+                        src="./assets/svgs/check-desktop.svg"
+                        alt="Check Icon"
+                        class="custom-check w-7 h-5 lg:size-auto xl:w-7 xl:h-5 2xl:size-auto hidden absolute left-1 top-0.5 lg:left-2 lg:top-1 xl:left-1 xl:top-0.5 2xl:left-2 2xl:top-1"
+                      />
+                    </div>
+                  </label>
+
+                  <!-- BG Hover -->
+                  <img
+                    src="./assets/bg-images/product-hover.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200 ease-in-out"
+                  />
+
+                  <!-- Question Button -->
+                  <button
+                    class="product-open-btn absolute right-4 bottom-11 z-20"
+                  >
+                    <img src="./assets/svgs/question.svg" alt="Question" />
+                  </button>
+
+                  <!-- Image & Title -->
+                  <div
+                    class="relative z-10 flex flex-col items-center space-y-2.5 px-2"
+                  >
+                    <img
+                      src="./assets/images/product.png"
+                      alt="Product"
+                      class="max-w-[115px] xs:max-w-none xl:max-w-[115px] 2xl:max-w-none"
+                    />
+                    <p
+                      class="text-center text-white text-sm xs:text-base xl:text-xs 2xl:text-base font-bold leading-4"
+                    >
+                      60 Кристаллов Сотворения
+                    </p>
+                  </div>
+
+                  <!-- Cost -->
+                  <div
+                    class="relative z-10 flex flex-col-reverse md:flex-row xl:flex-col-reverse 2xl:flex-row items-center justify-center gap-2.5 uppercase mt-2.5 xs:mt-6 md:mt-11 xl:mt-3 2xl:mt-11"
+                  >
+                    <div class="relative text-white text-xs font-extrabold">
+                      RUB 7370
+                      <span
+                        class="h-px w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-red rounded-full"
+                      ></span>
+                    </div>
+
+                    <button
+                      class="h-6 flex items-center gap-1 font-extrabold bg-white text-brand-purple text-xs sm:text-sm xl:text-xs 2xl:text-sm border-3 border-brand-purple rounded-full px-2"
+                    >
+                      <span>RUB 69</span>
+                      <svg
+                        width="10"
+                        height="11"
+                        viewBox="0 0 10 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.08987 9.88191L8.37272 3.59906L8.37272 9.08882C8.37272 9.52755 8.7327 9.88754 9.17143 9.88754C9.61017 9.88754 9.96452 9.53318 9.96452 9.09445L9.96452 1.68102C9.96452 1.24229 9.61017 0.887933 9.17143 0.887933L1.75801 0.876684C1.5476 0.876448 1.34573 0.959929 1.19695 1.10871C1.04817 1.2575 0.964684 1.45936 0.964921 1.66977C0.964921 2.10851 1.31928 2.46286 1.75801 2.46286L7.24777 2.47411L0.964921 8.75696C0.655559 9.06632 0.655559 9.57255 0.964921 9.88191C1.27428 10.1913 1.78051 10.1913 2.08987 9.88191Z"
+                          fill="#A68CE9"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </a>
+                <!-- Product 7 -->
+                <a
+                  href="#"
+                  class="product-item relative group flex flex-col justify-between sm:rounded-30 px-4 pb-1 pt-2 xs:pb-4 xs:pt-5 xl:pb-1 2xl:pb-4 2xl:pt-5"
+                >
+                  <!-- Check -->
+                  <input type="checkbox" class="hidden" id="7" />
+
+                  <label
+                    for="7"
+                    class="absolute top-0 right-0 flex items-end justify-end z-30 p-4"
+                  >
+                    <div
+                      class="size-fit relative flex items-center justify-center cursor-pointer"
+                    >
+                      <img
+                        src="./assets/images/rounded-check.png"
+                        alt="Icon"
+                        class="size-[30px] lg:size-10 xl:size-[30px] 2xl:size-10"
+                      />
+
+                      <img
+                        src="./assets/svgs/check-desktop.svg"
+                        alt="Check Icon"
+                        class="custom-check w-7 h-5 lg:size-auto xl:w-7 xl:h-5 2xl:size-auto hidden absolute left-1 top-0.5 lg:left-2 lg:top-1 xl:left-1 xl:top-0.5 2xl:left-2 2xl:top-1"
+                      />
+                    </div>
+                  </label>
+
+                  <!-- BG Hover -->
+                  <img
+                    src="./assets/bg-images/product-hover.png"
+                    alt="BG"
+                    class="absolute inset-0 size-full object-fill opacity-70 group-hover:opacity-100 transition-all duration-200 ease-in-out"
+                  />
+
+                  <!-- Question Button -->
+                  <button
+                    class="product-open-btn absolute right-4 bottom-11 z-20"
+                  >
+                    <img src="./assets/svgs/question.svg" alt="Question" />
+                  </button>
+
+                  <!-- Image & Title -->
+                  <div
+                    class="relative z-10 flex flex-col items-center space-y-2.5 px-2"
+                  >
+                    <img
+                      src="./assets/images/girl-image.png"
+                      alt="Product"
+                      class="max-w-[115px] xs:max-w-none xl:max-w-[115px] 2xl:max-w-none"
+                    />
+                    <p
+                      class="text-center text-white text-sm xs:text-base xl:text-xs 2xl:text-base font-bold leading-4"
+                    >
+                      Благословение полой луны
+                    </p>
+                  </div>
+
+                  <!-- Cost -->
+                  <div
+                    class="relative z-10 flex flex-col-reverse md:flex-row xl:flex-col-reverse 2xl:flex-row items-center justify-center gap-2.5 uppercase mt-2.5 xs:mt-6 md:mt-11 xl:mt-3 2xl:mt-11"
+                  >
+                    <div class="relative text-white text-xs font-extrabold">
+                      RUB 7370
+                      <span
+                        class="h-px w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-red rounded-full"
+                      ></span>
+                    </div>
+
+                    <button
+                      class="h-6 flex items-center gap-1 font-extrabold bg-white text-brand-purple text-xs sm:text-sm xl:text-xs 2xl:text-sm border-3 border-brand-purple rounded-full px-2"
+                    >
+                      <span>RUB 359</span>
+                      <svg
+                        width="10"
+                        height="11"
+                        viewBox="0 0 10 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.08987 9.88191L8.37272 3.59906L8.37272 9.08882C8.37272 9.52755 8.7327 9.88754 9.17143 9.88754C9.61017 9.88754 9.96452 9.53318 9.96452 9.09445L9.96452 1.68102C9.96452 1.24229 9.61017 0.887933 9.17143 0.887933L1.75801 0.876684C1.5476 0.876448 1.34573 0.959929 1.19695 1.10871C1.04817 1.2575 0.964684 1.45936 0.964921 1.66977C0.964921 2.10851 1.31928 2.46286 1.75801 2.46286L7.24777 2.47411L0.964921 8.75696C0.655559 9.06632 0.655559 9.57255 0.964921 9.88191C1.27428 10.1913 1.78051 10.1913 2.08987 9.88191Z"
+                          fill="#A68CE9"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Product Poppup -->
+              <div
+                id="product-poppup"
+                class="fade-in hidden fixed inset-0 z-[70] size-full bg-white/90 flex justify-center items-center"
+              >
+                <div class="max-w-96 space-y-10">
+                  <div class="space-y-4">
+                    <!-- Close Btn -->
+                    <div class="flex items-end justify-end">
+                      <button class="product-close-btn h-fit ml-auto">
+                        <svg
+                          width="22"
+                          height="22"
+                          viewBox="0 0 22 22"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="size-4 lg:size-auto"
+                        >
+                          <path
+                            d="M21.5119 0.504716C21.2002 0.192273 20.777 0.0166856 20.3356 0.0166856C19.8942 0.0166856 19.471 0.192273 19.1593 0.504716L11 8.6473L2.84073 0.488031C2.52899 0.175588 2.10576 0 1.66439 0C1.22303 0 0.799795 0.175588 0.488055 0.488031C-0.162685 1.13877 -0.162685 2.18996 0.488055 2.8407L8.64733 11L0.488055 19.1592C-0.162685 19.81 -0.162685 20.8612 0.488055 21.5119C1.13879 22.1627 2.18999 22.1627 2.84073 21.5119L11 13.3526L19.1593 21.5119C19.81 22.1627 20.8612 22.1627 21.5119 21.5119C22.1627 20.8612 22.1627 19.81 21.5119 19.1592L13.3527 11L21.5119 2.8407C22.146 2.20665 22.146 1.13877 21.5119 0.504716Z"
+                            fill="black"
+                            fill-opacity="0.8"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+
+                    <div class="w-96 relative rounded-30 overflow-hidden">
+                      <!-- BG Image -->
+                      <img
+                        src="./assets/bg-images/product-poppup.png"
+                        alt="BG"
+                        class="absolute inset-0 size-full object-fill"
+                      />
+
+                      <!-- Image & Title -->
+                      <div
+                        class="max-w-[250px] mx-auto relative z-10 flex flex-col items-center space-y-2.5 pt-10"
+                      >
+                        <!-- Image -->
+                        <div class="size-[250px] shrink-0">
+                          <img
+                            src="./assets/images/product.png"
+                            alt="Product"
+                            class="w-full"
+                          />
+                        </div>
+
+                        <p
+                          class="text-center text-white text-[32px] font-bold leading-[100%]"
+                        >
+                          3280+600 Кристаллов Сотворения
+                        </p>
+                      </div>
+
+                      <p
+                        class="relative z-10 text-left font-normal text-white text-sm mt-5 px-2.5"
+                      >
+                        Мы — команда страстных геймеров, которые посвятили свою
+                        жизнь исследованию и совершенствованию игровых
+                        стратегий. Наш сайт создан для тех, кто стремится
+                        развиваться в мире игр и достичь новых высот.
+                      </p>
+
+                      <!-- Cost -->
+                      <div class="relative z-10 mb-5 px-2.5 mt-10">
+                        <p
+                          class="font-extrabold text-[26px] text-right text-white uppercase"
+                        >
+                          RUB 3680
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center gap-2.5">
+                    <button
+                      class="product-close-btn h-11 flex-1 uppercase font-extrabold text-black/40 text-lg border-2 border-brand-purple rounded-10 hover:shadow-lg transition-all duration-200 ease-in-out"
+                    >
+                      Добавить
+                    </button>
+
+                    <div
+                      class="w-[99px] h-11 shrink-0 flex items-center gap-1 border-2 border-brand-purple rounded-10"
+                    >
+                      <button
+                        class="h-11 flex-1 uppercase font-extrabold text-black/40 text-lg pl-3 pr-1.5"
+                      >
+                        -
+                      </button>
+                      <span>1</span>
+                      <button
+                        class="h-11 flex-1 uppercase font-extrabold text-black/40 text-lg pl-3 pr-1.5"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Purchasing Form -->
+            <div class="max-w-secondary xl:max-w-min w-full mx-auto xl:mx-0">
+              <div
+                class="max-w-[493px] ml-auto space-y-10 mt-7 xs:mt-10 xl:mt-0"
+              >
+                <div class="relative rounded-30">
+                  <!-- BG Image -->
+                  <img
+                    src="./assets/bg-images/product-form.png"
+                    alt="Bg Images"
+                    class="absolute size-full inset-0 hidden sm:block object-fill"
+                  />
+
+                  <!-- BG Image Mobile -->
+                  <img
+                    src="./assets/bg-images/product-form-mobile.png"
+                    alt="Bg Images"
+                    class="absolute size-full inset-0 sm:hidden object-fill"
+                  />
+
+                  <!-- Game Image -->
+                  <img
+                    src="./assets/images/product-form-image.png"
+                    alt="Bg Images"
+                    class="w-2/3 xs:size-auto absolute object-fill -top-16 xs:-top-28 -right-5 z-20"
+                  />
+
+                  <div class="relative z-10 size-full p-5">
+                    <h3 class="text-5xl xs:text-6xl text-white leading-[90%]">
+                      Genshin <br />
+                      Impact
+                    </h3>
+
+                    <div
+                      class="space-y-[30px] font-oswald text-white mt-24 xs:mt-20"
+                    >
+                      <!-- User ID & Server ID -->
+                      <div class="space-y-3.5">
+                        <h5
+                          class="xs:text-[22px] text-white font-oswald leading-normal"
+                        >
+                          ПОЖАЛУЙСТА, ВВЕДИТЕ ВАШ ID ДЛЯ ДОСТАВКИ
+                        </h5>
+
+                        <label
+                          for="userId"
+                          class="max-w-[345px] block space-y-2.5"
+                        >
+                          <div class="flex gap-2.5">
+                            <span class="font-bold text-xs xs:text-base"
+                              >USER ID</span
+                            >
+                            <!-- User ID Btn -->
+                            <button id="user-id-open-btn">
+                              <img
+                                src="./assets/svgs/question.svg"
+                                alt="Qeustion"
+                              />
+                            </button>
+                          </div>
+                          <input
+                            type="text"
+                            id="userId"
+                            class="w-full h-11 xs:h-8 rounded-10 font-mulish text-black px-3 py-1"
+                          />
+                        </label>
+
+                        <!-- Select Container -->
+                        <div class="max-w-[345px] relative select space-y-2.5">
+                          <span class="font-bold text-xs xs:text-base"
+                            >SERVER ID</span
+                          >
+
+                          <!-- Select Button -->
+                          <button
+                            class="select-button h-11 xs:h-8 w-full flex items-center justify-between text-black bg-white rounded-10 px-2.5"
+                          >
+                            <span
+                              class="select-label font-mulish text-black"
+                            ></span>
+                            <img
+                              src="./assets/svgs/angle-down.svg"
+                              alt="Angle Down"
+                              class="select-icon transition-all duration-200 ease-in-out"
+                            />
+                          </button>
+
+                          <!-- Select List -->
+                          <ul
+                            class="select-list fade-in w-full absolute bg-white rounded-10 font-mulish hidden z-10 shadow-lg"
+                          >
+                            <li
+                              class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
+                              data-value="lorem"
+                            >
+                              lorem
+                            </li>
+                            <li
+                              class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
+                              data-value="lorem"
+                            >
+                              ipsum
+                            </li>
+                            <li
+                              class="flex items-center gap-2 text-black hover:text-brand-purple cursor-pointer overflow-hidden px-2.5 py-2.5 xs:py-1"
+                              data-value="lorem"
+                            >
+                              dolor
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <!-- Product -->
+                      <div class="space-y-3.5">
+                        <div class="flex items-center justify-between gap-5">
+                          <h5
+                            class="flex-1 xs:text-[22px] text-white font-oswald uppercase"
+                          >
+                            Товар
+                          </h5>
+                          <h6
+                            class="w-[83px] text-xs xs:text-sm text-white font-oswald uppercase"
+                          >
+                            Количество
+                          </h6>
+                        </div>
+
+                        <!--  Selected Products -->
+                        <div
+                          class="selected-products space-y-2.5 font-bold"
+                        ></div>
+                      </div>
+
+                      <!-- Promocode -->
+                      <label
+                        for="promoCode"
+                        class="max-w-[345px] block space-y-2.5"
+                      >
+                        <h5
+                          class="xs:text-[22px] text-white font-oswald uppercase"
+                        >
+                          промокод
+                        </h5>
+                        <input
+                          type="text"
+                          id="promoCode"
+                          class="w-full h-11 xs:h-8 text-sm xs:text-base rounded-10 font-mulish text-black px-3 py-1"
+                          placeholder="Если есть, введите промокод"
+                        />
+                      </label>
+
+                      <!-- Email -->
+                      <label
+                        for="email"
+                        class="max-w-[345px] block space-y-2.5"
+                      >
+                        <h5
+                          class="xs:text-[22px] text-white font-oswald uppercase"
+                        >
+                          почта
+                        </h5>
+                        <input
+                          type="text"
+                          id="email"
+                          class="w-full h-11 xs:h-8 text-sm xs:text-base rounded-10 font-mulish text-black outline-none px-3 py-1"
+                          placeholder="Опционально"
+                        />
+                      </label>
+
+                      <!-- Payment Methods -->
+                      <div class="space-y-5">
+                        <div class="space-y-1">
+                          <h5
+                            class="text-base xs:text-[22px] text-white font-oswald uppercase"
+                          >
+                            Способ оплаты
+                          </h5>
+                          <div class="flex items-center gap-8 font-bold">
+                            <span
+                              class="text-sm text-white font-oswald uppercase"
+                            >
+                              без комиссии
+                            </span>
+                            <span
+                              class="text-sm text-white font-oswald uppercase"
+                            >
+                              комиссия 1%
+                            </span>
+                            <span
+                              class="text-sm text-white font-oswald uppercase"
+                            >
+                              комиссия 5%
+                            </span>
+                          </div>
+                        </div>
+
+                        <!-- Payment Methods -->
+                        <div class="flex items-center gap-3.5 sm:gap-5">
+                          <!-- Method 1 -->
+                          <input
+                            type="radio"
+                            name="payment"
+                            id="payment-1"
+                            class="hidden peer/payment-1"
+                            checked
+                          />
+                          <label
+                            for="payment-1"
+                            class="size-[75px] xs:size-24 shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden block cursor-pointer opacity-50 peer-checked/payment-1:opacity-100"
+                          >
+                            <img
+                              src="./assets/images/spb-payment.png"
+                              alt="SPB"
+                              class="size-full object-cover"
+                            />
+                          </label>
+
+                          <!-- Method 2 -->
+                          <input
+                            type="radio"
+                            name="payment"
+                            id="payment-2"
+                            class="hidden peer/payment-2"
+                          />
+                          <label
+                            for="payment-2"
+                            class="size-[75px] xs:size-24 shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden block cursor-pointer opacity-50 peer-checked/payment-2:opacity-100"
+                          >
+                            <img
+                              src="./assets/images/spb-payment.png"
+                              alt="SPB"
+                              class="size-full object-cover"
+                            />
+                          </label>
+
+                          <!-- Method 3 -->
+                          <input
+                            type="radio"
+                            name="payment"
+                            id="payment-3"
+                            class="hidden peer/payment-3"
+                          />
+                          <label
+                            for="payment-3"
+                            class="size-[75px] xs:size-24 shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden block cursor-pointer opacity-50 peer-checked/payment-3:opacity-100"
+                          >
+                            <img
+                              src="./assets/images/spb-payment.png"
+                              alt="SPB"
+                              class="size-full object-cover"
+                            />
+                          </label>
+
+                          <!-- Method 4 -->
+                          <input
+                            type="radio"
+                            name="payment"
+                            id="payment-4"
+                            class="hidden peer/payment-4"
+                          />
+                          <label
+                            for="payment-4"
+                            class="size-[75px] xs:size-24 shrink-0 bg-white/20 border-2 border-brand-purple/50 rounded-full overflow-hidden block cursor-pointer opacity-50 peer-checked/payment-4:opacity-100"
+                          >
+                            <img
+                              src="./assets/images/spb-payment.png"
+                              alt="SPB"
+                              class="size-full object-cover"
+                            />
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="space-y-5">
+                  <!-- Cost -->
+                  <div
+                    class="flex items-center justify-between text-black/40 uppercase"
+                  >
+                    <h5
+                      class="text-lg xs:text-[22px] font-oswald leading-normal"
+                    >
+                      сумма
+                    </h5>
+                    <h5
+                      class="text-lg xs:text-[22px] font-oswald leading-normal"
+                    >
+                      6080 rub
+                    </h5>
+                  </div>
+
+                  <!-- Pay Button -->
+                  <div class="space-y-2.5">
+                    <button
+                      class="w-full relative h-10 xs:h-16 font-extrabold xs:text-[28px] text-white border-2 border-brand-purple rounded-full hover:opacity-80 transition-all du20"
+                    >
+                      <img
+                        src="./assets/bg-images/button.png"
+                        alt="button"
+                        class="absolute inset-0 size-full object-cover rounded-30"
+                      />
+                      <span class="relative uppercase z-10">оплатить</span>
+                    </button>
+                    <p
+                      class="block text-[13px] font-bold xs:text-lg text-black/40 leading-[80%]"
+                    >
+                      Нажимая кнопку <span class="uppercase">оплатить</span>, я
+                      принимаю условия <a
+                        href="#"
+                        class="underline underline-offset-2"
+                        >Пользовательского Соглашения</a
+                      > и подтверждаю ознакомление с <a
+                        href="#"
+                        class="underline underline-offset-2"
+                        >FAQ</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- User ID Poppup -->
+            <div
+              id="user-id-poppup"
+              class="fade-in hidden fixed inset-0 z-[70] size-full bg-white/90 flex justify-center items-center"
+            >
+              <div
+                class="max-w-base flex flex-col-reverse items-end lg:items-start lg:flex-row gap-5 lg:gap-10 px-2.5"
+              >
+                <div
+                  class="border lg:border-2 border-black rounded-20 overflow-hidden"
+                >
+                  <img
+                    src="./assets/images/user-id-poppup.png"
+                    alt="User ID Image"
+                    class="size-full min-h-full object-cover"
+                  />
+                </div>
+
+                <button id="user-id-close-btn" class="h-fit">
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 22 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-4 lg:size-auto"
+                  >
+                    <path
+                      d="M21.5119 0.504716C21.2002 0.192273 20.777 0.0166856 20.3356 0.0166856C19.8942 0.0166856 19.471 0.192273 19.1593 0.504716L11 8.6473L2.84073 0.488031C2.52899 0.175588 2.10576 0 1.66439 0C1.22303 0 0.799795 0.175588 0.488055 0.488031C-0.162685 1.13877 -0.162685 2.18996 0.488055 2.8407L8.64733 11L0.488055 19.1592C-0.162685 19.81 -0.162685 20.8612 0.488055 21.5119C1.13879 22.1627 2.18999 22.1627 2.84073 21.5119L11 13.3526L19.1593 21.5119C19.81 22.1627 20.8612 22.1627 21.5119 21.5119C22.1627 20.8612 22.1627 19.81 21.5119 19.1592L13.3527 11L21.5119 2.8407C22.146 2.20665 22.146 1.13877 21.5119 0.504716Z"
+                      fill="black"
+                      fill-opacity="0.8"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div
+        class="max-w-base mx-auto relative flex flex-col md:flex-row justify-between gap-6 pt-20 lg:pt-40 pb-10 px-2.5 md:px-12 lg:px-2.5"
+      >
+        <!-- Logo -->
+        <a
+          href="./index.html"
+          class="group inline-block w-[85px] h-10 xs:w-14 xs:h-8 sm:w-[118px] sm:h-14 overflow-hidden shrink-0"
+        >
+          <img
+            src="./assets/svgs/logo.svg"
+            alt="LOGO"
+            class="size-full group-hover:hidden"
+          />
+          <img
+            src="./assets/svgs/logo-hover.svg"
+            alt="LOGO"
+            class="size-full hidden group-hover:block"
+          />
+        </a>
+
+        <!-- Links -->
+        <div
+          class="flex lg:mx-auto gap-12 xs:gap-20 sm:gap-32 lg:gap-[180px] text-[10px] lg:text-xs font-extrabold uppercase text-black/40 tracking-[0.6px]"
+        >
+          <ul class="space-y-3.5 lg:space-y-5">
+            <li>
+              <a
+                href="#products"
+                class="hover:text-brand-purple transition-all duration-300"
+                >Продукты</a
+              >
+            </li>
+            <li>
+              <a
+                href="#bonuses"
+                class="hover:text-brand-purple transition-all duration-300"
+                >Бонусы</a
+              >
+            </li>
+            <li>
+              <a
+                href="#secrets"
+                class="hover:text-brand-purple transition-all duration-300"
+                >Гайды</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="hover:text-brand-purple transition-all duration-300"
+                >О нас</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="hover:text-brand-purple transition-all duration-300"
+                >Контакты</a
+              >
+            </li>
+          </ul>
+          <ul class="space-y-3.5 lg:space-y-5">
+            <li>
+              <a
+                href="#"
+                class="hover:text-brand-purple transition-all duration-300"
+                >Поддержка</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-brand-purple transition-all duration-300"
+                >Политика конфиденциальности</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-brand-purple transition-all duration-300"
+                >Условия использования</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-brand-purple transition-all duration-300"
+                >Правила поведения</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <img
+          src="./assets/images/footer.png"
+          alt="Image"
+          class="absolute bottom-0 right-0 hidden lg:block"
+        />
+
+        <!-- Mobile Image -->
+        <img
+          src="./assets/images/footer-mobile.png"
+          alt="Image"
+          class="absolute bottom-0 right-0 lg:hidden"
+        />
+      </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
